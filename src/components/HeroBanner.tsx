@@ -3,36 +3,50 @@ import { useState, useEffect } from 'react';
 import heroWeaving from '@/assets/hero-weaving.jpg';
 
 const HeroBanner = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoError, setVideoError] = useState(false);
+
+  useEffect(() => {
+    console.log('Video states:', { videoLoaded, videoError });
+  }, [videoLoaded, videoError]);
 
   return (
     <section className="relative h-screen overflow-hidden">
       {/* Background Video with Fallback */}
       <div className="absolute inset-0">
-        {!videoError ? (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover"
-            poster={heroWeaving}
-            onError={() => setVideoError(true)}
-          >
-            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
-          </video>
-        ) : (
-          <div className="relative w-full h-full">
-            <img
-              src={heroWeaving}
-              alt="Premium fabric weaving process"
-              className="w-full h-full object-cover"
-            />
-            {/* Add subtle animation overlay to simulate video movement */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+          poster={heroWeaving}
+          onLoadedData={() => {
+            console.log('Video loaded successfully');
+            setVideoLoaded(true);
+          }}
+          onError={(e) => {
+            console.log('Video error:', e);
+            setVideoError(true);
+          }}
+          onCanPlay={() => {
+            console.log('Video can play');
+          }}
+        >
+          {/* Try multiple video sources */}
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Overlay that's always visible */}
+        <div className="absolute inset-0 bg-black/40" />
+        
+        {/* Debug info */}
+        {process.env.NODE_ENV === 'development' && (
+          <div className="absolute top-4 left-4 bg-black/80 text-white p-2 rounded text-xs">
+            Video Loaded: {videoLoaded ? 'Yes' : 'No'} | Error: {videoError ? 'Yes' : 'No'}
           </div>
         )}
-        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Content Overlay */}
