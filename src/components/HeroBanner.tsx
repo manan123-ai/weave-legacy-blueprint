@@ -1,22 +1,37 @@
 import { Button } from '@/components/ui/button';
+import { useState, useEffect } from 'react';
+import heroWeaving from '@/assets/hero-weaving.jpg';
 
 const HeroBanner = () => {
+  const [videoError, setVideoError] = useState(false);
+
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Video */}
+      {/* Background Video with Fallback */}
       <div className="absolute inset-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-          poster="/placeholder-weaving.jpg"
-        >
-          <source src="/weaving-process.mp4" type="video/mp4" />
-          {/* Fallback for browsers that don't support video */}
-          <div className="w-full h-full bg-gradient-to-br from-amber-50 to-stone-100" />
-        </video>
+        {!videoError ? (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+            poster={heroWeaving}
+            onError={() => setVideoError(true)}
+          >
+            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+          </video>
+        ) : (
+          <div className="relative w-full h-full">
+            <img
+              src={heroWeaving}
+              alt="Premium fabric weaving process"
+              className="w-full h-full object-cover"
+            />
+            {/* Add subtle animation overlay to simulate video movement */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse" />
+          </div>
+        )}
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
