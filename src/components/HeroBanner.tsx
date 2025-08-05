@@ -1,16 +1,22 @@
 import { Button } from '@/components/ui/button';
-import heroWeaving from '@/assets/hero-weaving.jpg';
 
 const HeroBanner = () => {
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Image/Video */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src={heroWeaving}
-          alt="Premium fabric weaving process"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-        />
+          poster="/placeholder-weaving.jpg"
+        >
+          <source src="/weaving-process.mp4" type="video/mp4" />
+          {/* Fallback for browsers that don't support video */}
+          <div className="w-full h-full bg-gradient-to-br from-amber-50 to-stone-100" />
+        </video>
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
