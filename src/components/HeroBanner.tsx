@@ -1,13 +1,26 @@
 import { Button } from '@/components/ui/button';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import heroWeaving from '@/assets/hero-weaving.jpg';
 
 const HeroBanner = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoError, setVideoError] = useState(false);
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <motion.section 
+      ref={heroRef}
+      className="relative h-screen overflow-hidden"
+      style={{ y }}
+    >
       {/* Background Video with Fallback */}
       <div className="absolute inset-0">
         {!videoError ? (
@@ -55,33 +68,68 @@ const HeroBanner = () => {
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
+      <motion.div 
+        className="relative z-10 h-full flex items-center justify-center text-center px-4"
+        style={{ opacity }}
+      >
         <div className="max-w-4xl mx-auto text-white">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            What others can't weave,<br />
-            <span className="italic">we perfect.</span>
-          </h1>
-          
-          <p className="font-body text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90">
-            High-quality woven fabric for the world's most iconic brands.
-          </p>
-          
-          <Button 
-            size="lg" 
-            className="bg-white text-black hover:bg-white/90 font-body font-medium px-8 py-3 text-lg"
+          <motion.h1 
+            className="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
           >
-            Explore Our Craft
-          </Button>
+            What others can't weave,<br />
+            <motion.span 
+              className="italic bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.8 }}
+            >
+              we perfect.
+            </motion.span>
+          </motion.h1>
+          
+          <motion.p 
+            className="font-body text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            High-quality woven fabric for the world's most iconic brands.
+          </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 1 }}
+          >
+            <Button 
+              size="lg" 
+              className="bg-white text-black hover:bg-white/90 hover:scale-105 font-body font-medium px-8 py-3 text-lg transition-all duration-300 shadow-lg"
+            >
+              Explore Our Craft
+            </Button>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <motion.div 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        style={{ opacity }}
+      >
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
+          <motion.div 
+            className="w-1 h-3 bg-white rounded-full mt-2" 
+            animate={{ opacity: [1, 0.3, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

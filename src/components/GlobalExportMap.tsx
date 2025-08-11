@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 const GlobalExportMap = () => {
   const exportLocations = [
     { name: 'New York', x: '25%', y: '35%' },
@@ -11,16 +13,34 @@ const GlobalExportMap = () => {
   ];
 
   return (
-    <section className="py-24 bg-primary text-primary-foreground">
+    <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.h2 
+            className="font-serif text-4xl md:text-5xl font-bold mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             Global Reach
-          </h2>
-          <p className="font-body text-xl opacity-90 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            className="font-body text-xl opacity-90 max-w-3xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             Trusted by international labels and high-volume manufacturers across the world
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         <div className="relative max-w-5xl mx-auto">
           {/* World Map SVG - Simplified */}
@@ -38,36 +58,88 @@ const GlobalExportMap = () => {
 
             {/* Glowing dots for cities */}
             {exportLocations.map((location, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="absolute transform -translate-x-1/2 -translate-y-1/2"
                 style={{ left: location.x, top: location.y }}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
                 <div className="relative">
-                  <div className="w-3 h-3 bg-accent rounded-full animate-pulse" />
-                  <div className="absolute inset-0 w-3 h-3 bg-accent rounded-full animate-ping opacity-75" />
-                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-body whitespace-nowrap opacity-75">
+                  <motion.div 
+                    className="w-3 h-3 bg-accent rounded-full"
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                      opacity: [1, 0.7, 1]
+                    }}
+                    transition={{ 
+                      duration: 2, 
+                      repeat: Infinity,
+                      delay: index * 0.2
+                    }}
+                  />
+                  <motion.div 
+                    className="absolute inset-0 w-3 h-3 bg-accent rounded-full opacity-75"
+                    animate={{ 
+                      scale: [1, 2, 1],
+                      opacity: [0.75, 0, 0.75]
+                    }}
+                    transition={{ 
+                      duration: 2, 
+                      repeat: Infinity,
+                      delay: index * 0.2
+                    }}
+                  />
+                  <motion.div 
+                    className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-body whitespace-nowrap opacity-75"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 0.75, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+                    viewport={{ once: true }}
+                  >
                     {location.name}
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
-          <div>
-            <div className="font-serif text-3xl font-bold mb-2">50+</div>
-            <div className="font-body text-lg opacity-90">Countries Served</div>
-          </div>
-          <div>
-            <div className="font-serif text-3xl font-bold mb-2">500+</div>
-            <div className="font-body text-lg opacity-90">Global Partners</div>
-          </div>
-          <div>
-            <div className="font-serif text-3xl font-bold mb-2">25+</div>
-            <div className="font-body text-lg opacity-90">Years of Excellence</div>
-          </div>
+          {[
+            { number: '50+', label: 'Countries Served' },
+            { number: '500+', label: 'Global Partners' },
+            { number: '25+', label: 'Years of Excellence' }
+          ].map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <motion.div 
+                className="font-serif text-3xl font-bold mb-2"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.2 + 0.3 }}
+                viewport={{ once: true }}
+              >
+                {stat.number}
+              </motion.div>
+              <motion.div 
+                className="font-body text-lg opacity-90"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 0.9 }}
+                transition={{ duration: 0.6, delay: index * 0.2 + 0.5 }}
+                viewport={{ once: true }}
+              >
+                {stat.label}
+              </motion.div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
