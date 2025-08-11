@@ -84,12 +84,22 @@ const Footer = () => {
             © 2024 Janki Nath & Co. All rights reserved.
           </p>
           
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded">
-              ISO 9001:2015 Certified
+          <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
+            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
+              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+              GOTS Certified
             </span>
-            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded">
+            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
+              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+              OCS Certified
+            </span>
+            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
+              <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
               OEKO-TEX Standard 100
+            </span>
+            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
+              <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+              ISO 9001:2015 Certified
             </span>
           </div>
         </div>
