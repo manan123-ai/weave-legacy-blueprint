@@ -1,11 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import heroWeaving from '@/assets/hero-weaving.jpg';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import heroSlide1 from '@/assets/weaving-process.jpg';
+import heroSlide2 from '@/assets/cotton-yarn.jpg';
+import heroSlide3 from '@/assets/hero-slide3.jpg';
 
 const HeroBanner = () => {
-  const [videoLoaded, setVideoLoaded] = useState(false);
-  const [videoError, setVideoError] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -15,56 +17,107 @@ const HeroBanner = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
+  const slides = [
+    {
+      image: heroSlide1,
+      title: "Weaving Dreams into Reality",
+      subtitle: "Explore Our Craft",
+      description: "Discover the artistry behind every thread with our premium weaving techniques",
+      buttonText: "Explore Our Craft",
+      buttonAction: () => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+    },
+    {
+      image: heroSlide2,
+      title: "40+ Years of Excellence",
+      subtitle: "About Our Journey",
+      description: "From humble beginnings to global recognition - our story of textile mastery",
+      buttonText: "Our Story",
+      buttonAction: () => window.location.href = '/about'
+    },
+    {
+      image: heroSlide3,
+      title: "Trusted by Global Brands",
+      subtitle: "World-Class Quality",
+      description: "Delivering premium fabrics to fashion capitals across 10 countries worldwide",
+      buttonText: "View Our Work",
+      buttonAction: () => window.location.href = '/clientele'
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
   return (
     <motion.section 
       ref={heroRef}
       className="relative h-screen overflow-hidden"
       style={{ y }}
     >
-      {/* Background Video with Fallback */}
+      {/* Background Images with Slides */}
       <div className="absolute inset-0">
-        {!videoError ? (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover"
-            poster={heroWeaving}
-            onLoadedData={() => setVideoLoaded(true)}
-            onError={() => setVideoError(true)}
+        {slides.map((slide, index) => (
+          <motion.div
+            key={index}
+            className="absolute inset-0"
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ 
+              opacity: currentSlide === index ? 1 : 0,
+              scale: currentSlide === index ? 1 : 1.1
+            }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
           >
-            {/* Real fabric weaving videos */}
-            <source src="https://player.vimeo.com/external/442256088.sd.mp4?s=f4a3b8fc8d6e3e4e8c2de8d8d9a8c2b6b6b8c4c4&profile_id=164&oauth2_token_id=57447761" type="video/mp4" />
-            <source src="https://cdn.pixabay.com/vimeo/461408906/weaving-57322.mp4?width=1280&hash=f6c8c4b8f5e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3" type="video/mp4" />
-          </video>
-        ) : (
-          // Weaving-inspired animated background fallback
-          <div className="relative w-full h-full bg-gradient-to-br from-amber-50 to-stone-100">
             <img
-              src={heroWeaving}
-              alt="Premium fabric weaving process"
+              src={slide.image}
+              alt={slide.title}
               className="w-full h-full object-cover"
             />
             {/* Weaving pattern animation overlay */}
-            <div className="absolute inset-0 opacity-30">
+            <div className="absolute inset-0 opacity-20">
               <div className="w-full h-full relative overflow-hidden">
-                {/* Horizontal threads */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform translate-x-full animate-pulse" 
-                     style={{ animationDuration: '3s' }} />
-                {/* Vertical threads */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent transform translate-y-full animate-pulse" 
-                     style={{ animationDuration: '4s', animationDelay: '1s' }} />
-                {/* Weaving motion */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-amber-200/20 to-transparent animate-ping" 
-                     style={{ animationDuration: '6s' }} />
+                {/* Dynamic weaving animations */}
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                  animate={{ 
+                    x: ["-100%", "100%"]
+                  }}
+                  transition={{ 
+                    duration: 4, 
+                    repeat: Infinity, 
+                    ease: "linear",
+                    delay: index * 0.5
+                  }}
+                />
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-transparent"
+                  animate={{ 
+                    y: ["-100%", "100%"]
+                  }}
+                  transition={{ 
+                    duration: 5, 
+                    repeat: Infinity, 
+                    ease: "linear",
+                    delay: index * 0.7
+                  }}
+                />
               </div>
             </div>
-          </div>
-        )}
+          </motion.div>
+        ))}
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Content Overlay */}
@@ -72,47 +125,94 @@ const HeroBanner = () => {
         className="relative z-10 h-full flex items-center justify-center text-center px-4"
         style={{ opacity }}
       >
-        <div className="max-w-4xl mx-auto text-white">
-          <motion.h1 
-            className="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight"
+        <div className="max-w-6xl mx-auto text-white">
+          <motion.div
+            key={currentSlide}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 1 }}
           >
-            What others can't weave,<br />
-            <motion.span 
-              className="italic bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.8 }}
+            <motion.div 
+              className="text-sm font-body uppercase tracking-wider text-accent mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
-              we perfect.
-            </motion.span>
-          </motion.h1>
-          
-          <motion.p 
-            className="font-body text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            High-quality woven fabric for the world's most iconic brands.
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 1 }}
-          >
-            <Button 
-              size="lg" 
-              className="bg-white text-black hover:bg-white/90 hover:scale-105 font-body font-medium px-8 py-3 text-lg transition-all duration-300 shadow-lg"
+              {slides[currentSlide].subtitle}
+            </motion.div>
+            
+            <motion.h1 
+              className="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
             >
-              Explore Our Craft
-            </Button>
+              <motion.span 
+                className="bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
+              >
+                {slides[currentSlide].title}
+              </motion.span>
+            </motion.h1>
+            
+            <motion.p 
+              className="font-body text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              {slides[currentSlide].description}
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 1 }}
+            >
+              <Button 
+                size="lg" 
+                onClick={slides[currentSlide].buttonAction}
+                className="bg-white text-black hover:bg-white/90 hover:scale-105 font-body font-medium px-8 py-3 text-lg transition-all duration-300 shadow-lg"
+              >
+                {slides[currentSlide].buttonText}
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </motion.div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group"
+      >
+        <ChevronLeft className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+      </button>
+      
+      <button
+        onClick={nextSlide}
+        className="absolute right-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group"
+      >
+        <ChevronRight className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+      </button>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              currentSlide === index 
+                ? 'bg-white scale-125' 
+                : 'bg-white/50 hover:bg-white/70'
+            }`}
+          />
+        ))}
+      </div>
 
       {/* Scroll Indicator */}
       <motion.div 

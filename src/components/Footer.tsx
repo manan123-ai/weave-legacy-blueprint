@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -17,14 +17,13 @@ const Footer = () => {
             
             {/* Social Media */}
             <div className="flex space-x-4">
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+              <a 
+                href="https://www.instagram.com/jankinathandco?igsh=MTMyamltNDFxNGdvOQ%3D%3D&utm_source=qr" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -54,25 +53,42 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-primary-foreground/60" />
-                <div className="font-body text-sm text-primary-foreground/80">
-                  123 Textile District,<br />
-                  Mumbai, Maharashtra 400001<br />
+                <a 
+                  href="https://maps.app.goo.gl/JnbyovcrkzdVrCeY6?g_st=ic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  A-14, MAYAPURI INDUSTRIAL AREA<br />
+                  PHASE -1, NEW DELHI -110064<br />
                   India
-                </div>
+                </a>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-foreground/60" />
-                <a href="mailto:info@jankinath.com" className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  info@jankinath.com
+                <a href="mailto:jcofabrics@yahoo.co.in" className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  jcofabrics@yahoo.co.in
                 </a>
               </div>
               
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary-foreground/60" />
-                <a href="tel:+91234567890" className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  +91 234 567 890
-                </a>
+              <div className="flex flex-col space-y-2">
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-primary-foreground/60" />
+                  <a href="tel:+919891542727" className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                    +91 9891542727
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 ml-8">
+                  <a href="tel:+919810111193" className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                    +91 9810111193
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 ml-8">
+                  <a href="tel:+919810069936" className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                    +91 9810069936
+                  </a>
+                </div>
               </div>
             </div>
           </div>

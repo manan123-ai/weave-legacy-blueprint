@@ -1,5 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import Testimonials from '@/components/Testimonials';
+import GlobalExportMap from '@/components/GlobalExportMap';
 import { Clock, Package, Settings, Shield } from 'lucide-react';
 
 const Clientele = () => {
@@ -54,47 +56,8 @@ const Clientele = () => {
           </div>
         </section>
 
-        {/* Export Coverage */}
-        <section className="py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl font-bold text-primary mb-6">
-                Global Export Coverage
-              </h2>
-              <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-                We export to over 50 countries across 6 continents, building lasting partnerships with brands worldwide
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-16">
-              {exportCountries.map((country, index) => (
-                <div
-                  key={index}
-                  className="bg-card p-4 rounded-lg text-center hover:bg-accent transition-colors"
-                >
-                  <span className="font-body text-sm text-muted-foreground">
-                    {country}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div className="bg-primary text-primary-foreground p-8 rounded-lg">
-                <div className="font-serif text-4xl font-bold mb-2">50+</div>
-                <div className="font-body text-lg">Countries Served</div>
-              </div>
-              <div className="bg-primary text-primary-foreground p-8 rounded-lg">
-                <div className="font-serif text-4xl font-bold mb-2">500+</div>
-                <div className="font-body text-lg">Global Partners</div>
-              </div>
-              <div className="bg-primary text-primary-foreground p-8 rounded-lg">
-                <div className="font-serif text-4xl font-bold mb-2">25+</div>
-                <div className="font-body text-lg">Years of Excellence</div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <GlobalExportMap />
+        <Testimonials />
 
         {/* Client Types */}
         <section className="py-24 bg-accent">

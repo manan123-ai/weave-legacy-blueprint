@@ -42,11 +42,16 @@ const Contact = () => {
                       <h3 className="font-serif text-lg font-semibold text-primary mb-2">
                         Address
                       </h3>
-                      <p className="font-body text-muted-foreground">
-                        123 Textile District<br />
-                        Mumbai, Maharashtra 400001<br />
+                      <a 
+                        href="https://maps.app.goo.gl/JnbyovcrkzdVrCeY6?g_st=ic"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-body text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        A-14, MAYAPURI INDUSTRIAL AREA<br />
+                        PHASE -1, NEW DELHI -110064<br />
                         India
-                      </p>
+                      </a>
                     </div>
                   </div>
                   
@@ -59,10 +64,10 @@ const Contact = () => {
                         Email
                       </h3>
                       <a 
-                        href="mailto:info@jankinath.com" 
+                        href="mailto:jcofabrics@yahoo.co.in" 
                         className="font-body text-muted-foreground hover:text-primary transition-colors"
                       >
-                        info@jankinath.com
+                        jcofabrics@yahoo.co.in
                       </a>
                     </div>
                   </div>

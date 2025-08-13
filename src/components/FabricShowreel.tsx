@@ -1,50 +1,51 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import cottonSwatch from '@/assets/cotton-swatch.jpg';
-import linenSwatch from '@/assets/linen-swatch.jpg';
-import jacquardSwatch from '@/assets/jacquard-swatch.jpg';
+import cottonFabric from '@/assets/cotton-fabric.jpg';
+import linenFabric from '@/assets/linen-fabric.jpg';
+import jacquardFabric from '@/assets/jacquard-fabric.jpg';
+import viscoseFabric from '@/assets/viscose-fabric.jpg';
 
 const FabricShowreel = () => {
   const fabricCategories = [
     {
       name: 'Cotton',
-      image: cottonSwatch,
+      image: cottonFabric,
       description: 'Premium quality cotton fabrics',
     },
     {
       name: 'Cotton Blends',
-      image: cottonSwatch,
+      image: cottonFabric,
       description: 'Innovative cotton blend compositions',
     },
     {
       name: 'Viscose',
-      image: linenSwatch,
+      image: viscoseFabric,
       description: 'Luxurious viscose textiles',
     },
     {
       name: 'Jacquards',
-      image: jacquardSwatch,
+      image: jacquardFabric,
       description: 'Intricate jacquard patterns',
     },
     {
       name: 'Linen',
-      image: linenSwatch,
+      image: linenFabric,
       description: 'Natural linen excellence',
     },
     {
       name: 'Tweeds',
-      image: jacquardSwatch,
+      image: jacquardFabric,
       description: 'Classic tweed fabrics',
     },
     {
       name: 'Upholstery & Home Furnishing',
-      image: cottonSwatch,
+      image: cottonFabric,
       description: 'Durable home textiles',
     },
     {
       name: 'Speciality Wovens',
-      image: jacquardSwatch,
+      image: jacquardFabric,
       description: 'Unique specialty textiles',
     },
   ];

@@ -127,9 +127,14 @@ const Fabrics = () => {
                         </div>
                       </div>
                       
-                      <button className="mt-6 font-body text-sm text-primary hover:text-primary/80 transition-colors underline">
-                        Download Lookbook
-                      </button>
+                      <div className="mt-6 flex space-x-4">
+                        <a href="tel:+919891542727" className="font-body text-sm text-primary hover:text-primary/80 transition-colors underline">
+                          Call Us
+                        </a>
+                        <a href="mailto:jcofabrics@yahoo.co.in" className="font-body text-sm text-primary hover:text-primary/80 transition-colors underline">
+                          Email Us
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

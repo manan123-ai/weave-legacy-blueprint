@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Globe3D from '@/components/Globe3D';
 
 const GlobalExportMap = () => {
   const exportLocations = [
@@ -42,76 +43,13 @@ const GlobalExportMap = () => {
           </motion.p>
         </motion.div>
 
-        <div className="relative max-w-5xl mx-auto">
-          {/* World Map SVG - Simplified */}
-          <div className="relative bg-primary-foreground/10 rounded-2xl p-8 h-96 overflow-hidden">
-            <svg
-              viewBox="0 0 1000 500"
-              className="w-full h-full opacity-20"
-              fill="currentColor"
-            >
-              {/* Simplified world map paths */}
-              <path d="M 100 150 Q 200 120 300 150 Q 400 140 500 160 Q 600 150 700 170 Q 800 160 900 180 L 900 350 Q 800 330 700 340 Q 600 350 500 340 Q 400 360 300 350 Q 200 380 100 350 Z" />
-              <path d="M 150 200 Q 250 180 350 200 Q 450 190 550 210 L 550 280 Q 450 260 350 270 Q 250 280 150 270 Z" />
-              <path d="M 600 220 Q 700 200 800 220 Q 850 210 900 230 L 900 300 Q 850 280 800 290 Q 700 300 600 290 Z" />
-            </svg>
-
-            {/* Glowing dots for cities */}
-            {exportLocations.map((location, index) => (
-              <motion.div
-                key={index}
-                className="absolute transform -translate-x-1/2 -translate-y-1/2"
-                style={{ left: location.x, top: location.y }}
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="relative">
-                  <motion.div 
-                    className="w-3 h-3 bg-accent rounded-full"
-                    animate={{ 
-                      scale: [1, 1.2, 1],
-                      opacity: [1, 0.7, 1]
-                    }}
-                    transition={{ 
-                      duration: 2, 
-                      repeat: Infinity,
-                      delay: index * 0.2
-                    }}
-                  />
-                  <motion.div 
-                    className="absolute inset-0 w-3 h-3 bg-accent rounded-full opacity-75"
-                    animate={{ 
-                      scale: [1, 2, 1],
-                      opacity: [0.75, 0, 0.75]
-                    }}
-                    transition={{ 
-                      duration: 2, 
-                      repeat: Infinity,
-                      delay: index * 0.2
-                    }}
-                  />
-                  <motion.div 
-                    className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-body whitespace-nowrap opacity-75"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 0.75, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-                    viewport={{ once: true }}
-                  >
-                    {location.name}
-                  </motion.div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        <Globe3D />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
           {[
-            { number: '50+', label: 'Countries Served' },
-            { number: '500+', label: 'Global Partners' },
-            { number: '25+', label: 'Years of Excellence' }
+            { number: '10+', label: 'Countries Served' },
+            { number: '50+', label: 'Global Partners' },
+            { number: '40+', label: 'Years of Excellence' }
           ].map((stat, index) => (
             <motion.div
               key={index}
