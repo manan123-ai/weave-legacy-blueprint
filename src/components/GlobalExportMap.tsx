@@ -77,7 +77,7 @@ const GlobalExportMap = () => {
         <Globe3DThree />
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, staggerChildren: 0.2 }}

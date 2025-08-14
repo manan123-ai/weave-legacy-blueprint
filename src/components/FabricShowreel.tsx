@@ -80,7 +80,7 @@ const FabricShowreel = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12">
           {fabricCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -112,7 +112,7 @@ const FabricShowreel = () => {
                 />
               </div>
               <motion.div 
-                className="p-6"
+                className="p-4 sm:p-6"
                 whileHover={{ backgroundColor: "hsl(var(--secondary))" }}
                 transition={{ duration: 0.3 }}
               >

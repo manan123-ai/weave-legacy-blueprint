@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="font-serif text-2xl font-bold mb-4 block">
@@ -100,7 +100,7 @@ const Footer = () => {
             © 2024 Janki Nath & Co. All rights reserved.
           </p>
           
-          <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
+          <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 md:mt-0 justify-center md:justify-end">
             <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
               <span className="w-2 h-2 bg-green-400 rounded-full"></span>
               GOTS Certified
