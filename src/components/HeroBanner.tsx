@@ -2,9 +2,9 @@ import { Button } from '@/components/ui/button';
 import { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import heroSlide1 from '@/assets/weaving-process.jpg';
-import heroSlide2 from '@/assets/cotton-yarn.jpg';
-import heroSlide3 from '@/assets/hero-slide3.jpg';
+import heroSlide1 from '@/assets/colorful-fabric-banner.jpg';
+import heroSlide2 from '@/assets/weaving-loom-banner.jpg';
+import heroSlide3 from '@/assets/yarn-production-banner.jpg';
 
 const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,25 +20,25 @@ const HeroBanner = () => {
   const slides = [
     {
       image: heroSlide1,
-      title: "Weaving Dreams into Reality",
+      title: "Traditional Craftsmanship Meets Modern Excellence",
       subtitle: "Explore Our Craft",
-      description: "Discover the artistry behind every thread with our premium weaving techniques",
+      description: "Discover our premium collection of vibrant fabrics, handpicked for quality and artistry",
       buttonText: "Explore Our Craft",
       buttonAction: () => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
     },
     {
       image: heroSlide2,
-      title: "40+ Years of Excellence",
+      title: "Advanced Weaving Technology",
       subtitle: "About Our Journey",
-      description: "From humble beginnings to global recognition - our story of textile mastery",
-      buttonText: "Our Story",
+      description: "State-of-the-art manufacturing processes ensuring consistent quality and innovation",
+      buttonText: "Our Story", 
       buttonAction: () => window.location.href = '/about'
     },
     {
       image: heroSlide3,
-      title: "Trusted by Global Brands",
+      title: "Premium Yarn Production",
       subtitle: "World-Class Quality",
-      description: "Delivering premium fabrics to fashion capitals across 10 countries worldwide",
+      description: "From fiber to finished fabric - complete control over our manufacturing excellence",
       buttonText: "View Our Work",
       buttonAction: () => window.location.href = '/clientele'
     }

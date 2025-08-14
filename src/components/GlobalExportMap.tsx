@@ -1,21 +1,52 @@
-import { motion } from 'framer-motion';
-import Globe3D from '@/components/Globe3D';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Globe3DThree from '@/components/Globe3DThree';
+import { useRef } from 'react';
 
 const GlobalExportMap = () => {
-  const exportLocations = [
-    { name: 'New York', x: '25%', y: '35%' },
-    { name: 'London', x: '45%', y: '30%' },
-    { name: 'Paris', x: '48%', y: '32%' },
-    { name: 'Milan', x: '50%', y: '38%' },
-    { name: 'Tokyo', x: '85%', y: '40%' },
-    { name: 'Hong Kong', x: '82%', y: '48%' },
-    { name: 'Dubai', x: '60%', y: '45%' },
-    { name: 'Mumbai', x: '70%', y: '48%' },
-  ];
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
+  
+  const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
-    <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.section 
+      ref={sectionRef}
+      className="py-24 bg-primary text-primary-foreground relative overflow-hidden"
+      style={{ y, opacity }}
+    >
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div 
+          className="absolute -top-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl"
+          animate={{ 
+            x: [0, 100, 0],
+            y: [0, -50, 0]
+          }}
+          transition={{ 
+            duration: 20, 
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        <motion.div 
+          className="absolute -bottom-40 -right-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl"
+          animate={{ 
+            x: [0, -100, 0],
+            y: [0, 50, 0]
+          }}
+          transition={{ 
+            duration: 25, 
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
@@ -43,12 +74,18 @@ const GlobalExportMap = () => {
           </motion.p>
         </motion.div>
 
-        <Globe3D />
+        <Globe3DThree />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, staggerChildren: 0.2 }}
+          viewport={{ once: true }}
+        >
           {[
             { number: '10+', label: 'Countries Served' },
-            { number: '50+', label: 'Global Partners' },
+            { number: '50+', label: 'Global Partners' }, 
             { number: '40+', label: 'Years of Excellence' }
           ].map((stat, index) => (
             <motion.div
@@ -78,9 +115,9 @@ const GlobalExportMap = () => {
               </motion.div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
