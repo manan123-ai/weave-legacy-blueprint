@@ -1,4 +1,3 @@
-import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 import GlobalExportMap from '@/components/GlobalExportMap';
@@ -41,8 +40,6 @@ const Clientele = () => {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
-      
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-24 bg-secondary">

@@ -1,4 +1,3 @@
-import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import cottonSwatch from '@/assets/cotton-swatch.jpg';
 import linenSwatch from '@/assets/linen-swatch.jpg';
@@ -66,8 +65,6 @@ const Fabrics = () => {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
-      
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-24 bg-secondary">

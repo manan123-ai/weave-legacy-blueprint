@@ -1,4 +1,3 @@
-import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,8 +7,6 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 const Contact = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
-      
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-24 bg-secondary">

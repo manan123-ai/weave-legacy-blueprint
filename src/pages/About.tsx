@@ -1,12 +1,9 @@
-import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 
 const About = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
-      
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-24 bg-secondary">
