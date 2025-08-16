@@ -32,6 +32,10 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      if (!supabase) {
+        throw new Error('Supabase not configured');
+      }
+
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData,
       });
