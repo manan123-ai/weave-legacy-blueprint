@@ -31,23 +31,30 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      if (!supabase) {
-        throw new Error('Supabase not configured');
-      }
+    // Create email content
+    const emailSubject = `Fabric Inquiry from ${formData.firstName} ${formData.lastName}`;
+    const emailBody = `Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Company: ${formData.company || 'Not provided'}
+Fabric Interest: ${formData.fabricInterest || 'Not specified'}
 
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData,
-      });
+Message:
+${formData.message}`;
 
-      if (error) throw error;
-
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your inquiry. We will get back to you soon.",
-      });
-      
-      // Reset form
+    // Create mailto link
+    const mailtoLink = `mailto:jcofabrics@yahoo.co.in?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    toast({
+      title: "Email client opened!",
+      description: "Your default email application should open with the message pre-filled.",
+    });
+    
+    // Reset form after a short delay
+    setTimeout(() => {
       setFormData({
         firstName: '',
         lastName: '',
@@ -56,16 +63,8 @@ const Contact = () => {
         fabricInterest: '',
         message: ''
       });
-    } catch (error) {
-      console.error('Error sending message:', error);
-      toast({
-        title: "Error sending message",
-        description: "Please try again later or contact us directly.",
-        variant: "destructive",
-      });
-    } finally {
       setIsSubmitting(false);
-    }
+    }, 1000);
   };
 
   return (
