@@ -78,20 +78,27 @@ const Contact = () => {
                         Phone
                       </h3>
                       <a 
-                        href="tel:+91234567890" 
+                        href="tel:+919891542727" 
                         className="font-body text-muted-foreground hover:text-primary transition-colors"
                       >
-                        +91 234 567 890
+                        +91 98915 42727
                       </a>
                     </div>
                   </div>
                 </div>
 
-                {/* Map Placeholder */}
-                <div className="mt-12 bg-muted rounded-lg h-64 flex items-center justify-center">
-                  <p className="font-body text-muted-foreground">
-                    Google Map Location
-                  </p>
+                {/* Interactive Google Map */}
+                <div className="mt-12">
+                  <iframe
+                    src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=A-14,%20MAYAPURI%20INDUSTRIAL%20AREA%20PHASE%20-1,%20NEW%20DELHI%20-110064+(Janki%20Nath%20&amp;%20Co)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    width="100%"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg shadow-lg"
+                  />
                 </div>
               </div>
 
