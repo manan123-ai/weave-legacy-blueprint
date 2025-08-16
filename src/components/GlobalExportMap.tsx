@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import InteractiveWorldMap from '@/components/InteractiveWorldMap';
+import MapboxWorldMap from './MapboxWorldMap';
 import { useRef } from 'react';
 
 const GlobalExportMap = () => {
@@ -74,7 +74,7 @@ const GlobalExportMap = () => {
           </motion.p>
         </motion.div>
 
-        <InteractiveWorldMap />
+        <MapboxWorldMap />
 
         <motion.div 
           className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 text-center"
