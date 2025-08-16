@@ -1,62 +1,67 @@
 import Footer from '@/components/Footer';
-import cottonSwatch from '@/assets/cotton-swatch.jpg';
-import linenSwatch from '@/assets/linen-swatch.jpg';
-import jacquardSwatch from '@/assets/jacquard-swatch.jpg';
+import cottonFabric from '@/assets/cotton-pinterest.jpg';
+import cottonBlendsFabric from '@/assets/cotton-blends-pinterest.jpg';
+import linenFabric from '@/assets/linen-new.jpg';
+import jacquardFabric from '@/assets/jacquard-pinterest.jpg';
+import viscoseFabric from '@/assets/viscose-pinterest.jpg';
+import tweedFabric from '@/assets/tweed-new.jpg';
+import upholsteryFabric from '@/assets/upholstery-fabric-samples.jpg';
+import specialtyWovenFabric from '@/assets/specialty-woven-new.jpg';
 
 const Fabrics = () => {
   const fabricCategories = [
     {
       name: 'Cotton',
-      image: cottonSwatch,
+      image: cottonFabric,
       description: 'Premium quality cotton fabrics in various weights and finishes.',
       specs: 'GSM: 120-300 | Width: 44"-60" | Finishes: Plain, Mercerized, Sanforized',
       useCases: 'Shirts, Dresses, Casual Wear, Bedding',
     },
     {
       name: 'Cotton Blends',
-      image: cottonSwatch,
+      image: cottonBlendsFabric,
       description: 'Innovative cotton blend compositions for enhanced performance.',
       specs: 'GSM: 140-280 | Width: 44"-58" | Blends: Cotton-Polyester, Cotton-Modal',
       useCases: 'Workwear, Activewear, Smart Casual',
     },
     {
       name: 'Viscose',
-      image: linenSwatch,
+      image: viscoseFabric,
       description: 'Luxurious viscose textiles with excellent drape and feel.',
       specs: 'GSM: 100-250 | Width: 44"-60" | Finishes: Soft, Crisp, Brushed',
       useCases: 'Evening Wear, Linings, Lightweight Garments',
     },
     {
       name: 'Jacquards',
-      image: jacquardSwatch,
+      image: jacquardFabric,
       description: 'Intricate jacquard patterns woven with precision and artistry.',
       specs: 'GSM: 200-400 | Width: 44"-54" | Patterns: Floral, Geometric, Custom',
       useCases: 'Luxury Apparel, Upholstery, Accessories',
     },
     {
       name: 'Linen',
-      image: linenSwatch,
+      image: linenFabric,
       description: 'Natural linen excellence with superior quality and finish.',
       specs: 'GSM: 120-300 | Width: 44"-60" | Types: Pure Linen, Linen Blends',
       useCases: 'Summer Clothing, Home Textiles, Luxury Garments',
     },
     {
       name: 'Tweeds',
-      image: jacquardSwatch,
+      image: tweedFabric,
       description: 'Classic tweed fabrics with traditional and modern interpretations.',
       specs: 'GSM: 300-500 | Width: 54"-60" | Patterns: Herringbone, Houndstooth',
       useCases: 'Coats, Jackets, Suits, Accessories',
     },
     {
       name: 'Upholstery & Home Furnishing',
-      image: cottonSwatch,
+      image: upholsteryFabric,
       description: 'Durable home textiles designed for longevity and style.',
       specs: 'GSM: 250-600 | Width: 54"-140" | Features: Stain Resistant, Durable',
       useCases: 'Furniture, Curtains, Cushions, Decorative Items',
     },
     {
       name: 'Speciality Wovens',
-      image: jacquardSwatch,
+      image: specialtyWovenFabric,
       description: 'Unique specialty textiles for specific applications and requirements.',
       specs: 'GSM: Variable | Width: Custom | Features: Technical, Performance',
       useCases: 'Technical Wear, Medical Textiles, Industrial Applications',
