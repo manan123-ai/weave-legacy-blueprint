@@ -90,7 +90,11 @@ const About = () => {
         <section className="py-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-serif text-4xl font-bold text-primary mb-16">Leadership</h2>
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-3 gap-12">
+              <div className="bg-card p-8 rounded-lg">
+                <h3 className="font-serif text-2xl font-bold text-primary mb-4">MR. HAMESH KUMAR BHASIN</h3>
+                <p className="font-body text-muted-foreground">Director | 45+ Years Experience</p>
+              </div>
               <div className="bg-card p-8 rounded-lg">
                 <h3 className="font-serif text-2xl font-bold text-primary mb-4">MR. SANDEEPAN BHASIN</h3>
                 <p className="font-body text-muted-foreground">Director | 30+ Years Experience</p>
