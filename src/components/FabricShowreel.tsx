@@ -7,7 +7,7 @@ import linenFabric from '@/assets/linen-new.jpg';
 import jacquardFabric from '@/assets/jacquard-new.jpg';
 import viscoseFabric from '@/assets/viscose-updated.jpg';
 import tweedFabric from '@/assets/tweed-new.jpg';
-import upholsteryFabric from '@/assets/upholstery-updated.jpg';
+import upholsteryFabric from '@/assets/upholstery-fabric-samples.jpg';
 import specialtyWovenFabric from '@/assets/specialty-woven-new.jpg';
 
 const FabricShowreel = () => {
