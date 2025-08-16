@@ -5,6 +5,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useState } from 'react';
+import { supabase } from '@/lib/supabase';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -31,34 +32,26 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/functions/v1/send-contact-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData,
       });
 
-      const result = await response.json();
+      if (error) throw error;
 
-      if (response.ok) {
-        toast({
-          title: "Message sent successfully!",
-          description: "Thank you for your inquiry. We will get back to you soon.",
-        });
-        
-        // Reset form
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          company: '',
-          fabricInterest: '',
-          message: ''
-        });
-      } else {
-        throw new Error(result.error || 'Failed to send message');
-      }
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your inquiry. We will get back to you soon.",
+      });
+      
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        fabricInterest: '',
+        message: ''
+      });
     } catch (error) {
       console.error('Error sending message:', error);
       toast({
