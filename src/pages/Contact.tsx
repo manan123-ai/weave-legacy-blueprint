@@ -2,9 +2,75 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/components/ui/use-toast';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { useState } from 'react';
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    fabricInterest: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for your inquiry. We will get back to you soon.",
+        });
+        
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          company: '',
+          fabricInterest: '',
+          message: ''
+        });
+      } else {
+        throw new Error(result.error || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again later or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <main className="pt-16">
@@ -108,55 +174,93 @@ const Contact = () => {
                   Request a Fabric Sample
                 </h2>
                 
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="font-body text-sm font-medium text-primary mb-2 block">
-                        First Name
+                        First Name *
                       </label>
-                      <Input placeholder="Your first name" />
+                      <Input 
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        placeholder="Your first name" 
+                        required
+                      />
                     </div>
                     <div>
                       <label className="font-body text-sm font-medium text-primary mb-2 block">
-                        Last Name
+                        Last Name *
                       </label>
-                      <Input placeholder="Your last name" />
+                      <Input 
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        placeholder="Your last name" 
+                        required
+                      />
                     </div>
                   </div>
                   
                   <div>
                     <label className="font-body text-sm font-medium text-primary mb-2 block">
-                      Email
+                      Email *
                     </label>
-                    <Input type="email" placeholder="your.email@company.com" />
+                    <Input 
+                      type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="your.email@company.com" 
+                      required
+                    />
                   </div>
                   
                   <div>
                     <label className="font-body text-sm font-medium text-primary mb-2 block">
                       Company
                     </label>
-                    <Input placeholder="Your company name" />
+                    <Input 
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      placeholder="Your company name" 
+                    />
                   </div>
                   
                   <div>
                     <label className="font-body text-sm font-medium text-primary mb-2 block">
                       Fabric Interest
                     </label>
-                    <Input placeholder="e.g., Cotton, Linen, Jacquards" />
+                    <Input 
+                      name="fabricInterest"
+                      value={formData.fabricInterest}
+                      onChange={handleInputChange}
+                      placeholder="e.g., Cotton, Linen, Jacquards" 
+                    />
                   </div>
                   
                   <div>
                     <label className="font-body text-sm font-medium text-primary mb-2 block">
-                      Message
+                      Message *
                     </label>
                     <Textarea 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       placeholder="Tell us about your requirements, quantities, and any specific needs..."
                       rows={6}
+                      required
                     />
                   </div>
                   
-                  <Button className="w-full font-body font-medium" size="lg">
-                    Send Message
+                  <Button 
+                    type="submit" 
+                    className="w-full font-body font-medium" 
+                    size="lg"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                 </form>
               </div>
