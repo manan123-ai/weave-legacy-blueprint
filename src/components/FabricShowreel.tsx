@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import cottonFabric from '@/assets/cotton-premium.jpg';
-import cottonBlendsFabric from '@/assets/cotton-blends-premium.jpg';
+import cottonBlendsFabric from '@/assets/cotton-blends-uploaded.jpg';
 import linenFabric from '@/assets/linen-new.jpg';
 import jacquardFabric from '@/assets/jacquard-new.jpg';
 import viscoseFabric from '@/assets/viscose-premium.jpg';
