@@ -114,8 +114,12 @@ const Footer = () => {
               OEKO-TEX Standard 100
             </span>
             <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
-              <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-              ISO 9001:2015 Certified
+              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+              MSME Registered
+            </span>
+            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
+              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+              BCI Member
             </span>
           </div>
         </div>

@@ -24,7 +24,8 @@ const Navigation = () => {
     { name: 'GOTS Certification', href: '#gots-certificate' },
     { name: 'OCS Certification', href: '#ocs-certificate' },
     { name: 'OEKO-TEX Standard 100', href: '#oeko-tex-certificate' },
-    { name: 'ISO 9001:2015', href: '#iso-certificate' },
+    { name: 'MSME Registered', href: '#msme-certificate' },
+    { name: 'BCI Member', href: '#bci-certificate' },
   ];
 
   const navItems = [

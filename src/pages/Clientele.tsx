@@ -26,7 +26,7 @@ const Clientele = () => {
     {
       icon: Shield,
       title: 'Quality Assurance',
-      value: 'ISO Certified',
+      value: 'MSME Registered',
       description: 'Rigorous quality control at every stage of production',
     },
   ];
