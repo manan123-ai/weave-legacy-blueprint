@@ -6,7 +6,19 @@ import jacquardFabric from '@/assets/jacquard-pinterest.jpg';
 import viscoseFabric from '@/assets/viscose-pinterest.jpg';
 import tweedFabric from '@/assets/tweed-new.jpg';
 import upholsteryFabric from '@/assets/upholstery-fabric-samples.jpg';
-import specialtyWovenFabric from '@/assets/specialty-woven-new.jpg';
+import noveltyFabric from '@/assets/specialty-woven-new.jpg';
+import yarnDyedFabric from '@/assets/yarn-dyed-fabric.jpg';
+import indigoFabric from '@/assets/indigo-dyed-fabric.jpg';
+import dobbyFabric from '@/assets/dobby-fabric.jpg';
+import voileCambricFabric from '@/assets/voile-cambric-fabric.jpg';
+import poplinSheetingFabric from '@/assets/poplin-sheeting-fabric.jpg';
+import twillDrillFabric from '@/assets/twill-drill-fabric.jpg';
+import oxfordCanvasFabric from '@/assets/oxford-canvas-fabric.jpg';
+import lurexSequinFabric from '@/assets/lurex-sequin-fabric.jpg';
+import cutworkJacquardFabric from '@/assets/cutwork-jacquard-fabric.jpg';
+import ikatTieDyeFabric from '@/assets/ikat-tiedye-fabric.jpg';
+import crepeHighTwistFabric from '@/assets/crepe-hightwist-fabric.jpg';
+import lycraBlendFabric from '@/assets/lycra-blend-fabric.jpg';
 
 const Fabrics = () => {
   const fabricCategories = [
@@ -60,11 +72,95 @@ const Fabrics = () => {
       useCases: 'Furniture, Curtains, Cushions, Decorative Items',
     },
     {
-      name: 'Speciality Wovens',
-      image: specialtyWovenFabric,
+      name: 'Yarn-Dyed',
+      image: yarnDyedFabric,
+      description: 'Vibrant yarn-dyed fabrics with colorfast properties and rich textures.',
+      specs: 'GSM: 120-280 | Width: 44"-58" | Colors: Multi-color, Checks, Stripes',
+      useCases: 'Shirts, Dresses, Casual Wear, Fashion Garments',
+    },
+    {
+      name: 'Novelty Fabrics',
+      image: noveltyFabric,
       description: 'Unique specialty textiles for specific applications and requirements.',
       specs: 'GSM: Variable | Width: Custom | Features: Technical, Performance',
       useCases: 'Technical Wear, Medical Textiles, Industrial Applications',
+    },
+    {
+      name: 'Indigo Dyes',
+      image: indigoFabric,
+      description: 'Traditional and modern indigo-dyed fabrics with authentic blue tones.',
+      specs: 'GSM: 140-320 | Width: 44"-60" | Shades: Light to Deep Indigo',
+      useCases: 'Denim, Traditional Wear, Fashion Garments, Accessories',
+    },
+    {
+      name: 'Dobby',
+      image: dobbyFabric,
+      description: 'Sophisticated dobby weaves with geometric patterns and textures.',
+      specs: 'GSM: 120-250 | Width: 44"-58" | Patterns: Geometric, Abstract, Custom',
+      useCases: 'Formal Shirts, Dress Fabrics, Premium Textiles',
+    },
+    {
+      name: 'Voiles & Cambric',
+      image: voileCambricFabric,
+      description: 'Lightweight, sheer fabrics with delicate weave and soft hand feel.',
+      specs: 'GSM: 80-140 | Width: 44"-60" | Finishes: Soft, Crisp, Semi-Sheer',
+      useCases: 'Summer Clothing, Linings, Scarves, Lightweight Garments',
+    },
+    {
+      name: 'Poplin & Sheetings',
+      image: poplinSheetingFabric,
+      description: 'Smooth, plain weave fabrics with crisp finish and durability.',
+      specs: 'GSM: 100-200 | Width: 44"-90" | Finishes: Mercerized, Sanforized',
+      useCases: 'Shirts, Bedding, Institutional Textiles, Uniforms',
+    },
+    {
+      name: 'Twills & Drills',
+      image: twillDrillFabric,
+      description: 'Diagonal weave fabrics offering strength and distinctive appearance.',
+      specs: 'GSM: 180-350 | Width: 44"-60" | Angles: 45°, 63°, Custom',
+      useCases: 'Workwear, Pants, Uniforms, Heavy-duty Applications',
+    },
+    {
+      name: 'Oxfords & Canvas',
+      image: oxfordCanvasFabric,
+      description: 'Sturdy basket weave fabrics designed for durability and strength.',
+      specs: 'GSM: 200-450 | Width: 44"-60" | Construction: Basket, Plain Weave',
+      useCases: 'Casual Shirts, Bags, Upholstery, Industrial Uses',
+    },
+    {
+      name: 'Lurex & Sequins',
+      image: lurexSequinFabric,
+      description: 'Glamorous fabrics with metallic threads and decorative elements.',
+      specs: 'GSM: 120-300 | Width: 44"-54" | Features: Metallic, Reflective, Decorative',
+      useCases: 'Evening Wear, Party Dresses, Stage Costumes, Fashion Accessories',
+    },
+    {
+      name: 'Cutwork Jacquard',
+      image: cutworkJacquardFabric,
+      description: 'Intricate jacquard fabrics with decorative cutwork patterns.',
+      specs: 'GSM: 180-350 | Width: 44"-54" | Patterns: Floral, Geometric, Openwork',
+      useCases: 'Luxury Fashion, Evening Wear, Decorative Textiles, Premium Garments',
+    },
+    {
+      name: 'IKAT & Tie Dye',
+      image: ikatTieDyeFabric,
+      description: 'Traditional resist-dyeing techniques creating unique patterns and colors.',
+      specs: 'GSM: 120-280 | Width: 44"-58" | Patterns: Traditional, Contemporary',
+      useCases: 'Ethnic Wear, Fashion Garments, Accessories, Decorative Items',
+    },
+    {
+      name: 'Crepe & High Twist',
+      image: crepeHighTwistFabric,
+      description: 'Textured fabrics with twisted yarns creating distinctive surface effects.',
+      specs: 'GSM: 100-250 | Width: 44"-58" | Textures: Fine Crepe, Heavy Crepe',
+      useCases: 'Formal Wear, Dresses, Blouses, Fashion Garments',
+    },
+    {
+      name: 'Lycra & Lycra Blends',
+      image: lycraBlendFabric,
+      description: 'Stretch fabrics combining comfort with performance and recovery.',
+      specs: 'GSM: 120-300 | Width: 44"-60" | Stretch: 2-way, 4-way, Recovery',
+      useCases: 'Activewear, Swimwear, Fashion Garments, Performance Wear',
     },
   ];
 
