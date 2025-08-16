@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
+import jankinathLogo from '@/assets/jankinath-logo.png';
 
 const Footer = () => {
   return (
@@ -8,9 +9,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="font-serif text-2xl font-bold mb-4 block">
-              JANKI NATH & CO.
-            </Link>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src={jankinathLogo} 
+                alt="Janki Nath & Co. Fabrics" 
+                className="h-12 w-12 brightness-0 invert"
+              />
+              <Link to="/" className="font-serif text-2xl font-bold">
+                JANKI NATH & CO.
+              </Link>
+            </div>
             <p className="font-body text-primary-foreground/80 mb-6 max-w-md">
               Weaving excellence for generations. Premium quality fabrics for the world's most iconic brands.
             </p>

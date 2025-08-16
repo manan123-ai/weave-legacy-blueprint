@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Award } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import jankinathLogo from '@/assets/jankinath-logo.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,14 +53,24 @@ const Navigation = () => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
+            className="flex items-center"
           >
             <Link 
               to="/" 
-              className={`font-serif text-2xl font-bold transition-colors ${
-                scrolled ? 'text-primary' : 'text-white'
-              }`}
+              className="flex items-center space-x-3"
             >
-              Janki Nath & Co.
+              <img 
+                src={jankinathLogo} 
+                alt="Janki Nath & Co. Fabrics" 
+                className={`h-12 w-12 transition-all duration-300 ${
+                  scrolled ? 'brightness-100' : 'brightness-0 invert'
+                }`}
+              />
+              <span className={`font-serif text-xl font-bold transition-colors hidden sm:block ${
+                scrolled ? 'text-primary' : 'text-white'
+              }`}>
+                Janki Nath & Co.
+              </span>
             </Link>
           </motion.div>
 
