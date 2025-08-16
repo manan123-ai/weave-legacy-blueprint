@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import Footer from '@/components/Footer';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import cottonFabric from '@/assets/cotton-pinterest.jpg';
 import cottonBlendsFabric from '@/assets/cotton-blends-pinterest.jpg';
 import linenFabric from '@/assets/linen-new.jpg';
@@ -21,6 +23,8 @@ import crepeHighTwistFabric from '@/assets/crepe-hightwist-fabric.jpg';
 import lycraBlendFabric from '@/assets/lycra-blend-fabric.jpg';
 
 const Fabrics = () => {
+  const [selectedFilter, setSelectedFilter] = useState('all');
+
   const fabricCategories = [
     {
       name: 'Cotton',
@@ -164,6 +168,35 @@ const Fabrics = () => {
     },
   ];
 
+  // Filter categories for the dropdown
+  const filterCategories = [
+    { value: 'all', label: 'All Fabrics' },
+    { value: 'cotton', label: 'Cotton Types' },
+    { value: 'luxury', label: 'Luxury Fabrics' },
+    { value: 'specialty', label: 'Specialty & Technical' },
+    { value: 'decorative', label: 'Decorative & Fashion' },
+    { value: 'basic', label: 'Basic Weaves' },
+  ];
+
+  // Filter fabrics based on selected category
+  const getFilteredFabrics = () => {
+    if (selectedFilter === 'all') return fabricCategories;
+    
+    const filterMap = {
+      cotton: ['Cotton', 'Cotton Blends', 'Poplin & Sheetings'],
+      luxury: ['Viscose', 'Jacquards', 'Linen', 'Tweeds', 'Cutwork Jacquard'],
+      specialty: ['Novelty Fabrics', 'Lycra & Lycra Blends', 'Upholstery & Home Furnishing'],
+      decorative: ['Yarn-Dyed', 'Indigo Dyes', 'Lurex & Sequins', 'IKAT & Tie Dye'],
+      basic: ['Dobby', 'Voiles & Cambric', 'Twills & Drills', 'Oxfords & Canvas', 'Crepe & High Twist'],
+    };
+    
+    return fabricCategories.filter(fabric => 
+      filterMap[selectedFilter]?.includes(fabric.name)
+    );
+  };
+
+  const filteredFabrics = getFilteredFabrics();
+
   return (
     <div className="min-h-screen">
       <main className="pt-16">
@@ -182,8 +215,40 @@ const Fabrics = () => {
         {/* Fabric Grid */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Filter Dropdown */}
+            <div className="mb-8 flex justify-between items-center">
+              <h2 className="font-serif text-3xl font-bold text-primary">
+                Browse by Category
+              </h2>
+              <div className="w-64">
+                <Select value={selectedFilter} onValueChange={setSelectedFilter}>
+                  <SelectTrigger className="bg-background border-2 border-border hover:border-primary/50 transition-colors">
+                    <SelectValue placeholder="Filter fabrics..." />
+                  </SelectTrigger>
+                  <SelectContent className="bg-background border-2 border-border shadow-lg z-50">
+                    {filterCategories.map((category) => (
+                      <SelectItem 
+                        key={category.value} 
+                        value={category.value}
+                        className="hover:bg-secondary cursor-pointer"
+                      >
+                        {category.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            {/* Results Count */}
+            <div className="mb-6">
+              <p className="font-body text-muted-foreground">
+                Showing {filteredFabrics.length} of {fabricCategories.length} fabric{filteredFabrics.length !== 1 ? 's' : ''}
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {fabricCategories.map((fabric, index) => (
+              {filteredFabrics.map((fabric, index) => (
                 <div
                   key={index}
                   className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
