@@ -116,9 +116,7 @@ const FabricShowreel = () => {
                 />
               </div>
               <motion.div 
-                className="p-4 sm:p-6"
-                whileHover={{ backgroundColor: "hsl(var(--secondary))" }}
-                transition={{ duration: 0.3 }}
+                className="p-4 sm:p-6 transition-colors duration-300 group-hover:bg-secondary"
               >
                 <h3 className="font-serif text-xl font-semibold text-primary mb-2 group-hover:text-foreground transition-colors">
                   {category.name}
