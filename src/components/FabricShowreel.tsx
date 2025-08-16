@@ -1,11 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import cottonFabric from '@/assets/cotton-premium.jpg';
-import cottonBlendsFabric from '@/assets/cotton-blends-updated.jpg';
+import cottonFabric from '@/assets/cotton-pinterest.jpg';
+import cottonBlendsFabric from '@/assets/cotton-blends-pinterest.jpg';
 import linenFabric from '@/assets/linen-new.jpg';
 import jacquardFabric from '@/assets/jacquard-new.jpg';
-import viscoseFabric from '@/assets/viscose-premium.jpg';
+import viscoseFabric from '@/assets/viscose-pinterest.jpg';
 import tweedFabric from '@/assets/tweed-new.jpg';
 import upholsteryFabric from '@/assets/upholstery-fabric-samples.jpg';
 import specialtyWovenFabric from '@/assets/specialty-woven-new.jpg';
