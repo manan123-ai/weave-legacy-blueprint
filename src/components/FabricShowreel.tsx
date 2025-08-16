@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import cottonFabric from '@/assets/cotton-pinterest.jpg';
 import cottonBlendsFabric from '@/assets/cotton-blends-pinterest.jpg';
 import linenFabric from '@/assets/linen-new.jpg';
-import jacquardFabric from '@/assets/jacquard-new.jpg';
+import jacquardFabric from '@/assets/jacquard-pinterest.jpg';
 import viscoseFabric from '@/assets/viscose-pinterest.jpg';
 import tweedFabric from '@/assets/tweed-new.jpg';
 import upholsteryFabric from '@/assets/upholstery-fabric-samples.jpg';
