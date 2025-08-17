@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Award } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import jankinathLogo from '@/assets/jankinath-logo.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

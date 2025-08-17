@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import EnhancedWorldMap from './EnhancedWorldMap';
+import worldMapImage from '@/assets/world-map.jpg';
 import { useRef } from 'react';
 
 const GlobalExportMap = () => {
@@ -74,7 +74,88 @@ const GlobalExportMap = () => {
           </motion.p>
         </motion.div>
 
-        <EnhancedWorldMap />
+        {/* World Map */}
+        <motion.div 
+          className="relative bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-primary-foreground/20 overflow-hidden"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="relative">
+            <motion.img 
+              src={worldMapImage}
+              alt="World Map showing our global reach"
+              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              initial={{ scale: 1.1, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            />
+            
+            {/* Export locations markers */}
+            <motion.div 
+              className="absolute top-1/2 left-[58%] transform -translate-x-1/2 -translate-y-1/2"
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <motion.div 
+                className="relative"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                }}
+                transition={{ 
+                  duration: 2, 
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <div className="w-6 h-6 bg-primary-foreground rounded-full border-4 border-primary shadow-lg"></div>
+                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-primary-foreground text-primary px-3 py-1 rounded-full text-sm font-bold whitespace-nowrap">
+                  India
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Additional export markers */}
+            {[
+              { x: 20, y: 40, label: 'USA' },
+              { x: 50, y: 35, label: 'Europe' },
+              { x: 75, y: 45, label: 'Asia' },
+              { x: 85, y: 70, label: 'Australia' }
+            ].map((location, index) => (
+              <motion.div 
+                key={location.label}
+                className="absolute transform -translate-x-1/2 -translate-y-1/2"
+                style={{ top: `${location.y}%`, left: `${location.x}%` }}
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.7 + index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <motion.div 
+                  className="relative"
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{ 
+                    duration: 3, 
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: index * 0.5
+                  }}
+                >
+                  <div className="w-4 h-4 bg-accent rounded-full border-2 border-primary-foreground shadow-lg"></div>
+                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground px-2 py-1 rounded text-xs font-medium whitespace-nowrap">
+                    {location.label}
+                  </div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         <motion.div 
           className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 text-center"
