@@ -1,31 +1,61 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-// Import existing fabric texture images
-import cottonTexture from '@/assets/cotton-fabric.jpg';
-import linenTexture from '@/assets/linen-fabric.jpg';
-import jacquardTexture from '@/assets/jacquard-fabric.jpg';
-import viscoseTexture from '@/assets/viscose-fabric.jpg';
-import dobbyTexture from '@/assets/dobby-fabric.jpg';
-import crepeTexture from '@/assets/crepe-hightwist-fabric.jpg';
-import twillTexture from '@/assets/twill-drill-fabric.jpg';
-import oxfordTexture from '@/assets/oxford-canvas-fabric.jpg';
+// Import Pinterest-inspired fabric texture images
+import plainWeaveTexture from '@/assets/fabric-textures/plain-weave-checkered.jpg';
+import looseWeaveTexture from '@/assets/fabric-textures/loose-weave-grey.jpg';
+import jacquardTraditionalTexture from '@/assets/fabric-textures/jacquard-traditional-pattern.jpg';
+import twillWeaveTeal from '@/assets/fabric-textures/twill-weave-teal.jpg';
+import crepeWeaveTexture from '@/assets/fabric-textures/crepe-weave-natural.jpg';
 
-// Import new fabric texture images from web
+// Import existing fabric texture images
 import cottonTextureNew from '@/assets/fabric-textures/cotton-texture-new.jpg';
 import linenTextureNew from '@/assets/fabric-textures/linen-natural-texture.jpg';
-import jacquardTextureNew from '@/assets/fabric-textures/jacquard-pattern-texture.jpg';
 import viscoseTextureNew from '@/assets/fabric-textures/viscose-silk-texture.jpg';
-import twillTextureNew from '@/assets/fabric-textures/twill-texture-new.jpg';
 import denimTexture from '@/assets/fabric-textures/denim-texture-new.jpg';
 import canvasTexture from '@/assets/fabric-textures/canvas-texture-new.jpg';
-import crepeTextureNew from '@/assets/fabric-textures/crepe-texture-new.jpg';
 import oxfordTextureNew from '@/assets/fabric-textures/oxford-basket-weave.jpg';
+import dobbyTexture from '@/assets/dobby-fabric.jpg';
 
 const FabricGallery = () => {
   const [selectedFabric, setSelectedFabric] = useState<number | null>(null);
 
   const fabricTextures = [
+    {
+      name: 'Plain Weave',
+      image: plainWeaveTexture,
+      description: 'Classic over-under interlacing pattern with checkered design',
+      technique: 'Plain Weave',
+      properties: 'Simple Structure, Balanced, Versatile'
+    },
+    {
+      name: 'Loose Weave',
+      image: looseWeaveTexture,
+      description: 'Open weave structure allowing air circulation',
+      technique: 'Loose Weave',
+      properties: 'Breathable, Lightweight, Natural'
+    },
+    {
+      name: 'Traditional Jacquard',
+      image: jacquardTraditionalTexture,
+      description: 'Intricate geometric patterns with metallic threads',
+      technique: 'Jacquard Loom',
+      properties: 'Complex Patterns, Luxury, Traditional Craft'
+    },
+    {
+      name: 'Twill Weave',
+      image: twillWeaveTeal,
+      description: 'Diagonal rib pattern creating durable fabric structure',
+      technique: 'Twill Weave',
+      properties: 'Diagonal Pattern, Strong, Durable'
+    },
+    {
+      name: 'Crepe Weave',
+      image: crepeWeaveTexture,
+      description: 'High-twist yarns creating characteristic crinkled texture',
+      technique: 'Crepe Weave',
+      properties: 'Crinkled Texture, Elegant Drape, Refined'
+    },
     {
       name: 'Cotton',
       image: cottonTextureNew,
@@ -41,13 +71,6 @@ const FabricGallery = () => {
       properties: 'Moisture-wicking, Anti-bacterial, Strong'
     },
     {
-      name: 'Jacquard',
-      image: jacquardTextureNew,
-      description: 'Intricate pattern weaving for luxury textiles',
-      technique: 'Jacquard Loom',
-      properties: 'Complex Patterns, Luxurious, Decorative'
-    },
-    {
       name: 'Viscose',
       image: viscoseTextureNew,
       description: 'Silk-like synthetic with elegant drape',
@@ -55,7 +78,7 @@ const FabricGallery = () => {
       properties: 'Silk-like Feel, Lustrous, Flowing'
     },
     {
-      name: 'Twill Denim',
+      name: 'Denim',
       image: denimTexture,
       description: 'Classic diagonal weave for sturdy fabrics',
       technique: 'Twill Weave',
@@ -69,20 +92,6 @@ const FabricGallery = () => {
       properties: 'Heavy-duty, Water-resistant, Strong'
     },
     {
-      name: 'Dobby',
-      image: dobbyTexture,
-      description: 'Geometric pattern precision weaving',
-      technique: 'Dobby Weave',
-      properties: 'Geometric Patterns, Textured, Sophisticated'
-    },
-    {
-      name: 'Crepe',
-      image: crepeTextureNew,
-      description: 'Twisted high-twist yarns creating texture',
-      technique: 'Crepe Weave',
-      properties: 'Crinkled Texture, Flowing, Elegant'
-    },
-    {
       name: 'Oxford',
       image: oxfordTextureNew,
       description: 'Basket weave structure for casual elegance',
@@ -90,25 +99,11 @@ const FabricGallery = () => {
       properties: 'Casual, Breathable, Classic'
     },
     {
-      name: 'High-Twist Crepe',
-      image: crepeTexture,
-      description: 'Advanced crepe with enhanced texture',
-      technique: 'High-Twist Crepe',
-      properties: 'Enhanced Texture, Wrinkle-resistant, Refined'
-    },
-    {
-      name: 'Drill Twill',
-      image: twillTextureNew,
-      description: 'Reinforced twill for workwear applications',
-      technique: 'Reinforced Twill',
-      properties: 'Extra Strong, Workwear Grade, Long-lasting'
-    },
-    {
-      name: 'Pure Linen',
-      image: linenTexture,
-      description: 'Traditional linen with authentic texture',
-      technique: 'Traditional Weave',
-      properties: 'Authentic, Natural, Breathable'
+      name: 'Dobby',
+      image: dobbyTexture,
+      description: 'Geometric pattern precision weaving',
+      technique: 'Dobby Weave',
+      properties: 'Geometric Patterns, Textured, Sophisticated'
     }
   ];
 
