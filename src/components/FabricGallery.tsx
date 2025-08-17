@@ -5,8 +5,9 @@ import { useState } from 'react';
 import plainWeaveTexture from '@/assets/fabric-textures/plain-weave-checkered.jpg';
 import looseWeaveTexture from '@/assets/fabric-textures/loose-weave-grey.jpg';
 import jacquardTraditionalTexture from '@/assets/fabric-textures/jacquard-traditional-pattern.jpg';
-import twillWeaveTeal from '@/assets/fabric-textures/twill-weave-teal.jpg';
 import crepeWeaveTexture from '@/assets/fabric-textures/crepe-weave-natural.jpg';
+import oxfordHerringboneTexture from '@/assets/fabric-textures/oxford-herringbone-green.jpg';
+import rosepathTwillTexture from '@/assets/fabric-textures/rosepath-twill-beige.jpg';
 
 // Import existing fabric texture images
 import cottonTextureNew from '@/assets/fabric-textures/cotton-texture-new.jpg';
@@ -14,7 +15,6 @@ import linenTextureNew from '@/assets/fabric-textures/linen-natural-texture.jpg'
 import viscoseTextureNew from '@/assets/fabric-textures/viscose-silk-texture.jpg';
 import denimTexture from '@/assets/fabric-textures/denim-texture-new.jpg';
 import canvasTexture from '@/assets/fabric-textures/canvas-texture-new.jpg';
-import oxfordTextureNew from '@/assets/fabric-textures/oxford-basket-weave.jpg';
 import dobbyTexture from '@/assets/dobby-fabric.jpg';
 
 const FabricGallery = () => {
@@ -44,10 +44,10 @@ const FabricGallery = () => {
     },
     {
       name: 'Twill Weave',
-      image: twillWeaveTeal,
-      description: 'Diagonal rib pattern creating durable fabric structure',
+      image: rosepathTwillTexture,
+      description: 'Rosepath twill with elegant diagonal rib pattern',
       technique: 'Twill Weave',
-      properties: 'Diagonal Pattern, Strong, Durable'
+      properties: 'Diagonal Pattern, Strong, Traditional Craft'
     },
     {
       name: 'Crepe Weave',
@@ -92,11 +92,11 @@ const FabricGallery = () => {
       properties: 'Heavy-duty, Water-resistant, Strong'
     },
     {
-      name: 'Oxford',
-      image: oxfordTextureNew,
-      description: 'Basket weave structure for casual elegance',
+      name: 'Oxford Herringbone',
+      image: oxfordHerringboneTexture,
+      description: 'Chevron herringbone pattern for luxury applications',
       technique: 'Oxford Weave',
-      properties: 'Casual, Breathable, Classic'
+      properties: 'Herringbone Pattern, Luxury, Decorative'
     },
     {
       name: 'Dobby',
