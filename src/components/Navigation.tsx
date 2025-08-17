@@ -60,14 +60,7 @@ const Navigation = () => {
               to="/" 
               className="flex items-center space-x-3"
             >
-              <img 
-                src={jankinathLogo} 
-                alt="Janki Nath & Co. Fabrics" 
-                className={`h-12 w-12 transition-all duration-300 ${
-                  scrolled ? 'brightness-100' : 'brightness-0 invert'
-                }`}
-              />
-              <span className={`font-serif text-xl font-bold transition-colors hidden sm:block ${
+              <span className={`font-serif text-xl font-bold transition-colors ${
                 scrolled ? 'text-primary' : 'text-white'
               }`}>
                 Janki Nath & Co.

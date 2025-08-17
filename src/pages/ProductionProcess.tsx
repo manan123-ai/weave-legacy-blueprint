@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { CheckCircle, Clock, Users, Package, Truck, Award } from 'lucide-react';
 import Footer from '@/components/Footer';
+import IndiaWorldMap from '@/components/IndiaWorldMap';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -14,16 +15,16 @@ const ProductionProcess = () => {
   const productionSteps = [
     {
       id: 1,
-      title: "Yarn Selection & Quality Check",
-      description: "Premium quality yarns are carefully selected and undergo rigorous quality testing to ensure they meet our strict standards.",
+      title: "Raw Material Selection & Quality Check",
+      description: "Premium quality raw materials are carefully selected and undergo rigorous quality testing to ensure they meet our strict standards.",
       image: cottonYarn,
       icon: <CheckCircle className="h-8 w-8" />,
       duration: "1-2 Days"
     },
     {
       id: 2,
-      title: "Yarn Preparation & Dyeing", 
-      description: "Yarns are prepared, sorted by specifications, and dyed using advanced techniques to achieve perfect color matching.",
+      title: "Material Preparation & Processing", 
+      description: "Raw materials are prepared, sorted by specifications, and processed using advanced techniques to achieve perfect quality standards.",
       image: yarnProduction,
       icon: <Users className="h-8 w-8" />,
       duration: "2-3 Days"
@@ -245,6 +246,9 @@ const ProductionProcess = () => {
           </div>
         </div>
       </section>
+
+      {/* India World Map Section */}
+      <IndiaWorldMap />
 
       {/* Call to Action */}
       <section className="py-24 bg-primary text-primary-foreground">
