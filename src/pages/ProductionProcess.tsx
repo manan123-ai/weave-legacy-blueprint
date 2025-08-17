@@ -6,12 +6,13 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 // Import fabric and weaving images
-import weavingProcess from '@/assets/weaving-process.jpg';
 import weavingLoomBanner from '@/assets/weaving-loom-banner.jpg';
-import fabricSamples from '@/assets/upholstery-fabric-samples.jpg';
-import cottonFabric from '@/assets/cotton-fabric.jpg';
-import jacquardFabric from '@/assets/jacquard-fabric.jpg';
-import linenFabric from '@/assets/linen-fabric.jpg';
+import productionRawMaterials from '@/assets/production-raw-materials.jpg';
+import productionMaterialPrep from '@/assets/production-material-prep.jpg';
+import productionLoomSetup from '@/assets/production-loom-setup.jpg';
+import productionWeaving from '@/assets/production-weaving.jpg';
+import productionQualityCheck from '@/assets/production-quality-check.jpg';
+import productionPackaging from '@/assets/production-packaging.jpg';
 
 const ProductionProcess = () => {
   const productionSteps = [
@@ -19,7 +20,7 @@ const ProductionProcess = () => {
       id: 1,
       title: "Raw Material Selection & Quality Check",
       description: "Premium quality raw materials are carefully selected and undergo rigorous quality testing to ensure they meet our strict standards.",
-      image: cottonFabric,
+      image: productionRawMaterials,
       icon: <CheckCircle className="h-8 w-8" />,
       duration: "1-2 Days"
     },
@@ -27,7 +28,7 @@ const ProductionProcess = () => {
       id: 2,
       title: "Material Preparation & Processing", 
       description: "Raw materials are prepared, sorted by specifications, and processed using advanced techniques to achieve perfect quality standards.",
-      image: jacquardFabric,
+      image: productionMaterialPrep,
       icon: <Users className="h-8 w-8" />,
       duration: "2-3 Days"
     },
@@ -35,7 +36,7 @@ const ProductionProcess = () => {
       id: 3,
       title: "Loom Setup & Warping",
       description: "Our skilled technicians set up the looms with precision, ensuring proper tension and alignment for optimal weaving.",
-      image: weavingProcess,
+      image: productionLoomSetup,
       icon: <Package className="h-8 w-8" />,
       duration: "1 Day"
     },
@@ -43,7 +44,7 @@ const ProductionProcess = () => {
       id: 4,
       title: "Weaving Process",
       description: "Master weavers operate state-of-the-art looms, combining traditional techniques with modern technology to create exceptional fabrics.",
-      image: linenFabric,
+      image: productionWeaving,
       icon: <Clock className="h-8 w-8" />,
       duration: "3-7 Days"
     },
@@ -51,7 +52,7 @@ const ProductionProcess = () => {
       id: 5,
       title: "Quality Control & Finishing",
       description: "Each fabric undergoes thorough inspection, finishing treatments, and final quality checks before packaging.",
-      image: fabricSamples,
+      image: productionQualityCheck,
       icon: <Award className="h-8 w-8" />,
       duration: "1-2 Days"
     },
@@ -59,7 +60,7 @@ const ProductionProcess = () => {
       id: 6,
       title: "Packaging & Dispatch",
       description: "Approved fabrics are carefully packaged using industry-standard methods and dispatched with proper documentation.",
-      image: weavingLoomBanner,
+      image: productionPackaging,
       icon: <Truck className="h-8 w-8" />,
       duration: "1 Day"
     }
