@@ -7,9 +7,11 @@ import { Link } from 'react-router-dom';
 
 // Import fabric and weaving images
 import weavingProcess from '@/assets/weaving-process.jpg';
-import yarnProduction from '@/assets/yarn-production-banner.jpg';
+import weavingLoomBanner from '@/assets/weaving-loom-banner.jpg';
 import fabricSamples from '@/assets/upholstery-fabric-samples.jpg';
-import cottonYarn from '@/assets/cotton-yarn.jpg';
+import cottonFabric from '@/assets/cotton-fabric.jpg';
+import jacquardFabric from '@/assets/jacquard-fabric.jpg';
+import linenFabric from '@/assets/linen-fabric.jpg';
 
 const ProductionProcess = () => {
   const productionSteps = [
@@ -17,7 +19,7 @@ const ProductionProcess = () => {
       id: 1,
       title: "Raw Material Selection & Quality Check",
       description: "Premium quality raw materials are carefully selected and undergo rigorous quality testing to ensure they meet our strict standards.",
-      image: cottonYarn,
+      image: cottonFabric,
       icon: <CheckCircle className="h-8 w-8" />,
       duration: "1-2 Days"
     },
@@ -25,7 +27,7 @@ const ProductionProcess = () => {
       id: 2,
       title: "Material Preparation & Processing", 
       description: "Raw materials are prepared, sorted by specifications, and processed using advanced techniques to achieve perfect quality standards.",
-      image: yarnProduction,
+      image: jacquardFabric,
       icon: <Users className="h-8 w-8" />,
       duration: "2-3 Days"
     },
@@ -41,7 +43,7 @@ const ProductionProcess = () => {
       id: 4,
       title: "Weaving Process",
       description: "Master weavers operate state-of-the-art looms, combining traditional techniques with modern technology to create exceptional fabrics.",
-      image: fabricSamples,
+      image: linenFabric,
       icon: <Clock className="h-8 w-8" />,
       duration: "3-7 Days"
     },
@@ -49,7 +51,7 @@ const ProductionProcess = () => {
       id: 5,
       title: "Quality Control & Finishing",
       description: "Each fabric undergoes thorough inspection, finishing treatments, and final quality checks before packaging.",
-      image: weavingProcess,
+      image: fabricSamples,
       icon: <Award className="h-8 w-8" />,
       duration: "1-2 Days"
     },
@@ -57,7 +59,7 @@ const ProductionProcess = () => {
       id: 6,
       title: "Packaging & Dispatch",
       description: "Approved fabrics are carefully packaged using industry-standard methods and dispatched with proper documentation.",
-      image: fabricSamples,
+      image: weavingLoomBanner,
       icon: <Truck className="h-8 w-8" />,
       duration: "1 Day"
     }
@@ -103,8 +105,8 @@ const ProductionProcess = () => {
         {/* Background Video/Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={weavingProcess} 
-            alt="Weaving Process" 
+            src={weavingLoomBanner} 
+            alt="Fabric Production Process" 
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-accent/80"></div>
