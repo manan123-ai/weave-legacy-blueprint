@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-// Import fabric texture images
+// Import existing fabric texture images
 import cottonTexture from '@/assets/cotton-fabric.jpg';
 import linenTexture from '@/assets/linen-fabric.jpg';
 import jacquardTexture from '@/assets/jacquard-fabric.jpg';
@@ -11,57 +11,104 @@ import crepeTexture from '@/assets/crepe-hightwist-fabric.jpg';
 import twillTexture from '@/assets/twill-drill-fabric.jpg';
 import oxfordTexture from '@/assets/oxford-canvas-fabric.jpg';
 
+// Import new fabric texture images from web
+import cottonTextureNew from '@/assets/fabric-textures/cotton-texture-new.jpg';
+import linenTextureNew from '@/assets/fabric-textures/linen-natural-texture.jpg';
+import jacquardTextureNew from '@/assets/fabric-textures/jacquard-pattern-texture.jpg';
+import viscoseTextureNew from '@/assets/fabric-textures/viscose-silk-texture.jpg';
+import twillTextureNew from '@/assets/fabric-textures/twill-texture-new.jpg';
+import denimTexture from '@/assets/fabric-textures/denim-texture-new.jpg';
+import canvasTexture from '@/assets/fabric-textures/canvas-texture-new.jpg';
+import crepeTextureNew from '@/assets/fabric-textures/crepe-texture-new.jpg';
+import oxfordTextureNew from '@/assets/fabric-textures/oxford-basket-weave.jpg';
+
 const FabricGallery = () => {
   const [selectedFabric, setSelectedFabric] = useState<number | null>(null);
 
   const fabricTextures = [
     {
       name: 'Cotton',
-      image: cottonTexture,
-      description: 'Pure cotton with natural breathability',
-      technique: 'Plain Weave'
+      image: cottonTextureNew,
+      description: 'Pure cotton with natural breathability and softness',
+      technique: 'Plain Weave',
+      properties: 'Hypoallergenic, Breathable, Durable'
     },
     {
       name: 'Linen',
-      image: linenTexture,
-      description: 'Natural flax fiber luxury',
-      technique: 'Loose Weave'
+      image: linenTextureNew,
+      description: 'Natural flax fiber with exceptional cooling properties',
+      technique: 'Loose Weave',
+      properties: 'Moisture-wicking, Anti-bacterial, Strong'
     },
     {
       name: 'Jacquard',
-      image: jacquardTexture,
-      description: 'Intricate pattern weaving',
-      technique: 'Jacquard Loom'
+      image: jacquardTextureNew,
+      description: 'Intricate pattern weaving for luxury textiles',
+      technique: 'Jacquard Loom',
+      properties: 'Complex Patterns, Luxurious, Decorative'
     },
     {
       name: 'Viscose',
-      image: viscoseTexture,
-      description: 'Silk-like synthetic elegance',
-      technique: 'Twill Weave'
+      image: viscoseTextureNew,
+      description: 'Silk-like synthetic with elegant drape',
+      technique: 'Twill Weave',
+      properties: 'Silk-like Feel, Lustrous, Flowing'
+    },
+    {
+      name: 'Twill Denim',
+      image: denimTexture,
+      description: 'Classic diagonal weave for sturdy fabrics',
+      technique: 'Twill Weave',
+      properties: 'Durable, Diagonal Pattern, Versatile'
+    },
+    {
+      name: 'Canvas',
+      image: canvasTexture,
+      description: 'Heavy-duty fabric with basket weave structure',
+      technique: 'Plain Weave',
+      properties: 'Heavy-duty, Water-resistant, Strong'
     },
     {
       name: 'Dobby',
       image: dobbyTexture,
-      description: 'Geometric pattern precision',
-      technique: 'Dobby Weave'
+      description: 'Geometric pattern precision weaving',
+      technique: 'Dobby Weave',
+      properties: 'Geometric Patterns, Textured, Sophisticated'
     },
     {
       name: 'Crepe',
-      image: crepeTexture,
-      description: 'Twisted high-twist yarns',
-      technique: 'Crepe Weave'
-    },
-    {
-      name: 'Twill',
-      image: twillTexture,
-      description: 'Diagonal weave pattern',
-      technique: 'Twill Weave'
+      image: crepeTextureNew,
+      description: 'Twisted high-twist yarns creating texture',
+      technique: 'Crepe Weave',
+      properties: 'Crinkled Texture, Flowing, Elegant'
     },
     {
       name: 'Oxford',
-      image: oxfordTexture,
-      description: 'Basket weave structure',
-      technique: 'Oxford Weave'
+      image: oxfordTextureNew,
+      description: 'Basket weave structure for casual elegance',
+      technique: 'Oxford Weave',
+      properties: 'Casual, Breathable, Classic'
+    },
+    {
+      name: 'High-Twist Crepe',
+      image: crepeTexture,
+      description: 'Advanced crepe with enhanced texture',
+      technique: 'High-Twist Crepe',
+      properties: 'Enhanced Texture, Wrinkle-resistant, Refined'
+    },
+    {
+      name: 'Drill Twill',
+      image: twillTextureNew,
+      description: 'Reinforced twill for workwear applications',
+      technique: 'Reinforced Twill',
+      properties: 'Extra Strong, Workwear Grade, Long-lasting'
+    },
+    {
+      name: 'Pure Linen',
+      image: linenTexture,
+      description: 'Traditional linen with authentic texture',
+      technique: 'Traditional Weave',
+      properties: 'Authentic, Natural, Breathable'
     }
   ];
 
@@ -124,7 +171,7 @@ const FabricGallery = () => {
         </motion.div>
 
         {/* Fabric Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {fabricTextures.map((fabric, index) => (
             <motion.div
               key={index}
@@ -165,12 +212,12 @@ const FabricGallery = () => {
                 
                 {/* Hover Content */}
                 <motion.div 
-                  className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute bottom-0 left-0 right-0 p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 >
-                  <h3 className="font-serif text-lg font-bold mb-1">
+                  <h3 className="font-serif text-sm md:text-lg font-bold mb-1">
                     {fabric.name}
                   </h3>
-                  <p className="font-body text-sm opacity-90">
+                  <p className="font-body text-xs md:text-sm opacity-90">
                     {fabric.technique}
                   </p>
                 </motion.div>
@@ -185,9 +232,12 @@ const FabricGallery = () => {
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="font-body text-sm text-muted-foreground">
+                  <p className="font-body text-sm text-muted-foreground mb-2">
                     {fabric.description}
                   </p>
+                  <div className="text-xs text-primary font-medium">
+                    Properties: {fabric.properties}
+                  </div>
                 </motion.div>
               )}
             </motion.div>
