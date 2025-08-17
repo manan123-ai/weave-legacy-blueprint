@@ -1,18 +1,31 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import weavingVideo from '@/assets/weaving-process.jpg'; // Using image as fallback for video
 
 const AboutPreview = () => {
   return (
     <section className="py-24 bg-secondary relative overflow-hidden">
+      {/* Background Video/Image */}
+      <div className="absolute inset-0 z-0">
+        <div className="relative w-full h-full">
+          <img 
+            src={weavingVideo} 
+            alt="Weaving Process Background" 
+            className="w-full h-full object-cover opacity-15 scale-110 animate-slow-zoom"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 via-secondary/90 to-secondary/95"></div>
+        </div>
+      </div>
+      
       {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 z-[1]">
         <div className="absolute top-10 left-10 w-32 h-32 border border-primary rounded-full animate-float" />
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-primary rounded-full animate-float" style={{ animationDelay: '1s' }} />
         <div className="absolute top-1/2 right-10 w-16 h-16 border border-primary rounded-full animate-float" style={{ animationDelay: '2s' }} />
       </div>
       
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
         <motion.h2 
           className="font-serif text-4xl md:text-5xl font-bold text-primary mb-8"
           initial={{ opacity: 0, y: 50 }}

@@ -134,6 +134,14 @@ export default {
 					'100%': {
 						backgroundPosition: '200% 0'
 					}
+				},
+				'slow-zoom': {
+					'0%': {
+						transform: 'scale(1.1)'
+					},
+					'100%': {
+						transform: 'scale(1.2)'
+					}
 				}
 			},
 			animation: {
@@ -143,7 +151,8 @@ export default {
 				'fade-in-scale': 'fade-in-scale 0.5s ease-out forwards',
 				'slide-in-right': 'slide-in-right 0.6s ease-out forwards',
 				'float': 'float 3s ease-in-out infinite',
-				'shimmer': 'shimmer 2s linear infinite'
+				'shimmer': 'shimmer 2s linear infinite',
+				'slow-zoom': 'slow-zoom 20s ease-in-out infinite alternate'
 			}
 		}
 	},

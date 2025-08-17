@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import StaticWorldMap from './StaticWorldMap';
+import EnhancedWorldMap from './EnhancedWorldMap';
 import { useRef } from 'react';
 
 const GlobalExportMap = () => {
@@ -74,7 +74,7 @@ const GlobalExportMap = () => {
           </motion.p>
         </motion.div>
 
-        <StaticWorldMap />
+        <EnhancedWorldMap />
 
         <motion.div 
           className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 text-center"
