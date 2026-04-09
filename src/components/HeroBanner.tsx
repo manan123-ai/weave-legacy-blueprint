@@ -8,6 +8,7 @@ import heroSlide3 from '@/assets/yarn-production-banner.jpg';
 
 const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -16,6 +17,8 @@ const HeroBanner = () => {
   
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const rotateX = useTransform(scrollYProgress, [0, 1], [0, 5]);
 
   const slides = [
     {
@@ -36,7 +39,7 @@ const HeroBanner = () => {
     },
     {
       image: heroSlide3,
-      title: "Premium Yarn Production",
+      title: "Premium Fabric Production",
       subtitle: "World-Class Quality",
       description: "From fiber to finished fabric - complete control over our manufacturing excellence",
       buttonText: "View Our Work",
@@ -51,22 +54,33 @@ const HeroBanner = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!heroRef.current) return;
+    const rect = heroRef.current.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    setMousePos({ x, y });
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
     <motion.section 
       ref={heroRef}
       className="relative h-screen overflow-hidden"
-      style={{ y }}
+      style={{ y, perspective: 1200 }}
+      onMouseMove={handleMouseMove}
     >
-      {/* Background Images with Slides */}
-      <div className="absolute inset-0">
+      {/* Background Images with 3D parallax depth */}
+      <motion.div 
+        className="absolute inset-0"
+        style={{ 
+          scale,
+          rotateX,
+          transformStyle: 'preserve-3d',
+        }}
+      >
         {slides.map((slide, index) => (
           <motion.div
             key={index}
@@ -74,79 +88,75 @@ const HeroBanner = () => {
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ 
               opacity: currentSlide === index ? 1 : 0,
-              scale: currentSlide === index ? 1 : 1.1
+              scale: currentSlide === index ? 1 : 1.1,
+              z: currentSlide === index ? 0 : -100,
             }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
+            style={{ transformStyle: 'preserve-3d' }}
           >
-            <img
+            <motion.img
               src={slide.image}
               alt={slide.title}
               className="w-full h-full object-cover"
+              style={{
+                transform: `translate3d(${mousePos.x * -20}px, ${mousePos.y * -20}px, 0)`,
+                transition: 'transform 0.3s ease-out',
+              }}
             />
             {/* Weaving pattern animation overlay */}
             <div className="absolute inset-0 opacity-20">
               <div className="w-full h-full relative overflow-hidden">
-                {/* Dynamic weaving animations */}
                 <motion.div 
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                  animate={{ 
-                    x: ["-100%", "100%"]
-                  }}
-                  transition={{ 
-                    duration: 4, 
-                    repeat: Infinity, 
-                    ease: "linear",
-                    delay: index * 0.5
-                  }}
+                  animate={{ x: ["-100%", "100%"] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: index * 0.5 }}
                 />
                 <motion.div 
                   className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-transparent"
-                  animate={{ 
-                    y: ["-100%", "100%"]
-                  }}
-                  transition={{ 
-                    duration: 5, 
-                    repeat: Infinity, 
-                    ease: "linear",
-                    delay: index * 0.7
-                  }}
+                  animate={{ y: ["-100%", "100%"] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "linear", delay: index * 0.7 }}
                 />
               </div>
             </div>
           </motion.div>
         ))}
-        
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/50" />
-      </div>
+      </motion.div>
 
-      {/* Content Overlay */}
+      {/* Content with 3D depth layers */}
       <motion.div 
         className="relative z-10 h-full flex items-center justify-center text-center px-4"
-        style={{ opacity }}
+        style={{ 
+          opacity,
+          transform: `perspective(1000px) translate3d(${mousePos.x * 15}px, ${mousePos.y * 15}px, 50px)`,
+          transition: 'transform 0.3s ease-out',
+        }}
       >
         <div className="max-w-6xl mx-auto text-white">
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
+            initial={{ opacity: 0, y: 50, rotateX: -15 }}
+            animate={{ opacity: 1, y: 0, rotateX: 0 }}
+            exit={{ opacity: 0, y: -50, rotateX: 15 }}
             transition={{ duration: 1 }}
+            style={{ transformStyle: 'preserve-3d' }}
           >
             <motion.div 
               className="text-sm font-body uppercase tracking-wider text-accent mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, z: -30 }}
+              animate={{ opacity: 1, y: 0, z: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              style={{ transform: `translateZ(30px)` }}
             >
               {slides[currentSlide].subtitle}
             </motion.div>
             
             <motion.h1 
               className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight px-4"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50, z: -50 }}
+              animate={{ opacity: 1, y: 0, z: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
+              style={{ transform: `translateZ(60px)` }}
             >
               <motion.span 
                 className="bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent"
@@ -163,19 +173,22 @@ const HeroBanner = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
+              style={{ transform: `translateZ(40px)` }}
             >
               {slides[currentSlide].description}
             </motion.p>
             
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.9, z: -20 }}
+              animate={{ opacity: 1, scale: 1, z: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
+              style={{ transform: `translateZ(70px)` }}
             >
               <Button 
                 size="lg" 
                 onClick={slides[currentSlide].buttonAction}
-                className="bg-white text-black hover:bg-white/90 hover:scale-105 font-body font-medium px-8 py-3 text-lg transition-all duration-300 shadow-lg"
+                className="bg-white text-black hover:bg-white/90 hover:scale-110 font-body font-medium px-8 py-3 text-lg shadow-2xl hover:shadow-white/25"
+                style={{ transition: 'all 0.3s ease' }}
               >
                 {slides[currentSlide].buttonText}
               </Button>
@@ -184,19 +197,25 @@ const HeroBanner = () => {
         </div>
       </motion.div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows with 3D hover */}
       <button
         onClick={prevSlide}
-        className="absolute left-2 sm:left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 sm:p-3 transition-all duration-300 group"
+        className="absolute left-2 sm:left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 sm:p-3 group"
+        style={{ transition: 'all 0.3s ease', transformStyle: 'preserve-3d' }}
+        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-50%) scale(1.15) translateZ(20px)'}
+        onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(-50%)'}
       >
-        <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform" />
+        <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
       </button>
       
       <button
         onClick={nextSlide}
-        className="absolute right-2 sm:right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 sm:p-3 transition-all duration-300 group"
+        className="absolute right-2 sm:right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 sm:p-3 group"
+        style={{ transition: 'all 0.3s ease', transformStyle: 'preserve-3d' }}
+        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-50%) scale(1.15) translateZ(20px)'}
+        onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(-50%)'}
       >
-        <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform" />
+        <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
       </button>
 
       {/* Slide Indicators */}
@@ -207,7 +226,7 @@ const HeroBanner = () => {
             onClick={() => setCurrentSlide(index)}
             className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
               currentSlide === index 
-                ? 'bg-white scale-125' 
+                ? 'bg-white scale-125 shadow-lg shadow-white/50' 
                 : 'bg-white/50 hover:bg-white/70'
             }`}
           />
@@ -219,7 +238,7 @@ const HeroBanner = () => {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        style={{ opacity }}
+        style={{ opacity: opacity as any }}
       >
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <motion.div 
