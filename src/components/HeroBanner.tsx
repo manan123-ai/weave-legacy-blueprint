@@ -1,24 +1,23 @@
 import { Button } from '@/components/ui/button';
 import { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import heroSlide1 from '@/assets/colorful-fabric-banner.jpg';
 import heroSlide2 from '@/assets/weaving-loom-banner.jpg';
 import heroSlide3 from '@/assets/yarn-production-banner.jpg';
 
+const processSteps = [
+  { label: 'Yarn', icon: '🧶' },
+  { label: 'Weaving', icon: '🔄' },
+  { label: 'Dyeing', icon: '🎨' },
+  { label: 'Finishing', icon: '✨' },
+  { label: 'Garment', icon: '👔' },
+];
+
 const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [activeStep, setActiveStep] = useState(0);
   const heroRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"]
-  });
-  
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
-  const rotateX = useTransform(scrollYProgress, [0, 1], [0, 5]);
 
   const slides = [
     {
@@ -34,7 +33,7 @@ const HeroBanner = () => {
       title: "Advanced Weaving Technology",
       subtitle: "About Our Journey",
       description: "State-of-the-art manufacturing processes ensuring consistent quality and innovation",
-      buttonText: "Our Story", 
+      buttonText: "Our Story",
       buttonAction: () => window.location.href = '/about'
     },
     {
@@ -54,201 +53,166 @@ const HeroBanner = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!heroRef.current) return;
-    const rect = heroRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    setMousePos({ x, y });
-  };
+  // Animate through process steps
+  useEffect(() => {
+    const stepTimer = setInterval(() => {
+      setActiveStep((prev) => (prev + 1) % processSteps.length);
+    }, 2000);
+    return () => clearInterval(stepTimer);
+  }, []);
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <motion.section 
-      ref={heroRef}
-      className="relative h-screen overflow-hidden"
-      style={{ y, perspective: 1200 }}
-      onMouseMove={handleMouseMove}
-    >
-      {/* Background Images with 3D parallax depth */}
-      <motion.div 
-        className="absolute inset-0"
-        style={{ 
-          scale,
-          rotateX,
-          transformStyle: 'preserve-3d',
-        }}
-      >
-        {slides.map((slide, index) => (
-          <motion.div
-            key={index}
-            className="absolute inset-0"
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ 
-              opacity: currentSlide === index ? 1 : 0,
-              scale: currentSlide === index ? 1 : 1.1,
-              z: currentSlide === index ? 0 : -100,
-            }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            style={{ transformStyle: 'preserve-3d' }}
-          >
-            <motion.img
-              src={slide.image}
-              alt={slide.title}
-              className="w-full h-full object-cover"
-              style={{
-                transform: `translate3d(${mousePos.x * -20}px, ${mousePos.y * -20}px, 0)`,
-                transition: 'transform 0.3s ease-out',
-              }}
-            />
-            {/* Weaving pattern animation overlay */}
-            <div className="absolute inset-0 opacity-20">
-              <div className="w-full h-full relative overflow-hidden">
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                  animate={{ x: ["-100%", "100%"] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: index * 0.5 }}
-                />
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-transparent"
-                  animate={{ y: ["-100%", "100%"] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "linear", delay: index * 0.7 }}
-                />
-              </div>
-            </div>
-          </motion.div>
-        ))}
-        <div className="absolute inset-0 bg-black/50" />
-      </motion.div>
-
-      {/* Content with 3D depth layers */}
-      <motion.div 
-        className="relative z-10 h-full flex items-center justify-center text-center px-4"
-        style={{ 
-          opacity,
-          transform: `perspective(1000px) translate3d(${mousePos.x * 15}px, ${mousePos.y * 15}px, 50px)`,
-          transition: 'transform 0.3s ease-out',
-        }}
-      >
-        <div className="max-w-6xl mx-auto text-white">
+    <section ref={heroRef} className="relative h-screen overflow-hidden">
+      {/* Background Images */}
+      <div className="absolute inset-0">
+        <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0, y: 50, rotateX: -15 }}
-            animate={{ opacity: 1, y: 0, rotateX: 0 }}
-            exit={{ opacity: 0, y: -50, rotateX: 15 }}
-            transition={{ duration: 1 }}
-            style={{ transformStyle: 'preserve-3d' }}
+            className="absolute inset-0"
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
           >
-            <motion.div 
-              className="text-sm font-body uppercase tracking-wider text-accent mb-4"
-              initial={{ opacity: 0, y: 20, z: -30 }}
-              animate={{ opacity: 1, y: 0, z: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              style={{ transform: `translateZ(30px)` }}
-            >
-              {slides[currentSlide].subtitle}
-            </motion.div>
-            
-            <motion.h1 
-              className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight px-4"
-              initial={{ opacity: 0, y: 50, z: -50 }}
-              animate={{ opacity: 1, y: 0, z: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              style={{ transform: `translateZ(60px)` }}
-            >
-              <motion.span 
-                className="bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.8 }}
-              >
-                {slides[currentSlide].title}
-              </motion.span>
-            </motion.h1>
-            
-            <motion.p 
-              className="font-body text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 px-4"
+            <img
+              src={slides[currentSlide].image}
+              alt={slides[currentSlide].title}
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+        <div className="max-w-5xl mx-auto text-white">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              style={{ transform: `translateZ(40px)` }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.8 }}
             >
-              {slides[currentSlide].description}
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, z: -20 }}
-              animate={{ opacity: 1, scale: 1, z: 0 }}
-              transition={{ duration: 0.6, delay: 1 }}
-              style={{ transform: `translateZ(70px)` }}
-            >
-              <Button 
-                size="lg" 
-                onClick={slides[currentSlide].buttonAction}
-                className="bg-white text-black hover:bg-white/90 hover:scale-110 font-body font-medium px-8 py-3 text-lg shadow-2xl hover:shadow-white/25"
-                style={{ transition: 'all 0.3s ease' }}
+              <motion.p
+                className="text-sm font-body uppercase tracking-[0.3em] text-accent mb-4"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
               >
-                {slides[currentSlide].buttonText}
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
-      </motion.div>
+                {slides[currentSlide].subtitle}
+              </motion.p>
 
-      {/* Navigation Arrows with 3D hover */}
+              <motion.h1
+                className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight px-4"
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              >
+                {slides[currentSlide].title}
+              </motion.h1>
+
+              <motion.p
+                className="font-body text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 px-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+              >
+                {slides[currentSlide].description}
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+              >
+                <Button
+                  size="lg"
+                  onClick={slides[currentSlide].buttonAction}
+                  className="bg-white text-foreground hover:bg-white/90 font-body font-medium px-8 py-3 text-lg transition-all duration-300 hover:scale-105"
+                >
+                  {slides[currentSlide].buttonText}
+                </Button>
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Yarn to Garment Process Timeline */}
+        <motion.div
+          className="absolute bottom-20 sm:bottom-24 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+        >
+          <div className="flex items-center justify-between relative">
+            {/* Progress line */}
+            <div className="absolute top-5 left-[10%] right-[10%] h-[2px] bg-white/20">
+              <motion.div
+                className="h-full bg-white/80"
+                animate={{ width: `${(activeStep / (processSteps.length - 1)) * 100}%` }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+              />
+            </div>
+
+            {processSteps.map((step, index) => (
+              <div key={step.label} className="flex flex-col items-center z-10 relative">
+                <motion.div
+                  className={`w-10 h-10 rounded-full flex items-center justify-center text-lg transition-all duration-500 ${
+                    index <= activeStep
+                      ? 'bg-white text-foreground shadow-lg shadow-white/30'
+                      : 'bg-white/20 text-white/60'
+                  }`}
+                  animate={index === activeStep ? { scale: [1, 1.15, 1] } : {}}
+                  transition={{ duration: 0.6 }}
+                >
+                  {step.icon}
+                </motion.div>
+                <span className={`text-xs mt-2 font-body transition-all duration-500 ${
+                  index <= activeStep ? 'text-white' : 'text-white/40'
+                }`}>
+                  {step.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-2 sm:left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 sm:p-3 group"
-        style={{ transition: 'all 0.3s ease', transformStyle: 'preserve-3d' }}
-        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-50%) scale(1.15) translateZ(20px)'}
-        onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(-50%)'}
+        className="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 transition-all duration-300 hover:scale-110"
       >
         <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
       </button>
-      
+
       <button
         onClick={nextSlide}
-        className="absolute right-2 sm:right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 sm:p-3 group"
-        style={{ transition: 'all 0.3s ease', transformStyle: 'preserve-3d' }}
-        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-50%) scale(1.15) translateZ(20px)'}
-        onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(-50%)'}
+        className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 transition-all duration-300 hover:scale-110"
       >
         <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-16 sm:bottom-20 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2 sm:space-x-3">
+      <div className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 z-20 flex space-x-2 sm:space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-              currentSlide === index 
-                ? 'bg-white scale-125 shadow-lg shadow-white/50' 
-                : 'bg-white/50 hover:bg-white/70'
+            className={`h-1 rounded-full transition-all duration-500 ${
+              currentSlide === index
+                ? 'bg-white w-8'
+                : 'bg-white/40 w-3 hover:bg-white/60'
             }`}
           />
         ))}
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        style={{ opacity: opacity as any }}
-      >
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <motion.div 
-            className="w-1 h-3 bg-white rounded-full mt-2" 
-            animate={{ opacity: [1, 0.3, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-        </div>
-      </motion.div>
-    </motion.section>
+    </section>
   );
 };
 
