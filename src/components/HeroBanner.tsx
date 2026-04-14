@@ -6,17 +6,8 @@ import heroSlide1 from '@/assets/colorful-fabric-banner.jpg';
 import heroSlide2 from '@/assets/weaving-loom-banner.jpg';
 import heroSlide3 from '@/assets/yarn-production-banner.jpg';
 
-const processSteps = [
-  { label: 'Yarn', icon: '🧶' },
-  { label: 'Weaving', icon: '🔄' },
-  { label: 'Dyeing', icon: '🎨' },
-  { label: 'Finishing', icon: '✨' },
-  { label: 'Garment', icon: '👔' },
-];
-
 const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [activeStep, setActiveStep] = useState(0);
   const heroRef = useRef<HTMLElement>(null);
 
   const slides = [
@@ -53,14 +44,6 @@ const HeroBanner = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
-  // Animate through process steps
-  useEffect(() => {
-    const stepTimer = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % processSteps.length);
-    }, 2000);
-    return () => clearInterval(stepTimer);
-  }, []);
-
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
@@ -68,22 +51,19 @@ const HeroBanner = () => {
     <section ref={heroRef} className="relative h-screen overflow-hidden">
       {/* Background Images */}
       <div className="absolute inset-0">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            className="absolute inset-0"
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+            style={{ opacity: currentSlide === index ? 1 : 0 }}
           >
             <img
-              src={slides[currentSlide].image}
-              alt={slides[currentSlide].title}
+              src={slide.image}
+              alt={slide.title}
               className="w-full h-full object-cover"
             />
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </div>
 
@@ -141,46 +121,6 @@ const HeroBanner = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-
-        {/* Yarn to Garment Process Timeline */}
-        <motion.div
-          className="absolute bottom-20 sm:bottom-24 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-        >
-          <div className="flex items-center justify-between relative">
-            {/* Progress line */}
-            <div className="absolute top-5 left-[10%] right-[10%] h-[2px] bg-white/20">
-              <motion.div
-                className="h-full bg-white/80"
-                animate={{ width: `${(activeStep / (processSteps.length - 1)) * 100}%` }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-              />
-            </div>
-
-            {processSteps.map((step, index) => (
-              <div key={step.label} className="flex flex-col items-center z-10 relative">
-                <motion.div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center text-lg transition-all duration-500 ${
-                    index <= activeStep
-                      ? 'bg-white text-foreground shadow-lg shadow-white/30'
-                      : 'bg-white/20 text-white/60'
-                  }`}
-                  animate={index === activeStep ? { scale: [1, 1.15, 1] } : {}}
-                  transition={{ duration: 0.6 }}
-                >
-                  {step.icon}
-                </motion.div>
-                <span className={`text-xs mt-2 font-body transition-all duration-500 ${
-                  index <= activeStep ? 'text-white' : 'text-white/40'
-                }`}>
-                  {step.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
 
       {/* Navigation Arrows */}
@@ -212,6 +152,21 @@ const HeroBanner = () => {
           />
         ))}
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        className="absolute bottom-20 left-1/2 -translate-x-1/2 text-white"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <motion.div
+            className="w-1 h-3 bg-white/70 rounded-full mt-2"
+            animate={{ opacity: [1, 0.3, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+        </div>
+      </motion.div>
     </section>
   );
 };
