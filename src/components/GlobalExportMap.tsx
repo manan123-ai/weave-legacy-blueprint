@@ -18,45 +18,41 @@ const indiaPosition = { x: '65%', y: '48%' };
 
 const GlobalExportMap = () => {
   return (
-    <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+    <section className="py-24 bg-primary text-primary-foreground">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <motion.h2
+            className="font-serif text-4xl md:text-5xl font-bold mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
             Global Reach
-          </h2>
-          <p className="font-body text-xl opacity-80 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p
+            className="font-body text-xl opacity-80 max-w-3xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 0.8 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             Trusted by international labels and high-volume manufacturers across the world
-          </p>
-        </motion.div>
+          </motion.p>
+        </div>
 
         {/* World Map with markers */}
-        <motion.div
-          className="relative rounded-2xl overflow-hidden border border-primary-foreground/10"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
+        <div className="relative rounded-2xl overflow-hidden border border-primary-foreground/10">
           <img
             src={worldMapImage}
             alt="World Map showing our global reach"
-            className="w-full h-64 md:h-96 object-cover opacity-30"
+            className="w-full h-64 md:h-96 object-cover opacity-40"
           />
 
           {/* India marker */}
-          <motion.div
+          <div
             className="absolute"
             style={{ top: indiaPosition.y, left: indiaPosition.x, transform: 'translate(-50%, -50%)' }}
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
           >
             <div className="relative">
               <div className="w-5 h-5 bg-primary-foreground rounded-full border-2 border-primary" />
@@ -65,7 +61,7 @@ const GlobalExportMap = () => {
               </div>
               <div className="absolute inset-0 w-5 h-5 rounded-full border border-primary-foreground animate-ping opacity-40" />
             </div>
-          </motion.div>
+          </div>
 
           {/* Export destination markers */}
           {exportDestinations.map((dest, index) => (
@@ -75,7 +71,7 @@ const GlobalExportMap = () => {
               style={{ top: dest.y, left: dest.x, transform: 'translate(-50%, -50%)' }}
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+              transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
               viewport={{ once: true }}
             >
               <div className="relative group cursor-pointer">
@@ -86,7 +82,7 @@ const GlobalExportMap = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 text-center">
