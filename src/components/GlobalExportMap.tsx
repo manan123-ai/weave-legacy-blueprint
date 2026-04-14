@@ -1,37 +1,24 @@
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
+import worldMapImage from '@/assets/world-map.jpg';
 
 const exportDestinations = [
-  { name: 'USA', x: 180, y: 180 },
-  { name: 'UK', x: 430, y: 130 },
-  { name: 'Germany', x: 470, y: 135 },
-  { name: 'Italy', x: 475, y: 165 },
-  { name: 'Japan', x: 790, y: 170 },
-  { name: 'Australia', x: 770, y: 320 },
-  { name: 'UAE', x: 570, y: 210 },
-  { name: 'Canada', x: 190, y: 130 },
-  { name: 'Bangladesh', x: 650, y: 210 },
-  { name: 'Sri Lanka', x: 625, y: 260 },
+  { name: 'USA', x: '20%', y: '42%' },
+  { name: 'UK', x: '45%', y: '30%' },
+  { name: 'Germany', x: '49%', y: '32%' },
+  { name: 'Italy', x: '49%', y: '40%' },
+  { name: 'Japan', x: '85%', y: '38%' },
+  { name: 'Australia', x: '83%', y: '78%' },
+  { name: 'UAE', x: '60%', y: '50%' },
+  { name: 'Canada', x: '18%', y: '28%' },
+  { name: 'Bangladesh', x: '70%', y: '48%' },
+  { name: 'Sri Lanka', x: '68%', y: '58%' },
 ];
 
-const indiaPos = { x: 620, y: 215 };
-
-const continents = `M 120 100 L 130 95 L 170 90 L 200 95 L 260 80 L 270 100 L 280 120 L 260 160 L 240 180 L 230 220 L 200 280 L 180 310 L 160 280 L 150 240 L 140 200 L 130 170 L 120 140 Z
-M 300 280 L 320 270 L 360 260 L 380 290 L 370 330 L 340 360 L 310 340 L 300 310 Z
-M 400 60 L 420 55 L 460 50 L 500 55 L 540 60 L 560 80 L 580 70 L 620 65 L 680 60 L 740 65 L 800 70 L 840 80 L 830 100 L 800 110 L 780 130 L 750 120 L 720 115 L 680 120 L 640 130 L 600 140 L 570 150 L 540 140 L 510 150 L 490 170 L 470 180 L 450 170 L 430 160 L 410 140 L 400 120 L 390 100 Z
-M 540 160 L 560 170 L 580 180 L 600 200 L 620 210 L 640 220 L 660 210 L 680 200 L 720 190 L 740 180 L 760 190 L 780 200 L 800 180 L 790 160 L 770 150 L 750 140 L 730 135 L 700 140 L 680 150 L 660 160 L 640 165 L 620 170 L 600 175 L 580 170 Z
-M 590 200 L 610 195 L 630 200 L 640 220 L 630 250 L 620 270 L 610 260 L 600 240 L 595 220 Z
-M 700 220 L 730 210 L 750 220 L 770 240 L 800 250 L 810 280 L 800 310 L 780 330 L 750 340 L 730 320 L 720 290 L 710 260 Z
-M 420 180 L 440 190 L 460 200 L 480 220 L 500 250 L 520 280 L 510 310 L 490 330 L 470 340 L 450 320 L 440 300 L 430 270 L 420 240 L 415 210 Z`;
+const indiaPosition = { x: '65%', y: '48%' };
 
 const GlobalExportMap = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-
   return (
-    <section
-      ref={sectionRef}
-      className="py-24 bg-primary text-primary-foreground relative overflow-hidden"
-    >
+    <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           className="text-center mb-16"
@@ -48,138 +35,57 @@ const GlobalExportMap = () => {
           </p>
         </motion.div>
 
-        {/* SVG World Map with animated connection lines */}
+        {/* World Map with markers */}
         <motion.div
-          className="relative bg-primary-foreground/5 rounded-2xl p-6 md:p-10 border border-primary-foreground/10"
+          className="relative rounded-2xl overflow-hidden border border-primary-foreground/10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <svg
-            viewBox="0 0 900 400"
-            className="w-full h-auto"
-            style={{ maxHeight: '450px' }}
+          <img
+            src={worldMapImage}
+            alt="World Map showing our global reach"
+            className="w-full h-64 md:h-96 object-cover opacity-30"
+          />
+
+          {/* India marker */}
+          <motion.div
+            className="absolute"
+            style={{ top: indiaPosition.y, left: indiaPosition.x, transform: 'translate(-50%, -50%)' }}
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
           >
-            {/* Continent outlines */}
-            {continents.split('\n').map((path, i) => (
-              <motion.path
-                key={i}
-                d={path.trim()}
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-                strokeOpacity="0.15"
-                initial={{ pathLength: 0 }}
-                whileInView={{ pathLength: 1 }}
-                transition={{ duration: 2, delay: i * 0.1 }}
-                viewport={{ once: true }}
-              />
-            ))}
+            <div className="relative">
+              <div className="w-5 h-5 bg-primary-foreground rounded-full border-2 border-primary" />
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary-foreground text-primary px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap">
+                India
+              </div>
+              <div className="absolute inset-0 w-5 h-5 rounded-full border border-primary-foreground animate-ping opacity-40" />
+            </div>
+          </motion.div>
 
-            {/* Filled continents */}
-            {continents.split('\n').map((path, i) => (
-              <motion.path
-                key={`fill-${i}`}
-                d={path.trim()}
-                fill="currentColor"
-                fillOpacity="0.05"
-                stroke="none"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 1 + i * 0.1 }}
-                viewport={{ once: true }}
-              />
-            ))}
-
-            {/* Animated connection lines from India */}
-            {exportDestinations.map((dest, index) => {
-              const midX = (indiaPos.x + dest.x) / 2;
-              const midY = Math.min(indiaPos.y, dest.y) - 40 - Math.abs(indiaPos.x - dest.x) * 0.1;
-              const pathD = `M ${indiaPos.x} ${indiaPos.y} Q ${midX} ${midY} ${dest.x} ${dest.y}`;
-
-              return (
-                <g key={dest.name}>
-                  <motion.path
-                    d={pathD}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                    strokeOpacity="0.08"
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    transition={{ duration: 1.5, delay: 0.5 + index * 0.15 }}
-                    viewport={{ once: true }}
-                  />
-                  <motion.path
-                    d={pathD}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeOpacity="0.4"
-                    strokeDasharray="6 4"
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    transition={{ duration: 1.5, delay: 0.5 + index * 0.15 }}
-                    viewport={{ once: true }}
-                  />
-                </g>
-              );
-            })}
-
-            {/* India marker - use regular circle, not motion */}
-            <motion.g
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+          {/* Export destination markers */}
+          {exportDestinations.map((dest, index) => (
+            <motion.div
+              key={dest.name}
+              className="absolute"
+              style={{ top: dest.y, left: dest.x, transform: 'translate(-50%, -50%)' }}
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
               viewport={{ once: true }}
             >
-              <circle cx={indiaPos.x} cy={indiaPos.y} r={8} fill="currentColor" fillOpacity="0.9" />
-              <circle
-                cx={indiaPos.x} cy={indiaPos.y} r={14}
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeOpacity="0.3"
-              />
-              <text
-                x={indiaPos.x}
-                y={indiaPos.y - 20}
-                textAnchor="middle"
-                fill="currentColor"
-                fontSize="12"
-                fontWeight="700"
-                fontFamily="'Playfair Display', serif"
-              >
-                INDIA
-              </text>
-            </motion.g>
-
-            {/* Destination markers */}
-            {exportDestinations.map((dest, index) => (
-              <motion.g
-                key={dest.name}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1 + index * 0.12 }}
-                viewport={{ once: true }}
-              >
-                <circle cx={dest.x} cy={dest.y} r={4} fill="currentColor" fillOpacity="0.7" />
-                <text
-                  x={dest.x}
-                  y={dest.y - 10}
-                  textAnchor="middle"
-                  fill="currentColor"
-                  fillOpacity="0.7"
-                  fontSize="9"
-                  fontWeight="500"
-                  fontFamily="'Inter', sans-serif"
-                >
+              <div className="relative group cursor-pointer">
+                <div className="w-3 h-3 bg-accent rounded-full border border-primary-foreground transition-transform duration-300 group-hover:scale-150" />
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-primary-foreground/90 text-primary px-2 py-0.5 rounded text-[10px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {dest.name}
-                </text>
-              </motion.g>
-            ))}
-          </svg>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
 
         {/* Stats */}
