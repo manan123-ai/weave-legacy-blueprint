@@ -8,9 +8,9 @@ import cottonBlendsFabric from '@/assets/cotton-blends-pinterest.jpg';
 import linenFabric from '@/assets/linen-new.jpg';
 import jacquardFabric from '@/assets/jacquard-pinterest.jpg';
 import viscoseFabric from '@/assets/viscose-pinterest.jpg';
-import tweedFabric from '@/assets/tweed-new.jpg';
-import upholsteryFabric from '@/assets/upholstery-fabric-samples.jpg';
-import specialtyWovenFabric from '@/assets/specialty-woven-new.jpg';
+import twillDrillsFabric from '@/assets/twill-drills-new.jpg';
+import upholsteryFabric from '@/assets/upholstery-home-furnishing-new.jpg';
+import crepeHighTwistFabric from '@/assets/crepe-high-twist-new.jpg';
 
 interface FabricOption {
   name: string;
@@ -168,19 +168,19 @@ const FabricShowreel = () => {
       ]
     },
     {
-      name: 'Tweeds',
-      image: tweedFabric,
-      description: 'Classic tweed fabrics',
+      name: 'Twill & Drills',
+      image: twillDrillsFabric,
+      description: 'Durable twill weave fabrics',
       options: [
-        { name: 'Harris Style', description: 'Traditional' },
-        { name: 'Donegal', description: 'Speckled' },
-        { name: 'Herringbone', description: 'Patterned' },
+        { name: 'Cotton Twill', description: 'Classic weave' },
+        { name: 'Drill Fabric', description: 'Heavy duty' },
+        { name: 'Gabardine', description: 'Fine twill' },
       ]
     },
     {
       name: 'Upholstery & Home Furnishing',
       image: upholsteryFabric,
-      description: 'Durable home textiles',
+      description: 'Premium home textiles',
       options: [
         { name: 'Curtain Fabrics', description: 'Drapery' },
         { name: 'Sofa Upholstery', description: 'Heavy duty' },
@@ -188,13 +188,13 @@ const FabricShowreel = () => {
       ]
     },
     {
-      name: 'Speciality Wovens',
-      image: specialtyWovenFabric,
-      description: 'Unique specialty textiles',
+      name: 'Crepe & High Twist',
+      image: crepeHighTwistFabric,
+      description: 'Textured crepe fabrics',
       options: [
-        { name: 'Dobby Weaves', description: 'Geometric' },
-        { name: 'Seersucker', description: 'Puckered' },
-        { name: 'Double Cloth', description: 'Two-layer' },
+        { name: 'Georgette', description: 'Sheer crepe' },
+        { name: 'Moss Crepe', description: 'Textured' },
+        { name: 'High Twist Voile', description: 'Lightweight' },
       ]
     },
   ];
