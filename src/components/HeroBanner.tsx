@@ -79,7 +79,7 @@ const HeroBanner = () => {
               transition={{ duration: 0.8 }}
             >
               <motion.p
-                className="text-sm font-body uppercase tracking-[0.3em] text-accent mb-4"
+                className="text-sm font-body uppercase tracking-[0.3em] text-white/80 mb-4"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -88,7 +88,7 @@ const HeroBanner = () => {
               </motion.p>
 
               <motion.h1
-                className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight px-4"
+                className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight px-4 text-white"
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -97,7 +97,7 @@ const HeroBanner = () => {
               </motion.h1>
 
               <motion.p
-                className="font-body text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 px-4"
+                className="font-body text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white/90 px-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.5 }}

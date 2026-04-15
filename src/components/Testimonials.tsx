@@ -4,47 +4,20 @@ import { Star } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "Milano Fashion House",
       review: "Janki Nath & Co. has been our trusted fabric partner for over 5 years. Their quality is unmatched and delivery is always on time. The jacquard fabrics they create are simply extraordinary.",
       rating: 5,
       location: "Milan, Italy"
     },
     {
-      name: "David Chen",
-      company: "Pacific Garments Ltd.",
       review: "Exceptional quality fabrics at competitive prices. Their cotton blends are perfect for our activewear line. The team is responsive and understands our exact requirements.",
       rating: 5,
       location: "Hong Kong"
     },
     {
-      name: "Emma Williams",
-      company: "London Luxury Textiles",
-      review: "Working with Janki Nath has transformed our product line. Their sustainable practices and premium quality fabrics align perfectly with our brand values. Highly recommended!",
-      rating: 5,
-      location: "London, UK"
-    },
-    {
-      name: "Ahmed Hassan",
-      company: "Gulf Fashion Group",
       review: "Outstanding service and remarkable fabric quality. Their ability to handle large volumes while maintaining quality standards is impressive. Our go-to supplier for premium textiles.",
       rating: 5,
       location: "Dubai, UAE"
     },
-    {
-      name: "Maria Rodriguez",
-      company: "Barcelona Home Furnishings",
-      review: "The upholstery fabrics from Janki Nath are durable and beautifully designed. Their technical expertise and customer service excellence sets them apart in the industry.",
-      rating: 5,
-      location: "Barcelona, Spain"
-    },
-    {
-      name: "John Smith",
-      company: "American Textile Solutions",
-      review: "Consistent quality, innovative designs, and reliable partnerships. Janki Nath delivers exactly what they promise. Their fabric innovation capabilities are truly remarkable.",
-      rating: 5,
-      location: "New York, USA"
-    }
   ];
 
   return (
@@ -77,7 +50,7 @@ const Testimonials = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -117,21 +90,15 @@ const Testimonials = () => {
                 "{testimonial.review}"
               </motion.p>
 
-              {/* Client Info */}
+              {/* Location Only */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
                 viewport={{ once: true }}
               >
-                <h4 className="font-serif text-lg font-semibold text-primary group-hover:text-accent transition-colors">
-                  {testimonial.name}
-                </h4>
-                <p className="font-body text-sm text-muted-foreground">
-                  {testimonial.company}
-                </p>
-                <p className="font-body text-xs text-muted-foreground mt-1">
-                  {testimonial.location}
+                <p className="font-body text-sm text-muted-foreground italic">
+                  — Client from {testimonial.location}
                 </p>
               </motion.div>
             </motion.div>
