@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
+import ScrollProgress from "./components/motion/ScrollProgress";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Fabrics from "./pages/Fabrics";
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollProgress />
         <Navigation />
         <Routes>
           <Route path="/" element={<Index />} />
