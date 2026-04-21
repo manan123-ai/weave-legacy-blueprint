@@ -1,6 +1,9 @@
+import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 import GlobalExportMap from '@/components/GlobalExportMap';
+import KineticHeading from '@/components/motion/KineticHeading';
+import Reveal from '@/components/motion/Reveal';
 import { Clock, Package, Settings, Shield } from 'lucide-react';
 
 const Clientele = () => {
