@@ -45,14 +45,23 @@ const Clientele = () => {
     <div className="min-h-screen">
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-24 bg-secondary">
+        <section className="py-32 bg-secondary">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-8">
-              Our Clientele
-            </h1>
-            <p className="font-body text-xl text-muted-foreground">
-              Trusted by global brands and manufacturers worldwide
-            </p>
+            <Reveal>
+              <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
+                Trusted Worldwide
+              </p>
+            </Reveal>
+            <KineticHeading
+              as="h1"
+              text="Our Clientele"
+              className="font-serif text-5xl md:text-7xl font-bold text-primary mb-8 leading-[1.05]"
+            />
+            <Reveal delay={0.3}>
+              <p className="font-body text-xl text-muted-foreground font-light">
+                Trusted by global brands and manufacturers worldwide
+              </p>
+            </Reveal>
           </div>
         </section>
 
@@ -116,26 +125,34 @@ const Clientele = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {capabilities.map((capability, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="text-center group hover:scale-105 transition-transform duration-300"
+                  className="text-center group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -6 }}
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <capability.icon className="w-8 h-8" />
+                  <div className="relative inline-flex items-center justify-center w-16 h-16 mb-6">
+                    <span className="absolute inset-0 rounded-full border border-primary/30 group-hover:scale-125 group-hover:border-primary/0 transition-all duration-700" />
+                    <span className="absolute inset-0 bg-primary text-primary-foreground rounded-full flex items-center justify-center transition-transform duration-700 group-hover:rotate-[360deg]">
+                      <capability.icon className="w-7 h-7" />
+                    </span>
                   </div>
                   
                   <h3 className="font-serif text-xl font-semibold text-primary mb-2">
                     {capability.title}
                   </h3>
                   
-                  <div className="font-serif text-2xl font-bold text-primary mb-4">
+                  <div className="font-serif text-2xl font-bold text-primary mb-4 tabular-nums">
                     {capability.value}
                   </div>
                   
                   <p className="font-body text-sm text-muted-foreground">
                     {capability.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
