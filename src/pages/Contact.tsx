@@ -6,6 +6,8 @@ import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import { supabase } from '@/lib/supabase';
+import KineticHeading from '@/components/motion/KineticHeading';
+import Reveal from '@/components/motion/Reveal';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -71,14 +73,23 @@ ${formData.message}`;
     <div className="min-h-screen">
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-24 bg-secondary">
+        <section className="py-32 bg-secondary">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-8">
-              Contact Us
-            </h1>
-            <p className="font-body text-xl text-muted-foreground">
-              Get in touch to discuss your fabric requirements
-            </p>
+            <Reveal>
+              <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
+                Let's Connect
+              </p>
+            </Reveal>
+            <KineticHeading
+              as="h1"
+              text="Contact Us"
+              className="font-serif text-5xl md:text-7xl font-bold text-primary mb-8 leading-[1.05]"
+            />
+            <Reveal delay={0.3}>
+              <p className="font-body text-xl text-muted-foreground font-light">
+                Get in touch to discuss your fabric requirements
+              </p>
+            </Reveal>
           </div>
         </section>
 
