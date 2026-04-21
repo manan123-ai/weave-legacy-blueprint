@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { CheckCircle, Clock, Users, Package, Truck, Award } from 'lucide-react';
 import Footer from '@/components/Footer';
 import IndiaWorldMap from '@/components/IndiaWorldMap';
+import KineticHeading from '@/components/motion/KineticHeading';
+import Reveal from '@/components/motion/Reveal';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -114,22 +116,21 @@ const ProductionProcess = () => {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1 
-            className="font-serif text-4xl md:text-6xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Production Process & Ordering
-          </motion.h1>
-          <motion.p 
-            className="font-body text-xl md:text-2xl text-white/90 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Discover our meticulous 6-step production process and learn how to place orders with us
-          </motion.p>
+          <Reveal>
+            <p className="font-body text-xs uppercase tracking-[0.4em] text-white/70 mb-6">
+              Behind the Craft
+            </p>
+          </Reveal>
+          <KineticHeading
+            as="h1"
+            text="Production Process & Ordering"
+            className="font-serif text-4xl md:text-6xl font-bold text-white mb-6 leading-[1.05]"
+          />
+          <Reveal delay={0.4}>
+            <p className="font-body text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light">
+              Discover our meticulous 6-step production process and how to place orders
+            </p>
+          </Reveal>
         </div>
       </section>
 
