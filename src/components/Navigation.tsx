@@ -160,7 +160,7 @@ const Navigation = () => {
               </motion.div>
             </Button>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Mobile Navigation */}
         <AnimatePresence>
