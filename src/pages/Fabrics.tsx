@@ -1,5 +1,8 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
+import KineticHeading from '@/components/motion/KineticHeading';
+import Reveal from '@/components/motion/Reveal';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import cottonFabric from '@/assets/cotton-pinterest.jpg';
 import cottonBlendsFabric from '@/assets/cotton-blends-pinterest.jpg';
@@ -201,14 +204,23 @@ const Fabrics = () => {
     <div className="min-h-screen">
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-24 bg-secondary">
+        <section className="py-32 bg-secondary">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-8">
-              Our Fabrics
-            </h1>
-            <p className="font-body text-xl text-muted-foreground">
-              Discover our comprehensive range of premium textiles
-            </p>
+            <Reveal>
+              <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
+                The Collection
+              </p>
+            </Reveal>
+            <KineticHeading
+              as="h1"
+              text="Our Fabrics"
+              className="font-serif text-5xl md:text-7xl font-bold text-primary mb-8 leading-[1.05]"
+            />
+            <Reveal delay={0.3}>
+              <p className="font-body text-xl text-muted-foreground font-light">
+                Discover our comprehensive range of premium textiles
+              </p>
+            </Reveal>
           </div>
         </section>
 
@@ -249,30 +261,38 @@ const Fabrics = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {filteredFabrics.map((fabric, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                  className="bg-card rounded-sm overflow-hidden shadow-[0_2px_20px_-8px_hsl(var(--primary)/0.1)] hover:shadow-[0_30px_70px_-15px_hsl(var(--primary)/0.25)] transition-all duration-700 border border-border/40 group"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: (index % 2) * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  whileHover={{ y: -6 }}
                 >
                   <div className="md:flex">
-                    <div className="md:w-1/2">
+                    <div className="md:w-1/2 overflow-hidden">
                       <img
                         src={fabric.image}
                         alt={fabric.name}
-                        className="w-full h-64 md:h-full object-cover"
+                        className="w-full h-64 md:h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
                       />
                     </div>
-                    <div className="md:w-1/2 p-8">
-                      <h3 className="font-serif text-2xl font-bold text-primary mb-4">
+                    <div className="md:w-1/2 p-8 lg:p-10">
+                      <p className="font-body text-xs text-muted-foreground/60 tabular-nums mb-3">
+                        0{index + 1} / {filteredFabrics.length.toString().padStart(2, '0')}
+                      </p>
+                      <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-4 leading-tight">
                         {fabric.name}
                       </h3>
                       
-                      <p className="font-body text-muted-foreground mb-6">
+                      <p className="font-body text-muted-foreground mb-6 font-light leading-relaxed">
                         {fabric.description}
                       </p>
                       
                       <div className="space-y-4">
                         <div>
-                          <h4 className="font-body font-semibold text-sm text-primary mb-1">
+                          <h4 className="font-body font-semibold text-xs uppercase tracking-[0.2em] text-primary mb-2">
                             Specifications
                           </h4>
                           <p className="font-body text-sm text-muted-foreground">
@@ -281,7 +301,7 @@ const Fabrics = () => {
                         </div>
                         
                         <div>
-                          <h4 className="font-body font-semibold text-sm text-primary mb-1">
+                          <h4 className="font-body font-semibold text-xs uppercase tracking-[0.2em] text-primary mb-2">
                             Use Cases
                           </h4>
                           <p className="font-body text-sm text-muted-foreground">
@@ -290,17 +310,19 @@ const Fabrics = () => {
                         </div>
                       </div>
                       
-                      <div className="mt-6 flex space-x-4">
-                        <a href="tel:+919891542727" className="font-body text-sm text-primary hover:text-primary/80 transition-colors underline">
+                      <div className="mt-8 flex space-x-6">
+                        <a href="tel:+919891542727" className="font-body text-sm text-primary relative group/link">
                           Call Us
+                          <span className="absolute -bottom-0.5 left-0 w-full h-px bg-primary scale-x-0 group-hover/link:scale-x-100 origin-left transition-transform duration-500" />
                         </a>
-                        <a href="mailto:jcofabrics@yahoo.co.in" className="font-body text-sm text-primary hover:text-primary/80 transition-colors underline">
+                        <a href="mailto:jcofabrics@yahoo.co.in" className="font-body text-sm text-primary relative group/link">
                           Email Us
+                          <span className="absolute -bottom-0.5 left-0 w-full h-px bg-primary scale-x-0 group-hover/link:scale-x-100 origin-left transition-transform duration-500" />
                         </a>
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

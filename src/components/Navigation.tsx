@@ -39,30 +39,34 @@ const Navigation = () => {
 
   return (
     <motion.nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled 
-          ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border' 
+          ? 'bg-background/80 backdrop-blur-xl shadow-[0_8px_32px_-8px_hsl(var(--primary)/0.08)] border-b border-border/40' 
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <motion.div 
+          className="flex justify-between items-center"
+          animate={{ height: scrolled ? 56 : 80 }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        >
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
             className="flex items-center"
           >
             <Link 
               to="/" 
-              className="flex items-center space-x-3"
+              className="flex items-center space-x-3 group"
             >
-              <span className={`font-serif text-xl font-bold transition-colors ${
+              <span className={`font-serif text-xl font-bold transition-colors tracking-tight ${
                 scrolled ? 'text-primary' : 'text-white'
               }`}>
-                Janki Nath & Co.
+                <span className="inline-block transition-transform duration-500 group-hover:translate-x-[2px]">
+                  Janki Nath & Co.
+                </span>
               </span>
             </Link>
           </motion.div>
@@ -70,23 +74,20 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <motion.div
+              <Link
                 key={item.name}
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
+                to={item.path}
+                className={`font-body text-sm font-medium tracking-wide transition-colors relative group ${
+                  location.pathname === item.path
+                    ? scrolled ? 'text-primary' : 'text-white'
+                    : scrolled ? 'text-muted-foreground hover:text-primary' : 'text-white/70 hover:text-white'
+                }`}
               >
-                <Link
-                  to={item.path}
-                  className={`font-body text-sm font-medium transition-colors relative group ${
-                    location.pathname === item.path
-                      ? scrolled ? 'text-primary' : 'text-white'
-                      : scrolled ? 'text-muted-foreground hover:text-primary' : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-                </Link>
-              </motion.div>
+                {item.name}
+                <span className={`absolute -bottom-1 left-0 h-px transition-all duration-500 ease-out ${
+                  scrolled ? 'bg-primary' : 'bg-white'
+                } ${location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+              </Link>
             ))}
             
             {/* Certifications Dropdown */}
@@ -159,7 +160,7 @@ const Navigation = () => {
               </motion.div>
             </Button>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Mobile Navigation */}
         <AnimatePresence>
