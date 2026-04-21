@@ -1,5 +1,8 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
+import KineticHeading from '@/components/motion/KineticHeading';
+import Reveal from '@/components/motion/Reveal';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import cottonFabric from '@/assets/cotton-pinterest.jpg';
 import cottonBlendsFabric from '@/assets/cotton-blends-pinterest.jpg';
@@ -201,14 +204,23 @@ const Fabrics = () => {
     <div className="min-h-screen">
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-24 bg-secondary">
+        <section className="py-32 bg-secondary">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-8">
-              Our Fabrics
-            </h1>
-            <p className="font-body text-xl text-muted-foreground">
-              Discover our comprehensive range of premium textiles
-            </p>
+            <Reveal>
+              <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
+                The Collection
+              </p>
+            </Reveal>
+            <KineticHeading
+              as="h1"
+              text="Our Fabrics"
+              className="font-serif text-5xl md:text-7xl font-bold text-primary mb-8 leading-[1.05]"
+            />
+            <Reveal delay={0.3}>
+              <p className="font-body text-xl text-muted-foreground font-light">
+                Discover our comprehensive range of premium textiles
+              </p>
+            </Reveal>
           </div>
         </section>
 
