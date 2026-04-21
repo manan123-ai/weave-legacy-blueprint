@@ -30,26 +30,42 @@ const FabricCard = ({ category, index }: { category: FabricCategory; index: numb
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
-      viewport={{ once: true }}
+      transition={{ duration: 0.7, delay: (index % 4) * 0.1, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, amount: 0.2 }}
+      whileHover={{ y: -8 }}
     >
-      <div className="group bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50">
-        <div className="aspect-square overflow-hidden relative">
+      <div className="group relative bg-card rounded-sm overflow-hidden shadow-[0_2px_20px_-8px_hsl(var(--primary)/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.25)] transition-all duration-700 border border-border/40">
+        <div className="aspect-[4/5] overflow-hidden relative">
           <img
             src={category.image}
             alt={category.name}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+          {/* Hover-revealed name overlay */}
+          <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-primary-foreground/70 mb-1">
+              Collection
+            </p>
+            <p className="font-serif text-lg text-primary-foreground italic">
+              {category.name}
+            </p>
+          </div>
         </div>
 
-        <div className="p-4 sm:p-6">
-          <h3 className="font-serif text-xl font-semibold text-primary mb-2">
-            {category.name}
-          </h3>
-          <p className="font-body text-sm text-muted-foreground mb-3">
+        <div className="p-5 sm:p-6">
+          <div className="flex items-start justify-between gap-3 mb-2">
+            <h3 className="font-serif text-xl font-semibold text-primary leading-tight">
+              {category.name}
+            </h3>
+            <span className="font-body text-xs text-muted-foreground/60 tabular-nums pt-1.5">
+              0{index + 1}
+            </span>
+          </div>
+          <p className="font-body text-sm text-muted-foreground mb-4 leading-relaxed">
             {category.description}
           </p>
 
@@ -58,12 +74,15 @@ const FabricCard = ({ category, index }: { category: FabricCategory; index: numb
             <div>
               <button
                 onClick={() => setExpanded(!expanded)}
-                className="flex items-center gap-1 text-sm font-body font-medium text-primary hover:text-primary/70 transition-colors"
+                className="flex items-center gap-1.5 text-sm font-body font-medium text-primary hover:gap-2.5 transition-all duration-300 group/btn"
               >
-                View Options
+                <span className="relative">
+                  View Options
+                  <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-primary transition-all duration-500 group-hover/btn:w-full" />
+                </span>
                 <motion.span
                   animate={{ rotate: expanded ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <ChevronDown className="w-4 h-4" />
                 </motion.span>
@@ -75,13 +94,16 @@ const FabricCard = ({ category, index }: { category: FabricCategory; index: numb
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="mt-3 space-y-2 pt-3 border-t border-border">
+                    <div className="mt-4 space-y-2 pt-4 border-t border-border">
                       {category.options.map((option, i) => (
-                        <div
+                        <motion.div
                           key={i}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: i * 0.05 }}
                           className="flex items-center justify-between py-1.5 text-sm"
                         >
                           <span className="font-body text-muted-foreground">
@@ -101,7 +123,7 @@ const FabricCard = ({ category, index }: { category: FabricCategory; index: numb
                           {!option.pdfUrl && option.description && (
                             <span className="text-xs text-muted-foreground/60">{option.description}</span>
                           )}
-                        </div>
+                        </motion.div>
                       ))}
                     </div>
                   </motion.div>
@@ -200,24 +222,27 @@ const FabricShowreel = () => {
   ];
 
   return (
-    <section className="py-24 bg-background overflow-hidden">
+    <section className="py-32 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">
-            Our Fabric Categories
+          <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
+            The Collection
+          </p>
+          <h2 className="font-serif text-4xl md:text-6xl font-bold text-primary mb-6 leading-[1.05]">
+            Our Fabric <span className="italic text-muted-foreground">Categories</span>
           </h2>
-          <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover our comprehensive range of premium fabrics, each crafted with precision and care
+          <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+            A comprehensive range of premium fabrics, each crafted with precision and care
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16">
           {fabricCategories.map((category, index) => (
             <FabricCard key={index} category={category} index={index} />
           ))}
@@ -233,9 +258,12 @@ const FabricShowreel = () => {
           <Button
             asChild
             size="lg"
-            className="font-body font-medium transition-all duration-300 hover:scale-105"
+            className="font-body font-medium transition-all duration-500 rounded-full px-10 py-6 hover:scale-[1.03] group"
           >
-            <Link to="/fabrics">View All Fabrics</Link>
+            <Link to="/fabrics">
+              <span>View All Fabrics</span>
+              <span className="ml-2 transition-transform duration-500 group-hover:translate-x-1">→</span>
+            </Link>
           </Button>
         </motion.div>
       </div>
