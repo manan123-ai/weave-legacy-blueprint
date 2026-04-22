@@ -152,7 +152,7 @@ const About = () => {
                 Leadership
               </h2>
             </Reveal>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {leadership.map((person, index) => (
                 <motion.div
                   key={index}
