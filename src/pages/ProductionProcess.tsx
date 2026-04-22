@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Clock, Users, Package, Truck, Award } from 'lucide-react';
+import { CheckCircle, Clock, Users, Package, Truck, Award, Leaf, HeartHandshake, ShieldCheck, Recycle } from 'lucide-react';
 import Footer from '@/components/Footer';
 import IndiaWorldMap from '@/components/IndiaWorldMap';
 import KineticHeading from '@/components/motion/KineticHeading';
@@ -245,6 +245,68 @@ const ProductionProcess = () => {
                     {step.description}
                   </p>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sustainability & Ethical Workforce */}
+      <section className="py-32 bg-background relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal className="text-center mb-20">
+            <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
+              Conscious Craft
+            </p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary leading-tight mb-6">
+              Sustainable Practices & <span className="italic text-muted-foreground">Ethical Workforce</span>
+            </h2>
+            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto font-light">
+              Beyond the loom, we believe true craftsmanship begins with caring for the people and planet behind every thread.
+            </p>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: Leaf,
+                title: 'Sustainable Materials',
+                description: 'GOTS, OCS and OEKO-TEX aligned sourcing — organic cotton, natural fibres and responsibly produced blends.',
+              },
+              {
+                icon: Recycle,
+                title: 'Resource Conscious',
+                description: 'Water-conscious dyeing, optimised energy use across our weaving units and continuous reduction of textile waste.',
+              },
+              {
+                icon: HeartHandshake,
+                title: 'We Care for Our Workforce',
+                description: 'Fair wages, safe working environments, and long-term partnerships with the artisans and operators who power our looms.',
+              },
+              {
+                icon: ShieldCheck,
+                title: 'Ethical Working Conditions',
+                description: 'Strict no child-labour policy, regulated working hours, and transparent practices across every facility we operate.',
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                className="bg-card p-8 rounded-sm border border-border/40 hover:border-primary/30 hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.15)] transition-all duration-700"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true }}
+                whileHover={{ y: -6 }}
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-5">
+                  <item.icon className="w-6 h-6" />
+                </div>
+                <h3 className="font-serif text-xl font-semibold text-primary mb-3 leading-tight">
+                  {item.title}
+                </h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  {item.description}
+                </p>
               </motion.div>
             ))}
           </div>
