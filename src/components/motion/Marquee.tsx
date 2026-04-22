@@ -15,12 +15,12 @@ const Marquee = ({ children, speed = 25, reverse = false, className = '' }: Marq
   return (
     <div className={`overflow-hidden ${className}`}>
       <motion.div
-        className="flex whitespace-nowrap w-max"
+        className="flex gap-12 whitespace-nowrap"
         animate={{ x: reverse ? ['-50%', '0%'] : ['0%', '-50%'] }}
         transition={{ duration: speed, repeat: Infinity, ease: 'linear' }}
       >
-        <div className="flex shrink-0">{children}</div>
-        <div className="flex shrink-0" aria-hidden="true">
+        <div className="flex gap-12 shrink-0">{children}</div>
+        <div className="flex gap-12 shrink-0" aria-hidden="true">
           {children}
         </div>
       </motion.div>

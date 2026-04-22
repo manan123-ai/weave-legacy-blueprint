@@ -11,7 +11,7 @@ const Clientele = () => {
     {
       icon: Package,
       title: 'Monthly Capacity',
-      value: '10M+ Meters',
+      value: '2M+ Meters',
       description: 'High-volume production capacity to meet large-scale demands',
     },
     {
