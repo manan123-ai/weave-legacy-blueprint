@@ -15,9 +15,10 @@ const About = () => {
   ];
 
   const leadership = [
-    { name: 'MR. HAMESH KUMAR BHASIN', role: 'Director', years: '45+ Years Experience' },
+    { name: 'MR. HAMESH KUMAR BHASIN', role: 'Managing Director', years: '45+ Years Experience' },
     { name: 'MR. SANDEEPAN BHASIN', role: 'Director', years: '30+ Years Experience' },
     { name: 'MR. DEEPAK BHASIN', role: 'Director', years: '30+ Years Experience' },
+    { name: 'MR. MANAN BHASIN', role: 'Marketing Head', years: 'Next-Generation Leadership' },
   ];
 
   return (
@@ -66,8 +67,7 @@ const About = () => {
             <Reveal delay={0.25}>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border/40 rounded-sm overflow-hidden mb-12">
                 {[
-                  { label: 'Head Office', value: 'Mayapuri, New Delhi' },
-                  { label: 'Showroom', value: 'Mayapuri, New Delhi' },
+                  { label: 'Head Office / Showroom', value: 'Mayapuri, New Delhi' },
                   { label: 'Weaving Unit', value: 'Meerut' },
                   { label: 'Weaving Unit', value: 'Bhiwandi / Ichalkaranji' },
                   { label: 'Weaving Unit', value: 'Erode' },
@@ -152,7 +152,7 @@ const About = () => {
                 Leadership
               </h2>
             </Reveal>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {leadership.map((person, index) => (
                 <motion.div
                   key={index}

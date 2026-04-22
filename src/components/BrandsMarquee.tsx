@@ -12,8 +12,13 @@ const BrandsMarquee = () => {
     'FREE PEOPLE',
     'SUPERDRY',
     'ANTHROPOLOGIE',
-    'FEHERTY',
+    'FAHERTY',
     'SOFT SURROUNDINGS',
+    'URBN',
+    'MARKS & SPENCER',
+    'LUCKY BRAND',
+    'J.CREW',
+    'PULL & BEAR',
   ];
 
   const domesticBrands = ['RELIANCE', 'RITU KUMAR'];
@@ -36,30 +41,30 @@ const BrandsMarquee = () => {
         </Reveal>
       </div>
 
-      <Marquee speed={45} className="py-6">
+      <Marquee speed={18} className="py-3">
         {allBrands.map((brand) => (
           <div
             key={brand}
-            className="flex items-center px-10 group"
+            className="flex items-center px-6 group"
           >
-            <span className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-primary/40 group-hover:text-primary transition-colors duration-500 whitespace-nowrap">
+            <span className="font-serif text-xl md:text-2xl font-bold tracking-tight text-primary/50 group-hover:text-primary transition-colors duration-500 whitespace-nowrap">
               {brand}
             </span>
-            <span className="ml-10 w-2 h-2 rounded-full bg-primary/20" />
+            <span className="ml-6 w-1.5 h-1.5 rounded-full bg-primary/20" />
           </div>
         ))}
       </Marquee>
 
-      <Marquee speed={50} reverse className="py-6">
+      <Marquee speed={22} reverse className="py-3">
         {allBrands.map((brand) => (
           <div
             key={`r-${brand}`}
-            className="flex items-center px-10 group"
+            className="flex items-center px-6 group"
           >
-            <span className="font-serif italic text-3xl md:text-5xl font-light tracking-tight text-primary/30 group-hover:text-primary transition-colors duration-500 whitespace-nowrap">
+            <span className="font-serif italic text-xl md:text-2xl font-light tracking-tight text-primary/40 group-hover:text-primary transition-colors duration-500 whitespace-nowrap">
               {brand}
             </span>
-            <span className="ml-10 w-2 h-2 rounded-full bg-primary/20" />
+            <span className="ml-6 w-1.5 h-1.5 rounded-full bg-primary/20" />
           </div>
         ))}
       </Marquee>

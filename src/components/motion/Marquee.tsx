@@ -11,7 +11,7 @@ interface MarqueeProps {
 /**
  * Infinite horizontal marquee. Duplicates children for seamless loop.
  */
-const Marquee = ({ children, speed = 40, reverse = false, className = '' }: MarqueeProps) => {
+const Marquee = ({ children, speed = 25, reverse = false, className = '' }: MarqueeProps) => {
   return (
     <div className={`overflow-hidden ${className}`}>
       <motion.div
