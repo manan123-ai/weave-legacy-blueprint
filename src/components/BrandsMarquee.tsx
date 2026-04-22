@@ -41,7 +41,7 @@ const BrandsMarquee = () => {
         </Reveal>
       </div>
 
-      <Marquee speed={30} className="py-3">
+      <Marquee speed={20} className="py-3">
         {allBrands.map((brand) => (
           <div
             key={brand}
