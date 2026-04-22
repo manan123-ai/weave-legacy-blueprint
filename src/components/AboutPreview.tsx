@@ -17,7 +17,7 @@ const AboutPreview = () => {
 
   const paragraphs = [
     'For generations, Janki Nath & Co. has been weaving excellence into every fabric we create. Our commitment to quality and innovation has made us a trusted partner for international brands and manufacturers worldwide.',
-    'From traditional techniques passed down through generations to cutting-edge technology, we blend heritage with innovation to create fabrics that define luxury and durability.',
+    "From our Head Office and Showroom in Mayapuri, New Delhi to dedicated weaving units in Meerut, Bhiwandi/Ichalkaranji, Erode, Salem and Surat — every thread is supervised end-to-end across India's most renowned textile hubs.",
     'Every thread tells a story of precision, every weave speaks of craftsmanship, and every fabric carries our promise of uncompromising quality.',
   ];
 

@@ -105,14 +105,14 @@ ${formData.message}`;
                 
                 <div className="space-y-8">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-primary text-primary-foreground p-3 rounded-full">
+                    <div className="bg-primary text-primary-foreground p-3 rounded-full shrink-0">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
                       <h3 className="font-serif text-lg font-semibold text-primary mb-2">
-                        Address
+                        Head Office / Showroom
                       </h3>
-                      <a 
+                      <a
                         href="https://maps.app.goo.gl/JnbyovcrkzdVrCeY6?g_st=ic"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -122,40 +122,63 @@ ${formData.message}`;
                         PHASE -1, NEW DELHI -110064<br />
                         India
                       </a>
+                      <h4 className="font-body text-xs uppercase tracking-[0.3em] text-primary mt-5 mb-2">
+                        Weaving Units
+                      </h4>
+                      <p className="font-body text-muted-foreground leading-relaxed">
+                        Meerut · Bhiwandi / Ichalkaranji<br />
+                        Erode · Salem · Surat
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
-                    <div className="bg-primary text-primary-foreground p-3 rounded-full">
+                    <div className="bg-primary text-primary-foreground p-3 rounded-full shrink-0">
                       <Mail className="w-6 h-6" />
                     </div>
                     <div>
                       <h3 className="font-serif text-lg font-semibold text-primary mb-2">
                         Email
                       </h3>
-                      <a 
-                        href="mailto:jcofabrics@yahoo.co.in" 
+                      <a
+                        href="mailto:jcofabrics@yahoo.co.in"
                         className="font-body text-muted-foreground hover:text-primary transition-colors"
                       >
                         jcofabrics@yahoo.co.in
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
-                    <div className="bg-primary text-primary-foreground p-3 rounded-full">
+                    <div className="bg-primary text-primary-foreground p-3 rounded-full shrink-0">
                       <Phone className="w-6 h-6" />
                     </div>
                     <div>
                       <h3 className="font-serif text-lg font-semibold text-primary mb-2">
                         Phone
                       </h3>
-                      <a 
-                        href="tel:+919891542727" 
-                        className="font-body text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        +91 98915 42727
-                      </a>
+                      <div className="space-y-1">
+                        <a href="tel:+919891542727" className="block font-body text-muted-foreground hover:text-primary transition-colors">
+                          +91 98915 42727
+                        </a>
+                        <a href="tel:+919810111193" className="block font-body text-muted-foreground hover:text-primary transition-colors">
+                          +91 98101 11193
+                        </a>
+                        <a href="tel:+919810069936" className="block font-body text-muted-foreground hover:text-primary transition-colors">
+                          +91 98100 69936
+                        </a>
+                      </div>
+                      <h4 className="font-body text-xs uppercase tracking-[0.3em] text-primary mt-4 mb-2">
+                        Landline
+                      </h4>
+                      <div className="space-y-1">
+                        <a href="tel:+911147079009" className="block font-body text-muted-foreground hover:text-primary transition-colors">
+                          011-47079009
+                        </a>
+                        <a href="tel:+911145567009" className="block font-body text-muted-foreground hover:text-primary transition-colors">
+                          011-45567009
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

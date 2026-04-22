@@ -58,9 +58,32 @@ const About = () => {
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="font-body text-lg text-muted-foreground leading-relaxed mb-12 font-light">
-                With our own manufacturing setups in prominent textile hubs such as Meerut, Bhiwandi, Erode, Salem, Surat, Varanasi, and Bhagalpur, we maintain stringent quality control and ensure timely delivery. Our comprehensive product portfolio includes export-grade fabrics such as Greige, RFD, Bleached, Dyed, Printed, Yarn-Dyed, Mill-made, Auto/Powerloom, Handloom, and Jacquard & Dobbys.
+              <p className="font-body text-lg text-muted-foreground leading-relaxed mb-10 font-light">
+                Our <span className="text-primary font-medium">Head Office and Showroom</span> in Mayapuri, New Delhi anchors a network of dedicated weaving units across India's most renowned textile hubs — <span className="text-primary font-medium">Meerut, Bhiwandi / Ichalkaranji, Erode, Salem, and Surat</span>. This integrated setup lets us maintain stringent quality control and ensure timely delivery on every order. Our comprehensive product portfolio includes export-grade fabrics such as Greige, RFD, Bleached, Dyed, Printed, Yarn-Dyed, Mill-made, Auto/Powerloom, Handloom, and Jacquard &amp; Dobbys.
               </p>
+            </Reveal>
+
+            <Reveal delay={0.25}>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border/40 rounded-sm overflow-hidden mb-12">
+                {[
+                  { label: 'Head Office', value: 'Mayapuri, New Delhi' },
+                  { label: 'Showroom', value: 'Mayapuri, New Delhi' },
+                  { label: 'Weaving Unit', value: 'Meerut' },
+                  { label: 'Weaving Unit', value: 'Bhiwandi / Ichalkaranji' },
+                  { label: 'Weaving Unit', value: 'Erode' },
+                  { label: 'Weaving Unit', value: 'Salem' },
+                  { label: 'Weaving Unit', value: 'Surat' },
+                ].map((loc) => (
+                  <div key={loc.value + loc.label} className="bg-background p-6">
+                    <p className="font-body text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-2">
+                      {loc.label}
+                    </p>
+                    <p className="font-serif text-lg text-primary font-medium leading-tight">
+                      {loc.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </Reveal>
 
             <div className="grid md:grid-cols-2 gap-12 mt-20">

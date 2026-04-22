@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
-import Testimonials from '@/components/Testimonials';
+import BrandsMarquee from '@/components/BrandsMarquee';
 import GlobalExportMap from '@/components/GlobalExportMap';
 import KineticHeading from '@/components/motion/KineticHeading';
 import Reveal from '@/components/motion/Reveal';
@@ -65,8 +65,8 @@ const Clientele = () => {
           </div>
         </section>
 
+        <BrandsMarquee />
         <GlobalExportMap />
-        <Testimonials />
 
         {/* Client Types */}
         <section className="py-24 bg-accent">
