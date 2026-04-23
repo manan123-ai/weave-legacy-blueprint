@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import ScrollProgress from "./components/motion/ScrollProgress";
 import AuroraBackground from "./components/motion/AuroraBackground";
-import CursorGlow from "./components/motion/CursorGlow";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Fabrics from "./pages/Fabrics";
@@ -24,7 +23,6 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <AuroraBackground />
-        <CursorGlow />
         <ScrollProgress />
         <Navigation />
         <Routes>
