@@ -26,7 +26,7 @@ const BrandsMarquee = () => {
   const allBrands = [...internationalBrands, ...domesticBrands];
 
   return (
-    <section className="py-24 bg-background border-y border-border/40">
+    <section className="py-24 bg-background border-y border-border/40 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <Reveal className="text-center">
           <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
@@ -41,33 +41,38 @@ const BrandsMarquee = () => {
         </Reveal>
       </div>
 
-      <Marquee speed={18} className="py-3">
-        {allBrands.map((brand) => (
-          <div
-            key={brand}
-            className="flex items-center px-6 group"
-          >
-            <span className="font-serif text-xl md:text-2xl font-bold tracking-tight text-primary/50 group-hover:text-primary transition-colors duration-500 whitespace-nowrap">
-              {brand}
-            </span>
-            <span className="ml-6 w-1.5 h-1.5 rounded-full bg-primary/20" />
-          </div>
-        ))}
-      </Marquee>
+      {/* Edge fades for cinematic feel */}
+      <div
+        className="relative"
+        style={{
+          WebkitMaskImage:
+            'linear-gradient(to right, transparent, black 8%, black 92%, transparent)',
+          maskImage:
+            'linear-gradient(to right, transparent, black 8%, black 92%, transparent)',
+        }}
+      >
+        <Marquee speed={18} className="py-3">
+          {allBrands.map((brand) => (
+            <div key={brand} className="flex items-center px-6 group">
+              <span className="font-serif text-xl md:text-2xl font-bold tracking-tight text-primary/50 group-hover:text-primary transition-colors duration-500 whitespace-nowrap">
+                {brand}
+              </span>
+              <span className="ml-6 w-1.5 h-1.5 rounded-full bg-primary/20" />
+            </div>
+          ))}
+        </Marquee>
 
-      <Marquee speed={22} reverse className="py-3">
-        {allBrands.map((brand) => (
-          <div
-            key={`r-${brand}`}
-            className="flex items-center px-6 group"
-          >
-            <span className="font-serif italic text-xl md:text-2xl font-light tracking-tight text-primary/40 group-hover:text-primary transition-colors duration-500 whitespace-nowrap">
-              {brand}
-            </span>
-            <span className="ml-6 w-1.5 h-1.5 rounded-full bg-primary/20" />
-          </div>
-        ))}
-      </Marquee>
+        <Marquee speed={22} reverse className="py-3">
+          {allBrands.map((brand) => (
+            <div key={`r-${brand}`} className="flex items-center px-6 group">
+              <span className="font-serif italic text-xl md:text-2xl font-light tracking-tight text-primary/40 group-hover:text-primary transition-colors duration-500 whitespace-nowrap">
+                {brand}
+              </span>
+              <span className="ml-6 w-1.5 h-1.5 rounded-full bg-primary/20" />
+            </div>
+          ))}
+        </Marquee>
+      </div>
     </section>
   );
 };
