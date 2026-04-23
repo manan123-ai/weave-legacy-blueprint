@@ -48,12 +48,16 @@ const CursorGlow = () => {
     <>
       <div
         ref={ringRef}
-        className="hidden md:block fixed top-0 left-0 z-[100] w-9 h-9 rounded-full border border-primary/40 pointer-events-none mix-blend-difference"
-        style={{ transition: 'width 0.3s, height 0.3s, border-color 0.3s' }}
+        className="hidden md:block fixed top-0 left-0 z-[100] w-10 h-10 rounded-full pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(circle, hsl(var(--primary) / 0.18) 0%, transparent 70%)',
+          transition: 'width 0.3s, height 0.3s',
+        }}
       />
       <div
         ref={dotRef}
-        className="hidden md:block fixed top-0 left-0 z-[100] w-1.5 h-1.5 rounded-full bg-primary pointer-events-none mix-blend-difference"
+        className="hidden md:block fixed top-0 left-0 z-[100] w-1.5 h-1.5 rounded-full bg-primary/60 pointer-events-none"
       />
     </>
   );
