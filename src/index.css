@@ -139,12 +139,6 @@ Feel: Editorial, spacious, modern-traditional hybrid
     @apply bg-primary;
   }
 
-  /* Hide native cursor on desktop where CursorGlow is active */
-  @media (hover: hover) and (pointer: fine) {
-    body, a, button, [role="button"], input, textarea, select, label {
-      cursor: none;
-    }
-  }
 }
 
 @layer utilities {

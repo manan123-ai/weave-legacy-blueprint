@@ -43,7 +43,7 @@ const WhyJankiNath = () => {
     { value: 40, suffix: '+', label: 'Years of Heritage' },
     { value: 2, suffix: 'M+', label: 'Meters Per Month' },
     { value: 20, suffix: '+', label: 'Countries Served' },
-    { value: 500, suffix: '+', label: 'Global Partners' },
+    { value: 50, suffix: '+', label: 'Global Partners' },
   ];
 
   return (
