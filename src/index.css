@@ -110,6 +110,7 @@ Feel: Editorial, spacious, modern-traditional hybrid
 
   body {
     @apply bg-background text-foreground font-body;
+    cursor: auto;
   }
 
   /* Typography Hierarchy */
