@@ -138,4 +138,60 @@ Feel: Editorial, spacious, modern-traditional hybrid
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary;
   }
+
+  /* Hide native cursor on desktop where CursorGlow is active */
+  @media (hover: hover) and (pointer: fine) {
+    body, a, button, [role="button"], input, textarea, select, label {
+      cursor: none;
+    }
+  }
+}
+
+@layer utilities {
+  /* Futuristic gradient text — used sparingly on key headings */
+  .text-gradient-luxe {
+    background: linear-gradient(
+      120deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--muted-foreground)) 45%,
+      hsl(var(--primary)) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+
+  /* Soft inner glow on hover */
+  .hover-glow {
+    transition: box-shadow 0.7s ease, transform 0.7s ease, border-color 0.7s ease;
+  }
+  .hover-glow:hover {
+    box-shadow:
+      0 0 0 1px hsl(var(--primary) / 0.1),
+      0 30px 80px -30px hsl(var(--primary) / 0.25),
+      0 0 60px -20px hsl(var(--accent) / 0.5);
+  }
+
+  /* Glass surface */
+  .glass {
+    background: hsl(var(--background) / 0.55);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid hsl(var(--border) / 0.6);
+  }
+
+  /* Animated divider line */
+  .divider-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--primary) / 0.4),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: shimmer 4s linear infinite;
+  }
 }

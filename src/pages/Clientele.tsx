@@ -81,7 +81,7 @@ const Clientele = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-background p-8 rounded-lg text-center">
+              <div className="glass hover-glow p-8 rounded-lg text-center">
                 <h3 className="font-serif text-xl font-bold text-primary mb-4">
                   Luxury Fashion Brands
                 </h3>
@@ -89,8 +89,8 @@ const Clientele = () => {
                   High-end fashion houses requiring premium fabrics with exceptional quality and unique designs
                 </p>
               </div>
-              
-              <div className="bg-background p-8 rounded-lg text-center">
+
+              <div className="glass hover-glow p-8 rounded-lg text-center">
                 <h3 className="font-serif text-xl font-bold text-primary mb-4">
                   High-Volume Manufacturers
                 </h3>
@@ -98,8 +98,8 @@ const Clientele = () => {
                   Large-scale manufacturers needing consistent quality and reliable supply chains
                 </p>
               </div>
-              
-              <div className="bg-background p-8 rounded-lg text-center">
+
+              <div className="glass hover-glow p-8 rounded-lg text-center">
                 <h3 className="font-serif text-xl font-bold text-primary mb-4">
                   Home Furnishing Companies
                 </h3>
@@ -145,7 +145,7 @@ const Clientele = () => {
                     {capability.title}
                   </h3>
                   
-                  <div className="font-serif text-2xl font-bold text-primary mb-4 tabular-nums">
+                  <div className="font-serif text-2xl font-bold mb-4 tabular-nums text-gradient-luxe">
                     {capability.value}
                   </div>
                   
