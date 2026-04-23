@@ -78,7 +78,7 @@ const WhyJankiNath = () => {
               transition={{ duration: 0.7, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
               viewport={{ once: true, amount: 0.3 }}
               whileHover={{ y: -6 }}
-              className="text-center group p-8 rounded-sm bg-background/40 backdrop-blur-sm border border-border/40 hover:bg-background hover:border-primary/30 hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.2)] transition-all duration-700"
+              className="text-center group p-8 rounded-sm glass hover-glow border border-border/40 hover:border-primary/30 transition-all duration-700"
             >
               <div className="relative inline-flex items-center justify-center w-16 h-16 mb-6">
                 <span className="absolute inset-0 rounded-full border border-primary/30 group-hover:scale-125 group-hover:border-primary/0 transition-all duration-700" />
@@ -103,7 +103,7 @@ const WhyJankiNath = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 border-t border-primary/10">
             {stats.map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="font-serif text-4xl md:text-5xl font-bold text-primary mb-2 tabular-nums">
+                <div className="font-serif text-4xl md:text-5xl font-bold mb-2 tabular-nums text-gradient-luxe">
                   <AnimatedCounter to={stat.value} suffix={stat.suffix} />
                 </div>
                 <div className="font-body text-xs uppercase tracking-[0.2em] text-muted-foreground">
