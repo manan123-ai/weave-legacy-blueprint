@@ -7,6 +7,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import { supabase } from '@/lib/supabase';
 import KineticHeading from '@/components/motion/KineticHeading';
+import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
 
 const Contact = () => {
@@ -297,6 +298,8 @@ ${formData.message}`;
             </div>
           </div>
         </section>
+
+        <KineticStrip text="Let's Weave Something Together" />
 
         {/* CTA Section */}
         <section className="py-24 bg-primary text-primary-foreground">

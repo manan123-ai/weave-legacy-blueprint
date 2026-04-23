@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import BrandsMarquee from '@/components/BrandsMarquee';
 import GlobalExportMap from '@/components/GlobalExportMap';
 import KineticHeading from '@/components/motion/KineticHeading';
+import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
 import { Clock, Package, Settings, Shield } from 'lucide-react';
 
@@ -66,6 +67,7 @@ const Clientele = () => {
         </section>
 
         <BrandsMarquee />
+        <KineticStrip text="In Good Company — Across Continents" />
         <GlobalExportMap />
 
         {/* Client Types */}
@@ -110,6 +112,8 @@ const Clientele = () => {
             </div>
           </div>
         </section>
+
+        <KineticStrip text="Trusted Worldwide — 50+ Global Partners" reverse />
 
         {/* Production Capabilities */}
         <section className="py-24">
