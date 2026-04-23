@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
 import KineticHeading from '@/components/motion/KineticHeading';
+import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import cottonFabric from '@/assets/cotton-pinterest.jpg';
@@ -224,6 +225,8 @@ const Fabrics = () => {
           </div>
         </section>
 
+        <KineticStrip text="Cotton · Linen · Jacquard · Viscose" />
+
         {/* Fabric Grid */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -327,6 +330,8 @@ const Fabrics = () => {
             </div>
           </div>
         </section>
+
+        <KineticStrip text="Woven for the World's Finest Brands" reverse />
       </main>
 
       <Footer />

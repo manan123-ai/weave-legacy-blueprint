@@ -3,6 +3,7 @@ import { CheckCircle, Clock, Users, Package, Truck, Award, Leaf, HeartHandshake,
 import Footer from '@/components/Footer';
 import IndiaWorldMap from '@/components/IndiaWorldMap';
 import KineticHeading from '@/components/motion/KineticHeading';
+import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -134,6 +135,8 @@ const ProductionProcess = () => {
         </div>
       </section>
 
+      <KineticStrip text="From Yarn to Fabric — Crafted with Care" />
+
       {/* How to Order Section */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -250,6 +253,8 @@ const ProductionProcess = () => {
           </div>
         </div>
       </section>
+
+      <KineticStrip text="Conscious Craft — Ethical Looms" reverse />
 
       {/* Sustainability & Ethical Workforce */}
       <section className="py-32 bg-background relative overflow-hidden">

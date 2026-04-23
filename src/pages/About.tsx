@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import KineticHeading from '@/components/motion/KineticHeading';
+import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
 
 const About = () => {
@@ -109,6 +110,8 @@ const About = () => {
           </div>
         </section>
 
+        <KineticStrip text="Since 1968 — Crafted in India" />
+
         {/* Why Choose Us */}
         <section className="py-32 bg-accent">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,6 +143,8 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        <KineticStrip text="Heritage · Quality · Innovation" reverse />
 
         {/* Leadership */}
         <section className="py-32">
