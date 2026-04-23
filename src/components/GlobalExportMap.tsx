@@ -87,8 +87,8 @@ const GlobalExportMap = () => {
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 text-center">
           {[
-            { number: '10+', label: 'Countries Served' },
-            { number: '50+', label: 'Global Partners' },
+            { number: '20+', label: 'Countries Served' },
+            { number: '500+', label: 'Global Partners' },
             { number: '40+', label: 'Years of Excellence' }
           ].map((stat, index) => (
             <motion.div
