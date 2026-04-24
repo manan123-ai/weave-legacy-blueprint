@@ -16,30 +16,31 @@ const KineticStrip = ({ text, reverse = false }: KineticStripProps) => {
     target: ref,
     offset: ['start end', 'end start'],
   });
+  // Move just enough to feel scroll-driven, but never hide the sentence.
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    reverse ? ['10%', '-30%'] : ['-30%', '10%']
+    reverse ? ['5%', '-15%'] : ['-15%', '5%']
   );
 
-  const words = Array(8).fill(text);
+  const words = Array(6).fill(text);
 
   return (
     <div
       ref={ref}
-      className="overflow-hidden py-10 border-y border-border/40 bg-background/40 backdrop-blur-sm"
+      className="overflow-hidden py-8 border-y border-border/40 bg-background/40 backdrop-blur-sm"
     >
       <motion.div
         style={{ x }}
-        className="flex gap-12 whitespace-nowrap will-change-transform"
+        className="flex gap-8 whitespace-nowrap will-change-transform"
       >
         {words.map((w, i) => (
           <span
             key={i}
-            className="font-serif italic text-5xl md:text-7xl font-light text-primary/30 tracking-tight"
+            className="font-serif italic text-3xl md:text-5xl font-light text-primary/30 tracking-tight flex items-center"
           >
             {w}
-            <span className="ml-12 text-primary/15">✦</span>
+            <span className="ml-8 text-primary/15 text-2xl md:text-3xl">✦</span>
           </span>
         ))}
       </motion.div>
