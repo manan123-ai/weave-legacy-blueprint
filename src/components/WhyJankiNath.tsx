@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import AnimatedCounter from '@/components/motion/AnimatedCounter';
 import Reveal from '@/components/motion/Reveal';
+import FigmaSurface from '@/components/motion/FigmaSurface';
+import FrameMarker from '@/components/motion/FrameMarker';
 
 const WhyJankiNath = () => {
   const ref = useRef<HTMLElement>(null);
@@ -56,11 +58,14 @@ const WhyJankiNath = () => {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <FigmaSurface
+        variant="blueprint"
+        frameLabel="Frame · Differentiators"
+        className="relative z-10"
+        innerClassName="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         <Reveal className="text-center mb-20">
-          <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
-            The Difference
-          </p>
+          <FrameMarker label="The Difference" index="04" />
           <h2 className="font-serif text-4xl md:text-6xl font-bold text-primary mb-6 leading-[1.05]">
             Why Janki Nath <span className="italic text-muted-foreground">& Co.</span>
           </h2>
@@ -113,7 +118,7 @@ const WhyJankiNath = () => {
             ))}
           </div>
         </Reveal>
-      </div>
+      </FigmaSurface>
     </section>
   );
 };
