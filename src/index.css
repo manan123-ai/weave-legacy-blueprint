@@ -226,4 +226,183 @@ Feel: Editorial, spacious, modern-traditional hybrid
   .float-soft {
     animation: float-y 6s ease-in-out infinite;
   }
+
+  /* ============ FIGMA-STYLE DEPTH SYSTEM ============ */
+
+  /* Background patterns */
+  .figma-grid {
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse at center, black 25%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 25%, transparent 80%);
+  }
+
+  .figma-dots {
+    background-image: radial-gradient(
+      hsl(var(--primary) / 0.18) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+
+  .figma-blueprint {
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.04) 1px, transparent 1px),
+      linear-gradient(hsl(var(--primary) / 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.08) 1px, transparent 1px);
+    background-size: 16px 16px, 16px 16px, 80px 80px, 80px 80px;
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+  }
+
+  .figma-holographic {
+    background:
+      conic-gradient(
+        from 180deg at 50% 50%,
+        hsl(var(--accent) / 0.12) 0deg,
+        transparent 60deg,
+        hsl(var(--secondary) / 0.15) 180deg,
+        transparent 240deg,
+        hsl(var(--accent) / 0.12) 360deg
+      );
+    animation: spin-slow 40s linear infinite;
+  }
+
+  /* Corner crosshairs — Figma frame markers */
+  .figma-crosshair {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+  .figma-crosshair::before,
+  .figma-crosshair::after {
+    content: '';
+    position: absolute;
+    background: hsl(var(--primary));
+  }
+  .figma-crosshair::before {
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    transform: translateY(-50%);
+  }
+  .figma-crosshair::after {
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    transform: translateX(-50%);
+  }
+
+  /* Holographic shimmer text accent */
+  .text-holo {
+    background: linear-gradient(
+      120deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--accent-foreground)) 30%,
+      hsl(var(--muted-foreground)) 50%,
+      hsl(var(--accent-foreground)) 70%,
+      hsl(var(--primary)) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: shimmer 8s linear infinite;
+  }
+
+  /* Neon outline edge */
+  .edge-glow {
+    position: relative;
+  }
+  .edge-glow::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary) / 0.3),
+      transparent 30%,
+      transparent 70%,
+      hsl(var(--accent) / 0.5)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .edge-glow:hover::before {
+    opacity: 1;
+  }
+
+  /* Animated dashed border */
+  .dash-border {
+    background-image:
+      repeating-linear-gradient(0deg, hsl(var(--primary) / 0.3), hsl(var(--primary) / 0.3) 4px, transparent 4px, transparent 10px),
+      repeating-linear-gradient(90deg, hsl(var(--primary) / 0.3), hsl(var(--primary) / 0.3) 4px, transparent 4px, transparent 10px),
+      repeating-linear-gradient(180deg, hsl(var(--primary) / 0.3), hsl(var(--primary) / 0.3) 4px, transparent 4px, transparent 10px),
+      repeating-linear-gradient(270deg, hsl(var(--primary) / 0.3), hsl(var(--primary) / 0.3) 4px, transparent 4px, transparent 10px);
+    background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+  }
+
+  /* Light beam sweep */
+  .beam-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+  .beam-sweep::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      115deg,
+      transparent 40%,
+      hsl(var(--primary) / 0.08) 50%,
+      transparent 60%
+    );
+    animation: beam 8s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes beam {
+    0%, 100% { transform: translateX(-30%); }
+    50% { transform: translateX(30%); }
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Measurement tick marks */
+  .measure-ticks {
+    background-image: repeating-linear-gradient(
+      90deg,
+      hsl(var(--primary) / 0.2) 0,
+      hsl(var(--primary) / 0.2) 1px,
+      transparent 1px,
+      transparent 12px
+    );
+    height: 8px;
+  }
 }
