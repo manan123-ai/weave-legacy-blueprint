@@ -14,6 +14,20 @@ const AuroraBackground = () => {
       {/* base wash */}
       <div className="absolute inset-0 bg-background" />
 
+      {/* editorial grid — Figma-style faint lines */}
+      <div
+        className="absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage:
+            'linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)',
+          backgroundSize: '80px 80px',
+          maskImage:
+            'radial-gradient(ellipse at center, black 30%, transparent 75%)',
+          WebkitMaskImage:
+            'radial-gradient(ellipse at center, black 30%, transparent 75%)',
+        }}
+      />
+
       {/* drifting aurora blobs */}
       <motion.div
         className="absolute -top-1/3 -left-1/4 w-[60vw] h-[60vw] rounded-full blur-[120px] opacity-[0.18]"
@@ -41,6 +55,17 @@ const AuroraBackground = () => {
         }}
         animate={{ x: [0, 50, -50, 0], y: [0, -30, 30, 0] }}
         transition={{ duration: 40, repeat: Infinity, ease: 'easeInOut' }}
+      />
+
+      {/* slow sweeping spotlight — Figma-prototype feel */}
+      <motion.div
+        className="absolute top-0 left-0 w-[40vw] h-[140vh] opacity-[0.06] blur-3xl"
+        style={{
+          background:
+            'linear-gradient(115deg, transparent 30%, hsl(var(--primary)) 50%, transparent 70%)',
+        }}
+        animate={{ x: ['-20vw', '120vw'] }}
+        transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
       />
 
       {/* fine grain for film texture */}
