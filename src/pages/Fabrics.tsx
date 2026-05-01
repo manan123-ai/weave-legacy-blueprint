@@ -331,6 +331,7 @@ const Fabrics = () => {
                       </div>
                     </div>
                   </div>
+                  </SpotlightCard>
                 </motion.div>
               ))}
             </div>
