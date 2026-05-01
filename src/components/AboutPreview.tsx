@@ -6,7 +6,6 @@ import weavingVideo from '@/assets/weaving-process.jpg';
 import KineticHeading from '@/components/motion/KineticHeading';
 import Reveal from '@/components/motion/Reveal';
 import MagneticButton from '@/components/motion/MagneticButton';
-import FigmaSurface from '@/components/motion/FigmaSurface';
 import FrameMarker from '@/components/motion/FrameMarker';
 
 const AboutPreview = () => {

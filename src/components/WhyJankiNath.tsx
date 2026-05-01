@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import AnimatedCounter from '@/components/motion/AnimatedCounter';
 import Reveal from '@/components/motion/Reveal';
-import FigmaSurface from '@/components/motion/FigmaSurface';
 import FrameMarker from '@/components/motion/FrameMarker';
 
 const WhyJankiNath = () => {
