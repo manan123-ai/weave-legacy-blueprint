@@ -6,7 +6,6 @@ import weavingVideo from '@/assets/weaving-process.jpg';
 import KineticHeading from '@/components/motion/KineticHeading';
 import Reveal from '@/components/motion/Reveal';
 import MagneticButton from '@/components/motion/MagneticButton';
-import FigmaSurface from '@/components/motion/FigmaSurface';
 import FrameMarker from '@/components/motion/FrameMarker';
 
 const AboutPreview = () => {
@@ -35,12 +34,7 @@ const AboutPreview = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/95 to-secondary" />
       </motion.div>
 
-      <FigmaSurface
-        variant="grid"
-        frameLabel="Frame · Heritage"
-        className="relative z-10"
-        innerClassName="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-      >
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FrameMarker label="Our Heritage" index="01" />
 
         <KineticHeading
@@ -72,7 +66,7 @@ const AboutPreview = () => {
             </Button>
           </MagneticButton>
         </Reveal>
-      </FigmaSurface>
+      </div>
     </section>
   );
 };

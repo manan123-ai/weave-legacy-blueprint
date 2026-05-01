@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { ChevronDown, FileText, ExternalLink } from 'lucide-react';
 import SpotlightCard from '@/components/motion/SpotlightCard';
-import FigmaSurface from '@/components/motion/FigmaSurface';
 import FrameMarker from '@/components/motion/FrameMarker';
 import cottonFabric from '@/assets/cotton-pinterest.jpg';
 import cottonBlendsFabric from '@/assets/cotton-blends-pinterest.jpg';
@@ -226,12 +225,7 @@ const FabricShowreel = () => {
 
   return (
     <section className="py-32 bg-background overflow-hidden">
-      <FigmaSurface
-        variant="dots"
-        frameLabel="Frame · Collection"
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        innerClassName=""
-      >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FrameMarker label="The Collection" index="02" />
         <motion.div
           className="text-center mb-20"
@@ -272,10 +266,10 @@ const FabricShowreel = () => {
             <Link to="/fabrics">
               <span>View All Fabrics</span>
               <span className="ml-2 transition-transform duration-500 group-hover:translate-x-1">→</span>
-          </Link>
+            </Link>
           </Button>
         </motion.div>
-      </FigmaSurface>
+      </div>
     </section>
   );
 };
