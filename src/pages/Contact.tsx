@@ -9,9 +9,6 @@ import { supabase } from '@/lib/supabase';
 import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
-import SpotlightCard from '@/components/motion/SpotlightCard';
-import SectionDivider from '@/components/motion/SectionDivider';
-import FrameMarker from '@/components/motion/FrameMarker';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -97,12 +94,9 @@ ${formData.message}`;
           </div>
         </section>
 
-        <SectionDivider label="Reach Out" index="01" />
-
         {/* Contact Content */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <FrameMarker label="Get in Touch" index="01" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Contact Information */}
               <div>

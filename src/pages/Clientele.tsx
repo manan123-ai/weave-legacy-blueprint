@@ -5,9 +5,6 @@ import GlobalExportMap from '@/components/GlobalExportMap';
 import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
-import SpotlightCard from '@/components/motion/SpotlightCard';
-import SectionDivider from '@/components/motion/SectionDivider';
-import FrameMarker from '@/components/motion/FrameMarker';
 import { Clock, Package, Settings, Shield } from 'lucide-react';
 
 const Clientele = () => {
@@ -71,7 +68,6 @@ const Clientele = () => {
 
         <BrandsMarquee />
         <KineticStrip text="In Good Company — Across Continents" />
-        <SectionDivider label="Global Reach" index="03" />
         <GlobalExportMap />
 
         {/* Client Types */}
@@ -87,36 +83,32 @@ const Clientele = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'Luxury Fashion Brands',
-                  desc: "High-end fashion houses requiring premium fabrics with exceptional quality and unique designs",
-                },
-                {
-                  title: 'High-Volume Manufacturers',
-                  desc: 'Large-scale manufacturers needing consistent quality and reliable supply chains',
-                },
-                {
-                  title: 'Home Furnishing Companies',
-                  desc: 'Interior design companies and furniture manufacturers seeking durable, stylish fabrics',
-                },
-              ].map((item, i) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -6 }}
-                >
-                  <SpotlightCard className="glass hover-glow p-8 rounded-lg text-center edge-glow h-full">
-                    <h3 className="font-serif text-xl font-bold text-primary mb-4">
-                      {item.title}
-                    </h3>
-                    <p className="font-body text-muted-foreground">{item.desc}</p>
-                  </SpotlightCard>
-                </motion.div>
-              ))}
+              <div className="glass hover-glow p-8 rounded-lg text-center">
+                <h3 className="font-serif text-xl font-bold text-primary mb-4">
+                  Luxury Fashion Brands
+                </h3>
+                <p className="font-body text-muted-foreground">
+                  High-end fashion houses requiring premium fabrics with exceptional quality and unique designs
+                </p>
+              </div>
+
+              <div className="glass hover-glow p-8 rounded-lg text-center">
+                <h3 className="font-serif text-xl font-bold text-primary mb-4">
+                  High-Volume Manufacturers
+                </h3>
+                <p className="font-body text-muted-foreground">
+                  Large-scale manufacturers needing consistent quality and reliable supply chains
+                </p>
+              </div>
+
+              <div className="glass hover-glow p-8 rounded-lg text-center">
+                <h3 className="font-serif text-xl font-bold text-primary mb-4">
+                  Home Furnishing Companies
+                </h3>
+                <p className="font-body text-muted-foreground">
+                  Interior design companies and furniture manufacturers seeking durable, stylish fabrics
+                </p>
+              </div>
             </div>
           </div>
         </section>

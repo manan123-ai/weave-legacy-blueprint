@@ -6,7 +6,6 @@ import GlobalExportMap from '@/components/GlobalExportMap';
 import WhyJankiNath from '@/components/WhyJankiNath';
 import Footer from '@/components/Footer';
 import KineticStrip from '@/components/motion/KineticStrip';
-import SectionDivider from '@/components/motion/SectionDivider';
 
 const Index = () => {
   return (
@@ -14,14 +13,10 @@ const Index = () => {
       <HeroBanner />
       <AboutPreview />
       <KineticStrip text="Heritage Craft — Modern Looms" />
-      <SectionDivider label="The Collection" index="02" />
       <FabricMarquee />
       <FabricShowreel />
       <KineticStrip text="Woven in India — Worn Worldwide" reverse />
-      <SectionDivider label="Global Reach" index="03" />
       <GlobalExportMap />
-      <KineticStrip text="Precision · Craft · Scale" />
-      <SectionDivider label="The Difference" index="04" />
       <WhyJankiNath />
       <Footer />
     </div>

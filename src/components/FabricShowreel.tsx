@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { ChevronDown, FileText, ExternalLink } from 'lucide-react';
-import SpotlightCard from '@/components/motion/SpotlightCard';
-import FigmaSurface from '@/components/motion/FigmaSurface';
-import FrameMarker from '@/components/motion/FrameMarker';
 import cottonFabric from '@/assets/cotton-pinterest.jpg';
 import cottonBlendsFabric from '@/assets/cotton-blends-pinterest.jpg';
 import linenFabric from '@/assets/linen-new.jpg';
@@ -39,7 +36,7 @@ const FabricCard = ({ category, index }: { category: FabricCategory; index: numb
       viewport={{ once: true, amount: 0.2 }}
       whileHover={{ y: -8 }}
     >
-      <SpotlightCard className="group relative bg-card rounded-sm overflow-hidden shadow-[0_2px_20px_-8px_hsl(var(--primary)/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.25)] transition-all duration-700 border border-border/40 edge-glow">
+      <div className="group relative bg-card rounded-sm overflow-hidden shadow-[0_2px_20px_-8px_hsl(var(--primary)/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.25)] transition-all duration-700 border border-border/40">
         <div className="aspect-[4/5] overflow-hidden relative">
           <img
             src={category.image}
@@ -135,7 +132,7 @@ const FabricCard = ({ category, index }: { category: FabricCategory; index: numb
             </div>
           )}
         </div>
-      </SpotlightCard>
+      </div>
     </motion.div>
   );
 };
@@ -226,13 +223,7 @@ const FabricShowreel = () => {
 
   return (
     <section className="py-32 bg-background overflow-hidden">
-      <FigmaSurface
-        variant="dots"
-        frameLabel="Frame · Collection"
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        innerClassName=""
-      >
-        <FrameMarker label="The Collection" index="02" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
@@ -272,10 +263,10 @@ const FabricShowreel = () => {
             <Link to="/fabrics">
               <span>View All Fabrics</span>
               <span className="ml-2 transition-transform duration-500 group-hover:translate-x-1">→</span>
-          </Link>
+            </Link>
           </Button>
         </motion.div>
-      </FigmaSurface>
+      </div>
     </section>
   );
 };

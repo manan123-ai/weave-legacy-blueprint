@@ -5,9 +5,6 @@ import IndiaWorldMap from '@/components/IndiaWorldMap';
 import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
-import SpotlightCard from '@/components/motion/SpotlightCard';
-import SectionDivider from '@/components/motion/SectionDivider';
-import FrameMarker from '@/components/motion/FrameMarker';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -143,7 +140,6 @@ const ProductionProcess = () => {
       {/* How to Order Section */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FrameMarker label="How to Order" index="01" />
           <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 50 }}
@@ -163,36 +159,32 @@ const ProductionProcess = () => {
             {orderingSteps.map((step, index) => (
               <motion.div
                 key={step.step}
+                className="relative p-8 bg-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -6 }}
               >
-                <SpotlightCard className="relative p-8 bg-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-border/50 edge-glow h-full">
-                  <div className="absolute -top-4 left-8 bg-primary text-primary-foreground rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">
-                    {step.step}
-                  </div>
-                  <div className="pt-4">
-                    <h3 className="font-serif text-xl font-bold text-card-foreground mb-4">
-                      {step.title}
-                    </h3>
-                    <p className="font-body text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </SpotlightCard>
+                <div className="absolute -top-4 left-8 bg-primary text-primary-foreground rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">
+                  {step.step}
+                </div>
+                <div className="pt-4">
+                  <h3 className="font-serif text-xl font-bold text-card-foreground mb-4">
+                    {step.title}
+                  </h3>
+                  <p className="font-body text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <SectionDivider label="The Process" index="02" />
       {/* Production Steps Section */}
       <section className="py-24 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FrameMarker label="The Process" index="02" />
           <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 50 }}

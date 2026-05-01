@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import worldMapImage from '@/assets/world-map.jpg';
-import FrameMarker from '@/components/motion/FrameMarker';
 
 const exportDestinations = [
   { name: 'USA', x: '20%', y: '42%' },
@@ -19,26 +18,9 @@ const indiaPosition = { x: '65%', y: '48%' };
 
 const GlobalExportMap = () => {
   return (
-    <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-      {/* faint grid */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage:
-            'linear-gradient(hsl(var(--primary-foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-foreground)) 1px, transparent 1px)',
-          backgroundSize: '64px 64px',
-          maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 80%)',
-          WebkitMaskImage: 'radial-gradient(ellipse at center, black 30%, transparent 80%)',
-        }}
-      />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-24 bg-primary text-primary-foreground">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="flex justify-center mb-6">
-            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary-foreground/60 px-3 py-1 border border-primary-foreground/20 rounded-sm">
-              03 — Global Reach
-            </span>
-          </div>
           <motion.h2
             className="font-serif text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
