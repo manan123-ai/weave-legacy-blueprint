@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
+import SpotlightCard from '@/components/motion/SpotlightCard';
+import SectionDivider from '@/components/motion/SectionDivider';
+import FrameMarker from '@/components/motion/FrameMarker';
 
 const About = () => {
   const whyChoose = [
@@ -116,6 +119,7 @@ const About = () => {
         <section className="py-32 bg-accent">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Reveal className="text-center mb-20">
+              <FrameMarker label="The Difference" index="03" />
               <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
                 The Difference
               </p>
@@ -128,16 +132,17 @@ const About = () => {
               {whyChoose.map((item, index) => (
                 <motion.div
                   key={index}
-                  className="bg-background p-8 rounded-sm text-center border border-border/40 hover:border-primary/30 hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.15)] transition-all duration-700"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: (index % 3) * 0.1, ease: [0.22, 1, 0.36, 1] }}
                   viewport={{ once: true }}
                   whileHover={{ y: -6 }}
                 >
-                  <p className="font-body text-xs text-muted-foreground/60 tabular-nums mb-3">0{index + 1}</p>
-                  <h3 className="font-serif text-xl font-semibold text-primary mb-3">{item.title}</h3>
-                  <p className="font-body text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                  <SpotlightCard className="bg-background p-8 rounded-sm text-center border border-border/40 hover:border-primary/30 hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.15)] transition-all duration-700 edge-glow h-full">
+                    <p className="font-body text-xs text-muted-foreground/60 tabular-nums mb-3">0{index + 1}</p>
+                    <h3 className="font-serif text-xl font-semibold text-primary mb-3">{item.title}</h3>
+                    <p className="font-body text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                  </SpotlightCard>
                 </motion.div>
               ))}
             </div>
@@ -150,6 +155,7 @@ const About = () => {
         <section className="py-32">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Reveal className="mb-20">
+              <FrameMarker label="The Team" index="04" />
               <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
                 The Team
               </p>
@@ -161,16 +167,17 @@ const About = () => {
               {leadership.map((person, index) => (
                 <motion.div
                   key={index}
-                  className="bg-card p-10 rounded-sm border border-border/40 hover:border-primary/30 transition-all duration-700"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
                   viewport={{ once: true }}
                   whileHover={{ y: -6 }}
                 >
-                  <h3 className="font-serif text-xl font-bold text-primary mb-3 leading-tight">{person.name}</h3>
-                  <p className="font-body text-muted-foreground text-sm">{person.role}</p>
-                  <p className="font-body text-muted-foreground/70 text-xs mt-1">{person.years}</p>
+                  <SpotlightCard className="bg-card p-10 rounded-sm border border-border/40 hover:border-primary/30 transition-all duration-700 edge-glow h-full">
+                    <h3 className="font-serif text-xl font-bold text-primary mb-3 leading-tight">{person.name}</h3>
+                    <p className="font-body text-muted-foreground text-sm">{person.role}</p>
+                    <p className="font-body text-muted-foreground/70 text-xs mt-1">{person.years}</p>
+                  </SpotlightCard>
                 </motion.div>
               ))}
             </div>
