@@ -9,6 +9,7 @@ import { useState } from 'react';
 import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
+import SEO from '@/components/SEO';
 
 const Contact = () => {
   const { toast } = useToast();
