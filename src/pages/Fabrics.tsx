@@ -204,6 +204,11 @@ const Fabrics = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Fabric Catalogue — Cotton, Linen, Jacquards & More | Janki Nath & Co."
+        description="Browse our premium fabric catalogue: cotton, cotton blends, linen, jacquards, viscose and specialty woven textiles — manufactured in India for global brands."
+        path="/fabrics"
+      />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-32 bg-secondary">
