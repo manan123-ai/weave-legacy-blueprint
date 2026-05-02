@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
+import SEO from '@/components/SEO';
 
 const About = () => {
   const whyChoose = [
@@ -24,6 +25,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="About — Janki Nath & Co. | Heritage Textile Manufacturer Since 1968"
+        description="Six decades of weaving excellence. Discover the heritage, craftsmanship and global reach of Janki Nath & Co., India's trusted premium fabric manufacturer."
+        path="/about"
+      />
       <main className="pt-16">
         {/* Hero */}
         <section className="py-32 bg-secondary relative overflow-hidden">
