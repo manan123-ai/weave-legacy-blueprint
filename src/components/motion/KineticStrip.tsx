@@ -27,7 +27,7 @@ const KineticStrip = ({ text, reverse = false }: KineticStripProps) => {
   return (
     <div
       ref={ref}
-      className="relative overflow-hidden py-6 border-y border-border/40 bg-background/40 backdrop-blur-sm"
+      className="relative overflow-hidden py-6 border-y border-border/40 bg-background/60"
     >
       <div className="measure-ticks absolute top-0 left-0 right-0 opacity-50" aria-hidden="true" />
       <div className="measure-ticks absolute bottom-0 left-0 right-0 opacity-50" aria-hidden="true" />
