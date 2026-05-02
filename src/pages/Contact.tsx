@@ -5,7 +5,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useState } from 'react';
-import { supabase } from '@/lib/supabase';
+
 import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
