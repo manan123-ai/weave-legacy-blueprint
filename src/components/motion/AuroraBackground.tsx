@@ -1,11 +1,18 @@
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 /**
  * Site-wide animated aurora — soft, slow-drifting gradient blobs in brand
  * tones that sit behind every page. Pure CSS/Framer; no 3D, no perspective.
- * Stays editorial: extremely low opacity, slow easing, never compete with content.
+ *
+ * Performance: heavy blur+grain filters are expensive. We render a lighter
+ * static version on mobile / reduced-motion to keep paint cost low.
  */
 const AuroraBackground = () => {
+  const isMobile = useIsMobile();
+  const reduce = useReducedMotion();
+  const lite = isMobile || reduce;
+
   return (
     <div
       aria-hidden="true"
@@ -14,68 +21,53 @@ const AuroraBackground = () => {
       {/* base wash */}
       <div className="absolute inset-0 bg-background" />
 
-      {/* editorial grid — Figma-style faint lines */}
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            'linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)',
-          backgroundSize: '80px 80px',
-          maskImage:
-            'radial-gradient(ellipse at center, black 30%, transparent 75%)',
-          WebkitMaskImage:
-            'radial-gradient(ellipse at center, black 30%, transparent 75%)',
-        }}
-      />
+      {/* editorial grid — Figma-style faint lines (skip on mobile) */}
+      {!lite && (
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage:
+              'linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)',
+            backgroundSize: '80px 80px',
+            maskImage:
+              'radial-gradient(ellipse at center, black 30%, transparent 75%)',
+            WebkitMaskImage:
+              'radial-gradient(ellipse at center, black 30%, transparent 75%)',
+          }}
+        />
+      )}
 
-      {/* drifting aurora blobs */}
-      <motion.div
-        className="absolute -top-1/3 -left-1/4 w-[60vw] h-[60vw] rounded-full blur-[120px] opacity-[0.18]"
-        style={{
-          background:
-            'radial-gradient(circle at center, hsl(var(--accent)) 0%, transparent 65%)',
-        }}
-        animate={{ x: [0, 80, -40, 0], y: [0, 60, -30, 0] }}
-        transition={{ duration: 28, repeat: Infinity, ease: 'easeInOut' }}
-      />
-      <motion.div
-        className="absolute top-1/3 -right-1/4 w-[55vw] h-[55vw] rounded-full blur-[140px] opacity-[0.14]"
-        style={{
-          background:
-            'radial-gradient(circle at center, hsl(var(--primary) / 0.6) 0%, transparent 65%)',
-        }}
-        animate={{ x: [0, -60, 40, 0], y: [0, -40, 60, 0] }}
-        transition={{ duration: 34, repeat: Infinity, ease: 'easeInOut' }}
-      />
-      <motion.div
-        className="absolute bottom-0 left-1/3 w-[50vw] h-[50vw] rounded-full blur-[120px] opacity-[0.12]"
-        style={{
-          background:
-            'radial-gradient(circle at center, hsl(var(--secondary)) 0%, transparent 65%)',
-        }}
-        animate={{ x: [0, 50, -50, 0], y: [0, -30, 30, 0] }}
-        transition={{ duration: 40, repeat: Infinity, ease: 'easeInOut' }}
-      />
-
-      {/* slow sweeping spotlight — Figma-prototype feel */}
-      <motion.div
-        className="absolute top-0 left-0 w-[40vw] h-[140vh] opacity-[0.06] blur-3xl"
-        style={{
-          background:
-            'linear-gradient(115deg, transparent 30%, hsl(var(--primary)) 50%, transparent 70%)',
-        }}
-        animate={{ x: ['-20vw', '120vw'] }}
-        transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
-      />
-
-      {/* fine grain for film texture */}
-      <div
-        className="absolute inset-0 opacity-[0.05] mix-blend-overlay"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E\")",
-        }}
-      />
+      {lite ? (
+        // Lightweight static gradient wash — no blur, no animation
+        <div
+          className="absolute inset-0 opacity-60"
+          style={{
+            background:
+              'radial-gradient(ellipse at 20% 10%, hsl(var(--accent) / 0.18), transparent 55%), radial-gradient(ellipse at 80% 60%, hsl(var(--secondary) / 0.18), transparent 55%)',
+          }}
+        />
+      ) : (
+        <>
+          <motion.div
+            className="absolute -top-1/3 -left-1/4 w-[55vw] h-[55vw] rounded-full blur-[90px] opacity-[0.16] will-change-transform"
+            style={{
+              background:
+                'radial-gradient(circle at center, hsl(var(--accent)) 0%, transparent 65%)',
+            }}
+            animate={{ x: [0, 60, -30, 0], y: [0, 40, -20, 0] }}
+            transition={{ duration: 32, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            className="absolute top-1/3 -right-1/4 w-[50vw] h-[50vw] rounded-full blur-[100px] opacity-[0.12] will-change-transform"
+            style={{
+              background:
+                'radial-gradient(circle at center, hsl(var(--primary) / 0.6) 0%, transparent 65%)',
+            }}
+            animate={{ x: [0, -40, 30, 0], y: [0, -30, 40, 0] }}
+            transition={{ duration: 38, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </>
+      )}
     </div>
   );
 };

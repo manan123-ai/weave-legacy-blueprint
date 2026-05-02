@@ -1,5 +1,6 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { useRef, ReactNode } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface FigmaSurfaceProps {
   children: ReactNode;
