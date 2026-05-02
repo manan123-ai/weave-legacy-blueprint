@@ -31,6 +31,10 @@ const FigmaSurface = ({
   innerClassName = '',
 }: FigmaSurfaceProps) => {
   const ref = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
+  const reduce = useReducedMotion();
+  const lite = isMobile || reduce;
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end start'],
@@ -62,10 +66,10 @@ const FigmaSurface = ({
         aria-hidden="true"
       />
 
-      {/* Drifting spotlight */}
-      {spotlight && (
+      {/* Drifting spotlight — desktop only (heavy blur) */}
+      {spotlight && !lite && (
         <motion.div
-          className="absolute top-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full blur-[100px] pointer-events-none"
+          className="absolute top-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full blur-[100px] pointer-events-none will-change-transform"
           style={{
             left: spotX,
             x: '-50%',
