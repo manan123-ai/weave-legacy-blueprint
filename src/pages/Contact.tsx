@@ -30,44 +30,51 @@ const Contact = () => {
     }));
   };
 
+  const encode = (data: Record<string, string>) =>
+    Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Create email content
-    const emailSubject = `Fabric Inquiry from ${formData.firstName} ${formData.lastName}`;
-    const emailBody = `Name: ${formData.firstName} ${formData.lastName}
-Email: ${formData.email}
-Company: ${formData.company || 'Not provided'}
-Fabric Interest: ${formData.fabricInterest || 'Not specified'}
+    try {
+      // Submit to Netlify Forms (form-name must match the static form in index.html)
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contact',
+          'bot-field': '',
+          ...formData,
+        }),
+      });
 
-Message:
-${formData.message}`;
+      if (!response.ok) throw new Error('Network response was not ok');
 
-    // Create mailto link
-    const mailtoLink = `mailto:jcofabrics@yahoo.co.in?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    // Show success message
-    toast({
-      title: "Email client opened!",
-      description: "Your default email application should open with the message pre-filled.",
-    });
-    
-    // Reset form after a short delay
-    setTimeout(() => {
+      toast({
+        title: 'Message sent!',
+        description: "Thank you — we've received your inquiry and will get back to you shortly.",
+      });
+
       setFormData({
         firstName: '',
         lastName: '',
         email: '',
         company: '',
         fabricInterest: '',
-        message: ''
+        message: '',
       });
+    } catch (error) {
+      toast({
+        title: 'Something went wrong',
+        description: 'Please try again or email us directly at jcofabrics@yahoo.co.in',
+        variant: 'destructive',
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -205,7 +212,21 @@ ${formData.message}`;
                   Request a Fabric Sample
                 </h2>
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
+                  {/* Required hidden inputs for Netlify Forms */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="font-body text-sm font-medium text-primary mb-2 block">

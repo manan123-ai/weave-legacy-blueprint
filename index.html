@@ -19,6 +19,24 @@
 
   <body>
     <div id="root"></div>
+
+    <!--
+      Hidden static form for Netlify form detection.
+      Netlify scans the built HTML for forms at deploy time. Because our app
+      is a React SPA, the live form is rendered by JS and is invisible to the
+      crawler — so we mirror its fields here. Field `name` attributes MUST
+      match the React form. Do not remove.
+    -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bot-field" />
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="text" name="fabricInterest" />
+      <textarea name="message"></textarea>
+    </form>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
