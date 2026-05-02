@@ -1,5 +1,6 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { useRef, ReactNode } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface FigmaSurfaceProps {
   children: ReactNode;
@@ -30,6 +31,10 @@ const FigmaSurface = ({
   innerClassName = '',
 }: FigmaSurfaceProps) => {
   const ref = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
+  const reduce = useReducedMotion();
+  const lite = isMobile || reduce;
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end start'],
@@ -61,10 +66,10 @@ const FigmaSurface = ({
         aria-hidden="true"
       />
 
-      {/* Drifting spotlight */}
-      {spotlight && (
+      {/* Drifting spotlight — desktop only (heavy blur) */}
+      {spotlight && !lite && (
         <motion.div
-          className="absolute top-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full blur-[100px] pointer-events-none"
+          className="absolute top-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full blur-[100px] pointer-events-none will-change-transform"
           style={{
             left: spotX,
             x: '-50%',
@@ -96,16 +101,17 @@ const FigmaSurface = ({
         </div>
       )}
 
-      {/* Film grain */}
-      <div
-        className="absolute inset-0 opacity-[0.04] mix-blend-overlay pointer-events-none"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E\")",
-        }}
-        aria-hidden="true"
-      />
-
+      {/* Film grain — desktop only (mix-blend + SVG noise is paint-heavy) */}
+      {!lite && (
+        <div
+          className="absolute inset-0 opacity-[0.04] mix-blend-overlay pointer-events-none"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E\")",
+          }}
+          aria-hidden="true"
+        />
+      )}
       <div className={`relative z-[1] ${innerClassName}`}>{children}</div>
     </div>
   );

@@ -159,16 +159,16 @@ const ProductionProcess = () => {
             {orderingSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                className="relative p-8 bg-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50"
-                initial={{ opacity: 0, y: 50 }}
+                className="relative mt-6 p-8 pt-10 bg-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
-                <div className="absolute -top-4 left-8 bg-primary text-primary-foreground rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">
+                <div className="absolute -top-5 left-6 bg-primary text-primary-foreground rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg shadow-md">
                   {step.step}
                 </div>
-                <div className="pt-4">
+                <div className="pt-2">
                   <h3 className="font-serif text-xl font-bold text-card-foreground mb-4">
                     {step.title}
                   </h3>
