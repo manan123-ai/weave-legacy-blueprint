@@ -9,6 +9,7 @@ import { useState } from 'react';
 import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
+import SEO from '@/components/SEO';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -79,6 +80,17 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Contact — Janki Nath & Co. | Fabric Inquiries & Sample Requests"
+        description="Get in touch with Janki Nath & Co. for fabric inquiries, sample requests and bulk orders. Email jcofabrics@yahoo.co.in or call +91 9891542727."
+        path="/contact"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: 'Contact Janki Nath & Co.',
+          url: 'https://jankinathandco.com/contact',
+        }}
+      />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-32 bg-secondary">

@@ -5,6 +5,7 @@ import GlobalExportMap from '@/components/GlobalExportMap';
 import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
+import SEO from '@/components/SEO';
 import { Clock, Package, Settings, Shield } from 'lucide-react';
 
 const Clientele = () => {
@@ -44,6 +45,11 @@ const Clientele = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Clientele — Trusted by 50+ Global Brands | Janki Nath & Co."
+        description="Janki Nath & Co. supplies premium fabrics to 50+ international brands across 20+ countries. Discover our global clientele and export footprint."
+        path="/clientele"
+      />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-32 bg-secondary">

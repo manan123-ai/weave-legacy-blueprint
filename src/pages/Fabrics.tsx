@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
+import SEO from '@/components/SEO';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import cottonFabric from '@/assets/cotton-pinterest.jpg';
 import cottonBlendsFabric from '@/assets/cotton-blends-pinterest.jpg';
@@ -203,6 +204,11 @@ const Fabrics = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Fabric Catalogue — Cotton, Linen, Jacquards & More | Janki Nath & Co."
+        description="Browse our premium fabric catalogue: cotton, cotton blends, linen, jacquards, viscose and specialty woven textiles — manufactured in India for global brands."
+        path="/fabrics"
+      />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-32 bg-secondary">

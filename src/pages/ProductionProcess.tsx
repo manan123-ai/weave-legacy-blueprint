@@ -7,6 +7,7 @@ import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 
 // Import fabric and weaving images
 import weavingLoomBanner from '@/assets/weaving-loom-banner.jpg';
@@ -104,6 +105,11 @@ const ProductionProcess = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Production Process & How to Order | Janki Nath & Co."
+        description="Inside our 6-step fabric production process — from yarn to finished cloth — and how to place an order with Janki Nath & Co."
+        path="/production"
+      />
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-primary via-primary/90 to-accent overflow-hidden">
         {/* Background Video/Image */}
