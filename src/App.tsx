@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
+import Preloader from "./components/Preloader";
 import ScrollProgress from "./components/motion/ScrollProgress";
 import AuroraBackground from "./components/motion/AuroraBackground";
 import Index from "./pages/Index";
@@ -22,6 +23,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <Preloader />
         <AuroraBackground />
         <ScrollProgress />
         <Navigation />

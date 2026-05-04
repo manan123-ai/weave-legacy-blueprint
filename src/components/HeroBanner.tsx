@@ -21,6 +21,7 @@ const HeroBanner = () => {
   const slides = [
     {
       image: heroSlide1,
+      alt: 'Colorful premium woven fabrics by Janki Nath & Co. — cotton, linen and jacquard textiles for global fashion brands',
       title: 'Traditional Craftsmanship Meets Modern Excellence',
       subtitle: 'Explore Our Craft',
       description:
@@ -31,6 +32,7 @@ const HeroBanner = () => {
     },
     {
       image: heroSlide2,
+      alt: 'Advanced weaving loom in operation at Janki Nath & Co. textile mill in India',
       title: 'Advanced Weaving Technology',
       subtitle: 'About Our Journey',
       description:
@@ -40,6 +42,7 @@ const HeroBanner = () => {
     },
     {
       image: heroSlide3,
+      alt: 'Premium fabric production line — yarn to finished textile, manufactured by Janki Nath & Co. India',
       title: 'Premium Fabric Production',
       subtitle: 'World-Class Quality',
       description:
@@ -90,7 +93,10 @@ const HeroBanner = () => {
           >
             <img
               src={slide.image}
-              alt={slide.title}
+              alt={slide.alt}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+              fetchPriority={index === 0 ? 'high' : 'low'}
               className={`w-full h-full object-cover ${
                 currentSlide === index ? 'animate-slow-zoom' : ''
               }`}
