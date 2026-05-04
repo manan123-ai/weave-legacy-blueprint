@@ -116,7 +116,9 @@ const ProductionProcess = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src={weavingLoomBanner} 
-            alt="Fabric Production Process" 
+            alt="Janki Nath & Co. weaving loom in operation — premium fabric production process in India" 
+            loading="eager"
+            decoding="async"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-accent/80"></div>
@@ -225,7 +227,9 @@ const ProductionProcess = () => {
                   >
                     <img 
                       src={step.image} 
-                      alt={step.title}
+                      alt={`${step.title} — Janki Nath & Co. fabric manufacturing process`}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-80 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
