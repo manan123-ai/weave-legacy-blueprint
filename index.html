@@ -55,6 +55,37 @@
   </head>
 
   <body>
+    <!--
+      Instant splash — paints before React loads so the user sees the
+      brand identity immediately (no white flash). React's <Preloader />
+      mounts on top with the same background, then fades out together.
+    -->
+    <style>
+      #initial-splash {
+        position: fixed; inset: 0; z-index: 99999;
+        background: #EFEAE2;
+        display: flex; align-items: center; justify-content: center;
+        flex-direction: column;
+        transition: opacity .5s ease;
+      }
+      #initial-splash img { width: 180px; height: 180px; object-fit: contain; }
+      #initial-splash .bar { margin-top: 32px; width: 220px; height: 1px; background: rgba(138,116,80,.18); overflow: hidden; }
+      #initial-splash .bar > span {
+        display: block; height: 100%; width: 30%;
+        background: #8A7450;
+        animation: jco-load 1.2s ease-in-out infinite;
+      }
+      @keyframes jco-load {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(360%); }
+      }
+      .react-mounted #initial-splash { opacity: 0; pointer-events: none; }
+    </style>
+    <div id="initial-splash" aria-hidden="true">
+      <img src="/jco-logo.png" alt="Janki Nath & Co. — JCO Fabrics" />
+      <div class="bar"><span></span></div>
+    </div>
+
     <div id="root"></div>
 
     <!--
@@ -81,18 +112,67 @@
       React hydrates.
     -->
     <div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden" aria-hidden="true">
-      <h1>Janki Nath &amp; Co. — Premium Woven Fabric Manufacturer in India</h1>
-      <p>Since 1968, Janki Nath &amp; Co. has been weaving premium cotton, linen, jacquard and specialty fabrics for over 50 global brands across 20+ countries. Head office in Mayapuri, New Delhi with weaving units in Meerut, Bhiwandi, Ichalkaranji, Erode, Salem and Surat.</p>
-      <nav>
+      <header>
+        <h1>Janki Nath &amp; Co. — Premium Woven Fabric Manufacturer &amp; Exporter in India</h1>
+        <p>Since 1968, Janki Nath &amp; Co. (JCO Fabrics) has been weaving premium cotton, linen, jacquard and specialty fabrics for over 50 global brands across 20+ countries. Head office in Mayapuri, New Delhi with weaving units in Meerut, Bhiwandi, Ichalkaranji, Erode, Salem and Surat.</p>
+      </header>
+
+      <nav aria-label="Primary">
         <a href="/">Home</a>
-        <a href="/about">About Us</a>
-        <a href="/fabrics">Fabrics</a>
+        <a href="/about">About Janki Nath &amp; Co.</a>
+        <a href="/fabrics">Fabrics &amp; Products</a>
         <a href="/production">Production Process</a>
-        <a href="/clientele">Clientele</a>
-        <a href="/contact">Contact</a>
+        <a href="/clientele">Clientele &amp; Global Exports</a>
+        <a href="/contact">Contact Janki Nath &amp; Co.</a>
       </nav>
+
+      <section>
+        <h2>Our Premium Woven Fabric Range</h2>
+        <ul>
+          <li>Cotton fabrics — woven cotton, cotton shirting, cotton dobby</li>
+          <li>Linen fabrics — pure linen, linen blends, linen shirting</li>
+          <li>Jacquard fabrics — designer jacquards for fashion and home</li>
+          <li>Specialty woven fabrics for luxury fashion and home furnishing</li>
+          <li>Custom developed fabrics — fully tailored to client specifications</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Trusted by Global Brands</h2>
+        <p>Janki Nath &amp; Co. supplies premium woven textiles to luxury fashion houses, high-volume manufacturers and home-furnishing companies across the United States, United Kingdom, Germany, France, Italy, Spain, Netherlands, Japan, South Korea, Australia, Canada, UAE, Saudi Arabia, Turkey, Brazil, Mexico, South Africa, Egypt, Bangladesh and Sri Lanka.</p>
+      </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <p>GOTS Certified · OCS Certified · OEKO-TEX Standard 100 · MSME Registered · BCI Member.</p>
+      </section>
+
+      <address>
+        Janki Nath &amp; Co., A-14, Mayapuri Industrial Area, Phase-1, New Delhi 110064, India.
+        Email: <a href="mailto:jcofabrics@yahoo.co.in">jcofabrics@yahoo.co.in</a>.
+        Phone: <a href="tel:+919891542727">+91 98915 42727</a>.
+      </address>
     </div>
 
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Hide the instant splash once React has mounted the app.
+      // The React <Preloader /> handles the polished fade-out from there.
+      (function () {
+        var tries = 0;
+        var t = setInterval(function () {
+          tries++;
+          var root = document.getElementById('root');
+          if ((root && root.childNodes.length > 0) || tries > 40) {
+            document.documentElement.classList.add('react-mounted');
+            setTimeout(function () {
+              var s = document.getElementById('initial-splash');
+              if (s && s.parentNode) s.parentNode.removeChild(s);
+            }, 600);
+            clearInterval(t);
+          }
+        }, 100);
+      })();
+    </script>
   </body>
 </html>

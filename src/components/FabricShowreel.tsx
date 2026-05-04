@@ -40,7 +40,9 @@ const FabricCard = ({ category, index }: { category: FabricCategory; index: numb
         <div className="aspect-[4/5] overflow-hidden relative">
           <img
             src={category.image}
-            alt={category.name}
+            alt={`${category.name} fabric by Janki Nath & Co. — premium woven textile from India`}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />

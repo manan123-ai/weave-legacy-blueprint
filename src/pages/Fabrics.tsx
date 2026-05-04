@@ -283,7 +283,9 @@ const Fabrics = () => {
                     <div className="md:w-1/2 overflow-hidden">
                       <img
                         src={fabric.image}
-                        alt={fabric.name}
+                        alt={`${fabric.name} fabric by Janki Nath & Co. — premium woven textile manufactured in India`}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-64 md:h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
                       />
                     </div>

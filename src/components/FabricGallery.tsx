@@ -182,7 +182,9 @@ const FabricGallery = () => {
               <div className="aspect-square overflow-hidden relative">
                 <motion.img
                   src={fabric.image}
-                  alt={fabric.name}
+                  alt={`${fabric.name} — premium woven fabric by Janki Nath & Co.`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.5 }}
