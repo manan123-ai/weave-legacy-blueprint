@@ -51,7 +51,7 @@ const BrandsMarquee = () => {
             'linear-gradient(to right, transparent, black 8%, black 92%, transparent)',
         }}
       >
-        <Marquee speed={10} className="py-3">
+        <Marquee speed={5} className="py-3">
           {allBrands.map((brand) => (
             <div key={brand} className="flex items-center px-6 group">
               <span className="font-serif text-xl md:text-2xl font-bold tracking-tight text-primary/50 group-hover:text-primary transition-colors duration-500 whitespace-nowrap">
