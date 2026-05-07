@@ -19,7 +19,7 @@ const KineticStrip = ({ text, reverse = false }: KineticStripProps) => {
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    reverse ? ['2%', '-12%'] : ['-12%', '2%']
+    reverse ? ['10%', '-40%'] : ['-40%', '10%']
   );
 
   const words = Array(8).fill(text);

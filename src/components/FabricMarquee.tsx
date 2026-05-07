@@ -22,7 +22,7 @@ const FabricMarquee = () => {
           Our Specialities
         </p>
       </Reveal>
-      <Marquee speed={45}>
+      <Marquee speed={18}>
         {labels.map((label) => (
           <span
             key={label}
