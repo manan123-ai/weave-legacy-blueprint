@@ -13,7 +13,6 @@ const BrandsMarquee = () => {
     'SUPERDRY',
     'ANTHROPOLOGIE',
     'FAHERTY',
-    'SOFT SURROUNDINGS',
     'URBN',
     'MARKS & SPENCER',
     'LUCKY BRAND',
