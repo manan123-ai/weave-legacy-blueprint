@@ -397,14 +397,23 @@ const WeaveRevealBanner = ({
 
       const imgA = ease(seg(f, 0.8, 0.92));
       if (img && imgA > 0) {
+        // Fit logo aspect-preserving inside the brass ring (no hard circular clip,
+        // so wide horizontal company logos aren't cropped into a weird sliver).
+        const maxW = clipR * 2 * 0.92;
+        const maxH = clipR * 2 * 0.78;
+        const iw = img.naturalWidth || sealW;
+        const ih = img.naturalHeight || sealH;
+        const scale = Math.min(maxW / iw, maxH / ih);
+        const dw = iw * scale;
+        const dh = ih * scale;
+        const dx = cx - dw / 2;
+        const dy = cy - dh / 2;
         ctx.save();
-        ctx.beginPath();
-        ctx.arc(cx, cy, clipR, 0, 7);
-        ctx.clip();
         ctx.globalAlpha = imgA;
-        ctx.drawImage(img, sx, sy, sealW, sealH);
+        ctx.drawImage(img, dx, dy, dw, dh);
         ctx.restore();
       }
+
 
       const sw2 = seg(f, 0.93, 1.0);
       if (sw2 > 0 && sw2 < 1) sweep(sw2, 0.2, true);
@@ -432,40 +441,40 @@ const WeaveRevealBanner = ({
   return (
     <section
       aria-label="Janki Nath & Co. weaving reveal banner"
-      className="w-full bg-[#e7ddd6] py-8 md:py-12"
+      className="w-full bg-[#f4ebe8]"
     >
-      <div className="mx-auto w-full max-w-[1584px] px-4">
+      <div
+        ref={rootRef}
+        className="relative w-full overflow-hidden bg-[#f4ebe8]"
+        style={{ aspectRatio: '1584 / 480', minHeight: '320px' }}
+      >
+        <canvas
+          ref={canvasRef}
+          className="absolute inset-0 block h-full w-full"
+          aria-hidden="true"
+        />
+
         <div
-          ref={rootRef}
-          className="relative w-full overflow-hidden bg-[#f4ebe8] rounded-sm shadow-sm"
-          style={{ aspectRatio: '1584 / 396' }}
+          ref={taglineRef}
+          className="pointer-events-none absolute inset-x-0 flex items-center justify-center gap-4"
+          style={{ bottom: '7%', opacity: 0, fontFamily: "'Cormorant Garamond', Georgia, serif" }}
         >
-          <canvas
-            ref={canvasRef}
-            className="absolute inset-0 block h-full w-full"
-            aria-hidden="true"
-          />
-          <div
-            ref={taglineRef}
-            className="pointer-events-none absolute inset-x-0 flex items-center justify-center gap-4"
-            style={{ bottom: '7%', opacity: 0, fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+          <span className="h-px w-12" style={{ background: 'rgba(90,70,64,0.45)' }} />
+          <span
+            className="whitespace-nowrap font-normal uppercase"
+            style={{
+              fontSize: 'clamp(11px, 1.1vw, 15px)',
+              letterSpacing: '0.34em',
+              color: '#5a4640',
+            }}
           >
-            <span className="h-px w-12" style={{ background: 'rgba(90,70,64,0.45)' }} />
-            <span
-              className="whitespace-nowrap font-normal uppercase"
-              style={{
-                fontSize: 'clamp(10px, 1vw, 13px)',
-                letterSpacing: '0.34em',
-                color: '#5a4640',
-              }}
-            >
-              {taglineText}
-            </span>
-            <span className="h-px w-12" style={{ background: 'rgba(90,70,64,0.45)' }} />
-          </div>
+            {taglineText}
+          </span>
+          <span className="h-px w-12" style={{ background: 'rgba(90,70,64,0.45)' }} />
         </div>
       </div>
     </section>
+
   );
 };
 
