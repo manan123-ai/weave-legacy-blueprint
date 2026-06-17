@@ -7,6 +7,7 @@ import WhyJankiNath from '@/components/WhyJankiNath';
 import Footer from '@/components/Footer';
 import KineticStrip from '@/components/motion/KineticStrip';
 import SEO from '@/components/SEO';
+import WeaveRevealBanner from '@/components/WeaveRevealBanner';
 
 const Index = () => {
   return (
@@ -28,6 +29,7 @@ const Index = () => {
         }}
       />
       <HeroBanner />
+      <WeaveRevealBanner taglineText="Designers · Manufacturers · Suppliers" />
       <AboutPreview />
       <KineticStrip text="Heritage Craft — Modern Looms" />
       <FabricMarquee />
