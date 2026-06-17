@@ -454,27 +454,27 @@ const WeaveRevealBanner = ({
           aria-hidden="true"
         />
 
-          <div
-            ref={taglineRef}
-            className="pointer-events-none absolute inset-x-0 flex items-center justify-center gap-4"
-            style={{ bottom: '7%', opacity: 0, fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+        <div
+          ref={taglineRef}
+          className="pointer-events-none absolute inset-x-0 flex items-center justify-center gap-4"
+          style={{ bottom: '7%', opacity: 0, fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+        >
+          <span className="h-px w-12" style={{ background: 'rgba(90,70,64,0.45)' }} />
+          <span
+            className="whitespace-nowrap font-normal uppercase"
+            style={{
+              fontSize: 'clamp(11px, 1.1vw, 15px)',
+              letterSpacing: '0.34em',
+              color: '#5a4640',
+            }}
           >
-            <span className="h-px w-12" style={{ background: 'rgba(90,70,64,0.45)' }} />
-            <span
-              className="whitespace-nowrap font-normal uppercase"
-              style={{
-                fontSize: 'clamp(10px, 1vw, 13px)',
-                letterSpacing: '0.34em',
-                color: '#5a4640',
-              }}
-            >
-              {taglineText}
-            </span>
-            <span className="h-px w-12" style={{ background: 'rgba(90,70,64,0.45)' }} />
-          </div>
+            {taglineText}
+          </span>
+          <span className="h-px w-12" style={{ background: 'rgba(90,70,64,0.45)' }} />
         </div>
       </div>
     </section>
+
   );
 };
 
