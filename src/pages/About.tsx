@@ -52,6 +52,27 @@ const About = () => {
           </div>
         </section>
 
+        {/* Company Profile */}
+        <section className="py-32">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
+                Company Profile
+              </p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-10 leading-tight">
+                Janki Nath <span className="italic text-muted-foreground">& Co.</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <p className="font-body text-lg text-muted-foreground leading-relaxed font-light">
+                Janki Nath & Co. (JCO Fabrics) has been manufacturing and exporting premium woven fabrics since 1968. We are certified under BCI, GOTS, OCS, and OEKO-TEX Standard 100, and are MSME registered. Our weaving units span Meerut, Bhiwandi/Ichalkaranji, Erode, Salem, and Surat, with our Head Office in Mayapuri, New Delhi. We supply cotton, linen, jacquard, viscose, twill, yarn-dyed, and specialty fabrics to global brands across 20+ countries, with a monthly production capacity of 2 million+ meters and lead times of 15-30 days.
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
         {/* Company Overview */}
         <section className="py-32">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
