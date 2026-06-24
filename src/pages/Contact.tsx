@@ -81,8 +81,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Contact — Janki Nath & Co. | Fabric Inquiries & Sample Requests"
-        description="Get in touch with Janki Nath & Co. for fabric inquiries, sample requests and bulk orders. Email jcofabrics@yahoo.co.in or call +91 9891542727."
+        title="Contact JNC Fabrics | Get a Quote | Fabric Samples"
+        description="Contact Janki Nath & Co. for fabric samples, pricing and export enquiries. Email: jcofabrics@yahoo.co.in | Phone: +91 9891542727"
         path="/contact"
         jsonLd={{
           '@context': 'https://schema.org',
