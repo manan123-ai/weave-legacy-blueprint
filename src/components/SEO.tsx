@@ -9,7 +9,7 @@ interface SEOProps {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const SITE_URL = 'https://jankinathandco.com';
+const SITE_URL = 'https://jcofabrics.com';
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 /**
@@ -50,7 +50,7 @@ const SEO = ({
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Janki Nath & Co." />
+      <meta property="og:site_name" content="JNC Fabrics" />
       <meta property="og:locale" content="en_IN" />
 
       {/* Twitter */}
