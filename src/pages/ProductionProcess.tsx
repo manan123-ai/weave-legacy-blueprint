@@ -106,8 +106,8 @@ const ProductionProcess = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Production Process & How to Order | Janki Nath & Co."
-        description="Inside our 6-step fabric production process — from yarn to finished cloth — and how to place an order with Janki Nath & Co."
+        title="Fabric Manufacturing & Production | JNC Fabrics India"
+        description="Weaving units in Meerut, Bhiwandi, Erode, Salem and Surat. 40+ years of export-grade fabric production for global buyers."
         path="/production"
       />
       {/* Hero Section */}

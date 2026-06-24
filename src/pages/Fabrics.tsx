@@ -205,8 +205,8 @@ const Fabrics = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Fabric Catalogue — Cotton, Linen, Jacquards & More | Janki Nath & Co."
-        description="Browse our premium fabric catalogue: cotton, cotton blends, linen, jacquards, viscose and specialty woven textiles — manufactured in India for global brands."
+        title="Woven Fabric Range | Cotton, Linen, Jacquard, Viscose | JNC Fabrics"
+        description="Export-grade woven fabrics: cotton, linen, jacquard, dobby, yarn-dyed, printed. Custom constructions available. Mill-direct pricing. OEKO-TEX & GOTS certified."
         path="/fabrics"
       />
       <main className="pt-16">

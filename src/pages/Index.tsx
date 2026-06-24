@@ -13,20 +13,46 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Janki Nath & Co. — Premium Woven Fabric Manufacturer, India"
-        description="Premium woven fabrics — cotton, linen, jacquards & specialty textiles. Trusted by 50+ global brands across 20+ countries since 1968."
+        title="JNC Fabrics | Premium Woven Fabric Manufacturer & Exporter from India"
+        description="Janki Nath & Co. — 50+ years of woven fabric manufacturing. Cotton, linen, jacquard, viscose. BCI, GOTS, OEKO-TEX certified. Mill-direct export to USA, UK, Germany, Japan, Australia."
         path="/"
-        jsonLd={{
-          '@context': 'https://schema.org',
-          '@type': 'WebSite',
-          name: 'Janki Nath & Co.',
-          url: 'https://jankinathandco.com',
-          potentialAction: {
-            '@type': 'SearchAction',
-            target: 'https://jankinathandco.com/?q={search_term_string}',
-            'query-input': 'required name=search_term_string',
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'JNC Fabrics',
+            url: 'https://jcofabrics.com',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://jcofabrics.com/?q={search_term_string}',
+              'query-input': 'required name=search_term_string',
+            },
           },
-        }}
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Janki Nath & Co.',
+            alternateName: 'JNC Fabrics',
+            url: 'https://jcofabrics.com',
+            logo: 'https://jcofabrics.com/logo.png',
+            foundingDate: '1968',
+            description: 'Premium woven fabric manufacturer and exporter from India. BCI, GOTS, OCS and OEKO-TEX certified. Supplying cotton, linen, jacquard and viscose fabrics to global buyers since 1968.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'A-14, Mayapuri Industrial Area, Phase-1',
+              addressLocality: 'New Delhi',
+              addressCountry: 'IN',
+              postalCode: '110064',
+            },
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+91-9891542727',
+              email: 'jcofabrics@yahoo.co.in',
+              contactType: 'sales',
+            },
+            hasCredential: ['BCI Cotton', 'GOTS', 'OCS', 'OEKO-TEX Standard 100'],
+          },
+        ]}
       />
       <HeroBanner />
       <WeaveRevealBanner taglineText="Designers · Manufacturers · Suppliers" />

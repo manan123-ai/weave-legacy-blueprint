@@ -46,8 +46,8 @@ const Clientele = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Clientele — Trusted by 50+ Global Brands | Janki Nath & Co."
-        description="Janki Nath & Co. supplies premium fabrics to 50+ international brands across 20+ countries. Discover our global clientele and export footprint."
+        title="Our Clients | Global Fabric Buyers | JNC Fabrics"
+        description="JNC Fabrics supplies premium woven fabric to fashion brands, garment manufacturers and importers across USA, UK, Germany, Japan, Australia and more."
         path="/clientele"
       />
       <main className="pt-16">

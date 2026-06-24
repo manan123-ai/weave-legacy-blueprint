@@ -26,8 +26,8 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="About — Janki Nath & Co. | Heritage Textile Manufacturer Since 1968"
-        description="Six decades of weaving excellence. Discover the heritage, craftsmanship and global reach of Janki Nath & Co., India's trusted premium fabric manufacturer."
+        title="About JNC Fabrics | Janki Nath & Co. Since 1968"
+        description="Fourth-generation woven fabric manufacturer from Mayapuri, New Delhi. BCI, GOTS, OCS, OEKO-TEX certified. Supplying buyers in 20+ countries since 1968."
         path="/about"
       />
       <main className="pt-16">
