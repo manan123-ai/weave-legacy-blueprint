@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin } from 'lucide-react';
+
+const ThreadsIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+    <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.02c.03-3.576.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.31-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.63 2.695 6.54 2.717 2.625-.02 4.358-.631 5.795-2.045 1.64-1.613 1.609-3.593 1.092-4.798-.305-.71-.86-1.305-1.6-1.74-.184 1.286-.594 2.328-1.225 3.114-.846 1.053-2.046 1.63-3.566 1.715-1.149.064-2.256-.21-3.122-.769-1.023-.66-1.62-1.67-1.681-2.85-.119-2.292 1.732-3.94 4.604-4.106.96-.054 1.916-.014 2.756.13-.087-.616-.327-1.181-.737-1.703-.642-.815-1.601-1.245-2.785-1.245-1.151 0-2.13.397-2.853 1.149-.65.677-1.07 1.529-1.249 2.529l-1.954-.526c.282-1.55.881-2.91 1.794-3.866 1.122-1.176 2.625-1.808 4.34-1.808 1.778 0 3.346.764 4.418 2.15.602.776 1.014 1.733 1.231 2.847.83.275 1.583.665 2.224 1.158 1.71 1.32 2.65 3.428 2.65 5.927 0 4.526-3.696 7.823-9.297 7.871zm.067-12.117c-1.892.112-3.107.836-3.063 1.93.018.341.187.681.488.954.504.456 1.241.629 2.084.583 1.225-.068 2.108-.43 2.692-1.094.605-.69.844-1.66.711-2.876-.756-.121-1.535-.18-2.323-.156-.207.006-.404.024-.589.046z"/>
+  </svg>
+);
 
 const Footer = () => {
   return (
@@ -17,13 +23,32 @@ const Footer = () => {
             
             {/* Social Media */}
             <div className="flex space-x-4">
-              <a 
-                href="https://www.instagram.com/jankinathandco?igsh=MTMyamltNDFxNGdvOQ%3D%3D&utm_source=qr" 
+              <a
+                href="https://www.instagram.com/jankinathandco?igsh=MTMyamltNDFxNGdvOQ%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
                 className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
               >
                 <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/manan-bhasin-6a9214417?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.threads.com/@jankinathandco?igshid=NTc4MTIwNjQ2YQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Threads"
+                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+              >
+                <ThreadsIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
