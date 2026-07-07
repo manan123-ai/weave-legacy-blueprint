@@ -18,9 +18,9 @@ const AboutPreview = () => {
   const bgY = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
 
   const paragraphs = [
-    'For generations, Janki Nath & Co. has been weaving excellence into every fabric we create. Our commitment to quality and innovation has made us a trusted partner for international brands and manufacturers worldwide.',
+    'JNC Fabrics is a premium woven fabric manufacturer and exporter from India, supplying fashion brands, garment manufacturers and fabric importers across USA, UK, Germany, France, Japan, Australia, UAE and South Korea — mill-direct, no agents.',
     "From our Head Office and Showroom in Mayapuri, New Delhi to dedicated weaving units in Meerut, Bhiwandi/Ichalkaranji, Erode, Salem and Surat — every thread is supervised end-to-end across India's most renowned textile hubs.",
-    'Every thread tells a story of precision, every weave speaks of craftsmanship, and every fabric carries our promise of uncompromising quality.',
+    'BCI, GOTS, OCS and OEKO-TEX Standard 100 certified — documentation available for every export order.',
   ];
 
   return (
@@ -45,8 +45,8 @@ const AboutPreview = () => {
 
         <KineticHeading
           as="h2"
-          text="Legacy in Every Thread"
-          highlight="Thread"
+          text="Premium Woven Fabric Manufacturer & Exporter from India"
+          highlight="Exporter"
           className="font-serif text-4xl md:text-6xl font-bold text-primary mb-12 leading-[1.1]"
         />
 

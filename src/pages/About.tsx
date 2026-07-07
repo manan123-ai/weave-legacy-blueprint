@@ -27,7 +27,7 @@ const About = () => {
     <div className="min-h-screen">
       <SEO
         title="About JNC Fabrics | Janki Nath & Co. Since 1968"
-        description="Fourth-generation woven fabric manufacturer from Mayapuri, New Delhi. BCI, GOTS, OCS, OEKO-TEX certified. Supplying buyers in 20+ countries since 1968."
+        description="Janki Nath & Co. — fourth-generation woven fabric manufacturer and exporter from New Delhi since 1968. Weaving units in Meerut, Bhiwandi, Erode, Salem, Surat. Exporting to 20+ countries."
         path="/about"
       />
       <main className="pt-16">
@@ -66,8 +66,17 @@ const About = () => {
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
+              <p className="font-body text-lg text-muted-foreground leading-relaxed font-light mb-6">
+                Janki Nath & Co. (JNC Fabrics) is a fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi, established 1968.
+              </p>
+              <p className="font-body text-lg text-muted-foreground leading-relaxed font-light mb-6">
+                We export premium woven fabrics to fashion brands, garment manufacturers, buying houses and fabric importers across USA, UK, Germany, France, Italy, Japan, Australia, UAE and South Korea.
+              </p>
+              <p className="font-body text-lg text-muted-foreground leading-relaxed font-light mb-6">
+                Our weaving units in Meerut, Bhiwandi, Erode, Salem and Surat produce export-grade fabric across cotton, linen, jacquard, viscose, dobby, yarn-dyed, crepe, twill and upholstery constructions.
+              </p>
               <p className="font-body text-lg text-muted-foreground leading-relaxed font-light">
-                Janki Nath & Co. (JCO Fabrics) has been manufacturing and exporting premium woven fabrics since 1968. We are certified under BCI, GOTS, OCS, and OEKO-TEX Standard 100, and are MSME registered. Our weaving units span Meerut, Bhiwandi/Ichalkaranji, Erode, Salem, and Surat, with our Head Office in Mayapuri, New Delhi. We supply cotton, linen, jacquard, viscose, twill, yarn-dyed, and specialty fabrics to global brands across 20+ countries, with a monthly production capacity of 2 million+ meters and lead times of 15-30 days.
+                All export orders include full certification documentation — BCI, GOTS, OCS and OEKO-TEX Standard 100. MSME registered, monthly capacity 2 million+ meters, lead times 15-30 days.
               </p>
             </Reveal>
           </div>

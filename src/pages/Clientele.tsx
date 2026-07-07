@@ -47,7 +47,7 @@ const Clientele = () => {
     <div className="min-h-screen">
       <SEO
         title="Our Clients | Global Fabric Buyers | JNC Fabrics"
-        description="JNC Fabrics supplies premium woven fabric to fashion brands, garment manufacturers and importers across USA, UK, Germany, Japan, Australia and more."
+        description="JNC Fabrics supplies export-grade woven fabric to fashion brands and garment manufacturers across USA, UK, Germany, France, Japan, Australia and UAE."
         path="/clientele"
       />
       <main className="pt-16">
@@ -61,12 +61,17 @@ const Clientele = () => {
             </Reveal>
             <KineticHeading
               as="h1"
-              text="Our Clientele"
-              className="font-serif text-5xl md:text-7xl font-bold text-primary mb-8 leading-[1.05]"
+              text="Trusted by International Brands and Manufacturers"
+              className="font-serif text-4xl md:text-6xl font-bold text-primary mb-8 leading-[1.05]"
             />
             <Reveal delay={0.3}>
-              <p className="font-body text-xl text-muted-foreground font-light">
-                Trusted by global brands and manufacturers worldwide
+              <p className="font-body text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto">
+                JNC Fabrics supplies premium woven fabric to fashion brands, garment manufacturers, buying houses and fabric importers across 20+ countries. Our export clients include companies sourcing cotton, linen, jacquard and specialty fabrics for their collections and production.
+              </p>
+            </Reveal>
+            <Reveal delay={0.45}>
+              <p className="font-body text-sm md:text-base text-muted-foreground/80 font-light max-w-3xl mx-auto mt-6">
+                Export markets: USA, UK, Germany, France, Italy, Spain, Netherlands, Japan, South Korea, Australia, UAE, Canada, Scotland and across Europe.
               </p>
             </Reveal>
           </div>

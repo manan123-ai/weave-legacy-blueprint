@@ -107,7 +107,7 @@ const ProductionProcess = () => {
     <div className="min-h-screen">
       <SEO
         title="Fabric Manufacturing & Production | JNC Fabrics India"
-        description="Weaving units in Meerut, Bhiwandi, Erode, Salem and Surat. 40+ years of export-grade fabric production for global buyers."
+        description="Mill-direct woven fabric export from India. Custom development to bulk production. BCI, GOTS, OCS, OEKO-TEX certified. FOB pricing. 15-30 day lead times."
         path="/production"
       />
       {/* Hero Section */}
@@ -136,14 +136,55 @@ const ProductionProcess = () => {
             className="font-serif text-4xl md:text-6xl font-bold text-white mb-6 leading-[1.05]"
           />
           <Reveal delay={0.4}>
-            <p className="font-body text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light">
-              Discover our meticulous 6-step production process and how to place orders
+            <p className="font-body text-lg md:text-xl text-white/90 max-w-3xl mx-auto font-light">
+              Mill-direct export supply — fabric produced in our own weaving units, shipped directly to buyers across 20+ countries. No agents, no markups.
             </p>
           </Reveal>
         </div>
       </section>
 
       <KineticStrip text="From Yarn to Fabric — Crafted with Care" />
+
+      {/* Export Terms Section */}
+      <section className="py-24 bg-background">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal className="text-center mb-12">
+            <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-4">
+              Export Terms
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary leading-tight">
+              How We Ship to Global Buyers
+            </h2>
+          </Reveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Reveal delay={0.1}>
+              <div className="border-l-2 border-primary pl-6">
+                <h3 className="font-serif text-lg font-semibold text-primary mb-3">Export Documentation</h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  Commercial invoice, packing list, certificate of origin, GST invoice and certification documentation (BCI, GOTS, OCS, OEKO-TEX) provided with every shipment.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="border-l-2 border-primary pl-6">
+                <h3 className="font-serif text-lg font-semibold text-primary mb-3">Minimum Order</h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  We work on both development quantities and bulk export orders. Custom construction development available from small sampling quantities.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <div className="border-l-2 border-primary pl-6">
+                <h3 className="font-serif text-lg font-semibold text-primary mb-3">Lead Times</h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  15-30 days for standard constructions, 30-45 days for custom development. FOB New Delhi pricing available.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
 
       {/* How to Order Section */}
       <section className="py-24 bg-background">
