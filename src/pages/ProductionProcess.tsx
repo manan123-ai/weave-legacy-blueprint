@@ -145,6 +145,47 @@ const ProductionProcess = () => {
 
       <KineticStrip text="From Yarn to Fabric — Crafted with Care" />
 
+      {/* Export Terms Section */}
+      <section className="py-24 bg-background">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal className="text-center mb-12">
+            <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-4">
+              Export Terms
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary leading-tight">
+              How We Ship to Global Buyers
+            </h2>
+          </Reveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Reveal delay={0.1}>
+              <div className="border-l-2 border-primary pl-6">
+                <h3 className="font-serif text-lg font-semibold text-primary mb-3">Export Documentation</h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  Commercial invoice, packing list, certificate of origin, GST invoice and certification documentation (BCI, GOTS, OCS, OEKO-TEX) provided with every shipment.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="border-l-2 border-primary pl-6">
+                <h3 className="font-serif text-lg font-semibold text-primary mb-3">Minimum Order</h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  We work on both development quantities and bulk export orders. Custom construction development available from small sampling quantities.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <div className="border-l-2 border-primary pl-6">
+                <h3 className="font-serif text-lg font-semibold text-primary mb-3">Lead Times</h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  15-30 days for standard constructions, 30-45 days for custom development. FOB New Delhi pricing available.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+
       {/* How to Order Section */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
