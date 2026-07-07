@@ -107,7 +107,7 @@ const ProductionProcess = () => {
     <div className="min-h-screen">
       <SEO
         title="Fabric Manufacturing & Production | JNC Fabrics India"
-        description="Weaving units in Meerut, Bhiwandi, Erode, Salem and Surat. 40+ years of export-grade fabric production for global buyers."
+        description="Mill-direct woven fabric export from India. Custom development to bulk production. BCI, GOTS, OCS, OEKO-TEX certified. FOB pricing. 15-30 day lead times."
         path="/production"
       />
       {/* Hero Section */}
@@ -136,8 +136,8 @@ const ProductionProcess = () => {
             className="font-serif text-4xl md:text-6xl font-bold text-white mb-6 leading-[1.05]"
           />
           <Reveal delay={0.4}>
-            <p className="font-body text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light">
-              Discover our meticulous 6-step production process and how to place orders
+            <p className="font-body text-lg md:text-xl text-white/90 max-w-3xl mx-auto font-light">
+              Mill-direct export supply — fabric produced in our own weaving units, shipped directly to buyers across 20+ countries. No agents, no markups.
             </p>
           </Reveal>
         </div>

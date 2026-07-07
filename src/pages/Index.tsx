@@ -13,7 +13,7 @@ const Index = () => {
     <div className="min-h-screen">
       <SEO
         title="JNC Fabrics | Premium Woven Fabric Manufacturer & Exporter from India"
-        description="Janki Nath & Co. — 50+ years of woven fabric manufacturing. Cotton, linen, jacquard, viscose. BCI, GOTS, OEKO-TEX certified. Mill-direct export to USA, UK, Germany, Japan, Australia."
+        description="JNC Fabrics — premium woven fabric manufacturer and exporter from India since 1968. Cotton, linen, jacquard, viscose, dobby, yarn-dyed. BCI, GOTS, OCS, OEKO-TEX certified. Mill-direct export to USA, UK, Germany, Japan, Australia."
         path="/"
         jsonLd={[
           {

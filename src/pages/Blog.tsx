@@ -10,7 +10,7 @@ const Blog = () => {
     <div className="min-h-screen">
       <SEO
         title="Blog & Resources | JNC Fabrics"
-        description="Guides and resources on sourcing woven fabric from India — certifications, constructions, and mill-direct buying."
+        description="JNC Fabrics blog — guides for international fabric buyers on sourcing woven fabric from India. GOTS certification, linen sourcing, jacquard fabric and more."
         path="/blog"
         jsonLd={{
           '@context': 'https://schema.org',

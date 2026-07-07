@@ -81,14 +81,14 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Contact JNC Fabrics | Get a Quote | Fabric Samples"
-        description="Contact Janki Nath & Co. for fabric samples, pricing and export enquiries. Email: jcofabrics@yahoo.co.in | Phone: +91 9891542727"
+        title="Contact JNC Fabrics — Woven Fabric Export Enquiries"
+        description="Contact JNC Fabrics for woven fabric export enquiries, samples and pricing. Email: jcofabrics@yahoo.co.in | WhatsApp: +91 9891542727 | New Delhi, India."
         path="/contact"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'ContactPage',
-          name: 'Contact Janki Nath & Co.',
-          url: 'https://jankinathandco.com/contact',
+          name: 'Contact JNC Fabrics',
+          url: 'https://jcofabrics.com/contact',
         }}
       />
       <main className="pt-16">
@@ -102,12 +102,12 @@ const Contact = () => {
             </Reveal>
             <KineticHeading
               as="h1"
-              text="Contact Us"
-              className="font-serif text-5xl md:text-7xl font-bold text-primary mb-8 leading-[1.05]"
+              text="Contact JNC Fabrics — Woven Fabric Export Enquiries"
+              className="font-serif text-4xl md:text-6xl font-bold text-primary mb-8 leading-[1.05]"
             />
             <Reveal delay={0.3}>
-              <p className="font-body text-xl text-muted-foreground font-light">
-                Get in touch to discuss your fabric requirements
+              <p className="font-body text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto">
+                For fabric samples, export pricing, certifications and custom development enquiries. We supply export-grade woven fabrics to buyers across USA, UK, Europe, Japan, Australia and UAE — send us your fabric brief and we will respond within 24 hours.
               </p>
             </Reveal>
           </div>
