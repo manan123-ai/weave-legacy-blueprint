@@ -5,6 +5,7 @@ import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
 import SEO from '@/components/SEO';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import cottonFabric from '@/assets/cotton-pinterest.jpg';
 import cottonBlendsFabric from '@/assets/cotton-blends-pinterest.jpg';
@@ -209,6 +210,7 @@ const Fabrics = () => {
         description="Export-grade woven fabrics from India — cotton, linen, jacquard, viscose, twill, upholstery, crepe, yarn-dyed, dobby. BCI and GOTS certified. Custom development available."
         path="/fabrics"
       />
+      <Breadcrumbs items={[{ name: 'Fabrics' }]} />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-32 bg-secondary">

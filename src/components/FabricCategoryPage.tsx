@@ -3,6 +3,7 @@ import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
 import SEO from '@/components/SEO';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { Link } from 'react-router-dom';
 
 export interface FabricSection {
@@ -39,6 +40,7 @@ const FabricCategoryPage = ({
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: `${productName} — Janki Nath & Co.`,
+      description: metaDescription,
       manufacturer: {
         '@type': 'Organization',
         name: 'Janki Nath & Co.',
@@ -46,6 +48,22 @@ const FabricCategoryPage = ({
       },
       countryOfOrigin: 'India',
       brand: { '@type': 'Brand', name: 'JNC Fabrics' },
+      offers: {
+        '@type': 'Offer',
+        availability: 'https://schema.org/InStock',
+        url: `${SITE}/contact`,
+        priceCurrency: 'USD',
+        price: '0',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          description: 'Price on request — contact us for FOB pricing and samples',
+        },
+        seller: {
+          '@type': 'Organization',
+          name: 'Janki Nath & Co.',
+          url: SITE,
+        },
+      },
     },
     {
       '@context': 'https://schema.org',
@@ -61,7 +79,13 @@ const FabricCategoryPage = ({
   return (
     <div className="min-h-screen">
       <SEO title={metaTitle} description={metaDescription} path={path} jsonLd={jsonLd} />
-      <main className="pt-16">
+      <Breadcrumbs
+        items={[
+          { name: 'Fabrics', path: '/fabrics' },
+          { name: productName },
+        ]}
+      />
+      <main>
         <section className="py-32 bg-secondary">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Reveal>
@@ -114,17 +138,20 @@ const FabricCategoryPage = ({
             <Reveal>
               <div className="mt-16 rounded-sm border border-border/60 bg-card p-10">
                 <h3 className="font-serif text-2xl font-bold text-primary mb-4">
-                  Request Samples & Pricing
+                  Ready to source {productName.toLowerCase()} from India?
                 </h3>
                 <p className="font-body text-muted-foreground mb-6 font-light">
                   Contact us for samples, pricing and custom development.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a href="mailto:jcofabrics@yahoo.co.in" className="font-body text-sm text-primary underline-offset-4 hover:underline">
-                    jcofabrics@yahoo.co.in
+                    📩 jcofabrics@yahoo.co.in
                   </a>
-                  <a href="tel:+919891542727" className="font-body text-sm text-primary underline-offset-4 hover:underline">
-                    WhatsApp: +91 98915 42727
+                  <a href="https://wa.me/919891542727" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-primary underline-offset-4 hover:underline">
+                    📱 WhatsApp: +91 9891542727
+                  </a>
+                  <a href="https://jcofabrics.com" className="font-body text-sm text-primary underline-offset-4 hover:underline">
+                    🌐 www.jcofabrics.com
                   </a>
                   <Link to="/contact" className="font-body text-sm text-primary underline-offset-4 hover:underline">
                     Contact form →

@@ -6,6 +6,7 @@ import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
 import SEO from '@/components/SEO';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { Clock, Package, Settings, Shield } from 'lucide-react';
 
 const Clientele = () => {
@@ -50,6 +51,7 @@ const Clientele = () => {
         description="JNC Fabrics supplies export-grade woven fabric to fashion brands and garment manufacturers across USA, UK, Germany, France, Japan, Australia and UAE."
         path="/clientele"
       />
+      <Breadcrumbs items={[{ name: 'Clientele' }]} />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-32 bg-secondary">

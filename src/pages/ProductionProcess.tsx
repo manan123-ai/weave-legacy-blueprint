@@ -8,6 +8,7 @@ import Reveal from '@/components/motion/Reveal';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 // Import fabric and weaving images
 import weavingLoomBanner from '@/assets/weaving-loom-banner.jpg';
@@ -110,6 +111,7 @@ const ProductionProcess = () => {
         description="Mill-direct woven fabric export from India. Custom development to bulk production. BCI, GOTS, OCS, OEKO-TEX certified. FOB pricing. 15-30 day lead times."
         path="/production"
       />
+      <Breadcrumbs items={[{ name: 'Production' }]} />
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-primary via-primary/90 to-accent overflow-hidden">
         {/* Background Video/Image */}

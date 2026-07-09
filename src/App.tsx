@@ -21,6 +21,7 @@ import Export from "./pages/Export";
 import Certifications from "./pages/Certifications";
 import Showroom from "./pages/Showroom";
 import Sampling from "./pages/Sampling";
+import FabricSourcingGuide from "./pages/FabricSourcingGuide";
 import CottonFabric from "./pages/fabrics/CottonFabric";
 import LinenFabric from "./pages/fabrics/LinenFabric";
 import JacquardFabric from "./pages/fabrics/JacquardFabric";
@@ -60,6 +61,7 @@ const App = () => (
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/showroom" element={<Showroom />} />
           <Route path="/sampling" element={<Sampling />} />
+          <Route path="/fabric-sourcing-guide" element={<FabricSourcingGuide />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
