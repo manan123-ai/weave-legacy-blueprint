@@ -90,7 +90,8 @@ const BlogPost = () => {
           url,
         }}
       />
-      <main className="pt-16">
+      <Breadcrumbs items={[{ name: 'Blog', path: '/blog' }, { name: post.title }]} />
+      <main>
         {/* Hero */}
         <section className="py-32 bg-secondary">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
