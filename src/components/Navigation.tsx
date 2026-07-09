@@ -44,6 +44,7 @@ const Navigation = () => {
     { name: 'Certifications', path: '/certifications' },
     { name: 'Showroom', path: '/showroom' },
     { name: 'Sampling', path: '/sampling' },
+    { name: 'Sourcing Guide', path: '/fabric-sourcing-guide' },
     { name: 'Blog', path: '/blog' },
     { name: 'Clientele', path: '/clientele' },
     { name: 'Contact', path: '/contact' },
