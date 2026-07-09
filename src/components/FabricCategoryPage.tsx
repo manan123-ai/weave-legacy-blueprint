@@ -138,17 +138,20 @@ const FabricCategoryPage = ({
             <Reveal>
               <div className="mt-16 rounded-sm border border-border/60 bg-card p-10">
                 <h3 className="font-serif text-2xl font-bold text-primary mb-4">
-                  Request Samples & Pricing
+                  Ready to source {productName.toLowerCase()} from India?
                 </h3>
                 <p className="font-body text-muted-foreground mb-6 font-light">
                   Contact us for samples, pricing and custom development.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a href="mailto:jcofabrics@yahoo.co.in" className="font-body text-sm text-primary underline-offset-4 hover:underline">
-                    jcofabrics@yahoo.co.in
+                    📩 jcofabrics@yahoo.co.in
                   </a>
-                  <a href="tel:+919891542727" className="font-body text-sm text-primary underline-offset-4 hover:underline">
-                    WhatsApp: +91 98915 42727
+                  <a href="https://wa.me/919891542727" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-primary underline-offset-4 hover:underline">
+                    📱 WhatsApp: +91 9891542727
+                  </a>
+                  <a href="https://jcofabrics.com" className="font-body text-sm text-primary underline-offset-4 hover:underline">
+                    🌐 www.jcofabrics.com
                   </a>
                   <Link to="/contact" className="font-body text-sm text-primary underline-offset-4 hover:underline">
                     Contact form →
