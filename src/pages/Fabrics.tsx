@@ -210,6 +210,7 @@ const Fabrics = () => {
         description="Export-grade woven fabrics from India — cotton, linen, jacquard, viscose, twill, upholstery, crepe, yarn-dyed, dobby. BCI and GOTS certified. Custom development available."
         path="/fabrics"
       />
+      <Breadcrumbs items={[{ name: 'Fabrics' }]} />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-32 bg-secondary">

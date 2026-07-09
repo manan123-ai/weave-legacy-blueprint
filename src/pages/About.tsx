@@ -31,6 +31,7 @@ const About = () => {
         description="Janki Nath & Co. — fourth-generation woven fabric manufacturer and exporter from New Delhi since 1968. Weaving units in Meerut, Bhiwandi, Erode, Salem, Surat. Exporting to 20+ countries."
         path="/about"
       />
+      <Breadcrumbs items={[{ name: 'About' }]} />
       <main className="pt-16">
         {/* Hero */}
         <section className="py-32 bg-secondary relative overflow-hidden">

@@ -30,6 +30,7 @@ const Blog = () => {
           })),
         }}
       />
+      <Breadcrumbs items={[{ name: 'Blog' }]} />
       <main className="pt-16">
         {/* Hero */}
         <section className="py-32 bg-secondary relative overflow-hidden">

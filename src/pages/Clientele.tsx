@@ -51,6 +51,7 @@ const Clientele = () => {
         description="JNC Fabrics supplies export-grade woven fabric to fashion brands and garment manufacturers across USA, UK, Germany, France, Japan, Australia and UAE."
         path="/clientele"
       />
+      <Breadcrumbs items={[{ name: 'Clientele' }]} />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-32 bg-secondary">

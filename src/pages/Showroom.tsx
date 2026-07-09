@@ -39,6 +39,7 @@ const Showroom = () => (
         },
       ]}
     />
+    <Breadcrumbs items={[{ name: 'Showroom' }]} />
     <main className="pt-16">
       <section className="py-32 bg-secondary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

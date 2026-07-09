@@ -92,6 +92,7 @@ const Contact = () => {
           url: 'https://jcofabrics.com/contact',
         }}
       />
+      <Breadcrumbs items={[{ name: 'Contact' }]} />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-32 bg-secondary">
