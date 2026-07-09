@@ -79,7 +79,13 @@ const FabricCategoryPage = ({
   return (
     <div className="min-h-screen">
       <SEO title={metaTitle} description={metaDescription} path={path} jsonLd={jsonLd} />
-      <main className="pt-16">
+      <Breadcrumbs
+        items={[
+          { name: 'Fabrics', path: '/fabrics' },
+          { name: productName },
+        ]}
+      />
+      <main>
         <section className="py-32 bg-secondary">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Reveal>
