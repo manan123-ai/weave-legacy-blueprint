@@ -21,6 +21,7 @@ import Export from "./pages/Export";
 import Certifications from "./pages/Certifications";
 import Showroom from "./pages/Showroom";
 import Sampling from "./pages/Sampling";
+import FabricSourcingGuide from "./pages/FabricSourcingGuide";
 import CottonFabric from "./pages/fabrics/CottonFabric";
 import LinenFabric from "./pages/fabrics/LinenFabric";
 import JacquardFabric from "./pages/fabrics/JacquardFabric";
