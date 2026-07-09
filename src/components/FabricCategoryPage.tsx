@@ -40,6 +40,7 @@ const FabricCategoryPage = ({
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: `${productName} — Janki Nath & Co.`,
+      description: metaDescription,
       manufacturer: {
         '@type': 'Organization',
         name: 'Janki Nath & Co.',
@@ -47,6 +48,22 @@ const FabricCategoryPage = ({
       },
       countryOfOrigin: 'India',
       brand: { '@type': 'Brand', name: 'JNC Fabrics' },
+      offers: {
+        '@type': 'Offer',
+        availability: 'https://schema.org/InStock',
+        url: `${SITE}/contact`,
+        priceCurrency: 'USD',
+        price: '0',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          description: 'Price on request — contact us for FOB pricing and samples',
+        },
+        seller: {
+          '@type': 'Organization',
+          name: 'Janki Nath & Co.',
+          url: SITE,
+        },
+      },
     },
     {
       '@context': 'https://schema.org',
