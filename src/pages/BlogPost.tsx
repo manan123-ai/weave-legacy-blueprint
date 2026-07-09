@@ -1,6 +1,7 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Reveal from '@/components/motion/Reveal';
 import { blogPosts, getPostBySlug } from '@/data/blogPosts';
 
