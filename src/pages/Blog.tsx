@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import KineticHeading from '@/components/motion/KineticHeading';
 import Reveal from '@/components/motion/Reveal';
 import { blogPosts } from '@/data/blogPosts';
