@@ -50,6 +50,7 @@ const FabricCategoryPage = ({
       },
       countryOfOrigin: 'India',
       brand: { '@type': 'Brand', name: 'JNC Fabrics' },
+      image: 'https://jcofabrics.com/og-image.jpg',
       offers: {
         '@type': 'Offer',
         availability: 'https://schema.org/InStock',
