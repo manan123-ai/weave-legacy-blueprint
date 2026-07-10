@@ -13,7 +13,8 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow" />
 
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
 
     <!-- OpenGraph -->
     <meta property="og:title" content="Janki Nath & Co. — Premium Woven Fabric Manufacturer" />
@@ -154,15 +155,17 @@
         transition: opacity .5s ease;
       }
       #initial-splash img { width: 180px; height: 180px; object-fit: contain; }
-      #initial-splash .bar { margin-top: 32px; width: 220px; height: 1px; background: rgba(138,116,80,.18); overflow: hidden; }
+      #initial-splash .bar { margin-top: 32px; width: 200px; height: 1px; overflow: hidden; }
       #initial-splash .bar > span {
-        display: block; height: 100%; width: 30%;
-        background: #8A7450;
-        animation: jco-load 1.2s ease-in-out infinite;
+        display: block; height: 100%; width: 100%;
+        background: #c9a84c;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: jco-load 1.5s ease-in-out forwards;
       }
       @keyframes jco-load {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(360%); }
+        0% { transform: scaleX(0); }
+        100% { transform: scaleX(1); }
       }
       .react-mounted #initial-splash { opacity: 0; pointer-events: none; }
     </style>
