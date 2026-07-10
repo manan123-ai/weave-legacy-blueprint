@@ -198,116 +198,114 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Contact Form */}
+              {/* Inquiry Form → WhatsApp */}
               <div>
                 <h2 className="font-serif text-3xl font-bold text-primary mb-8">
-                  Request a Fabric Sample
+                  Send an Inquiry
                 </h2>
-                
-                <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  onSubmit={handleSubmit}
-                  className="space-y-6"
-                >
-                  {/* Required hidden inputs for Netlify Forms */}
-                  <input type="hidden" name="form-name" value="contact" />
-                  <p className="hidden">
-                    <label>
-                      Don't fill this out if you're human: <input name="bot-field" />
+                <p className="font-body text-sm text-muted-foreground mb-6">
+                  Submit the form below — your inquiry opens directly in WhatsApp for the fastest response.
+                </p>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label className="font-body text-sm font-medium text-primary mb-2 block">
+                      Name *
                     </label>
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="font-body text-sm font-medium text-primary mb-2 block">
-                        First Name *
-                      </label>
-                      <Input 
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        placeholder="Your first name" 
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="font-body text-sm font-medium text-primary mb-2 block">
-                        Last Name *
-                      </label>
-                      <Input 
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                        placeholder="Your last name" 
-                        required
-                      />
-                    </div>
+                    <Input
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Your full name"
+                      required
+                    />
                   </div>
-                  
+
+                  <div>
+                    <label className="font-body text-sm font-medium text-primary mb-2 block">
+                      Company *
+                    </label>
+                    <Input
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      placeholder="Your company name"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="font-body text-sm font-medium text-primary mb-2 block">
+                      Country *
+                    </label>
+                    <Select
+                      value={formData.country}
+                      onValueChange={(v) => setFormData((p) => ({ ...p, country: v }))}
+                      required
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select your country" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {COUNTRIES.map((c) => (
+                          <SelectItem key={c} value={c}>{c}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
                   <div>
                     <label className="font-body text-sm font-medium text-primary mb-2 block">
                       Email *
                     </label>
-                    <Input 
-                      type="email" 
+                    <Input
+                      type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="your.email@company.com" 
+                      placeholder="your.email@company.com"
                       required
                     />
                   </div>
-                  
-                  <div>
-                    <label className="font-body text-sm font-medium text-primary mb-2 block">
-                      Company
-                    </label>
-                    <Input 
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      placeholder="Your company name" 
-                    />
-                  </div>
-                  
+
                   <div>
                     <label className="font-body text-sm font-medium text-primary mb-2 block">
                       Fabric Interest
                     </label>
-                    <Input 
-                      name="fabricInterest"
+                    <Select
                       value={formData.fabricInterest}
-                      onChange={handleInputChange}
-                      placeholder="e.g., Cotton, Linen, Jacquards" 
-                    />
+                      onValueChange={(v) => setFormData((p) => ({ ...p, fabricInterest: v }))}
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select fabric type" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {FABRICS.map((f) => (
+                          <SelectItem key={f} value={f}>{f}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
-                  
+
                   <div>
                     <label className="font-body text-sm font-medium text-primary mb-2 block">
-                      Message *
+                      Message / Requirement
                     </label>
-                    <Textarea 
+                    <Textarea
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Tell us about your requirements, quantities, and any specific needs..."
+                      placeholder="Construction, GSM, quantity, timeline, certifications required…"
                       rows={6}
-                      required
                     />
                   </div>
-                  
-                  <Button 
-                    type="submit" 
-                    className="w-full font-body font-medium" 
-                    size="lg"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+
+                  <Button type="submit" className="w-full font-body font-medium" size="lg">
+                    Send Inquiry
                   </Button>
                 </form>
               </div>
+
             </div>
           </div>
         </section>
