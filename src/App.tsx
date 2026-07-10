@@ -31,7 +31,12 @@ import ViscoseFabric from "./pages/fabrics/ViscoseFabric";
 import DobbyFabric from "./pages/fabrics/DobbyFabric";
 import CertifiedFabrics from "./pages/CertifiedFabrics";
 import RequestSamples from "./pages/RequestSamples";
-import IndiaVsChinaFabric from "./pages/IndiaVsChinaFabric";
+import CrepeFabric from "./pages/fabrics/CrepeFabric";
+import TwillFabric from "./pages/fabrics/TwillFabric";
+import IndigoFabric from "./pages/fabrics/IndigoFabric";
+import LurexFabric from "./pages/fabrics/LurexFabric";
+import IkatFabric from "./pages/fabrics/IkatFabric";
+import LycraBlendsFabric from "./pages/fabrics/LycraBlendsFabric";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -59,8 +64,13 @@ const App = () => (
           <Route path="/fabrics/viscose" element={<ViscoseFabric />} />
           <Route path="/fabrics/dobby" element={<DobbyFabric />} />
           <Route path="/fabrics/certified" element={<CertifiedFabrics />} />
+          <Route path="/fabrics/crepe" element={<CrepeFabric />} />
+          <Route path="/fabrics/twill" element={<TwillFabric />} />
+          <Route path="/fabrics/indigo" element={<IndigoFabric />} />
+          <Route path="/fabrics/lurex" element={<LurexFabric />} />
+          <Route path="/fabrics/ikat" element={<IkatFabric />} />
+          <Route path="/fabrics/lycra-blends" element={<LycraBlendsFabric />} />
           <Route path="/request-samples" element={<RequestSamples />} />
-          <Route path="/compare/india-vs-china-fabric" element={<IndiaVsChinaFabric />} />
           <Route path="/clientele" element={<Clientele />} />
           <Route path="/production" element={<ProductionProcess />} />
           <Route path="/export" element={<Export />} />

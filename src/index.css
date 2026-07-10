@@ -405,4 +405,77 @@ Feel: Editorial, spacious, modern-traditional hybrid
     );
     height: 8px;
   }
+
+  /* ============ ANIMATED WOVEN-GRID HERO ============ */
+  /* Two crossing thread layers (warp + weft), each a repeating-linear-
+     gradient, slowly drifting via background-position to feel like a loom
+     in motion — code-based, no video/image file. */
+  .weave-hero-bg {
+    background-color: #0a0a0a;
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        rgba(196, 155, 89, 0.16) 0px,
+        rgba(196, 155, 89, 0.16) 1px,
+        transparent 1px,
+        transparent 28px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        rgba(196, 155, 89, 0.1) 0px,
+        rgba(196, 155, 89, 0.1) 1px,
+        transparent 1px,
+        transparent 28px
+      ),
+      radial-gradient(ellipse at 50% 30%, rgba(60, 45, 20, 0.35) 0%, transparent 65%);
+    background-size: 28px 28px, 28px 28px, 100% 100%;
+    animation: weave-drift 22s linear infinite;
+  }
+  @keyframes weave-drift {
+    0% { background-position: 0px 0px, 0px 0px, 0 0; }
+    100% { background-position: 280px 0px, 0px 280px, 0 0; }
+  }
+
+  /* Certification badge stagger — scale in one by one */
+  @keyframes badge-scale-in {
+    0% { opacity: 0; transform: scale(0.6); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  .badge-scale-in {
+    animation: badge-scale-in 0.4s ease-out both;
+  }
+
+  /* ============ GLASS MORPHISM ============ */
+  .nav-glass {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .fabric-card-glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .stats-glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+  }
+
+  .whatsapp-glass {
+    background: rgba(37, 211, 102, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
 }

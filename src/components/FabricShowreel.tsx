@@ -36,7 +36,7 @@ const FabricCard = ({ category, index }: { category: FabricCategory; index: numb
       viewport={{ once: true, amount: 0.2 }}
       whileHover={{ y: -8 }}
     >
-      <div className="group relative bg-card rounded-sm overflow-hidden shadow-[0_2px_20px_-8px_hsl(var(--primary)/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.25)] transition-all duration-700 border border-border/40">
+      <div className="fabric-card-glass group relative overflow-hidden hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.35)] transition-all duration-700">
         <div className="aspect-[4/5] overflow-hidden relative">
           <img
             src={category.image}

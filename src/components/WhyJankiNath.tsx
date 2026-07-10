@@ -83,7 +83,7 @@ const WhyJankiNath = () => {
               transition={{ duration: 0.7, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
               viewport={{ once: true, amount: 0.3 }}
               whileHover={{ y: -6 }}
-              className="text-center group p-8 rounded-sm glass hover-glow border border-border/40 hover:border-primary/30 transition-all duration-700"
+              className="stats-glass text-center group p-8 hover-glow hover:border-primary/30 transition-all duration-700"
             >
               <div className="relative inline-flex items-center justify-center w-16 h-16 mb-6">
                 <span className="absolute inset-0 rounded-full border border-primary/30 group-hover:scale-125 group-hover:border-primary/0 transition-all duration-700" />

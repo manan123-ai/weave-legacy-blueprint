@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import worldMapImage from '@/assets/world-map.jpg';
+import AnimatedCounter from '@/components/motion/AnimatedCounter';
 
 const exportDestinations = [
   { name: 'USA', x: '20%', y: '42%' },
@@ -87,20 +88,20 @@ const GlobalExportMap = () => {
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 text-center">
           {[
-            { number: '20+', label: 'Countries Served' },
-            { number: '50+', label: 'Global Partners' },
-            { number: '40+', label: 'Years of Excellence' }
+            { value: 20, suffix: '+', label: 'Countries Served' },
+            { value: 50, suffix: '+', label: 'Global Partners' },
+            { value: 40, suffix: '+', label: 'Years of Excellence' }
           ].map((stat, index) => (
             <motion.div
               key={index}
-              className="p-6"
+              className="stats-glass p-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true }}
             >
               <div className="font-serif text-4xl font-bold mb-2">
-                {stat.number}
+                <AnimatedCounter to={stat.value} suffix={stat.suffix} />
               </div>
               <div className="font-body text-lg opacity-70">
                 {stat.label}

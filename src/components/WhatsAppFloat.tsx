@@ -13,7 +13,7 @@ const WhatsAppFloat = () => (
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Chat with Janki Nath & Co. on WhatsApp"
-    className="fixed bottom-5 right-5 z-40 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[0_10px_30px_-8px_rgba(37,211,102,0.6)] hover:scale-110 transition-transform duration-300"
+    className="whatsapp-glass fixed bottom-5 right-5 z-40 flex items-center justify-center w-14 h-14 text-white hover:scale-110 transition-transform duration-300"
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 1, duration: 0.5 }}

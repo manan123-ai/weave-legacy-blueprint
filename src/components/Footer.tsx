@@ -7,11 +7,28 @@ const ThreadsIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const fabricFooterLinks = [
+  { name: 'Cotton', path: '/fabrics/cotton' },
+  { name: 'Linen', path: '/fabrics/linen' },
+  { name: 'Jacquard', path: '/fabrics/jacquard' },
+  { name: 'Viscose', path: '/fabrics/viscose' },
+  { name: 'Yarn-Dyed', path: '/fabrics/yarn-dyed' },
+  { name: 'Dobby', path: '/fabrics/dobby' },
+  { name: 'Upholstery', path: '/fabrics/upholstery' },
+  { name: 'Crepe & High Twist', path: '/fabrics/crepe' },
+  { name: 'Twill & Drills', path: '/fabrics/twill' },
+  { name: 'Indigo', path: '/fabrics/indigo' },
+  { name: 'Lurex & Sequins', path: '/fabrics/lurex' },
+  { name: 'IKAT & Tie Dye', path: '/fabrics/ikat' },
+  { name: 'Lycra Blends', path: '/fabrics/lycra-blends' },
+  { name: 'All Fabrics →', path: '/fabrics' },
+];
+
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="font-serif text-2xl font-bold mb-4 block">
@@ -60,8 +77,20 @@ const Footer = () => {
               <Link to="/about" className="font-body text-primary-foreground/80 hover:text-primary-foreground transition-colors block">
                 About Us
               </Link>
-              <Link to="/fabrics" className="font-body text-primary-foreground/80 hover:text-primary-foreground transition-colors block">
-                Fabrics
+              <Link to="/export" className="font-body text-primary-foreground/80 hover:text-primary-foreground transition-colors block">
+                Export
+              </Link>
+              <Link to="/certifications" className="font-body text-primary-foreground/80 hover:text-primary-foreground transition-colors block">
+                Certifications
+              </Link>
+              <Link to="/showroom" className="font-body text-primary-foreground/80 hover:text-primary-foreground transition-colors block">
+                Showroom
+              </Link>
+              <Link to="/sampling" className="font-body text-primary-foreground/80 hover:text-primary-foreground transition-colors block">
+                Sampling
+              </Link>
+              <Link to="/blog" className="font-body text-primary-foreground/80 hover:text-primary-foreground transition-colors block">
+                Blog
               </Link>
               <Link to="/clientele" className="font-body text-primary-foreground/80 hover:text-primary-foreground transition-colors block">
                 Clientele
@@ -69,6 +98,22 @@ const Footer = () => {
               <Link to="/contact" className="font-body text-primary-foreground/80 hover:text-primary-foreground transition-colors block">
                 Contact
               </Link>
+            </nav>
+          </div>
+
+          {/* Fabrics */}
+          <div>
+            <h3 className="font-serif text-lg font-semibold mb-4">Fabrics</h3>
+            <nav className="space-y-2">
+              {fabricFooterLinks.map((f) => (
+                <Link
+                  key={f.path}
+                  to={f.path}
+                  className="font-body text-primary-foreground/80 hover:text-primary-foreground transition-colors block text-sm"
+                >
+                  {f.name}
+                </Link>
+              ))}
             </nav>
           </div>
 
@@ -103,6 +148,20 @@ const Footer = () => {
               </div>
 
               <div className="flex items-center space-x-3">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#25D366] shrink-0" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" />
+                </svg>
+                <a
+                  href="https://wa.me/919891542727"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm font-semibold text-primary-foreground hover:text-[#25D366] transition-colors"
+                >
+                  WhatsApp: +91 98915 42727
+                </a>
+              </div>
+
+              <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-foreground/60" />
                 <a href="mailto:jcofabrics@yahoo.co.in" className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   jcofabrics@yahoo.co.in
@@ -134,32 +193,33 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="font-body text-sm text-primary-foreground/60">
-            © 2024 Janki Nath & Co. All rights reserved.
-          </p>
-          
+        <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
+          <div className="text-center md:text-left">
+            <p className="font-body text-sm text-primary-foreground/60">
+              © 2024 Janki Nath & Co. All rights reserved.
+            </p>
+            <p className="font-body text-sm text-primary-foreground/60 mt-1">
+              Made in India 🇮🇳
+            </p>
+          </div>
+
           <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 md:mt-0 justify-center md:justify-end">
-            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
-              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-              GOTS Certified
-            </span>
-            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
-              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-              OCS Certified
-            </span>
-            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
-              <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-              OEKO-TEX Standard 100
-            </span>
-            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
-              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-              MSME Registered
-            </span>
-            <span className="font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1">
-              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-              BCI Member
-            </span>
+            {[
+              { label: 'BCI', dot: 'bg-green-400' },
+              { label: 'GOTS Certified', dot: 'bg-green-400' },
+              { label: 'OCS Certified', dot: 'bg-green-400' },
+              { label: 'OEKO-TEX Standard 100', dot: 'bg-blue-400' },
+              { label: 'MSME Registered', dot: 'bg-green-400' },
+            ].map((badge, i) => (
+              <span
+                key={badge.label}
+                className="badge-scale-in font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1"
+                style={{ animationDelay: `${i * 0.1}s` }}
+              >
+                <span className={`w-2 h-2 ${badge.dot} rounded-full`}></span>
+                {badge.label}
+              </span>
+            ))}
           </div>
         </div>
       </div>

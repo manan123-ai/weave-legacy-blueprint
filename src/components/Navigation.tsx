@@ -29,12 +29,18 @@ const Navigation = () => {
     { name: 'Cotton Fabric', path: '/fabrics/cotton' },
     { name: 'Linen Fabric', path: '/fabrics/linen' },
     { name: 'Jacquard Fabric', path: '/fabrics/jacquard' },
-    { name: 'Yarn Dyed Fabric', path: '/fabrics/yarn-dyed' },
-    { name: 'Upholstery Fabric', path: '/fabrics/upholstery' },
     { name: 'Viscose Fabric', path: '/fabrics/viscose' },
+    { name: 'Yarn-Dyed Fabric', path: '/fabrics/yarn-dyed' },
     { name: 'Dobby Fabric', path: '/fabrics/dobby' },
+    { name: 'Upholstery Fabric', path: '/fabrics/upholstery' },
+    { name: 'Crepe & High Twist', path: '/fabrics/crepe' },
+    { name: 'Twill & Drills', path: '/fabrics/twill' },
+    { name: 'Indigo Fabric', path: '/fabrics/indigo' },
+    { name: 'Lurex & Sequins', path: '/fabrics/lurex' },
+    { name: 'IKAT & Tie Dye', path: '/fabrics/ikat' },
+    { name: 'Lycra Blends', path: '/fabrics/lycra-blends' },
     { name: 'Certified Fabrics', path: '/fabrics/certified' },
-    { name: 'View All Fabrics', path: '/fabrics' },
+    { name: 'View All Fabrics', path: '/fabrics', viewAll: true },
   ];
 
   const navItems = [
@@ -46,7 +52,6 @@ const Navigation = () => {
     { name: 'Showroom', path: '/showroom' },
     { name: 'Sampling', path: '/sampling' },
     { name: 'Request Samples', path: '/request-samples' },
-    { name: 'India vs China', path: '/compare/india-vs-china-fabric' },
     { name: 'Sourcing Guide', path: '/fabric-sourcing-guide' },
     { name: 'Blog', path: '/blog' },
     { name: 'Clientele', path: '/clientele' },
@@ -55,10 +60,8 @@ const Navigation = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-background/80 backdrop-blur-xl shadow-[0_8px_32px_-8px_hsl(var(--primary)/0.08)] border-b border-border/40'
-          : 'bg-transparent'
+      className={`nav-glass fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled ? 'shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)]' : ''
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -72,7 +75,7 @@ const Navigation = () => {
         >
           <div className="flex items-center shrink-0">
             <Link to="/" className="flex items-center space-x-3 group">
-              <span className={`font-serif text-xl font-bold tracking-tight transition-colors ${scrolled ? 'text-primary' : 'text-white'}`}>
+              <span className="font-serif text-xl font-bold tracking-tight text-white">
                 <span className="inline-block transition-transform duration-500 group-hover:translate-x-[2px]">
                   Janki Nath & Co.
                 </span>
@@ -92,7 +95,7 @@ const Navigation = () => {
                 onClick={() => setFabricsOpen((v) => !v)}
                 onBlur={() => setTimeout(() => setFabricsOpen(false), 150)}
                 className={`font-body text-sm font-medium transition-colors flex items-center gap-1 ${
-                  scrolled ? 'text-muted-foreground hover:text-primary' : 'text-white/80 hover:text-white'
+                  'text-white/80 hover:text-white'
                 }`}
               >
                 Fabrics
@@ -101,7 +104,7 @@ const Navigation = () => {
               <AnimatePresence>
                 {fabricsOpen && (
                   <motion.div
-                    className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-md shadow-lg py-2 z-50"
+                    className="absolute top-full left-0 mt-2 w-72 max-h-[75vh] overflow-y-auto bg-background border border-border rounded-md shadow-lg py-2 z-50"
                     initial={{ opacity: 0, y: -8 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
@@ -112,9 +115,14 @@ const Navigation = () => {
                         key={f.path}
                         to={f.path}
                         onMouseDown={() => setFabricsOpen(false)}
-                        className="block px-4 py-2 text-sm font-body text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors"
+                        className={
+                          f.viewAll
+                            ? 'flex items-center justify-between px-4 py-2.5 mt-1 text-sm font-body font-medium text-primary border-t border-border hover:bg-muted/50 transition-colors'
+                            : 'block px-4 py-2 text-sm font-body text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors'
+                        }
                       >
                         {f.name}
+                        {f.viewAll && <span aria-hidden="true">→</span>}
                       </Link>
                     ))}
                   </motion.div>
@@ -132,7 +140,7 @@ const Navigation = () => {
                 onClick={() => setCertificatesOpen(!certificatesOpen)}
                 onBlur={() => setTimeout(() => setCertificatesOpen(false), 150)}
                 className={`font-body text-sm font-medium transition-colors flex items-center gap-1 ${
-                  scrolled ? 'text-muted-foreground hover:text-primary' : 'text-white/80 hover:text-white'
+                  'text-white/80 hover:text-white'
                 }`}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -173,7 +181,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className={scrolled ? 'text-primary' : 'text-white'}
+              className="text-white"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -207,19 +215,40 @@ const Navigation = () => {
                   </Link>
                 ))}
                 <div className="border-t border-border mt-2 pt-2">
-                  <div className="px-3 py-2 text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                  <button
+                    type="button"
+                    onClick={() => setFabricsOpen((v) => !v)}
+                    aria-expanded={fabricsOpen}
+                    className="w-full flex items-center justify-between px-3 py-2 text-xs font-medium text-muted-foreground uppercase tracking-wider"
+                  >
                     Fabrics
-                  </div>
-                  {fabricLinks.map((f) => (
-                    <Link
-                      key={f.path}
-                      to={f.path}
-                      onClick={() => setIsOpen(false)}
-                      className="block px-6 py-2 text-sm font-body text-muted-foreground hover:text-primary transition-colors rounded-md"
-                    >
-                      {f.name}
-                    </Link>
-                  ))}
+                    <ChevronDown className={`w-4 h-4 transition-transform ${fabricsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {fabricsOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25 }}
+                        className="overflow-hidden"
+                      >
+                        {fabricLinks.map((f) => (
+                          <Link
+                            key={f.path}
+                            to={f.path}
+                            onClick={() => {
+                              setIsOpen(false);
+                              setFabricsOpen(false);
+                            }}
+                            className="block px-6 py-2 text-sm font-body text-muted-foreground hover:text-primary transition-colors rounded-md"
+                          >
+                            {f.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
                 <div className="border-t border-border mt-2 pt-2">
                   <div className="px-3 py-2 text-xs font-medium text-muted-foreground flex items-center gap-2 uppercase tracking-wider">
@@ -247,29 +276,22 @@ const Navigation = () => {
 
 const NavLink = ({
   item,
-  scrolled,
   active,
 }: {
   item: { name: string; path: string };
-  scrolled: boolean;
+  scrolled?: boolean;
   active: boolean;
 }) => (
   <Link
     to={item.path}
     className={`font-body text-sm font-medium tracking-wide transition-colors relative group ${
-      active
-        ? scrolled
-          ? 'text-primary'
-          : 'text-white'
-        : scrolled
-        ? 'text-muted-foreground hover:text-primary'
-        : 'text-white/70 hover:text-white'
+      active ? 'text-white' : 'text-white/70 hover:text-white'
     }`}
   >
     {item.name}
     <span
       className={`absolute -bottom-1 left-0 h-px transition-all duration-500 ease-out ${
-        scrolled ? 'bg-primary' : 'bg-white'
+        'bg-white'
       } ${active ? 'w-full' : 'w-0 group-hover:w-full'}`}
     />
   </Link>

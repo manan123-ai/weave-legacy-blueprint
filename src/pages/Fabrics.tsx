@@ -274,7 +274,7 @@ const Fabrics = () => {
               {filteredFabrics.map((fabric, index) => (
                 <motion.div
                   key={index}
-                  className="bg-card rounded-sm overflow-hidden shadow-[0_2px_20px_-8px_hsl(var(--primary)/0.1)] hover:shadow-[0_30px_70px_-15px_hsl(var(--primary)/0.25)] transition-all duration-700 border border-border/40 group"
+                  className="fabric-card-glass overflow-hidden hover:shadow-[0_30px_70px_-15px_rgba(0,0,0,0.35)] transition-all duration-700 group"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: (index % 2) * 0.1, ease: [0.22, 1, 0.36, 1] }}
