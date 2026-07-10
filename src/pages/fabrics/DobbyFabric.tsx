@@ -7,6 +7,7 @@ const DobbyFabric = () => (
     title="Dobby Fabric Manufacturer & Exporter from India"
     metaTitle="Dobby Fabric Manufacturer India — Self Dobby Colour Dobby | JNC Fabrics"
     metaDescription="Dobby fabric manufacturer from India. Self-dobby and colour dobby in cotton and cotton blends. Subtle geometric weave for premium shirting and casualwear."
+    keywords="dobby fabric manufacturer India, self dobby fabric, dobby weave fabric India"
     intro="Janki Nath & Co. manufactures dobby fabrics — self-dobby and colour dobby constructions in cotton and blended compositions — for premium shirting, casualwear and formal wear applications."
     sections={[
       {

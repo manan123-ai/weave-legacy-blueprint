@@ -7,6 +7,7 @@ const LinenFabric = () => (
     title="Linen Fabric Manufacturer & Exporter from India"
     metaTitle="Linen Fabric Manufacturer India — GOTS Certified | JNC Fabrics"
     metaDescription="100% linen and linen blend fabric from India. Cotton/linen, viscose/linen blends. GOTS and OCS certified. Mill-direct export to fashion brands worldwide."
+    keywords="linen fabric manufacturer India, linen fabric exporter, GOTS linen fabric, cotton linen blend India"
     intro="Janki Nath & Co. manufactures 100% linen and linen blend fabrics — exported to fashion brands and garment manufacturers across Europe, USA, Japan and Australia."
     sections={[
       {

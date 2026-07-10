@@ -7,6 +7,7 @@ const YarnDyedFabric = () => (
     title="Yarn Dyed Fabric Manufacturer & Exporter from India"
     metaTitle="Yarn Dyed Fabric Manufacturer India — Checks Stripes Plaids | JNC Fabrics"
     metaDescription="Yarn dyed fabric manufacturer from India. Checks, stripes, plaids, madras in cotton, linen and viscose. Consistent colour across reorders. Mill-direct supply."
+    keywords="yarn dyed fabric manufacturer India, checks stripes fabric India, yarn dyed export"
     intro="Janki Nath & Co. manufactures yarn dyed fabrics — checks, stripes, plaids and multi-colour woven designs — from our yarn-dyed specialist units across India."
     sections={[
       {
