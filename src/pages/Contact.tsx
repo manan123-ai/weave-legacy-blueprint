@@ -2,7 +2,13 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useState } from 'react';
 
@@ -12,72 +18,44 @@ import Reveal from '@/components/motion/Reveal';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
+const COUNTRIES = [
+  'United States', 'United Kingdom', 'Germany', 'France', 'Italy', 'Spain',
+  'Netherlands', 'Portugal', 'Belgium', 'Denmark', 'Sweden', 'Norway',
+  'Poland', 'Turkey', 'Japan', 'South Korea', 'Australia', 'New Zealand',
+  'Canada', 'Mexico', 'Brazil', 'UAE', 'Saudi Arabia', 'Israel',
+  'South Africa', 'Egypt', 'India', 'Bangladesh', 'Sri Lanka', 'Other',
+];
+
+const FABRICS = [
+  'Cotton', 'Linen', 'Jacquard', 'Yarn-Dyed', 'Upholstery', 'Viscose', 'Dobby', 'Other',
+];
+
 const Contact = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
+    name: '',
     company: '',
+    country: '',
+    email: '',
     fabricInterest: '',
-    message: ''
+    message: '',
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const encode = (data: Record<string, string>) =>
-    Object.keys(data)
-      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&');
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Submit to Netlify Forms (form-name must match the static form in index.html)
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': 'contact',
-          'bot-field': '',
-          ...formData,
-        }),
-      });
-
-      if (!response.ok) throw new Error('Network response was not ok');
-
-      toast({
-        title: 'Message sent!',
-        description: "Thank you — we've received your inquiry and will get back to you shortly.",
-      });
-
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        fabricInterest: '',
-        message: '',
-      });
-    } catch (error) {
-      toast({
-        title: 'Something went wrong',
-        description: 'Please try again or email us directly at jcofabrics@yahoo.co.in',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    const text =
+      `New inquiry from ${formData.name}, ${formData.company}, ${formData.country}. ` +
+      `Fabric interest: ${formData.fabricInterest}. ` +
+      `Message: ${formData.message}. ` +
+      `Email: ${formData.email}`;
+    const url = `https://wa.me/919891542727?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
+
 
   return (
     <div className="min-h-screen">
