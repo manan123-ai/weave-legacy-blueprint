@@ -17,6 +17,7 @@ export interface FabricCategoryPageProps {
   title: string;
   metaTitle: string;
   metaDescription: string;
+  keywords?: string;
   intro: string;
   sections: FabricSection[];
   productName: string;

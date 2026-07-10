@@ -45,6 +45,7 @@ const SEO = ({
       <meta name="description" content={desc} />
       <link rel="canonical" href={url} />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      {keywords ? <meta name="keywords" content={keywords} /> : null}
 
       {/* OpenGraph */}
       <meta property="og:title" content={fullTitle} />
