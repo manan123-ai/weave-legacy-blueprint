@@ -6,6 +6,7 @@ interface SEOProps {
   path: string;
   image?: string;
   type?: 'website' | 'article';
+  keywords?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
@@ -23,6 +24,7 @@ const SEO = ({
   path,
   image = DEFAULT_IMAGE,
   type = 'website',
+  keywords,
   jsonLd,
 }: SEOProps) => {
   const url = `${SITE_URL}${path}`;
