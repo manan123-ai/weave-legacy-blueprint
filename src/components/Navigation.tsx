@@ -33,6 +33,7 @@ const Navigation = () => {
     { name: 'Upholstery Fabric', path: '/fabrics/upholstery' },
     { name: 'Viscose Fabric', path: '/fabrics/viscose' },
     { name: 'Dobby Fabric', path: '/fabrics/dobby' },
+    { name: 'Certified Fabrics', path: '/fabrics/certified' },
     { name: 'View All Fabrics', path: '/fabrics' },
   ];
 
@@ -44,6 +45,8 @@ const Navigation = () => {
     { name: 'Certifications', path: '/certifications' },
     { name: 'Showroom', path: '/showroom' },
     { name: 'Sampling', path: '/sampling' },
+    { name: 'Request Samples', path: '/request-samples' },
+    { name: 'India vs China', path: '/compare/india-vs-china-fabric' },
     { name: 'Sourcing Guide', path: '/fabric-sourcing-guide' },
     { name: 'Blog', path: '/blog' },
     { name: 'Clientele', path: '/clientele' },
