@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const SITE = 'https://jcofabrics.com';
 
 const rows: [string, string, string][] = [
-  ['Cotton & natural fibre fabric', 'World's second-largest producer, strong in cotton, linen, viscose, jacquard, yarn-dyed', 'Strong in cotton, extremely strong in synthetics and polyester blends'],
+  ['Cotton & natural fibre fabric', "World's second-largest producer, strong in cotton, linen, viscose, jacquard, yarn-dyed", 'Strong in cotton, extremely strong in synthetics and polyester blends'],
   ['MOQ flexibility', 'Lower MOQs, development-friendly (from 300–500m for many constructions)', 'Higher MOQs typical (1,000m+), oriented to bulk'],
   ['Sampling & development', 'Fast sampling, custom construction, quick strike-off cycles', 'Strong for repeat programmes, slower for full custom development'],
   ['Certifications', 'GOTS, BCI, OCS, OEKO-TEX widely available', 'OEKO-TEX common, GOTS available at select mills'],
