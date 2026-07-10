@@ -7,6 +7,7 @@ const CottonFabric = () => (
     title="Cotton Fabric Manufacturer & Exporter from India"
     metaTitle="Cotton Fabric Manufacturer India — Export Quality | JNC Fabrics"
     metaDescription="Export-grade cotton fabric from India. Plain weave, twill, dobby, poplin, canvas. Greige, RFD, dyed and printed. BCI and GOTS certified. Mill-direct supply."
+    keywords="cotton fabric manufacturer India, cotton fabric exporter, BCI cotton fabric, GOTS cotton fabric India"
     intro="Janki Nath & Co. manufactures export-grade cotton fabrics from our weaving units across India — supplying fashion brands, garment manufacturers and buying houses across USA, UK, Germany, France, Japan and Australia."
     sections={[
       {

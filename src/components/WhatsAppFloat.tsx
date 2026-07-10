@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
  * Pre-filled buyer inquiry text.
  */
 const WHATSAPP_URL =
-  'https://wa.me/919891542727?text=Hi%2C%20I%27m%20interested%20in%20fabric%20samples%20from%20Janki%20Nath%20%26%20Co.';
+  'https://wa.me/919891542727?text=Hi%2C%20I%20am%20interested%20in%20sourcing%20woven%20fabric%20from%20Janki%20Nath%20%26%20Co.%20Please%20share%20your%20catalogue%20and%20pricing.';
 
 const WhatsAppFloat = () => (
   <motion.a

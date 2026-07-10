@@ -17,6 +17,7 @@ export interface FabricCategoryPageProps {
   title: string;
   metaTitle: string;
   metaDescription: string;
+  keywords?: string;
   intro: string;
   sections: FabricSection[];
   productName: string;
@@ -29,6 +30,7 @@ const FabricCategoryPage = ({
   title,
   metaTitle,
   metaDescription,
+  keywords,
   intro,
   sections,
   productName,
@@ -78,7 +80,7 @@ const FabricCategoryPage = ({
 
   return (
     <div className="min-h-screen">
-      <SEO title={metaTitle} description={metaDescription} path={path} jsonLd={jsonLd} />
+      <SEO title={metaTitle} description={metaDescription} path={path} keywords={keywords} jsonLd={jsonLd} />
       <Breadcrumbs
         items={[
           { name: 'Fabrics', path: '/fabrics' },

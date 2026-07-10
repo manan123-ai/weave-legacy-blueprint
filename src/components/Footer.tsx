@@ -18,7 +18,7 @@ const Footer = () => {
               JANKI NATH & CO.
             </Link>
             <p className="font-body text-primary-foreground/80 mb-6 max-w-md">
-              Weaving excellence for generations. Premium quality fabrics for the world's most iconic brands.
+              Weaving excellence for generations. Our fabrics are used in garments manufactured for leading international fashion brands across USA, UK, Europe, Japan and Australia — supplied through our network of garment manufacturers and buying house clients.
             </p>
             
             {/* Social Media */}

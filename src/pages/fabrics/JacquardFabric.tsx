@@ -7,6 +7,7 @@ const JacquardFabric = () => (
     title="Jacquard Fabric Manufacturer & Exporter from India"
     metaTitle="Jacquard Fabric Manufacturer India — Custom Patterns | JNC Fabrics"
     metaDescription="Jacquard fabric manufacturer from India. Damask, brocade, matelassé, dobby jacquard. Cotton, viscose, linen compositions. Custom pattern development."
+    keywords="jacquard fabric manufacturer India, jacquard fabric exporter, damask fabric India, custom jacquard India"
     intro="Janki Nath & Co. weaves jacquard fabrics across our specialist units in Erode and Salem — supplying fashion brands, occasion wear manufacturers and home furnishing companies worldwide."
     sections={[
       {

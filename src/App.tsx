@@ -29,6 +29,9 @@ import YarnDyedFabric from "./pages/fabrics/YarnDyedFabric";
 import UpholsteryFabric from "./pages/fabrics/UpholsteryFabric";
 import ViscoseFabric from "./pages/fabrics/ViscoseFabric";
 import DobbyFabric from "./pages/fabrics/DobbyFabric";
+import CertifiedFabrics from "./pages/CertifiedFabrics";
+import RequestSamples from "./pages/RequestSamples";
+import IndiaVsChinaFabric from "./pages/IndiaVsChinaFabric";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -55,6 +58,9 @@ const App = () => (
           <Route path="/fabrics/upholstery" element={<UpholsteryFabric />} />
           <Route path="/fabrics/viscose" element={<ViscoseFabric />} />
           <Route path="/fabrics/dobby" element={<DobbyFabric />} />
+          <Route path="/fabrics/certified" element={<CertifiedFabrics />} />
+          <Route path="/request-samples" element={<RequestSamples />} />
+          <Route path="/compare/india-vs-china-fabric" element={<IndiaVsChinaFabric />} />
           <Route path="/clientele" element={<Clientele />} />
           <Route path="/production" element={<ProductionProcess />} />
           <Route path="/export" element={<Export />} />
