@@ -99,6 +99,13 @@ const Export = () => (
             </p>
           </Reveal>
 
+          <Reveal>
+            <h2 className="font-serif text-3xl font-bold text-primary mb-6">Why Source Mill-Direct from India</h2>
+            <p className="font-body text-lg text-muted-foreground font-light leading-relaxed">
+              Because we produce in our own weaving units, you deal directly with the manufacturer — no agent commission or trading-house markup between you and production, typically 15–25% more competitive than fabric sourced through intermediaries. We also control every stage of production, so custom development, mid-production changes and certification documentation are handled directly, not resold.
+            </p>
+          </Reveal>
+
           <div className="rounded-sm border border-border/60 bg-card p-10">
             <h3 className="font-serif text-2xl font-bold text-primary mb-4">Contact our export team</h3>
             <div className="flex flex-wrap gap-4">

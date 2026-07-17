@@ -14,6 +14,7 @@ const TwillFabric = () => (
         heading: 'Our Twill & Drills Range',
         paragraphs: [
           'We produce twill and drill fabrics across a range of weave angles and weights — cotton twill, drill and gabardine constructions — built for durability in workwear, uniforms and heavy-duty casualwear applications.',
+          'Twill weave creates a diagonal rib pattern by passing the weft thread over multiple warp threads before going under, rather than the simple over-one-under-one of plain weave — giving greater strength and durability at the same yarn weight. Drill is typically a heavier 2/1 or 3/1 twill used in workwear and uniforms; gabardine is a tightly woven, smooth-faced twill with excellent wrinkle resistance used in suits and formal trousers.',
         ],
         bullets: [
           { label: 'Constructions', value: 'Cotton Twill · Drill · Gabardine · 45° / 63° Twill' },

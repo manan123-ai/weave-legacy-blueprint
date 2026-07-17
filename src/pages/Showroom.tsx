@@ -99,7 +99,7 @@ const Showroom = () => (
           <Reveal>
             <h2 className="font-serif text-3xl font-bold text-primary mb-6">How to Reach Us</h2>
             <p className="font-body text-lg text-muted-foreground font-light leading-relaxed">
-              Mayapuri Industrial Area is located in West Delhi. Nearest Metro station: Mayapuri (Green Line). The showroom is in Phase-1 of Mayapuri Industrial Area.
+              Mayapuri Industrial Area is located in West Delhi, accessible from Ring Road, NH48 and Pankha Road, with parking available within the industrial area. Nearest Metro station: Mayapuri (Green Line), 5–7 minutes on foot. From Delhi Airport (IGI), the showroom is approximately 20–25 minutes by road via NH48.
             </p>
           </Reveal>
 

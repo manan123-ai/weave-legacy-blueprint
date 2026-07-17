@@ -21,7 +21,7 @@ const UpholsteryFabric = () => (
       {
         heading: 'Performance Standards',
         paragraphs: [
-          'Our upholstery fabrics are produced to export quality standards — suitable for residential and contract applications. Fabric testing available on request including Martindale abrasion, colourfastness to light and rubbing, dimensional stability.',
+          'Our upholstery fabrics are produced to export quality standards — suitable for residential and contract applications. Fabric testing available on request including Martindale abrasion (residential minimum 10,000–15,000 rubs, contract/hospitality 25,000–30,000+ rubs), colourfastness to light and rubbing, pilling resistance and dimensional stability, tested to relevant BS EN ISO standards.',
         ],
       },
       {

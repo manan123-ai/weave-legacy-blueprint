@@ -24,12 +24,40 @@ const About = () => {
     { name: 'MR. MANAN BHASIN', role: 'Marketing Head', years: 'Next-Generation Leadership' },
   ];
 
+  const generations = [
+    { gen: 'First Generation — Founder', name: 'Mr. Janki Nath', description: 'Founded the business in 1968 in Mayapuri Industrial Area, New Delhi, building the original weaving capacity and the company\'s first relationships with yarn suppliers and fabric buyers in the Delhi textile trade.' },
+    { gen: 'Second Generation', name: 'Mr. Hamesh Kumar Bhasin (Managing Director, 45+ years)', description: 'Built the export business, developing relationships with international buyers and establishing JNC Fabrics as a reliable export-quality fabric supplier. Expanded weaving capacity across multiple units and added certifications including BCI, GOTS, OCS and OEKO-TEX.' },
+    { gen: 'Third Generation', name: 'Mr. Sandeepan Bhasin & Mr. Deepak Bhasin (Directors, 30+ years each)', description: 'Scaled international operations, expanded to five weaving units across India, and grew the company\'s reach across major export markets including USA, UK, Germany, France, Japan, Australia and UAE.' },
+    { gen: 'Fourth Generation', name: 'Mr. Manan Bhasin (Marketing Head)', description: 'Building on the company\'s manufacturing heritage with digital infrastructure, direct international buyer outreach and modern brand positioning for the next phase of growth.' },
+  ];
+
   return (
     <div className="min-h-screen">
       <SEO
-        title="About JNC Fabrics | Janki Nath & Co. Since 1968"
-        description="Janki Nath & Co. — fourth-generation woven fabric manufacturer and exporter from New Delhi since 1968. Weaving units in Meerut, Bhiwandi, Erode, Salem, Surat. Exporting to 20+ countries."
+        title="About Janki Nath & Co. — Woven Fabric Manufacturer India Since 1968 | JNC Fabrics"
+        description="Janki Nath & Co. (JNC Fabrics) — fourth-generation woven fabric manufacturer from Mayapuri, New Delhi, founded 1968 by Mr. Janki Nath. Over 55 years of export-quality fabric manufacturing. BCI, GOTS, OCS and OEKO-TEX certified. Five weaving units across India."
         path="/about"
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Janki Nath & Co.',
+            foundingDate: '1968',
+            founder: {
+              '@type': 'Person',
+              name: 'Mr. Janki Nath',
+            },
+            url: 'https://jcofabrics.com',
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://jcofabrics.com/' },
+              { '@type': 'ListItem', position: 2, name: 'About', item: 'https://jcofabrics.com/about' },
+            ],
+          },
+        ]}
       />
       <Breadcrumbs items={[{ name: 'About' }]} />
       <main className="pt-16">
@@ -43,12 +71,12 @@ const About = () => {
             </Reveal>
             <KineticHeading
               as="h1"
-              text="Our Story"
+              text="About Janki Nath & Co. — Four Generations of Woven Fabric Manufacturing"
               className="font-serif text-5xl md:text-7xl font-bold text-primary mb-8 leading-[1.05]"
             />
             <Reveal delay={0.3}>
               <p className="font-body text-xl text-muted-foreground font-light">
-                40+ Years of Textile Excellence
+                Founded 1968 by Mr. Janki Nath — 55+ Years of Textile Excellence
               </p>
             </Reveal>
           </div>
@@ -69,7 +97,7 @@ const About = () => {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="font-body text-lg text-muted-foreground leading-relaxed font-light mb-6">
-                Janki Nath & Co. (JNC Fabrics) is a fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi, established 1968.
+                Janki Nath & Co. (JNC Fabrics) is a fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi, founded in 1968 by Mr. Janki Nath.
               </p>
               <p className="font-body text-lg text-muted-foreground leading-relaxed font-light mb-6">
                 We export premium woven fabrics to fashion brands, garment manufacturers, buying houses and fabric importers across USA, UK, Germany, France, Italy, Japan, Australia, UAE and South Korea.
@@ -184,6 +212,36 @@ const About = () => {
 
         <KineticStrip text="Heritage · Quality · Innovation" reverse />
 
+        {/* Four Generations */}
+        <section className="py-32">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Reveal className="text-center mb-20">
+              <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
+                Family Legacy
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary leading-tight">
+                The Four Generations
+              </h2>
+            </Reveal>
+            <div className="grid gap-8 md:grid-cols-2">
+              {generations.map((g, index) => (
+                <motion.div
+                  key={g.gen}
+                  className="border-l-2 border-primary pl-8 py-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  viewport={{ once: true }}
+                >
+                  <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">{g.gen}</p>
+                  <h3 className="font-serif text-xl font-bold text-primary mb-3">{g.name}</h3>
+                  <p className="font-body text-muted-foreground leading-relaxed font-light">{g.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Leadership */}
         <section className="py-32">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -214,7 +272,7 @@ const About = () => {
             </div>
             <Reveal delay={0.4}>
               <p className="font-body text-lg text-muted-foreground mt-12 font-light italic">
-                The business came into existence in 1968 and has since then been a known name in its field.
+                Founded by Mr. Janki Nath in 1968, the business has since grown into a known name in the Indian woven fabric export industry.
               </p>
             </Reveal>
           </div>

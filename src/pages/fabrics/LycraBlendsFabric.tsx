@@ -14,6 +14,7 @@ const LycraBlendsFabric = () => (
         heading: 'Our Lycra Blends Range',
         paragraphs: [
           'We produce Lycra blend woven fabrics with 2-way and 4-way stretch constructions, engineered for fit and recovery across activewear, swimwear and performance fashion applications.',
+          'Lycra (elastane/spandex) yarns are incorporated into the warp, weft, or both — typically 2–8% of the construction — to add stretch and recovery to woven fabric while retaining a woven look and feel. 2-way stretch (Lycra in weft only) suits casual and fashion applications; 4-way stretch (Lycra in both directions) is required for close-fitting activewear and swimwear. Cotton/Lycra remains the most common construction, moving with the body while still feeling like cotton.',
         ],
         bullets: [
           { label: 'Constructions', value: 'Cotton-Lycra · Viscose-Lycra · Poly-Lycra Wovens' },

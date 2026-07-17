@@ -42,10 +42,10 @@ const WhyJankiNath = () => {
   ];
 
   const stats = [
-    { value: 40, suffix: '+', label: 'Years of Heritage' },
-    { value: 2, suffix: 'M+', label: 'Meters Per Month' },
-    { value: 20, suffix: '+', label: 'Countries Served' },
-    { value: 50, suffix: '+', label: 'Global Partners' },
+    { value: 55, suffix: '+', label: 'Years — Est. 1968, Four Generations' },
+    { value: 2, suffix: 'M+', label: 'Metres/Month Across Five Weaving Units' },
+    { value: 20, suffix: '+', label: 'Export Markets — USA, UK, Europe, Japan' },
+    { value: 4, suffix: '', label: 'Certifications — BCI, GOTS, OCS, OEKO-TEX' },
   ];
 
   return (

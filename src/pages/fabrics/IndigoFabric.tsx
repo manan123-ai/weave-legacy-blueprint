@@ -14,6 +14,7 @@ const IndigoFabric = () => (
         heading: 'Our Indigo Dyed Range',
         paragraphs: [
           'We produce indigo dyed fabrics across a range of shades — from light washed indigo to deep, saturated tones — using both traditional and modern dyeing processes for denim, workwear and traditional wear applications.',
+          'Indigo is unique among dyes: rather than penetrating the fibre core, it attaches to the yarn surface in successive layers with each dip into the dye bath. This layered surface attachment is what gives indigo its distinctive fading characteristic — abrasion removes the outermost colour layers gradually, creating the patina indigo-dyed fabric is known for. Traditional warp indigo, with indigo-dyed warp and natural/white weft, produces the classic indigo-white contrast.',
         ],
         bullets: [
           { label: 'Constructions', value: 'Plain Weave · Twill · Denim-weight · Yarn-dyed' },

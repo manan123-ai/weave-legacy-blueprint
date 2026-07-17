@@ -14,6 +14,7 @@ const CrepeFabric = () => (
         heading: 'Our Crepe & High Twist Range',
         paragraphs: [
           'We produce crepe and high twist fabrics across a range of textures and weights — georgette, moss crepe and high twist voile — known for their fine surface texture, excellent drape and durability under repeated wear.',
+          'Crepe fabric is made from high-twist yarn — spun with significantly more twist than standard fabric yarn. When finished, the tightly twisted yarns relax under tension, creating the characteristic crinkled, pebbly surface texture. Moss crepe has a matte, pebbled surface popular for formal and occasion wear; georgette is lighter and slightly transparent with a floaty drape, used for blouses and overlay garments.',
         ],
         bullets: [
           { label: 'Constructions', value: 'Georgette · Moss Crepe · High Twist Voile · Crepe de Chine' },

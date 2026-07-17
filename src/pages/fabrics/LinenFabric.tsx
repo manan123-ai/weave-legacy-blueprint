@@ -13,11 +13,12 @@ const LinenFabric = () => (
       {
         heading: 'Our Linen Fabric Range',
         paragraphs: [
-          'We produce pure linen and linen blend fabrics across plain weave, twill and slub constructions — available in natural, bleached, dyed and yarn-dyed finishes.',
+          'We produce pure linen and linen blend fabrics across plain weave, twill and slub constructions — available in natural, bleached, dyed and yarn-dyed finishes, in standard widths of 44/45 inch and 58/60 inch.',
+          'Cotton/linen is our most popular blend for fashion applications — the cotton component reduces linen\'s tendency to crease and improves drape while retaining its breathability and texture (ratios: 55/45, 60/40, 70/30, 80/20). Viscose/linen adds fluid drape and a slight lustre, popular for summer dresses and resort wear. Linen contains natural pectin that stiffens the fibre when new — every wash cycle breaks it down gradually, which is why linen softens and improves with age rather than degrading like synthetic alternatives.',
         ],
         bullets: [
-          { label: 'Compositions', value: '100% Linen · Cotton/Linen · Viscose/Linen · Linen/Silk' },
-          { label: 'Finishes', value: 'Natural/Undyed · Bleached · Piece-dyed · Yarn-dyed · Washed/Enzyme · Printed' },
+          { label: 'Compositions', value: '100% Linen · Cotton/Linen · Viscose/Linen · Linen/Silk · Organic Linen (GOTS)' },
+          { label: 'Finishes', value: 'Natural/Undyed · Bleached · Piece-dyed · Yarn-dyed · Washed/Enzyme · Printed · Garment-dyed' },
         ],
       },
       {

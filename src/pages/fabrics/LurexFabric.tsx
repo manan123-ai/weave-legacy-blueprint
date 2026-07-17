@@ -14,6 +14,7 @@ const LurexFabric = () => (
         heading: 'Our Lurex & Sequins Range',
         paragraphs: [
           'We produce woven lurex and sequin fabrics with metallic and reflective surface effects, developed for evening wear, party dresses and stage costume collections.',
+          'Lurex is a metallic yarn — a core thread wrapped or laminated with a thin metallic film — woven alongside standard yarns as weft or warp to create a glittering effect within the fabric structure itself. Because the metallic yarn is structural rather than printed or embroidered, the effect cannot scratch off or wash away. Available as lurex jacquard, lurex stripes and checks, or all-over lurex for maximum metallic coverage.',
         ],
         bullets: [
           { label: 'Constructions', value: 'Woven Lurex · Sequin-embellished · Metallic Yarn Blends' },

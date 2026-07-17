@@ -13,11 +13,13 @@ const CottonFabric = () => (
       {
         heading: 'Our Cotton Fabric Range',
         paragraphs: [
-          'We produce cotton fabrics across a full range of constructions — plain weave, twill, drill, poplin, canvas, muslin, voile and oxford — available in greige, RFD (ready for dyeing), bleached, dyed and printed finishes.',
+          'We produce cotton fabrics across a full range of constructions — plain weave, twill, drill, poplin, canvas, sateen, oxford, dobby, voile and muslin — available in greige, RFD (ready for dyeing), bleached, dyed, printed and yarn-dyed finishes.',
+          'Plain weave cotton is the most versatile construction, used in shirting, dress fabric and linings. Cotton twill is the diagonal-rib weave behind chinos, workwear and denim-weight trousers — stronger and more durable than plain weave at the same yarn weight. Cotton poplin is the standard for formal shirting: a tight plain weave with a slight cross-rib for a smooth, crisp hand feel. Cotton sateen has a lustrous, weft-faced surface for premium shirting and home furnishing, while cotton canvas and duck are heavy, tightly woven constructions for bags, workwear and upholstery.',
         ],
         bullets: [
-          { label: 'Compositions', value: 'Cotton 100% · Cotton/Linen · Cotton/Viscose · Cotton/Lycra · Cotton/Polyester' },
-          { label: 'Finishes', value: 'Greige · RFD · Bleached · Piece-dyed · Yarn-dyed · Printed · Discharge · Pigment print' },
+          { label: 'Compositions', value: 'Cotton 100% · Cotton/Linen · Cotton/Viscose · Cotton/Modal · Cotton/Lycra · Cotton/Polyester · Organic Cotton (GOTS/OCS)' },
+          { label: 'Finishes', value: 'Greige · RFD · Bleached · Piece-dyed · Yarn-dyed · Printed · Discharge · Mercerised · Sanforised · Enzyme washed' },
+          { label: 'Constructions', value: 'Plain weave · Twill · Poplin · Canvas/Duck · Sateen · Oxford · Dobby · Voile/Lawn · Muslin' },
         ],
       },
       {

@@ -27,7 +27,8 @@ const COUNTRIES = [
 ];
 
 const FABRICS = [
-  'Cotton', 'Linen', 'Jacquard', 'Yarn-Dyed', 'Upholstery', 'Viscose', 'Dobby', 'Other',
+  'Cotton', 'Linen', 'Jacquard', 'Yarn-Dyed', 'Upholstery', 'Viscose', 'Dobby',
+  'Crepe', 'Twill', 'Indigo', 'Lurex', 'IKAT', 'Lycra Blends', 'Other',
 ];
 
 const Contact = () => {
@@ -204,7 +205,7 @@ const Contact = () => {
                   Send an Inquiry
                 </h2>
                 <p className="font-body text-sm text-muted-foreground mb-6">
-                  Submit the form below — your inquiry opens directly in WhatsApp for the fastest response.
+                  Submit the form below — your inquiry opens directly in WhatsApp for the fastest response. For the fastest turnaround, include fabric type and construction, composition and finish, colour direction (Pantone or reference image), quantity (development and bulk), certifications required (GOTS/BCI/OCS/OEKO-TEX) and your target delivery date.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">

@@ -18,7 +18,7 @@ const AboutPreview = () => {
   const bgY = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
 
   const paragraphs = [
-    'JNC Fabrics is a premium woven fabric manufacturer and exporter from India, supplying fashion brands, garment manufacturers and fabric importers across USA, UK, Germany, France, Japan, Australia, UAE and South Korea — mill-direct, no agents.',
+    'Janki Nath & Co. was founded in 1968 by Mr. Janki Nath and is now run by the fourth generation of the family — a premium woven fabric manufacturer and exporter supplying fashion brands, garment manufacturers and fabric importers across USA, UK, Germany, France, Japan, Australia, UAE and South Korea, mill-direct with no agents.',
     "From our Head Office and Showroom in Mayapuri, New Delhi to dedicated weaving units in Meerut, Bhiwandi/Ichalkaranji, Erode, Salem and Surat — every thread is supervised end-to-end across India's most renowned textile hubs.",
     'BCI, GOTS, OCS and OEKO-TEX Standard 100 certified — documentation available for every export order.',
   ];

@@ -14,6 +14,7 @@ const YarnDyedFabric = () => (
         heading: 'What is Yarn Dyed Fabric',
         paragraphs: [
           'In yarn dyed fabric, individual yarns are dyed before weaving. This creates colours and patterns that are woven directly into the fabric structure — not printed or applied after weaving. Result: deeper colour penetration, better colourfastness and consistent colour reproduction across reorders.',
+          'This is the key difference from piece-dyed fabric, which is woven first from undyed yarn and dyed as finished cloth afterwards. Only yarn dyeing enables multi-colour woven patterns — checks, stripes and plaids — where different coloured yarns interlace in the weave structure; piece dyeing can only produce solid colours.',
         ],
       },
       {

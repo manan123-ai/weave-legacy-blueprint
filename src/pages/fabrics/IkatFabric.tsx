@@ -14,6 +14,7 @@ const IkatFabric = () => (
         heading: 'Our IKAT & Tie Dye Range',
         paragraphs: [
           'We produce IKAT and tie dye fabrics using traditional resist-dyeing techniques, developed into both classic and contemporary pattern constructions for fashion and home textile collections.',
+          'IKAT is a dyeing technique in which yarns are resist-dyed before weaving — sections of yarn are tightly bound to prevent dye penetration, then the binding is removed after dyeing to reveal the pattern once woven. The characteristic "bleeding" or feathering at pattern edges is a natural result of slight yarn movement during weaving, and is the hallmark of authentic IKAT that printing cannot replicate. We offer warp IKAT, weft IKAT, and tie-dye fabric yardage.',
         ],
         bullets: [
           { label: 'Constructions', value: 'Traditional IKAT · Tie Dye · Resist-dyed Weaves' },

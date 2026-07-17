@@ -46,7 +46,7 @@ const GlobalExportMap = () => {
         <div className="relative rounded-2xl overflow-hidden border border-primary-foreground/10">
           <img
             src={worldMapImage}
-            alt="World Map showing our global reach"
+            alt="Woven fabric export markets — Janki Nath & Co. JNC Fabrics manufacturer exporter from New Delhi India"
             className="w-full h-64 md:h-96 object-cover opacity-40"
           />
 

@@ -14,6 +14,7 @@ const DobbyFabric = () => (
         heading: 'What is Dobby Fabric',
         paragraphs: [
           'Dobby fabric is woven using a dobby attachment that controls individual groups of warp yarns, creating small geometric patterns within the weave structure. The pattern is structural — not printed — making it permanent and wash-resistant.',
+          'Self-dobby uses the same yarn colour as the background, so the pattern is visible only through the weave structure — it reads as a solid colour from a distance and reveals its texture up close, which is why it is used in premium formal shirting. Colour dobby uses a contrasting yarn colour, making the pattern immediately visible as a two-colour or multi-colour design.',
         ],
       },
       {

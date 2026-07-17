@@ -13,7 +13,7 @@ const ViscoseFabric = () => (
       {
         heading: 'Our Viscose Fabric Range',
         paragraphs: [
-          'Viscose is a semi-synthetic cellulose fibre with exceptional drape, fluid movement and colour depth. Well-constructed viscose fabric is one of the most versatile fabrics in fashion.',
+          'Viscose is a regenerated cellulose fibre derived from wood pulp — semi-synthetic, sitting between natural and synthetic fibres. It has exceptional fluid drape (falling like silk at a fraction of the cost), takes dye to deeper, more saturated colours than most natural fibres, and is breathable unlike polyester. The common misconception that viscose is inherently low quality is a construction issue, not a fibre issue — well-constructed viscose is one of the most versatile fabrics in fashion.',
         ],
         bullets: [
           { label: 'Constructions', value: 'Viscose plain · Twill · Crepe · Georgette weight · Slub · Jacquard' },

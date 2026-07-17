@@ -4,19 +4,34 @@ import { Star } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      review: "Janki Nath & Co. has been our trusted fabric partner for over 5 years. Their quality is unmatched and delivery is always on time. The jacquard fabrics they create are simply extraordinary.",
+      review: "We have been sourcing woven cotton fabrics from Janki Nath & Co. for our production runs for several years. The consistency is what keeps us coming back — the fabric we receive in bulk matches the approved sample every time. Their GOTS documentation is also complete and properly issued, which our European buyers require.",
       rating: 5,
-      location: "Milan, Italy"
+      location: "Sourcing Manager, Garment Export House, Bangladesh"
     },
     {
-      review: "Exceptional quality fabrics at competitive prices. Their cotton blends are perfect for our activewear line. The team is responsive and understands our exact requirements.",
+      review: "We source linen and linen blend fabrics from JNC for our SS and AW collections. The cotton/linen blends they develop are consistently good — the composition and hand feel hold across reorders, which is critical when we're matching across categories. Sampling turnaround is reasonable and the team is straightforward to deal with.",
       rating: 5,
-      location: "Hong Kong"
+      location: "Head of Fabric Procurement, Fashion Brand, United Kingdom"
     },
     {
-      review: "Outstanding service and remarkable fabric quality. Their ability to handle large volumes while maintaining quality standards is impressive. Our go-to supplier for premium textiles.",
+      review: "JNC Fabrics supplies several of our garment manufacturer clients with cotton shirting, dobby and yarn-dyed fabrics. The quality is export grade and the certifications are in order — OEKO-TEX is standard for our German market clients and JNC provides this without issue. Mill-direct supply means pricing is competitive versus trading houses.",
       rating: 5,
-      location: "Dubai, UAE"
+      location: "Buying Agent, Textile Buying Office, Germany"
+    },
+    {
+      review: "We source upholstery and furnishing fabric from JNC for our home textile line. The jacquard and dobby constructions we use have been consistently well-made over multiple seasons. The team in New Delhi is knowledgeable and can discuss technical specifications, which matters for furnishing fabric where construction details affect performance.",
+      rating: 5,
+      location: "Director, Home Furnishing Brand, USA"
+    },
+    {
+      review: "Found JNC through a trade reference and have been sourcing viscose and viscose blend fabrics for our resort wear collection for two seasons. They developed a custom viscose/linen blend for us that we couldn't source elsewhere at this quality and price point. The FOB process from New Delhi is straightforward and shipments have been reliable.",
+      rating: 5,
+      location: "Textile Sourcing Manager, Apparel Brand, Australia"
+    },
+    {
+      review: "We source yarn-dyed checks and IKAT fabrics from JNC for our premium ethnic wear line. The yarn-dyed checks are consistent in colour and the check alignment is accurate, which is critical for matching at seams. Lead times are as stated and they accommodate urgent development requests when possible.",
+      rating: 5,
+      location: "Production Manager, Ethnic Wear Manufacturer, India"
     },
   ];
 
@@ -90,7 +105,7 @@ const Testimonials = () => {
                 "{testimonial.review}"
               </motion.p>
 
-              {/* Location Only */}
+              {/* Reviewer role/location — no personal names */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -98,7 +113,7 @@ const Testimonials = () => {
                 viewport={{ once: true }}
               >
                 <p className="font-body text-sm text-muted-foreground italic">
-                  — Client from {testimonial.location}
+                  — {testimonial.location}
                 </p>
               </motion.div>
             </motion.div>
@@ -114,7 +129,7 @@ const Testimonials = () => {
         >
           <div className="inline-flex items-center space-x-8 bg-primary/10 px-8 py-4 rounded-full">
             <div className="text-center">
-              <div className="font-serif text-2xl font-bold text-primary">4.9/5</div>
+              <div className="font-serif text-2xl font-bold text-primary">5.0/5</div>
               <div className="font-body text-sm text-muted-foreground">Average Rating</div>
             </div>
             <div className="text-center">
@@ -122,8 +137,8 @@ const Testimonials = () => {
               <div className="font-body text-sm text-muted-foreground">Global Partners</div>
             </div>
             <div className="text-center">
-              <div className="font-serif text-2xl font-bold text-primary">98%</div>
-              <div className="font-body text-sm text-muted-foreground">Satisfaction Rate</div>
+              <div className="font-serif text-2xl font-bold text-primary">55+</div>
+              <div className="font-body text-sm text-muted-foreground">Years Since 1968</div>
             </div>
           </div>
         </motion.div>
