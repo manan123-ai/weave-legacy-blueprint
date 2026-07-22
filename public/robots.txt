@@ -30,4 +30,4 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-Sitemap: https://jankinathandco.com/sitemap.xml
+Sitemap: https://jcofabrics.com/sitemap.xml
