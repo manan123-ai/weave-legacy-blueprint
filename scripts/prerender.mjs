@@ -65,9 +65,15 @@ async function run() {
 
     const html = await page.content();
 
-    const outDir = route === '/' ? DIST : path.join(DIST, route);
-    fs.mkdirSync(outDir, { recursive: true });
-    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+    // Write flat files (dist/fabrics/cotton.html) rather than
+    // dist/fabrics/cotton/index.html — Netlify serves a flat .html file at
+    // its extensionless path directly (200), whereas a directory+index.html
+    // triggers a 301 redirect to add a trailing slash, which would leave
+    // the canonical tag (no trailing slash, matching sitemap.xml) pointing
+    // at a URL that itself redirects.
+    const outPath = route === '/' ? path.join(DIST, 'index.html') : path.join(DIST, `${route}.html`);
+    fs.mkdirSync(path.dirname(outPath), { recursive: true });
+    fs.writeFileSync(outPath, html);
     console.log(`prerendered ${route}`);
   }
 
