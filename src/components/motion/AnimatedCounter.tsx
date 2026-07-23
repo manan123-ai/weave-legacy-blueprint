@@ -11,7 +11,7 @@ interface AnimatedCounterProps {
 const AnimatedCounter = ({ to, suffix = '', duration = 2000, className }: AnimatedCounterProps) => {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.5 });
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(to);
 
   useEffect(() => {
     if (!inView) return;

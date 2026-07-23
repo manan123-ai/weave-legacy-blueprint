@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 const About = () => {
   const whyChoose = [
-    { title: 'Experience and Expertise', description: 'Over four decades in the textile industry with a proven track record' },
+    { title: 'Experience and Expertise', description: 'Over five decades in the textile industry with a proven track record' },
     { title: 'Top Quality', description: 'Exceptional export-quality fabrics that meet the highest standards' },
     { title: 'Innovative Designs', description: 'Unique and trendsetting fabric designs' },
     { title: 'Competitive Prices', description: 'High-quality products at competitive rates' },
@@ -49,17 +49,12 @@ const About = () => {
             },
             url: 'https://jcofabrics.com',
           },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://jcofabrics.com/' },
-              { '@type': 'ListItem', position: 2, name: 'About', item: 'https://jcofabrics.com/about' },
-            ],
-          },
+          // BreadcrumbList is emitted once by <Breadcrumbs> below — do not
+          // duplicate it here (script tags aren't deduped by
+          // scripts/prerender.mjs).
         ]}
       />
-      <Breadcrumbs items={[{ name: 'About' }]} />
+      <Breadcrumbs items={[{ name: 'About' }]} currentPath="/about" />
       <main className="pt-16">
         {/* Hero */}
         <section className="py-32 bg-secondary relative overflow-hidden">
@@ -122,7 +117,7 @@ const About = () => {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8 font-light">
-                Janki Nath & Co. is one of the leading names in the Indian export industry, catering to top garment and home furnishings exporters across Delhi NCR, Jaipur, and Bangalore for over 40 years. Renowned for our exceptional fabric designs and unwavering commitment to quality, we supply international garment brands with a wide range of fabrics that adhere to the highest global standards, including advanced dyeing and processing techniques.
+                Janki Nath & Co. is one of the leading names in the Indian export industry, catering to top garment and home furnishings exporters across Delhi NCR, Jaipur, and Bangalore for over 55 years. Renowned for our exceptional fabric designs and unwavering commitment to quality, we supply international garment brands with a wide range of fabrics that adhere to the highest global standards, including advanced dyeing and processing techniques.
               </p>
             </Reveal>
             <Reveal delay={0.2}>

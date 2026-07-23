@@ -7,6 +7,8 @@ export interface Crumb {
 
 interface BreadcrumbsProps {
   items: Crumb[];
+  /** Current page path, used as the self-referencing URL on the last crumb. */
+  currentPath?: string;
 }
 
 const SITE = 'https://jcofabrics.com';
@@ -15,18 +17,19 @@ const SITE = 'https://jcofabrics.com';
  * Visible breadcrumb navigation with matching BreadcrumbList JSON-LD.
  * Sits below the fixed nav (h-16/20) and above the page hero.
  */
-const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
+const Breadcrumbs = ({ items, currentPath }: BreadcrumbsProps) => {
   const trail: Crumb[] = [{ name: 'Home', path: '/' }, ...items];
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: trail.map((c, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: c.name,
-      item: c.path ? `${SITE}${c.path}` : undefined,
-    })),
+    itemListElement: trail.map((c, i, arr) => {
+      const isLast = i === arr.length - 1;
+      // Google prefers the final crumb to carry a self-referencing item URL
+      // rather than omitting it.
+      const item = c.path ? `${SITE}${c.path}` : isLast && currentPath ? `${SITE}${currentPath}` : undefined;
+      return { '@type': 'ListItem', position: i + 1, name: c.name, item };
+    }),
   };
 
   return (

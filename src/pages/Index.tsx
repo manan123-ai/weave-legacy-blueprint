@@ -21,8 +21,10 @@ const Index = () => {
           {
             '@context': 'https://schema.org',
             '@type': 'WebSite',
+            '@id': 'https://jcofabrics.com/#website',
             name: 'JNC Fabrics',
             url: 'https://jcofabrics.com',
+            publisher: { '@id': 'https://jcofabrics.com/#organization' },
             potentialAction: {
               '@type': 'SearchAction',
               target: 'https://jcofabrics.com/?q={search_term_string}',
@@ -31,11 +33,13 @@ const Index = () => {
           },
           {
             '@context': 'https://schema.org',
-            '@type': 'Organization',
+            '@type': ['Organization', 'Manufacturer'],
+            '@id': 'https://jcofabrics.com/#organization',
             name: 'Janki Nath & Co.',
             alternateName: ['JNC Fabrics', 'JCO Fabrics', 'Janki Nath and Co'],
             url: 'https://jcofabrics.com',
-            logo: 'https://jcofabrics.com/logo.png',
+            logo: 'https://jcofabrics.com/jco-logo.png',
+            image: 'https://jcofabrics.com/og-image.jpg',
             foundingDate: '1968',
             founder: {
               '@type': 'Person',
@@ -59,16 +63,16 @@ const Index = () => {
             },
             hasCredential: ['BCI — Better Cotton Initiative', 'GOTS — Global Organic Textile Standard', 'OCS — Organic Content Standard', 'OEKO-TEX Standard 100', 'MSME Registered'],
             knowsAbout: ['Woven fabric manufacturing', 'Cotton fabric export', 'Linen fabric manufacture', 'Jacquard fabric weaving', 'GOTS certified fabric', 'BCI cotton', 'Fabric export India', 'Textile manufacturing India'],
-            areaServed: ['US', 'GB', 'DE', 'FR', 'JP', 'AU', 'AE', 'KR', 'CA', 'NL', 'IT', 'ES', 'BE', 'CH', 'SE', 'DK', 'NO'],
-          },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'Janki Nath & Co.',
+            areaServed: ['US', 'GB', 'DE', 'FR', 'IT', 'ES', 'NL', 'BE', 'CH', 'JP', 'KR', 'AU', 'NZ', 'AE', 'SA', 'CA', { '@type': 'Place', name: 'Scandinavia' }],
+            sameAs: [
+              'https://www.wikidata.org/wiki/Q140459786',
+              'https://www.instagram.com/jankinathandco',
+            ],
+            // Backed by the business's real Google Business Profile reviews.
             aggregateRating: {
               '@type': 'AggregateRating',
               ratingValue: '5',
-              reviewCount: '6',
+              reviewCount: '20',
               bestRating: '5',
               worstRating: '1',
             },
@@ -122,7 +126,7 @@ const Index = () => {
                 name: 'Which countries does Janki Nath & Co. export fabric to?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We export woven fabrics to USA, UK, Germany, France, Italy, Spain, Netherlands, Belgium, Switzerland, Japan, South Korea, Australia, New Zealand, UAE, Saudi Arabia, Canada, Scotland, Scandinavia and across Europe — supplying fashion brands, garment manufacturers, buying houses and fabric importers.',
+                  text: 'We export woven fabrics to USA, UK, Germany, France, Italy, Spain, Netherlands, Belgium, Switzerland, Japan, South Korea, Australia, New Zealand, UAE, Saudi Arabia, Canada and Scandinavia — supplying fashion brands, garment manufacturers, buying houses and fabric importers.',
                 },
               },
             ],

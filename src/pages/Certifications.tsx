@@ -5,8 +5,6 @@ import Reveal from '@/components/motion/Reveal';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
-const SITE = 'https://jcofabrics.com';
-
 const items = [
   {
     heading: 'BCI — Better Cotton Initiative',
@@ -43,18 +41,8 @@ const Certifications = () => (
       title="Fabric Certifications — BCI GOTS OCS OEKO-TEX | JNC Fabrics"
       description="Janki Nath & Co. holds BCI, GOTS, OCS and OEKO-TEX Standard 100 certifications. Full documentation available for every export order. Certified woven fabric manufacturer India."
       path="/certifications"
-      jsonLd={[
-        {
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-            { '@type': 'ListItem', position: 2, name: 'Certifications', item: `${SITE}/certifications` },
-          ],
-        },
-      ]}
     />
-    <Breadcrumbs items={[{ name: 'Certifications' }]} />
+    <Breadcrumbs items={[{ name: 'Certifications' }]} currentPath="/certifications" />
     <main className="pt-16">
       <section className="py-32 bg-secondary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -90,7 +90,7 @@ const GlobalExportMap = () => {
           {[
             { value: 20, suffix: '+', label: 'Countries Served' },
             { value: 50, suffix: '+', label: 'Global Partners' },
-            { value: 40, suffix: '+', label: 'Years of Excellence' }
+            { value: 55, suffix: '+', label: 'Years of Excellence' }
           ].map((stat, index) => (
             <motion.div
               key={index}

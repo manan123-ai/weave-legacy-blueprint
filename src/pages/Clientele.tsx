@@ -39,9 +39,9 @@ const Clientele = () => {
 
   const exportCountries = [
     'United States', 'United Kingdom', 'Germany', 'France', 'Italy',
-    'Spain', 'Netherlands', 'Japan', 'South Korea', 'Australia',
-    'Canada', 'UAE', 'Saudi Arabia', 'Turkey', 'Brazil',
-    'Mexico', 'South Africa', 'Egypt', 'Bangladesh', 'Sri Lanka',
+    'Spain', 'Netherlands', 'Belgium', 'Switzerland', 'Japan',
+    'South Korea', 'Australia', 'New Zealand', 'UAE', 'Saudi Arabia',
+    'Canada', 'Scandinavia',
   ];
 
   return (
@@ -73,7 +73,7 @@ const Clientele = () => {
             </Reveal>
             <Reveal delay={0.45}>
               <p className="font-body text-sm md:text-base text-muted-foreground/80 font-light max-w-3xl mx-auto mt-6">
-                Export markets: USA, UK, Germany, France, Italy, Spain, Netherlands, Japan, South Korea, Australia, UAE, Canada, Scotland and across Europe.
+                Export markets: USA, UK, Germany, France, Italy, Spain, Netherlands, Belgium, Switzerland, Japan, South Korea, Australia, New Zealand, UAE, Saudi Arabia, Canada and Scandinavia.
               </p>
             </Reveal>
           </div>

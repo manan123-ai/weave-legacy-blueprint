@@ -110,11 +110,7 @@ const FabricCategoryPage = ({
       '@type': 'Product',
       name: `${productName} — Janki Nath & Co.`,
       description: metaDescription,
-      manufacturer: {
-        '@type': 'Organization',
-        name: 'Janki Nath & Co.',
-        url: SITE,
-      },
+      manufacturer: { '@id': 'https://jcofabrics.com/#organization' },
       countryOfOrigin: 'India',
       brand: { '@type': 'Brand', name: 'JNC Fabrics' },
       image: 'https://jcofabrics.com/og-image.jpg',
@@ -122,28 +118,21 @@ const FabricCategoryPage = ({
         '@type': 'Offer',
         availability: 'https://schema.org/InStock',
         url: `${SITE}/contact`,
-        priceCurrency: 'USD',
-        price: '0',
         priceSpecification: {
-          '@type': 'PriceSpecification',
-          description: 'Price on request — contact us for FOB pricing and samples',
+          '@type': 'UnitPriceSpecification',
+          priceCurrency: 'USD',
+          referenceQuantity: {
+            '@type': 'QuantitativeValue',
+            value: 1,
+            unitText: 'quote on request — FOB New Delhi, MOQ varies by construction',
+          },
         },
-        seller: {
-          '@type': 'Organization',
-          name: 'Janki Nath & Co.',
-          url: SITE,
-        },
+        seller: { '@id': 'https://jcofabrics.com/#organization' },
       },
     },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-        { '@type': 'ListItem', position: 2, name: 'Fabrics', item: `${SITE}/fabrics` },
-        { '@type': 'ListItem', position: 3, name: productName, item: `${SITE}${path}` },
-      ],
-    },
+    // BreadcrumbList is emitted once by the shared <Breadcrumbs> component
+    // below — do not duplicate it here (script tags aren't deduped by
+    // scripts/prerender.mjs, so a second copy would ship to production).
   ];
 
   return (
@@ -154,6 +143,7 @@ const FabricCategoryPage = ({
           { name: 'Fabrics', path: '/fabrics' },
           { name: productName },
         ]}
+        currentPath={path}
       />
       <main>
         <section className="py-32 bg-secondary">

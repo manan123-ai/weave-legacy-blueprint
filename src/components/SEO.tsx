@@ -28,10 +28,14 @@ const SEO = ({
   jsonLd,
 }: SEOProps) => {
   const url = `${SITE_URL}${path}`;
-  const fullTitle =
-    title.length > 60 ? title.slice(0, 57) + '…' : title;
-  const desc =
-    description.length > 160 ? description.slice(0, 157) + '…' : description;
+  const truncateAtWord = (text: string, max: number) => {
+    if (text.length <= max) return text;
+    const cut = text.slice(0, max - 1);
+    const lastSpace = cut.lastIndexOf(' ');
+    return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut) + '…';
+  };
+  const fullTitle = truncateAtWord(title, 70);
+  const desc = truncateAtWord(description, 165);
 
   const structured = jsonLd
     ? Array.isArray(jsonLd)
