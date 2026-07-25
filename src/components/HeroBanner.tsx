@@ -1,10 +1,14 @@
 import { Button } from '@/components/ui/button';
 import { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import heroSlide1 from '@/assets/colorful-fabric-banner.jpg';
 import heroSlide2 from '@/assets/weaving-loom-banner.jpg';
 import heroSlide3 from '@/assets/yarn-production-banner.jpg';
+import heroSlide1Webp from '@/assets/colorful-fabric-banner.webp';
+import heroSlide2Webp from '@/assets/weaving-loom-banner.webp';
+import heroSlide3Webp from '@/assets/yarn-production-banner.webp';
 import MagneticButton from '@/components/motion/MagneticButton';
 
 const HeroBanner = () => {
@@ -21,6 +25,7 @@ const HeroBanner = () => {
   const slides = [
     {
       image: heroSlide1,
+      imageWebp: heroSlide1Webp,
       alt: 'Colorful premium woven fabrics by Janki Nath & Co. — cotton, linen and jacquard textiles for global fashion brands',
       title: 'Traditional Craftsmanship Meets Modern Excellence',
       subtitle: 'Explore Our Craft',
@@ -32,6 +37,7 @@ const HeroBanner = () => {
     },
     {
       image: heroSlide2,
+      imageWebp: heroSlide2Webp,
       alt: 'Advanced weaving loom in operation at Janki Nath & Co. textile mill in India',
       title: 'Advanced Weaving Technology',
       subtitle: 'About Our Journey',
@@ -42,6 +48,7 @@ const HeroBanner = () => {
     },
     {
       image: heroSlide3,
+      imageWebp: heroSlide3Webp,
       alt: 'Premium fabric production line — yarn to finished textile, manufactured by Janki Nath & Co. India',
       title: 'Premium Fabric Production',
       subtitle: 'World-Class Quality',
@@ -83,6 +90,11 @@ const HeroBanner = () => {
 
   return (
     <section ref={heroRef} className="relative h-screen overflow-hidden">
+      {/* Preload the LCP image (first hero slide, WebP) so the browser
+          fetches it immediately instead of waiting on CSSOM/JS discovery. */}
+      <Helmet>
+        <link rel="preload" as="image" href={heroSlide1Webp} fetchpriority="high" type="image/webp" />
+      </Helmet>
       {/* Background Images with subtle parallax + slow zoom */}
       <motion.div className="absolute inset-0" style={{ y: imageY }}>
         {slides.map((slide, index) => (
@@ -91,16 +103,19 @@ const HeroBanner = () => {
             className="absolute inset-0 transition-opacity duration-[1500ms] ease-in-out"
             style={{ opacity: currentSlide === index ? 1 : 0 }}
           >
-            <img
-              src={slide.image}
-              alt={slide.alt}
-              loading={index === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-              fetchPriority={index === 0 ? 'high' : 'low'}
-              className={`w-full h-full object-cover ${
-                currentSlide === index ? 'animate-slow-zoom' : ''
-              }`}
-            />
+            <picture>
+              <source srcSet={slide.imageWebp} type="image/webp" />
+              <img
+                src={slide.image}
+                alt={slide.alt}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+                fetchPriority={index === 0 ? 'high' : 'low'}
+                className={`w-full h-full object-cover ${
+                  currentSlide === index ? 'animate-slow-zoom' : ''
+                }`}
+              />
+            </picture>
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />

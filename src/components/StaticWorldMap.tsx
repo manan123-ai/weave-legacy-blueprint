@@ -28,9 +28,11 @@ const StaticWorldMap = () => {
     >
       {/* World Map Image */}
       <div className="relative">
-        <img 
-          src={worldMapImage} 
+        <img
+          src={worldMapImage}
           alt="Global export markets served by Janki Nath & Co. — woven fabric manufacturer and exporter India"
+          loading="lazy"
+          decoding="async"
           className="w-full h-auto object-cover"
         />
         

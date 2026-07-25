@@ -47,6 +47,8 @@ const GlobalExportMap = () => {
           <img
             src={worldMapImage}
             alt="Woven fabric export markets — Janki Nath & Co. JNC Fabrics manufacturer exporter from New Delhi India"
+            loading="lazy"
+            decoding="async"
             className="w-full h-64 md:h-96 object-cover opacity-40"
           />
 

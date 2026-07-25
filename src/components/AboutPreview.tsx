@@ -30,6 +30,8 @@ const AboutPreview = () => {
           src={weavingVideo}
           alt=""
           aria-hidden="true"
+          loading="lazy"
+          decoding="async"
           className="w-full h-[120%] object-cover opacity-[0.08]"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/95 to-secondary" />

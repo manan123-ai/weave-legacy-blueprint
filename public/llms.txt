@@ -1,49 +1,58 @@
-# JNC Fabrics — Janki Nath & Co.
+# Janki Nath & Co. (JNC Fabrics)
 
-JNC Fabrics (Janki Nath & Co.) is a fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi, India. Established 1968. Wikidata entity: Q140459786.
+> Fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi, India. Established 1968. Cotton, linen, jacquard, viscose, dobby, yarn-dyed, crepe, twill and upholstery fabrics. BCI, GOTS, OCS and OEKO-TEX Standard 100 certified. Mill-direct export to fashion brands, garment manufacturers and buying houses across 20+ countries.
 
 ## Products
-Cotton fabric, linen fabric, jacquard fabric, viscose fabric, yarn-dyed fabric, dobby fabric, upholstery fabric, crepe fabric, twill fabric, indigo fabric, lurex fabric, IKAT fabric, lycra blend fabric.
 
-Available in: greige, RFD, bleached, dyed, printed, yarn-dyed finishes.
-Constructions: plain weave, twill, dobby, jacquard, canvas, poplin, voile, crepe, georgette weight.
-
-## Certifications
-BCI (Better Cotton Initiative) — responsible cotton sourcing
-GOTS (Global Organic Textile Standard) — full organic supply chain certification
-OCS (Organic Content Standard) — organic content verification
-OEKO-TEX Standard 100 — product safety testing
-
-## Manufacturing
-Weaving units: Meerut, Bhiwandi/Ichalkaranji, Erode, Salem, Surat
-Head office and showroom: A-14, Mayapuri Industrial Area, Phase-1, New Delhi 110064
-Showroom hours: Monday to Saturday, 11AM to 8PM
-
-## Export
-Export markets: USA, UK, Germany, France, Italy, Spain, Netherlands, Belgium, Switzerland, Japan, South Korea, Australia, New Zealand, UAE, Saudi Arabia, Canada, Scandinavia
-Pricing: FOB New Delhi
-Documentation: Commercial invoice, packing list, certificate of origin, GST invoice, certification documents
-Lead time: 15-30 days standard, 30-45 days custom development
+- [Cotton Fabric](https://jcofabrics.com/fabrics/cotton) — Plain weave, twill, poplin, canvas, dobby. BCI and GOTS certified. Greige, RFD, dyed and printed finishes.
+- [Linen Fabric](https://jcofabrics.com/fabrics/linen) — 100% linen and linen blends. Cotton/linen, viscose/linen. GOTS and OCS certified.
+- [Jacquard Fabric](https://jcofabrics.com/fabrics/jacquard) — Damask, brocade, matelassé, cutwork. Custom pattern development.
+- [Yarn-Dyed Fabric](https://jcofabrics.com/fabrics/yarn-dyed) — Checks, stripes, plaids, madras. BCI certified cotton.
+- [Upholstery Fabric](https://jcofabrics.com/fabrics/upholstery) — Sofa fabric, curtain fabric, drapery. OEKO-TEX certified.
+- [Viscose Fabric](https://jcofabrics.com/fabrics/viscose) — Viscose twill, crepe, plain. Fluid drape for fashion brands.
+- [Dobby Fabric](https://jcofabrics.com/fabrics/dobby) — Self-dobby and colour dobby. Premium shirting.
+- [Crepe Fabric](https://jcofabrics.com/fabrics/crepe) — Moss crepe, high twist, georgette weight.
+- [Twill Fabric](https://jcofabrics.com/fabrics/twill) — Cotton twill, drill, gabardine for workwear and trousers.
+- [Indigo Fabric](https://jcofabrics.com/fabrics/indigo) — Traditional indigo dyed woven fabric.
+- [Lurex Fabric](https://jcofabrics.com/fabrics/lurex) — Metallic woven fabric for evening wear.
+- [IKAT Fabric](https://jcofabrics.com/fabrics/ikat) — Traditional resist-dyed patterns.
+- [Lycra Blends](https://jcofabrics.com/fabrics/lycra-blends) — Stretch woven fabric, 2-way and 4-way stretch.
+- [Certified Fabrics](https://jcofabrics.com/fabrics/certified) — BCI, GOTS and OCS certified fabric range.
 
 ## Key Pages
-Homepage: https://jcofabrics.com
-Fabrics: https://jcofabrics.com/fabrics
-Cotton fabric: https://jcofabrics.com/fabrics/cotton
-Linen fabric: https://jcofabrics.com/fabrics/linen
-Jacquard fabric: https://jcofabrics.com/fabrics/jacquard
-Yarn dyed fabric: https://jcofabrics.com/fabrics/yarn-dyed
-Upholstery fabric: https://jcofabrics.com/fabrics/upholstery
-Viscose fabric: https://jcofabrics.com/fabrics/viscose
-Dobby fabric: https://jcofabrics.com/fabrics/dobby
-Export: https://jcofabrics.com/export
-Certifications: https://jcofabrics.com/certifications
-Showroom: https://jcofabrics.com/showroom
-Sampling: https://jcofabrics.com/sampling
-Blog: https://jcofabrics.com/blog
-Fabric sourcing guide: https://jcofabrics.com/fabric-sourcing-guide
+
+- [Export Information](https://jcofabrics.com/export) — FOB pricing, lead times, documentation, export markets
+- [Certifications](https://jcofabrics.com/certifications) — BCI, GOTS, OCS, OEKO-TEX Standard 100 explained
+- [Showroom](https://jcofabrics.com/showroom) — A-14 Mayapuri Industrial Area, New Delhi. Mon-Sat 11AM-8PM
+- [Sampling Process](https://jcofabrics.com/sampling) — Lab dip, strike-off, bulk approval process
+- [Request Samples](https://jcofabrics.com/request-samples) — Request physical swatches or a digital catalogue
+- [Clientele](https://jcofabrics.com/clientele) — Global export markets and buyer network
+- [Fabric Sourcing Guide](https://jcofabrics.com/fabric-sourcing-guide) — Complete guide for international buyers
+- [Blog](https://jcofabrics.com/blog) — Educational articles on fabric sourcing, certifications and manufacturing
+- [About](https://jcofabrics.com/about) — Company history, leadership and production process
+- [Contact](https://jcofabrics.com/contact) — jcofabrics@yahoo.co.in | +91 98915 42727
+
+## Certifications
+
+- BCI (Better Cotton Initiative) — responsible cotton farming
+- GOTS (Global Organic Textile Standard) — full organic supply chain
+- OCS (Organic Content Standard) — organic content verification
+- OEKO-TEX Standard 100 — product safety testing
+
+## Manufacturing
+
+Weaving units: Meerut (Uttar Pradesh), Bhiwandi/Ichalkaranji (Maharashtra), Erode (Tamil Nadu), Salem (Tamil Nadu), Surat (Gujarat)
+
+Head office and showroom: A-14, Mayapuri Industrial Area, Phase-1, New Delhi 110064, India
+
+## Export Markets
+
+USA, United Kingdom, Germany, France, Italy, Spain, Netherlands, Belgium, Switzerland, Japan, South Korea, Australia, New Zealand, UAE, Saudi Arabia, Canada, Scandinavia
 
 ## Contact
-Email: jcofabrics@yahoo.co.in
-WhatsApp: +91 9891542727
-Phone: 011-47079009 / 45567009
-Website: https://jcofabrics.com
+
+- Email: jcofabrics@yahoo.co.in
+- WhatsApp: +91 98915 42727
+- Phone: 011-47079009 | 011-45567009
+- Website: https://jcofabrics.com
+- Wikidata: https://www.wikidata.org/wiki/Q140459786
