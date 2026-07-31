@@ -25,8 +25,6 @@ export interface FabricCategoryPageProps {
   productName: string;
 }
 
-const SITE = 'https://jcofabrics.com';
-
 // Icon shown on each spec/quality card — matched by keyword in the bullet
 // label so it works across every fabric page's existing data without
 // needing per-page customization. Falls back to a generic swatch icon.
@@ -114,21 +112,11 @@ const FabricCategoryPage = ({
       countryOfOrigin: 'India',
       brand: { '@type': 'Brand', name: 'JNC Fabrics' },
       image: 'https://jcofabrics.com/og-image.jpg',
-      offers: {
-        '@type': 'Offer',
-        availability: 'https://schema.org/InStock',
-        url: `${SITE}/contact`,
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          priceCurrency: 'USD',
-          referenceQuantity: {
-            '@type': 'QuantitativeValue',
-            value: 1,
-            unitText: 'quote on request — FOB New Delhi, MOQ varies by construction',
-          },
-        },
-        seller: { '@id': 'https://jcofabrics.com/#organization' },
-      },
+      // No `offers` block: these are B2B quote-only SKUs with no fixed
+      // online price, and Google flags an Offer without a resolvable
+      // price/aggregateRating/review as a critical structured-data issue.
+      // Omitting offers keeps the Product schema valid without fabricating
+      // a price or fake reviews.
     },
     // BreadcrumbList is emitted once by the shared <Breadcrumbs> component
     // below — do not duplicate it here (script tags aren't deduped by
