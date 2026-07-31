@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://jcofabrics.com/</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://jcofabrics.com/</loc><lastmod>2026-07-31</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://jcofabrics.com/about</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://jcofabrics.com/fabrics</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://jcofabrics.com/fabrics/cotton</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://jcofabrics.com/fabrics/linen</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://jcofabrics.com/fabrics/jacquard</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://jcofabrics.com/fabrics/yarn-dyed</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://jcofabrics.com/fabrics/jacquard</loc><lastmod>2026-07-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://jcofabrics.com/fabrics/yarn-dyed</loc><lastmod>2026-07-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://jcofabrics.com/fabrics/upholstery</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://jcofabrics.com/fabrics/viscose</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://jcofabrics.com/fabrics/dobby</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://jcofabrics.com/fabrics/dobby</loc><lastmod>2026-07-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://jcofabrics.com/fabrics/certified</loc><lastmod>2026-07-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://jcofabrics.com/fabrics/crepe</loc><lastmod>2026-07-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://jcofabrics.com/fabrics/twill</loc><lastmod>2026-07-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -28,14 +28,14 @@
   <url><loc>https://jcofabrics.com/fabric-sourcing-guide</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://jcofabrics.com/blog</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://jcofabrics.com/blog/woven-fabric-manufacturers-india-buyers-guide-2026</loc><lastmod>2026-01-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://jcofabrics.com/blog/gots-certified-fabric-india-brand-guide</loc><lastmod>2026-01-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://jcofabrics.com/blog/gots-certified-fabric-india-brand-guide</loc><lastmod>2026-07-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://jcofabrics.com/blog/jacquard-fabric-guide-fashion-buyers</loc><lastmod>2026-01-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://jcofabrics.com/blog/linen-fabric-sourcing-india-vs-europe-vs-china</loc><lastmod>2026-01-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://jcofabrics.com/blog/what-is-bci-cotton-guide-textile-buyers</loc><lastmod>2026-02-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://jcofabrics.com/blog/what-is-bci-cotton-guide-textile-buyers</loc><lastmod>2026-07-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://jcofabrics.com/blog/upholstery-home-furnishing-fabric-sourcing-india</loc><lastmod>2026-02-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://jcofabrics.com/blog/yarn-dyed-vs-piece-dyed-fabric-guide</loc><lastmod>2026-02-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://jcofabrics.com/blog/how-to-source-fabric-directly-indian-mill</loc><lastmod>2026-02-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://jcofabrics.com/blog/dobby-fabric-uses-construction-sourcing-guide</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://jcofabrics.com/blog/dobby-fabric-uses-construction-sourcing-guide</loc><lastmod>2026-07-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://jcofabrics.com/blog/sustainable-fabric-sourcing-india-certifications</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://jcofabrics.com/blog/minimum-order-quantity-fabric-india</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://jcofabrics.com/blog/how-to-request-fabric-samples-india</loc><lastmod>2026-03-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
