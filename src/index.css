@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Janki Nath & Co. Design System - Premium Textile Brand
 Color Palette: Creme / Black with warm undertones
 Typography: Serif headers + Sans-serif body
@@ -9,6 +5,10 @@ Feel: Editorial, spacious, modern-traditional hybrid
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   :root {
