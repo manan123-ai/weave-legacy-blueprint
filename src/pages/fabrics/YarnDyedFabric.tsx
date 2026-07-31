@@ -18,6 +18,12 @@ const YarnDyedFabric = () => (
         ],
       },
       {
+        heading: 'Which Season Is Yarn-Dyed Fabric Best For?',
+        paragraphs: [
+          'Yarn-dyed checks, plaids and stripes in heavier cotton and linen constructions are well suited for autumn-winter collections — the richer colour depth and structured hand feel complement the season. Lighter yarn-dyed cottons in chambray, oxford and fine check constructions work naturally for spring-summer collections. Both seasonal directions are available from our range in development and bulk quantities.',
+        ],
+      },
+      {
         heading: 'Our Yarn Dyed Range',
         bullets: [
           { label: 'Constructions', value: 'Checks · Stripes · Plaids · Madras · Chambray · Oxford · Dobby YD · Jacquard YD' },

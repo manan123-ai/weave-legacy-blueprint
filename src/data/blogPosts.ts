@@ -43,7 +43,7 @@ export const blogPosts: BlogPost[] = [
       "GOTS (Global Organic Textile Standard) is the world's leading textile processing standard for organic fibres. It covers the entire supply chain — from raw fibre through spinning, weaving, dyeing, finishing and labelling. For fashion brands building a certified supply chain, every step must be GOTS certified, including your fabric supplier.",
       "What GOTS actually requires: organic fibre at source (certified to GOTS or equivalent organic standard), restricted chemical inputs throughout processing (approved dyes, auxiliaries, accessories), wastewater treatment at processing facilities, social criteria including fair wages and safe working conditions, and annual third-party auditing of every facility in the chain.",
       "For buyers, this means requesting your supplier's GOTS certificate number and verifying it on the GOTS public database at global-standard.org. A genuine certificate shows the company name, certificate number, scope of certification, and validity date.",
-      "At Janki Nath & Co., we hold current GOTS certification alongside BCI, OCS and OEKO-TEX Standard 100. Our certified [fabrics](/fabrics) cover cotton, linen and blended constructions — documentation available on request for every order.",
+      "Janki Nath & Co. is one of the GOTS certified fabric manufacturers in India, holding current GOTS certification alongside BCI, OCS and OEKO-TEX Standard 100. Our certified [fabrics](/fabrics) cover cotton, linen and blended constructions — documentation available on request for every order.",
       "Related reading: [Our certifications](/certifications) | [Cotton fabric range](/fabrics/cotton)",
       "[Contact us](/contact): jcofabrics@yahoo.co.in",
     ],
@@ -98,7 +98,7 @@ export const blogPosts: BlogPost[] = [
     dateDisplay: 'February 5, 2026',
     author: 'Manan Bhasin',
     content: [
-      "BCI (Better Cotton Initiative) is the world's largest cotton sustainability programme, covering over 2.5 million farmers across 23 countries. BCI cotton is not certified organic — it is cotton grown according to Better Cotton standards, which focus on reduced water use, reduced pesticide use, improved soil health, and fair labour conditions.",
+      "BCI stands for Better Cotton Initiative. It is the world's largest cotton sustainability programme, covering over 2.5 million farmers across 23 countries. BCI cotton is not certified organic — it is cotton grown according to Better Cotton standards, which focus on reduced water use, reduced pesticide use, improved soil health, and fair labour conditions.",
       "The key distinction for buyers: BCI uses a mass balance system, meaning you buy the equivalent volume of Better Cotton grown somewhere in the supply chain — not necessarily the specific bales traced to a farm. This is different from GOTS or OCS, which require full chain-of-custody tracing.",
       "For brands with broad sustainability commitments, BCI is a credible baseline. For brands making specific organic or traceability claims, GOTS or OCS is more appropriate. BCI membership is verified through the Better Cotton Platform — your supplier should be able to provide their BCI membership number and annual claim volume.",
       "At Janki Nath & Co., we are active BCI members alongside our GOTS, OCS and OEKO-TEX certifications across our [woven fabric range](/fabrics).",
@@ -179,7 +179,7 @@ export const blogPosts: BlogPost[] = [
     author: 'Manan Bhasin',
     content: [
       "Dobby fabric is woven using a dobby attachment on the loom — a mechanism that allows individual groups of warp yarns to be controlled independently, creating small geometric patterns within the weave structure. The pattern is structural (woven in) rather than printed or embroidered.",
-      "Common dobby constructions: geometric repeats (diamonds, squares, small florals), textured surface effects (birds eye, honeycomb, waffle), and self-stripe effects. Dobby is used in formal shirting (where a subtle texture elevates a plain white or blue shirt), premium casualwear, suiting, and home furnishing. The fabric reads as elevated without being obviously patterned — buyers describe it as fabric that looks better up close.",
+      "What is dobby fabric used for? Formal shirting (a subtle texture elevates a plain white or blue shirt), premium casualwear, suiting and trousers, and home furnishing. Common dobby constructions: geometric repeats (diamonds, squares, small florals), textured surface effects (birds eye, honeycomb, waffle), and self-stripe effects. The fabric reads as elevated without being obviously patterned — buyers describe it as fabric that looks better up close.",
       "Construction considerations: thread count, yarn count, pattern repeat size, and whether the pattern is woven from the same yarn as the base (self-dobby) or with contrast yarn (colour dobby).",
       "At Janki Nath & Co., we manufacture [dobby fabrics](/fabrics) in cotton and cotton blends — self-dobby and yarn-dyed dobby constructions. Development and bulk available.",
       "Related reading: [Dobby fabric range](/fabrics/dobby) | [Cotton fabric range](/fabrics/cotton)",

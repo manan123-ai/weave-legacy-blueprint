@@ -14,7 +14,7 @@ const Index = () => {
     <div className="min-h-screen">
       <SEO
         title="Janki Nath & Co. | Woven Fabric Manufacturer India Since 1968"
-        description="Janki Nath & Co. (JNC Fabrics) — fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi since 1968. Cotton, linen, jacquard, viscose, dobby, twill, yarn-dyed, upholstery and crepe fabrics. BCI, GOTS, OCS and OEKO-TEX Standard 100 certified. Mill-direct export to 20+ countries."
+        description="Janki Nath & Co. (JNC Fabrics / JNC Textiles) — fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi since 1968. Cotton, linen, jacquard, viscose, dobby, twill, yarn-dyed, upholstery and crepe fabrics. BCI, GOTS, OCS and OEKO-TEX Standard 100 certified. Mill-direct export to 20+ countries."
         path="/"
         keywords="woven fabric manufacturer India, fabric exporter India, cotton fabric manufacturer India export, linen fabric manufacturer India, jacquard fabric manufacturer India, GOTS certified fabric India, BCI cotton fabric India, woven fabric supplier India, fabric manufacturer New Delhi, fabric manufacturer Mayapuri, mill direct fabric India, Janki Nath Co, JNC Fabrics, JCO Fabrics, textile manufacturer India 1968, dobby fabric India, yarn dyed fabric India, upholstery fabric India, viscose fabric India, twill fabric India, crepe fabric India, fabric export New Delhi, woven fabric exporter India"
         jsonLd={[

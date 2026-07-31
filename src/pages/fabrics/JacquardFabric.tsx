@@ -5,7 +5,7 @@ const JacquardFabric = () => (
     slug="jacquard"
     productName="Jacquard Fabric"
     title="Jacquard Fabric Manufacturer & Exporter from India"
-    metaTitle="Jacquard Fabric Manufacturer India — Custom Patterns | JNC Fabrics"
+    metaTitle="Custom Jacquard Apparel Manufacturer India | JNC Fabrics"
     metaDescription="Jacquard fabric manufacturer from India. Damask, brocade, matelassé, dobby jacquard. Cotton, viscose, linen compositions. Custom pattern development."
     keywords="jacquard fabric manufacturer India, jacquard fabric exporter, damask fabric India, custom jacquard India"
     intro="Janki Nath & Co. weaves jacquard fabrics across our specialist units in Erode and Salem — supplying fashion brands, occasion wear manufacturers and home furnishing companies worldwide."
@@ -19,6 +19,12 @@ const JacquardFabric = () => (
         bullets: [
           { label: 'Constructions', value: 'Damask · Brocade · Matelassé · Cutwork · Floral · Geometric · Dobby jacquard' },
           { label: 'Compositions', value: 'Cotton · Viscose · Cotton/Viscose · Linen · Lurex (metallic) · Cotton/Silk jacquard' },
+        ],
+      },
+      {
+        heading: 'Custom Jacquard for Apparel Manufacturers',
+        paragraphs: [
+          'We supply custom jacquard fabric directly to apparel manufacturers and garment brands — not through trading houses. Our Erode and Salem units develop jacquard constructions to your design brief for occasion wear, bridal, evening wear and formal garment production, with both development quantities and bulk production available from the same facilities.',
         ],
       },
       {

@@ -26,6 +26,12 @@ const DobbyFabric = () => (
         ],
       },
       {
+        heading: 'Manufacturing Capability',
+        paragraphs: [
+          'Mill-direct supply from our own weaving units across India — no agents or trading houses between buyer and production. Standard lead times are 15–30 days for fabrics in our running range and 30–45 days for custom dobby development, with both development quantities and bulk production available from the same facilities.',
+        ],
+      },
+      {
         heading: 'Certifications',
         paragraphs: ['BCI certified cotton options. OEKO-TEX Standard 100.'],
       },
