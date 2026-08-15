@@ -6,10 +6,10 @@ import Reveal from '@/components/motion/Reveal';
 import { blogPosts, getPostBySlug } from '@/data/blogPosts';
 
 /**
- * Render a paragraph with markdown-style [text](url) links converted to
- * real <Link> elements for internal routes and <a> for external URLs.
+ * Split text on markdown-style [text](url) links into a mix of plain
+ * strings and {text, href} link parts, for rendering inside any tag.
  */
-const renderParagraph = (text: string, key: number) => {
+const parseInlineLinks = (text: string): Array<string | { text: string; href: string }> => {
   const parts: Array<string | { text: string; href: string }> = [];
   const re = /\[([^\]]+)\]\(([^)]+)\)/g;
   let last = 0;
@@ -20,37 +20,70 @@ const renderParagraph = (text: string, key: number) => {
     last = m.index + m[0].length;
   }
   if (last < text.length) parts.push(text.slice(last));
+  return parts;
+};
 
+const renderInlineParts = (parts: Array<string | { text: string; href: string }>) =>
+  parts.map((p, i) => {
+    if (typeof p === 'string') return <span key={i}>{p}</span>;
+    if (p.href.startsWith('/')) {
+      return (
+        <Link
+          key={i}
+          to={p.href}
+          className="text-primary underline underline-offset-4 hover:no-underline"
+        >
+          {p.text}
+        </Link>
+      );
+    }
+    return (
+      <a
+        key={i}
+        href={p.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary underline underline-offset-4 hover:no-underline"
+      >
+        {p.text}
+      </a>
+    );
+  });
+
+/**
+ * Render one content-array entry. A leading "## " renders a real <h2> (used
+ * for question-style subheadings — real semantic headings matter for AI/GEO
+ * passage extraction, not just visual styling). A leading "### " renders an
+ * <h3>. Everything else renders as a body paragraph. Markdown-style
+ * [text](url) links work inside any of the three.
+ */
+const renderParagraph = (text: string, key: number) => {
+  if (text.startsWith('## ')) {
+    return (
+      <h2
+        key={key}
+        className="font-serif text-2xl md:text-3xl font-bold text-primary mt-12 mb-5 leading-tight"
+      >
+        {renderInlineParts(parseInlineLinks(text.slice(3)))}
+      </h2>
+    );
+  }
+  if (text.startsWith('### ')) {
+    return (
+      <h3
+        key={key}
+        className="font-serif text-xl md:text-2xl font-bold text-primary mt-8 mb-4 leading-tight"
+      >
+        {renderInlineParts(parseInlineLinks(text.slice(4)))}
+      </h3>
+    );
+  }
   return (
     <p
       key={key}
       className="font-body text-lg text-muted-foreground leading-relaxed font-light mb-6"
     >
-      {parts.map((p, i) => {
-        if (typeof p === 'string') return <span key={i}>{p}</span>;
-        if (p.href.startsWith('/')) {
-          return (
-            <Link
-              key={i}
-              to={p.href}
-              className="text-primary underline underline-offset-4 hover:no-underline"
-            >
-              {p.text}
-            </Link>
-          );
-        }
-        return (
-          <a
-            key={i}
-            href={p.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline underline-offset-4 hover:no-underline"
-          >
-            {p.text}
-          </a>
-        );
-      })}
+      {renderInlineParts(parseInlineLinks(text))}
     </p>
   );
 };
