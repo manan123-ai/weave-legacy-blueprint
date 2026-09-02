@@ -88,9 +88,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'linen-fabric-sourcing-india-vs-europe-vs-china',
-    title: 'Linen Fabric Sourcing Guide: India vs Europe vs China',
+    title: 'Linen Manufacturers in India vs Europe vs China',
     metaDescription:
-      'Comparing linen fabric sourcing from India, Europe and China — quality, pricing, certifications and lead times for fashion buyers.',
+      'Comparing linen manufacturers in India, Europe and China on quality, price and certification — and why Indian linen now competes on all three.',
     excerpt:
       'Where to source linen, what each region does best, and why India is increasingly competitive on quality and certification.',
     date: '2026-01-30',
@@ -112,9 +112,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'what-is-bci-cotton-guide-textile-buyers',
-    title: 'What is BCI Cotton? A Guide for Textile Buyers',
+    title: 'What Is BCI Cotton? Complete Guide for Fabric Buyers',
     metaDescription:
-      'What Better Cotton Initiative membership means for fabric buyers — sourcing standards, traceability, and how to verify BCI claims.',
+      'BCI cotton is Better Cotton Initiative certified, responsibly farmed cotton. Janki Nath & Co. is a BCI certified fabric manufacturer in India.',
     excerpt:
       'BCI is the largest cotton sustainability programme — but it works differently from GOTS. Here’s what that means for your claims.',
     date: '2026-02-05',
@@ -217,9 +217,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'dobby-fabric-uses-construction-sourcing-guide',
-    title: 'Dobby Fabric: Uses, Construction and Sourcing Guide',
+    title: "What Is Dobby Fabric Used For? Manufacturer India",
     metaDescription:
-      'What dobby fabric is, how it is made, where it is used in fashion and home furnishing, and how to source it from India.',
+      'Dobby fabric is a structural weave used in premium shirting and casualwear. Janki Nath & Co. is a dobby fabric manufacturer in India — mill-direct export.',
     excerpt:
       'The subtle geometric weave that elevates plain shirting — and how to spec dobby for your next collection.',
     date: '2026-03-01',
@@ -379,7 +379,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'india-vs-china-fabric-sourcing',
-    title: 'India vs China for Fabric Sourcing — Honest Comparison for Buyers',
+    title: 'India vs China Fabric Sourcing: Which Is Better?',
     metaDescription:
       'Honest comparison of India vs China for woven fabric sourcing — quality, pricing, certifications, lead times, MOQ and sustainability credentials compared.',
     excerpt:

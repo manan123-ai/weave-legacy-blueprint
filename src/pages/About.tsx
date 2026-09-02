@@ -34,8 +34,8 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="About Janki Nath & Co. — Woven Fabric Manufacturer India Since 1968 | JNC Fabrics"
-        description="Janki Nath & Co. (JNC Fabrics) — fourth-generation woven fabric manufacturer from Mayapuri, New Delhi, founded 1968 by Mr. Janki Nath. Over 55 years of export-quality fabric manufacturing. BCI, GOTS, OCS and OEKO-TEX certified. Five weaving units across India."
+        title="About JNC Fabrics — Woven Fabric Manufacturer & Exporter, New Delhi"
+        description="Janki Nath & Co. — woven fabric manufacturer and exporter in New Delhi since 1968. 55+ years, BCI, GOTS, OCS, OEKO-TEX certified. Exports to 20+ countries."
         path="/about"
         jsonLd={[
           {
