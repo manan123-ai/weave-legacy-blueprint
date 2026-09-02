@@ -97,24 +97,15 @@
     </form>
 
     <script type="module" src="/src/main.tsx"></script>
-    <script>
-      // Hide the instant splash once React has mounted the app.
-      // The React <Preloader /> handles the polished fade-out from there.
-      (function () {
-        var tries = 0;
-        var t = setInterval(function () {
-          tries++;
-          var root = document.getElementById('root');
-          if ((root && root.childNodes.length > 0) || tries > 40) {
-            document.documentElement.classList.add('react-mounted');
-            setTimeout(function () {
-              var s = document.getElementById('initial-splash');
-              if (s && s.parentNode) s.parentNode.removeChild(s);
-            }, 600);
-            clearInterval(t);
-          }
-        }, 100);
-      })();
-    </script>
+    <!--
+      The instant splash is now hidden by a useEffect in the root App
+      component (src/App.tsx), which fires the instant React actually
+      mounts — no polling, no artificial delay. Previously this ran a
+      setInterval polling document.getElementById('root').childNodes
+      every 100ms for up to 40 tries (4s worst case) before even starting
+      the 600ms fade — a real, measured contributor to a 7+ second LCP
+      on desktop in a Lighthouse audit. A mount-effect fires as soon as
+      React commits, with no polling granularity or artificial ceiling.
+    -->
   </body>
 </html>

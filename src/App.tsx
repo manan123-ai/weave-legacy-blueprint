@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -48,7 +48,29 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
-const App = () => (
+/**
+ * Hide the static #initial-splash (from index.html) the instant React
+ * actually mounts. Replaces a setInterval poll of document.getElementById
+ * ('root').childNodes (100ms x up to 40 tries = 4s worst case before even
+ * starting the fade) with a mount effect, which fires as soon as this
+ * component commits — no polling granularity, no artificial ceiling. This
+ * was a measured contributor to a 7+ second LCP on desktop in a Lighthouse
+ * audit.
+ */
+const useHideInitialSplash = () => {
+  useEffect(() => {
+    document.documentElement.classList.add('react-mounted');
+    const t = setTimeout(() => {
+      const splash = document.getElementById('initial-splash');
+      if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+    }, 600); // matches the existing 0.5s CSS opacity transition on #initial-splash
+    return () => clearTimeout(t);
+  }, []);
+};
+
+const App = () => {
+  useHideInitialSplash();
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -98,6 +120,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;

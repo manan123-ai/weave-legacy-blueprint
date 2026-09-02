@@ -103,19 +103,36 @@ const HeroBanner = () => {
             className="absolute inset-0 transition-opacity duration-[1500ms] ease-in-out"
             style={{ opacity: currentSlide === index ? 1 : 0 }}
           >
-            <picture>
-              <source srcSet={slide.imageWebp} type="image/webp" />
+            {index === 0 ? (
+              // LCP-critical slide: serve the WebP directly as a plain <img>
+              // rather than via <picture>/<source>, so its src exactly
+              // matches the preloaded URL above with no indirection for the
+              // browser (or Lighthouse's LCP-priority detection) to resolve.
               <img
-                src={slide.image}
+                src={slide.imageWebp}
                 alt={slide.alt}
-                loading={index === 0 ? 'eager' : 'lazy'}
+                loading="eager"
                 decoding="async"
-                fetchPriority={index === 0 ? 'high' : 'low'}
+                fetchPriority="high"
                 className={`w-full h-full object-cover ${
                   currentSlide === index ? 'animate-slow-zoom' : ''
                 }`}
               />
-            </picture>
+            ) : (
+              <picture>
+                <source srcSet={slide.imageWebp} type="image/webp" />
+                <img
+                  src={slide.image}
+                  alt={slide.alt}
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                  className={`w-full h-full object-cover ${
+                    currentSlide === index ? 'animate-slow-zoom' : ''
+                  }`}
+                />
+              </picture>
+            )}
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
