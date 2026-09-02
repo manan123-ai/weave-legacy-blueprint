@@ -1,38 +1,14 @@
 import Footer from '@/components/Footer';
 import KineticHeading from '@/components/motion/KineticHeading';
-import KineticStrip from '@/components/motion/KineticStrip';
 import Reveal from '@/components/motion/Reveal';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
-const items = [
-  {
-    heading: 'BCI Cotton Fabric — Better Cotton Initiative',
-    body: [
-      "As a supplier of BCI cotton fabric from India, Janki Nath & Co. is an active Better Cotton Initiative member — the world's largest cotton sustainability programme. BCI certified cotton is grown using reduced water, reduced pesticides and responsible farming practices across our sourcing base.",
-      'What this means for buyers: your cotton fabric purchase supports responsible farming. BCI claim documentation and membership number provided on request.',
-    ],
-  },
-  {
-    heading: 'GOTS Certified Fabric Manufacturer in India',
-    body: [
-      "Janki Nath & Co. is a GOTS certified fabric manufacturer in India — GOTS (Global Organic Textile Standard) is the world's leading textile processing standard for organic fibres, covering the entire supply chain from raw fibre through weaving, dyeing and finishing. It is the most comprehensive textile certification available.",
-      'What this means for buyers: full organic supply chain traceability from an Indian manufacturer, not a trading intermediary. Suitable for brands making organic or certified fabric claims. GOTS scope certificate and transaction certificates provided per shipment.',
-    ],
-  },
-  {
-    heading: 'OCS — Organic Content Standard',
-    body: [
-      'OCS verifies that a product contains a specified percentage of organic material. Chain of custody certified. Suitable for blended fabrics where full GOTS is not required.',
-    ],
-  },
-  {
-    heading: 'OEKO-TEX Standard 100',
-    body: [
-      'OEKO-TEX Standard 100 tests the finished fabric for over 100 harmful substances including heavy metals, pesticides, formaldehyde and pH levels. Certifies product safety.',
-      'What this means for buyers: the finished fabric is tested and confirmed free from harmful substances. Suitable for any fabric regardless of fibre source.',
-    ],
-  },
+const certifications = [
+  { name: 'GOTS', description: 'Global Organic Textile Standard — the full organic fibre-to-fabric supply chain.' },
+  { name: 'OEKO-TEX Standard 100', description: 'Every fabric tested and confirmed free from harmful substances.' },
+  { name: 'BCI', description: 'Better Cotton Initiative — responsibly farmed cotton at the source.' },
+  { name: 'OCS', description: 'Organic Content Standard — chain-of-custody verified organic content.' },
 ];
 
 const Certifications = () => (
@@ -45,44 +21,63 @@ const Certifications = () => (
     <Breadcrumbs items={[{ name: 'Certifications' }]} currentPath="/certifications" />
     <main className="pt-16">
       <section className="py-32 bg-secondary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
             <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
-              Standards & Certification
+              Certification
             </p>
           </Reveal>
           <KineticHeading
             as="h1"
-            text="Fabric Certifications"
+            text="Certified. Compliant. Trusted."
             className="font-serif text-4xl md:text-6xl font-bold text-primary mb-8 leading-[1.05]"
           />
           <Reveal delay={0.3}>
-            <p className="font-body text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-              Janki Nath & Co. is a GOTS certified fabric manufacturer in India and BCI cotton fabric member, holding four internationally recognised textile certifications covering responsible cotton sourcing, organic supply chains and product safety.
+            <p className="font-body text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto">
+              Janki Nath & Co. holds internationally recognised certifications across sustainability, organic content, chemical safety and responsible cotton sourcing. All certification documentation is available on request.
             </p>
           </Reveal>
         </div>
       </section>
 
-      <KineticStrip text="BCI · GOTS · OCS · OEKO-TEX Standard 100" />
-
       <section className="py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
-          {items.map((it) => (
-            <Reveal key={it.heading}>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6">{it.heading}</h2>
-              {it.body.map((p, i) => (
-                <p key={i} className="font-body text-lg text-muted-foreground leading-relaxed font-light mb-4">{p}</p>
-              ))}
-            </Reveal>
-          ))}
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6">Documentation</h2>
-            <p className="font-body text-lg text-muted-foreground leading-relaxed font-light">
-              All certification documentation available on request: GOTS scope certificate · OCS certificate · OEKO-TEX certificate · BCI claim documents · transaction certificates per shipment.
-            </p>
-            <p className="font-body text-base text-primary mt-6">
-              Contact us for certification documentation: <a href="mailto:jcofabrics@yahoo.co.in" className="underline-offset-4 hover:underline">jcofabrics@yahoo.co.in</a>
+            <div className="h-px w-16 mx-auto mb-14" style={{ backgroundColor: '#c9a84c' }} />
+          </Reveal>
+
+          <Reveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 mb-14">
+              {certifications.map((cert) => (
+                <div key={cert.name} className="text-center">
+                  <p className="font-serif text-xl md:text-2xl font-bold text-primary leading-tight">
+                    {cert.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="h-px w-16 mx-auto mb-14" style={{ backgroundColor: '#c9a84c' }} />
+          </Reveal>
+
+          <Reveal>
+            <div className="space-y-5 mb-16">
+              {certifications.map((cert) => (
+                <p
+                  key={cert.name}
+                  className="font-body text-base md:text-lg text-muted-foreground font-light text-center leading-relaxed"
+                >
+                  <span className="text-primary font-medium">{cert.name}</span> — {cert.description}
+                </p>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <p className="font-body text-base text-muted-foreground font-light text-center max-w-xl mx-auto">
+              Certified fabric developments are available on request. We also work with conventional constructions depending on buyer requirements.
             </p>
           </Reveal>
         </div>

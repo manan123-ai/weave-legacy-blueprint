@@ -27,7 +27,7 @@ const UpholsteryFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'OEKO-TEX Standard 100 certified — tested for harmful substances. GOTS certified options available for organic furnishing fabric.',
+          'OEKO-TEX Standard 100 certified — tested for harmful substances. GOTS certified options available for organic furnishing fabric. Available in certified and conventional constructions. Certifications on request.',
         ],
       },
       {

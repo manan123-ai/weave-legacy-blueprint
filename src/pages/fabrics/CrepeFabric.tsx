@@ -27,7 +27,7 @@ const CrepeFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'Our crepe and high twist fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 certified. Full documentation provided with every export order.',
+          'Our crepe and high twist fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 certified. Full documentation provided with every export order. Available in certified and conventional constructions. Certifications on request.',
         ],
       },
       {

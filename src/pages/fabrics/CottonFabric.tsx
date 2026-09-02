@@ -25,7 +25,7 @@ const CottonFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'Our cotton fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 certified. Full documentation provided with every export order.',
+          'Our cotton fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 certified. Full documentation provided with every export order. Available in certified and conventional constructions. Certifications on request.',
         ],
       },
       {

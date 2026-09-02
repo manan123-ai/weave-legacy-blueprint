@@ -24,7 +24,7 @@ const LinenFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'Our linen fabrics are available GOTS certified and OCS certified. OEKO-TEX Standard 100. Full export documentation provided.',
+          'Our linen fabrics are available GOTS certified and OCS certified. OEKO-TEX Standard 100. Full export documentation provided. Available in certified and conventional constructions. Certifications on request.',
         ],
       },
       {

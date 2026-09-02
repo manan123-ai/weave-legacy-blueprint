@@ -52,7 +52,7 @@ const YarnDyedFabric = () => (
       },
       {
         heading: 'Certifications',
-        paragraphs: ['BCI certified cotton options available. OEKO-TEX Standard 100.'],
+        paragraphs: ['BCI certified cotton options available. OEKO-TEX Standard 100. Available in certified and conventional constructions. Certifications on request.'],
       },
     ]}
   />
