@@ -53,7 +53,7 @@ const Showroom = () => (
           />
           <Reveal delay={0.3}>
             <p className="font-body text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-              Janki Nath & Co. operates a fabric showroom and head office in Mayapuri Industrial Area, New Delhi — one of Delhi's established textile manufacturing hubs.
+              Janki Nath & Co. is a fabric manufacturer in Mayapuri, Delhi, with a showroom and head office in Mayapuri Industrial Area — one of Delhi's established textile manufacturing hubs.
             </p>
           </Reveal>
         </div>

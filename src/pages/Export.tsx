@@ -112,6 +112,7 @@ const Export = () => (
               <a href="mailto:jcofabrics@yahoo.co.in" className="font-body text-sm text-primary underline-offset-4 hover:underline">jcofabrics@yahoo.co.in</a>
               <a href="tel:+919891542727" className="font-body text-sm text-primary underline-offset-4 hover:underline">WhatsApp / Phone: +91 98915 42727</a>
               <Link to="/contact" className="font-body text-sm text-primary underline-offset-4 hover:underline">Contact form →</Link>
+              <Link to="/fabrics/woven-fabric-exporter-india" className="font-body text-sm text-primary underline-offset-4 hover:underline">MOQ & Incoterms for export →</Link>
             </div>
           </div>
         </div>

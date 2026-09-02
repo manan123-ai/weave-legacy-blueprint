@@ -18,9 +18,16 @@ const YarnDyedFabric = () => (
         ],
       },
       {
-        heading: 'Which Season Is Yarn-Dyed Fabric Best For?',
+        heading: 'Yarn Dyed Fabric Manufacturer in India',
         paragraphs: [
-          'Yarn-dyed checks, plaids and stripes in heavier cotton and linen constructions are well suited for autumn-winter collections — the richer colour depth and structured hand feel complement the season. Lighter yarn-dyed cottons in chambray, oxford and fine check constructions work naturally for spring-summer collections. Both seasonal directions are available from our range in development and bulk quantities.',
+          'Janki Nath & Co. is a yarn dyed fabric manufacturer in India, producing checks, stripes, plaids and multi-colour woven designs from our own yarn-dyeing and weaving units — mill-direct, not through a trading intermediary. Standard lead times are 15–30 days for constructions in our running range and 30–45 days for custom colour development, with both development quantities and bulk production available from the same facilities.',
+        ],
+      },
+      {
+        heading: 'FAQ: Yarn Dyed Fabric for Which Season?',
+        paragraphs: [
+          'Yarn dyed fabric for which season? Yarn-dyed checks, plaids and stripes in heavier cotton and linen constructions are well suited for autumn-winter collections — the richer colour depth and structured hand feel complement the season.',
+          'Which season is yarn-dyed fabric used in? Lighter yarn-dyed cottons in chambray, oxford and fine check constructions work naturally for spring-summer collections. Both seasonal directions are available from our range in development and bulk quantities.',
         ],
       },
       {

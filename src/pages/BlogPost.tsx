@@ -57,7 +57,48 @@ const renderInlineParts = (parts: Array<string | { text: string; href: string }>
  * <h3>. Everything else renders as a body paragraph. Markdown-style
  * [text](url) links work inside any of the three.
  */
+/**
+ * "TABLE:" prefix renders a real semantic <table> — rows separated by "\n",
+ * cells by "|", first row treated as the header. Used for reference data
+ * (e.g. a GSM weight chart) where a table is genuinely the right structure,
+ * not a styling choice — tables are also well-supported for rich-result
+ * and AI-passage extraction of structured data.
+ */
+const renderTable = (text: string, key: number) => {
+  const rows = text.slice('TABLE:'.length).split('\n').filter(Boolean).map((r) => r.split('|'));
+  const [header, ...body] = rows;
+  return (
+    <div key={key} className="overflow-x-auto mb-8">
+      <table className="w-full border-collapse font-body text-sm">
+        <thead>
+          <tr className="border-b-2 border-primary/30">
+            {header.map((h, i) => (
+              <th key={i} className="text-left py-3 pr-6 text-primary font-semibold uppercase tracking-wide text-xs">
+                {h}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {body.map((row, ri) => (
+            <tr key={ri} className="border-b border-border/50">
+              {row.map((cell, ci) => (
+                <td key={ci} className="py-3 pr-6 text-muted-foreground leading-relaxed">
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
 const renderParagraph = (text: string, key: number) => {
+  if (text.startsWith('TABLE:')) {
+    return renderTable(text, key);
+  }
   if (text.startsWith('## ')) {
     return (
       <h2

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
 import KineticHeading from '@/components/motion/KineticHeading';
@@ -34,6 +35,7 @@ const Fabrics = () => {
   const fabricCategories = [
     {
       name: 'Cotton',
+      slug: 'cotton',
       image: cottonFabric,
       description: 'Export-grade cotton fabric from India — plain weave, twill, dobby and yarn-dyed. Available greige, RFD, dyed and printed. BCI certified.',
       specs: 'GSM: 120-300 | Width: 44"-60" | Finishes: Plain, Mercerized, Sanforized',
@@ -48,6 +50,7 @@ const Fabrics = () => {
     },
     {
       name: 'Viscose',
+      slug: 'viscose',
       image: viscoseFabric,
       description: 'Viscose fabric export from India — viscose twill, crepe, plain. Fluid drape, deep colour. Fashion brands and garment exporters.',
       specs: 'GSM: 100-250 | Width: 44"-60" | Finishes: Soft, Crisp, Brushed',
@@ -55,6 +58,7 @@ const Fabrics = () => {
     },
     {
       name: 'Jacquards',
+      slug: 'jacquard',
       image: jacquardFabric,
       description: 'Export jacquard fabric from India — damask, brocade, matelassé, cutwork. Custom patterns developed to your spec.',
       specs: 'GSM: 200-400 | Width: 44"-54" | Patterns: Floral, Geometric, Custom',
@@ -62,6 +66,7 @@ const Fabrics = () => {
     },
     {
       name: 'Linen',
+      slug: 'linen',
       image: linenFabric,
       description: '100% linen and linen blend fabric for export — GOTS certified. Cotton/linen, viscose/linen blends available. Mill-direct from India.',
       specs: 'GSM: 120-300 | Width: 44"-60" | Types: Pure Linen, Linen Blends',
@@ -76,6 +81,7 @@ const Fabrics = () => {
     },
     {
       name: 'Upholstery & Home Furnishing',
+      slug: 'upholstery',
       image: upholsteryFabric,
       description: 'Upholstery and home furnishing fabric export from India — OEKO-TEX certified. Curtain, sofa and drapery fabric.',
       specs: 'GSM: 250-600 | Width: 54"-140" | Features: Stain Resistant, Durable',
@@ -83,6 +89,7 @@ const Fabrics = () => {
     },
     {
       name: 'Yarn-Dyed',
+      slug: 'yarn-dyed',
       image: yarnDyedFabric,
       description: 'Yarn-dyed fabric export from India — checks, stripes, plaids in cotton, linen and viscose. Consistent colour across reorders.',
       specs: 'GSM: 120-280 | Width: 44"-58" | Colors: Multi-color, Checks, Stripes',
@@ -97,6 +104,7 @@ const Fabrics = () => {
     },
     {
       name: 'Indigo Dyes',
+      slug: 'indigo',
       image: indigoFabric,
       description: 'Indigo dyed fabric export from India — traditional indigo woven fabric. Light to deep shades for denim and traditional wear.',
       specs: 'GSM: 140-320 | Width: 44"-60" | Shades: Light to Deep Indigo',
@@ -104,6 +112,7 @@ const Fabrics = () => {
     },
     {
       name: 'Dobby',
+      slug: 'dobby',
       image: dobbyFabric,
       description: 'Dobby fabric export India — self-dobby shirting, colour dobby. Subtle geometric weave for premium casualwear and formal shirts.',
       specs: 'GSM: 120-250 | Width: 44"-58" | Patterns: Geometric, Abstract, Custom',
@@ -125,6 +134,7 @@ const Fabrics = () => {
     },
     {
       name: 'Twills & Drills',
+      slug: 'twill',
       image: twillDrillFabric,
       description: 'Export twill and drill fabric India — cotton twill, gabardine, structured weaves for workwear, uniforms and casualwear.',
       specs: 'GSM: 180-350 | Width: 44"-60" | Angles: 45°, 63°, Custom',
@@ -139,6 +149,7 @@ const Fabrics = () => {
     },
     {
       name: 'Lurex & Sequins',
+      slug: 'lurex',
       image: lurexSequinFabric,
       description: 'Lurex and metallic fabric export India — woven lurex, sequin fabric for evening and occasion wear collections.',
       specs: 'GSM: 120-300 | Width: 44"-54" | Features: Metallic, Reflective, Decorative',
@@ -153,6 +164,7 @@ const Fabrics = () => {
     },
     {
       name: 'IKAT & Tie Dye',
+      slug: 'ikat',
       image: ikatTieDyeFabric,
       description: 'IKAT and tie dye fabric export India — traditional resist-dyed woven fabric. Artisan constructions for premium collections.',
       specs: 'GSM: 120-280 | Width: 44"-58" | Patterns: Traditional, Contemporary',
@@ -160,6 +172,7 @@ const Fabrics = () => {
     },
     {
       name: 'Crepe & High Twist',
+      slug: 'crepe',
       image: crepeHighTwistFabric,
       description: 'Crepe and high twist fabric export India — moss crepe, georgette, chiffon-weight woven. For evening wear and formal collections.',
       specs: 'GSM: 100-250 | Width: 44"-58" | Textures: Fine Crepe, Heavy Crepe',
@@ -167,6 +180,7 @@ const Fabrics = () => {
     },
     {
       name: 'Lycra & Lycra Blends',
+      slug: 'lycra-blends',
       image: lycraBlendFabric,
       description: 'Lycra blend woven fabric export India — stretch woven for activewear and swimwear. 2-way and 4-way stretch constructions.',
       specs: 'GSM: 120-300 | Width: 44"-60" | Stretch: 2-way, 4-way, Recovery',
@@ -323,7 +337,16 @@ const Fabrics = () => {
                         </div>
                       </div>
                       
-                      <div className="mt-8 flex space-x-6">
+                      <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                        {fabric.slug && (
+                          <Link
+                            to={`/fabrics/${fabric.slug}`}
+                            className="font-body text-sm font-medium text-primary relative group/link"
+                          >
+                            View Full Range →
+                            <span className="absolute -bottom-0.5 left-0 w-full h-px bg-primary scale-x-0 group-hover/link:scale-x-100 origin-left transition-transform duration-500" />
+                          </Link>
+                        )}
                         <a href="tel:+919891542727" className="font-body text-sm text-primary relative group/link">
                           Call Us
                           <span className="absolute -bottom-0.5 left-0 w-full h-px bg-primary scale-x-0 group-hover/link:scale-x-100 origin-left transition-transform duration-500" />

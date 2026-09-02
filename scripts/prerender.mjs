@@ -8,7 +8,7 @@ const ROUTES = [
   '/fabrics/jacquard', '/fabrics/yarn-dyed', '/fabrics/upholstery',
   '/fabrics/viscose', '/fabrics/dobby', '/fabrics/certified',
   '/fabrics/crepe', '/fabrics/twill', '/fabrics/indigo', '/fabrics/lurex',
-  '/fabrics/ikat', '/fabrics/lycra-blends', '/request-samples',
+  '/fabrics/ikat', '/fabrics/lycra-blends', '/fabrics/woven-fabric-exporter-india', '/request-samples',
   '/clientele', '/production', '/export', '/certifications', '/showroom',
   '/sampling', '/fabric-sourcing-guide', '/contact', '/blog',
   '/blog/woven-fabric-manufacturers-india-buyers-guide-2026',
