@@ -7,17 +7,17 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 const items = [
   {
-    heading: 'BCI — Better Cotton Initiative',
+    heading: 'BCI Cotton Fabric — Better Cotton Initiative',
     body: [
-      "BCI is the world's largest cotton sustainability programme. BCI certified cotton is grown using reduced water, reduced pesticides and responsible farming practices. We are active BCI members.",
-      'What this means for buyers: your cotton fabric purchase supports responsible farming. BCI claim documentation provided.',
+      "As a supplier of BCI cotton fabric from India, Janki Nath & Co. is an active Better Cotton Initiative member — the world's largest cotton sustainability programme. BCI certified cotton is grown using reduced water, reduced pesticides and responsible farming practices across our sourcing base.",
+      'What this means for buyers: your cotton fabric purchase supports responsible farming. BCI claim documentation and membership number provided on request.',
     ],
   },
   {
-    heading: 'GOTS — Global Organic Textile Standard',
+    heading: 'GOTS Certified Fabric Manufacturer in India',
     body: [
-      "GOTS is the world's leading textile processing standard for organic fibres — covering the entire supply chain from raw fibre through weaving, dyeing and finishing. The most comprehensive textile certification available.",
-      'What this means for buyers: full organic supply chain traceability. Suitable for brands making organic or certified fabric claims. GOTS certificate and transaction certificates provided per shipment.',
+      "Janki Nath & Co. is a GOTS certified fabric manufacturer in India — GOTS (Global Organic Textile Standard) is the world's leading textile processing standard for organic fibres, covering the entire supply chain from raw fibre through weaving, dyeing and finishing. It is the most comprehensive textile certification available.",
+      'What this means for buyers: full organic supply chain traceability from an Indian manufacturer, not a trading intermediary. Suitable for brands making organic or certified fabric claims. GOTS scope certificate and transaction certificates provided per shipment.',
     ],
   },
   {
@@ -38,8 +38,8 @@ const items = [
 const Certifications = () => (
   <div className="min-h-screen">
     <SEO
-      title="Fabric Certifications — BCI GOTS OCS OEKO-TEX | JNC Fabrics"
-      description="Janki Nath & Co. holds BCI, GOTS, OCS and OEKO-TEX Standard 100 certifications. Full documentation available for every export order. Certified woven fabric manufacturer India."
+      title="GOTS & BCI Certified Fabric Manufacturer India | JNC Fabrics"
+      description="Janki Nath & Co. is a GOTS certified fabric manufacturer in India and active BCI cotton fabric member, alongside OCS and OEKO-TEX Standard 100. Full documentation on every export order."
       path="/certifications"
     />
     <Breadcrumbs items={[{ name: 'Certifications' }]} currentPath="/certifications" />
@@ -58,7 +58,7 @@ const Certifications = () => (
           />
           <Reveal delay={0.3}>
             <p className="font-body text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-              Janki Nath & Co. holds four internationally recognised textile certifications covering responsible cotton sourcing, organic supply chains and product safety.
+              Janki Nath & Co. is a GOTS certified fabric manufacturer in India and BCI cotton fabric member, holding four internationally recognised textile certifications covering responsible cotton sourcing, organic supply chains and product safety.
             </p>
           </Reveal>
         </div>

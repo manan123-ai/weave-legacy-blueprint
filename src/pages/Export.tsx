@@ -11,8 +11,8 @@ const SITE = 'https://jcofabrics.com';
 const Export = () => (
   <div className="min-h-screen">
     <SEO
-      title="Woven Fabric Export from India — Mill Direct Supply | JNC Fabrics"
-      description="Export woven fabric directly from Indian mill. FOB pricing, export documentation, BCI GOTS OEKO-TEX certified. Supplying buyers across USA, UK, Germany, France, Japan, Australia, UAE."
+      title="Woven Fabric Supplier India Export — New Delhi Manufacturer | JNC Fabrics"
+      description="Woven fabric supplier from India for export — fabric manufacturer based in New Delhi, mill-direct FOB pricing, BCI GOTS OEKO-TEX certified. Supplying buyers across USA, UK, Germany, France, Japan, Australia, UAE."
       path="/export"
       jsonLd={[
         {
@@ -41,7 +41,7 @@ const Export = () => (
           />
           <Reveal delay={0.3}>
             <p className="font-body text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-              Janki Nath & Co. exports premium woven fabrics mill-direct to fashion brands, garment manufacturers, buying houses and fabric importers across 20+ countries.
+              Janki Nath & Co. is a woven fabric supplier and manufacturer based in New Delhi, exporting premium fabric mill-direct to fashion brands, garment manufacturers, buying houses and fabric importers across 20+ countries.
             </p>
           </Reveal>
         </div>
@@ -54,7 +54,7 @@ const Export = () => (
           <Reveal>
             <h2 className="font-serif text-3xl font-bold text-primary mb-6">Export Markets</h2>
             <p className="font-body text-lg text-muted-foreground font-light leading-relaxed">
-              USA · United Kingdom · Germany · France · Italy · Spain · Netherlands · Belgium · Switzerland · Japan · South Korea · Australia · New Zealand · UAE · Saudi Arabia · Canada · Scotland · Scandinavia
+              USA · United Kingdom · Germany · France · Italy · Spain · Netherlands · Belgium · Switzerland · Japan · South Korea · Australia · New Zealand · UAE · Saudi Arabia · Canada · Scandinavia
             </p>
           </Reveal>
 
