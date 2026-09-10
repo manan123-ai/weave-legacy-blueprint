@@ -114,9 +114,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'what-is-bci-cotton-guide-textile-buyers',
-    title: 'What Is BCI Cotton? Complete Guide for Fabric Buyers',
+    title: 'BCI Cotton Fabric — Buy Certified Supply',
     metaDescription:
-      'BCI cotton is Better Cotton Initiative certified, responsibly farmed cotton. Janki Nath & Co. is a BCI certified fabric manufacturer in India.',
+      'BCI cotton fabric, mill-direct from a certified India manufacturer. See composition, GSM options and MOQ for buyers sourcing genuine BCI-verified cotton.',
     excerpt:
       'BCI is the largest cotton sustainability programme — but it works differently from GOTS. Here’s what that means for your claims.',
     date: '2026-02-05',
@@ -219,9 +219,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'dobby-fabric-uses-construction-sourcing-guide',
-    title: "What Is Dobby Fabric Used For? Manufacturer India",
+    title: "Dobby Fabric Manufacturer India — Specs & Samples",
     metaDescription:
-      'Dobby fabric is a structural weave used in premium shirting and casualwear. Janki Nath & Co. is a dobby fabric manufacturer in India — mill-direct export.',
+      'Dobby fabric manufacturer in India: constructions, GSM range, lining and shirting options with sample availability — mill-direct export, not a reseller.',
     excerpt:
       'The subtle geometric weave that elevates plain shirting — and how to spec dobby for your next collection.',
     date: '2026-03-01',
@@ -229,6 +229,9 @@ export const blogPosts: BlogPost[] = [
     author: 'Manan Bhasin',
     content: [
       "Dobby fabric is woven using a dobby attachment fitted to the loom — a mechanism that allows individual groups of warp yarns to be controlled independently, rather than moving as a single sheet the way plain weave does. That independent control is what creates small geometric patterns directly within the weave structure. The pattern is structural — woven in, not printed or embroidered afterward — which is the whole reason dobby fabric behaves and ages differently from a printed equivalent: the design can't crack, peel, or fade out of registration, because it's built into the cloth itself rather than sitting on top of it.",
+      "## Dobby Fabric GSM Range & Constructions We Manufacture",
+      "TABLE:GSM Range|Construction|Typical Fabric|End Use\n100-140|Self-dobby (fine)|Fine dobby shirting|Formal shirts, blouses\n140-180|Self-dobby / birds-eye|Standard dobby shirting|Casual shirts, shirting basics\n180-220|Colour dobby|Textured shirting, light suiting|Smart-casual shirts, light jackets\n220-280|Yarn-dyed dobby|Structured dobby weave|Trousers, tailored casualwear\n280-350|Heavy dobby / honeycomb|Textured home-furnishing dobby|Cushion covers, table linen, light upholstery lining",
+      "Sample cards across this GSM range are available on request — see [request samples](/request-samples) for lead times and minimum quantities by construction.",
       "## What Is Dobby Fabric Used For?",
       "Formal shirting is the single biggest application — a subtle woven texture elevates a plain white or blue shirt from basic to premium without the fabric reading as \"patterned\" from a distance. Beyond shirting, dobby shows up in premium casualwear, suiting and tailored trousers, and home furnishing (cushion covers, table [linen](/fabrics/linen), light upholstery). The common thread across all of these applications is the same: dobby reads as elevated without being obviously patterned. Buyers in the trade often describe it as fabric that \"looks better up close\" — the texture only becomes apparent on inspection, which is exactly the quality signal a premium shirting brand wants without shouting about it.",
       "## Common Dobby Constructions",
