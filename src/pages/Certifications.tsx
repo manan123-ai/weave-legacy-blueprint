@@ -9,13 +9,14 @@ const certifications = [
   { name: 'OEKO-TEX Standard 100', description: 'Every fabric tested and confirmed free from harmful substances.' },
   { name: 'BCI', description: 'Better Cotton Initiative — responsibly farmed cotton at the source.' },
   { name: 'OCS', description: 'Organic Content Standard — chain-of-custody verified organic content.' },
+  { name: 'GRS', description: 'Global Recycled Standard — chain-of-custody verified recycled content across the supply chain.' },
 ];
 
 const Certifications = () => (
   <div className="min-h-screen">
     <SEO
       title="GOTS & BCI Certified Fabric Manufacturer India | JNC Fabrics"
-      description="Janki Nath & Co. is a GOTS certified fabric manufacturer in India and active BCI cotton fabric member, alongside OCS and OEKO-TEX Standard 100. Full documentation on every export order."
+      description="Janki Nath & Co. is a GOTS certified fabric manufacturer in India and active BCI cotton fabric member, alongside OCS, OEKO-TEX Standard 100 and GRS. Full documentation on every export order."
       path="/certifications"
     />
     <Breadcrumbs items={[{ name: 'Certifications' }]} currentPath="/certifications" />
@@ -47,7 +48,7 @@ const Certifications = () => (
           </Reveal>
 
           <Reveal>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 mb-14">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-6 gap-y-10 mb-14">
               {certifications.map((cert) => (
                 <div key={cert.name} className="text-center">
                   <p className="font-serif text-xl md:text-2xl font-bold text-primary leading-tight">

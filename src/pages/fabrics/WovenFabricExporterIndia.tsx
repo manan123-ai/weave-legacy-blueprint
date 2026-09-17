@@ -13,7 +13,7 @@ const WovenFabricExporterIndia = () => (
   <div className="min-h-screen">
     <SEO
       title="Woven Fabric Exporter India | Fabric Exporter | JNC Fabrics"
-      description="Janki Nath & Co. is a woven fabric exporter in India — mill-direct, BCI GOTS OEKO-TEX certified, MOQ for development and bulk, full export documentation and Incoterms support."
+      description="Janki Nath & Co. is a woven fabric exporter in India — mill-direct, BCI GOTS OEKO-TEX GRS certified, MOQ for development and bulk, full export documentation and Incoterms support."
       path={PATH}
       keywords="woven fabric exporter India, fabric exporter India, fabric export MOQ, Incoterms fabric export India"
       jsonLd={[
@@ -85,7 +85,7 @@ const WovenFabricExporterIndia = () => (
           <Reveal>
             <h2 className="font-serif text-3xl font-bold text-primary mb-6">Certifications for Export</h2>
             <p className="font-body text-lg text-muted-foreground font-light leading-relaxed">
-              BCI (Better Cotton Initiative) · GOTS (Global Organic Textile Standard) · OCS (Organic Content Standard) · OEKO-TEX Standard 100. Full documentation, including shipment-specific transaction certificates, is available on request — see our{' '}
+              BCI (Better Cotton Initiative) · GOTS (Global Organic Textile Standard) · OCS (Organic Content Standard) · OEKO-TEX Standard 100 · GRS (Global Recycled Standard). Full documentation, including shipment-specific transaction certificates, is available on request — see our{' '}
               <Link to="/certifications" className="text-primary underline underline-offset-4 hover:no-underline">certifications page</Link>{' '}
               for what each one verifies.
             </p>

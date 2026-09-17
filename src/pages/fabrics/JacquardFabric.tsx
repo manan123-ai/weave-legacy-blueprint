@@ -42,7 +42,7 @@ const JacquardFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'OEKO-TEX Standard 100 certified. GOTS certified options available in cotton jacquard. Available in certified and conventional constructions. Certifications on request.',
+          'OEKO-TEX Standard 100 and GRS certified. GOTS certified options available in cotton jacquard. Available in certified and conventional constructions. Certifications on request.',
         ],
       },
     ]}

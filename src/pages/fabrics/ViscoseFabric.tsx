@@ -29,7 +29,7 @@ const ViscoseFabric = () => (
       },
       {
         heading: 'Certifications',
-        paragraphs: ['OEKO-TEX Standard 100 certified. Available in certified and conventional constructions. Certifications on request.'],
+        paragraphs: ['OEKO-TEX Standard 100 and GRS certified. Available in certified and conventional constructions. Certifications on request.'],
       },
     ]}
   />

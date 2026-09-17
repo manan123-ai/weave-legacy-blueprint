@@ -19,7 +19,7 @@ const IkatFabric = () => (
         bullets: [
           { label: 'Constructions', value: 'Traditional IKAT · Tie Dye · Resist-dyed Weaves' },
           { label: 'Finishes', value: 'Traditional · Contemporary · Custom Pattern Development' },
-          { label: 'Certifications', value: 'BCI · GOTS · OCS · OEKO-TEX' },
+          { label: 'Certifications', value: 'BCI · GOTS · OCS · OEKO-TEX · GRS' },
           { label: 'Supply', value: 'Development quantities and bulk' },
           { label: 'Export', value: 'Mill-direct, FOB New Delhi' },
         ],
@@ -27,7 +27,7 @@ const IkatFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'Our IKAT and tie dye fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 certified. Full documentation provided with every export order. Available in certified and conventional constructions. Certifications on request.',
+          'Our IKAT and tie dye fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 and GRS (Global Recycled Standard) certified. Full documentation provided with every export order. Available in certified and conventional constructions. Certifications on request.',
         ],
       },
       {

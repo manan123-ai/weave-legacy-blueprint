@@ -19,7 +19,7 @@ const LurexFabric = () => (
         bullets: [
           { label: 'Constructions', value: 'Woven Lurex · Sequin-embellished · Metallic Yarn Blends' },
           { label: 'Finishes', value: 'Metallic · Reflective · Decorative · Custom Colourways' },
-          { label: 'Certifications', value: 'BCI · GOTS · OCS · OEKO-TEX' },
+          { label: 'Certifications', value: 'BCI · GOTS · OCS · OEKO-TEX · GRS' },
           { label: 'Supply', value: 'Development quantities and bulk' },
           { label: 'Export', value: 'Mill-direct, FOB New Delhi' },
         ],
@@ -27,7 +27,7 @@ const LurexFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'Our lurex and sequin fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 certified. Full documentation provided with every export order. Available in certified and conventional constructions. Certifications on request.',
+          'Our lurex and sequin fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 and GRS (Global Recycled Standard) certified. Full documentation provided with every export order. Available in certified and conventional constructions. Certifications on request.',
         ],
       },
       {

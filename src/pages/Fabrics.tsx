@@ -221,7 +221,7 @@ const Fabrics = () => {
     <div className="min-h-screen">
       <SEO
         title="Woven Fabric Range | Cotton, Linen, Jacquard, Viscose | JNC Fabrics"
-        description="Export-grade woven fabrics from India — cotton, linen, jacquard, viscose, twill, upholstery, crepe, yarn-dyed, dobby. BCI and GOTS certified. Custom development available."
+        description="Export-grade woven fabrics from India — cotton, linen, jacquard, viscose, twill, upholstery, crepe, yarn-dyed, dobby. BCI, GOTS and GRS certified. Custom development available."
         path="/fabrics"
       />
       <Breadcrumbs items={[{ name: 'Fabrics' }]} />
@@ -236,12 +236,28 @@ const Fabrics = () => {
             </Reveal>
             <KineticHeading
               as="h1"
-              text="Our Fabrics"
+              text="Woven Fabric Manufacturer & Exporter — India"
               className="font-serif text-5xl md:text-7xl font-bold text-primary mb-8 leading-[1.05]"
             />
             <Reveal delay={0.3}>
               <p className="font-body text-xl text-muted-foreground font-light">
                 Discover our comprehensive range of premium textiles
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* Company Introduction */}
+        <section className="py-16 bg-background">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="font-body text-lg text-muted-foreground font-light leading-relaxed">
+                Janki Nath & Co. has been manufacturing woven fabric in India for more than 55 years, starting operations in 1968 and growing across four generations into one of the country's established mill-direct fabric exporters. Our weaving units are spread across Meerut, Bhiwandi, Erode, Salem and Surat, giving us access to the specific looms, yarn sourcing and finishing capabilities each fabric category needs — from fine cotton shirting to heavier jacquard and upholstery constructions — rather than running every product through a single general-purpose facility. This range is what lets us offer cotton, linen, jacquard, viscose, dobby, twill, yarn-dyed, upholstery and crepe fabrics under one supplier relationship, with consistent quality and documentation across the whole order.
+              </p>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <p className="font-body text-lg text-muted-foreground font-light leading-relaxed mt-6">
+                We export directly to fashion brands, garment manufacturers and buying houses across the USA, UK, Europe, Japan and Australia, among other markets, without routing through trading intermediaries — buyers deal with the mill itself from costing through to shipment. Our fabrics are available under GOTS, BCI, OCS, OEKO-TEX Standard 100 and GRS certification, with full transaction-level documentation provided as standard on every export order, alongside conventional constructions for buyers who don't require certified sourcing. Custom development is a core part of how we work: we take on pattern, weave and finish development from small sample quantities through to full bulk production, so a buyer can validate a fabric before committing to a production-scale order. Whether you're sourcing an established construction from the range below or need something developed specifically for your collection, our teams across these five units are set up to take a brief from first sample to final shipment.
               </p>
             </Reveal>
           </div>

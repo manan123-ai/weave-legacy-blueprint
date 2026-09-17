@@ -27,7 +27,7 @@ const HeroBanner = () => {
       image: heroSlide1,
       imageWebp: heroSlide1Webp,
       alt: 'Colorful premium woven fabrics by Janki Nath & Co. — cotton, linen and jacquard textiles for global fashion brands',
-      title: 'Traditional Craftsmanship Meets Modern Excellence',
+      title: "India's Trusted Woven Fabric Manufacturer Since 1968",
       subtitle: 'Explore Our Craft',
       description:
         'Discover our premium collection of vibrant fabrics, handpicked for quality and artistry',

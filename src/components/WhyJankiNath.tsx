@@ -45,7 +45,7 @@ const WhyJankiNath = () => {
     { value: 55, suffix: '+', label: 'Years — Est. 1968, Four Generations' },
     { value: 2, suffix: 'M+', label: 'Metres/Month Across Five Weaving Units' },
     { value: 20, suffix: '+', label: 'Export Markets — USA, UK, Europe, Japan' },
-    { value: 4, suffix: '', label: 'Certifications — BCI, GOTS, OCS, OEKO-TEX' },
+    { value: 5, suffix: '', label: 'Certifications — BCI, GOTS, OCS, OEKO-TEX, GRS' },
   ];
 
   return (

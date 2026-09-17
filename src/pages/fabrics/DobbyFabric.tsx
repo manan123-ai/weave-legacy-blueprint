@@ -33,7 +33,7 @@ const DobbyFabric = () => (
       },
       {
         heading: 'Certifications',
-        paragraphs: ['BCI certified cotton options. OEKO-TEX Standard 100. Available in certified and conventional constructions. Certifications on request.'],
+        paragraphs: ['BCI certified cotton options. OEKO-TEX Standard 100 and GRS certified. Available in certified and conventional constructions. Certifications on request.'],
       },
     ]}
   />

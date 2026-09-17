@@ -14,7 +14,7 @@ const Index = () => {
     <div className="min-h-screen">
       <SEO
         title="Janki Nath & Co. | Woven Fabric Manufacturer India Since 1968"
-        description="Janki Nath & Co. (JNC Fabrics / JNC Textiles) — fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi since 1968. Cotton, linen, jacquard, viscose, dobby, twill, yarn-dyed, upholstery and crepe fabrics. BCI, GOTS, OCS and OEKO-TEX Standard 100 certified. Mill-direct export to 20+ countries."
+        description="Janki Nath & Co. (JNC Fabrics / JNC Textiles) — fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi since 1968. Cotton, linen, jacquard, viscose, dobby, twill, yarn-dyed, upholstery and crepe fabrics. BCI, GOTS, OCS, OEKO-TEX Standard 100 and GRS certified. Mill-direct export to 20+ countries."
         path="/"
         keywords="woven fabric manufacturer India, fabric exporter India, cotton fabric manufacturer India export, linen fabric manufacturer India, jacquard fabric manufacturer India, GOTS certified fabric India, BCI cotton fabric India, woven fabric supplier India, fabric manufacturer New Delhi, fabric manufacturer Mayapuri, mill direct fabric India, Janki Nath Co, JNC Fabrics, JCO Fabrics, textile manufacturer India 1968, dobby fabric India, yarn dyed fabric India, upholstery fabric India, viscose fabric India, twill fabric India, crepe fabric India, fabric export New Delhi, woven fabric exporter India"
         jsonLd={[
@@ -45,7 +45,7 @@ const Index = () => {
               '@type': 'Person',
               name: 'Mr. Janki Nath',
             },
-            description: 'Fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi, India. Founded 1968 by Mr. Janki Nath. Cotton, linen, jacquard, viscose, dobby, yarn-dyed, twill, upholstery and crepe fabrics. BCI, GOTS, OCS and OEKO-TEX Standard 100 certified. Five weaving units across India. Mill-direct export to 20+ countries.',
+            description: 'Fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi, India. Founded 1968 by Mr. Janki Nath. Cotton, linen, jacquard, viscose, dobby, yarn-dyed, twill, upholstery and crepe fabrics. BCI, GOTS, OCS, OEKO-TEX Standard 100 and GRS certified. Five weaving units across India. Mill-direct export to 20+ countries.',
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'A-14, Mayapuri Industrial Area, Phase-1',
@@ -61,7 +61,7 @@ const Index = () => {
               contactType: 'sales',
               availableLanguage: ['English', 'Hindi'],
             },
-            hasCredential: ['BCI — Better Cotton Initiative', 'GOTS — Global Organic Textile Standard', 'OCS — Organic Content Standard', 'OEKO-TEX Standard 100', 'MSME Registered'],
+            hasCredential: ['BCI — Better Cotton Initiative', 'GOTS — Global Organic Textile Standard', 'OCS — Organic Content Standard', 'OEKO-TEX Standard 100', 'GRS — Global Recycled Standard', 'MSME Registered'],
             knowsAbout: ['Woven fabric manufacturing', 'Cotton fabric export', 'Linen fabric manufacture', 'Jacquard fabric weaving', 'GOTS certified fabric', 'BCI cotton', 'Fabric export India', 'Textile manufacturing India'],
             areaServed: ['US', 'GB', 'DE', 'FR', 'IT', 'ES', 'NL', 'BE', 'CH', 'JP', 'KR', 'AU', 'NZ', 'AE', 'SA', 'CA', { '@type': 'Place', name: 'Scandinavia' }],
             sameAs: [
