@@ -12,6 +12,7 @@ export interface FabricSection {
   heading: string;
   paragraphs?: string[];
   bullets?: { label: string; value: string }[];
+  links?: { label: string; to: string }[];
 }
 
 export interface FabricCategoryPageProps {
@@ -184,6 +185,15 @@ const FabricCategoryPage = ({
                         {p}
                       </p>
                     ))}
+                    {section.links && (
+                      <p className="font-body text-base text-muted-foreground mb-4">
+                        {section.links.map((l, i) => (
+                          <Link key={i} to={l.to} className="text-primary underline underline-offset-4 hover:no-underline mr-6">
+                            {l.label} →
+                          </Link>
+                        ))}
+                      </p>
+                    )}
                     {section.bullets && (
                       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         {section.bullets.map((b, i) => (

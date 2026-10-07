@@ -220,8 +220,8 @@ const Fabrics = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Woven Fabric Range | Cotton, Linen, Jacquard, Viscose | JNC Fabrics"
-        description="Export-grade woven fabrics from India — cotton, linen, jacquard, viscose, twill, upholstery, crepe, yarn-dyed, dobby. BCI, GOTS and GRS certified. Custom development available."
+        title="Woven Fabric Manufacturer India — Cotton, Linen & Jacquard | JNC"
+        description="Mill-direct woven fabric manufacturer in India — cotton, linen, jacquard, viscose, dobby and more. Exporting to the USA, UK and Europe. BCI, GOTS and GRS certified."
         path="/fabrics"
       />
       <Breadcrumbs items={[{ name: 'Fabrics' }]} />

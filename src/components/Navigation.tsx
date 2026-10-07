@@ -174,6 +174,14 @@ const Navigation = () => {
                 )}
               </AnimatePresence>
             </div>
+            <a
+              href="https://wa.me/919891542727"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-sm font-medium tracking-wide text-white border border-white/70 rounded-full px-4 py-1.5 hover:bg-white hover:text-foreground transition-colors"
+            >
+              Get a Quote
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -201,6 +209,15 @@ const Navigation = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md max-h-[75vh] overflow-y-auto">
+                <a
+                  href="https://wa.me/919891542727"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2 text-base font-medium font-body rounded-md bg-primary text-primary-foreground text-center"
+                >
+                  Get a Quote
+                </a>
                 {navItems.map((item) => (
                   <Link
                     key={item.path}

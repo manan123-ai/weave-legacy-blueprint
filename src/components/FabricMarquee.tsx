@@ -40,6 +40,12 @@ const FabricMarquee = () => {
           </span>
         ))}
       </Marquee>
+      <p className="mt-6 text-center font-body text-sm text-muted-foreground">
+        New to dobby?{' '}
+        <Link to="/blog/dobby-fabric-uses-construction-sourcing-guide" className="text-primary underline underline-offset-4 hover:no-underline">
+          Read our guide: What is dobby fabric?
+        </Link>
+      </p>
     </section>
   );
 };

@@ -31,9 +31,9 @@ const HeroBanner = () => {
       subtitle: 'Explore Our Craft',
       description:
         'Discover our premium collection of vibrant fabrics, handpicked for quality and artistry',
-      buttonText: 'Explore Our Craft',
+      buttonText: 'Get in Touch',
       buttonAction: () =>
-        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' }),
+        window.open('https://wa.me/919891542727', '_blank', 'noopener,noreferrer'),
     },
     {
       image: heroSlide2,

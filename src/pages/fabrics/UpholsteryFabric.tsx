@@ -5,8 +5,8 @@ const UpholsteryFabric = () => (
     slug="upholstery"
     productName="Upholstery & Home Furnishing Fabric"
     title="Upholstery & Home Furnishing Fabric Manufacturer from India"
-    metaTitle="Upholstery Fabric Manufacturer India | Export Quality | JNC Fabrics"
-    metaDescription="Upholstery fabric manufacturer and exporter from India. Sofa, curtain and drapery fabric, export quality. OEKO-TEX certified, mill-direct supply worldwide."
+    metaTitle="Upholstery Fabric Manufacturer & Exporter India | JNC Fabrics"
+    metaDescription="Upholstery fabric export from India: sofa, curtain and drapery fabrics direct from the mill. OEKO-TEX and GRS certified, exported to the USA, UK and Europe."
     keywords="upholstery fabric manufacturer India, home furnishing fabric India, sofa fabric manufacturer"
     intro="Janki Nath & Co. manufactures upholstery, furnishing and home textile fabrics — supplying home furnishing brands, interior design companies and furniture manufacturers across USA, UK, Europe and UAE."
     sections={[
