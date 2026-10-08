@@ -187,11 +187,23 @@ const FabricCategoryPage = ({
                     ))}
                     {section.links && (
                       <p className="font-body text-base text-muted-foreground mb-4">
-                        {section.links.map((l, i) => (
-                          <Link key={i} to={l.to} className="text-primary underline underline-offset-4 hover:no-underline mr-6">
-                            {l.label} →
-                          </Link>
-                        ))}
+                        {section.links.map((l, i) =>
+                          l.to.startsWith('http') ? (
+                            <a
+                              key={i}
+                              href={l.to}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary underline underline-offset-4 hover:no-underline mr-6"
+                            >
+                              {l.label} →
+                            </a>
+                          ) : (
+                            <Link key={i} to={l.to} className="text-primary underline underline-offset-4 hover:no-underline mr-6">
+                              {l.label} →
+                            </Link>
+                          )
+                        )}
                       </p>
                     )}
                     {section.bullets && (
