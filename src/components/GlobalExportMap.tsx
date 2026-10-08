@@ -13,6 +13,15 @@ const exportDestinations = [
   { name: 'Canada', x: '18%', y: '28%' },
   { name: 'Bangladesh', x: '70%', y: '48%' },
   { name: 'Sri Lanka', x: '68%', y: '58%' },
+  { name: 'France', x: '46%', y: '35%' },
+  { name: 'Spain', x: '44%', y: '39%' },
+  { name: 'Netherlands', x: '47%', y: '31%' },
+  { name: 'Belgium', x: '46.5%', y: '33%' },
+  { name: 'Switzerland', x: '48%', y: '36.5%' },
+  { name: 'Scandinavia', x: '50%', y: '22%' },
+  { name: 'South Korea', x: '83%', y: '37%' },
+  { name: 'New Zealand', x: '91%', y: '85%' },
+  { name: 'Saudi Arabia', x: '58%', y: '47%' },
 ];
 
 const indiaPosition = { x: '65%', y: '48%' };
@@ -86,6 +95,10 @@ const GlobalExportMap = () => {
             </motion.div>
           ))}
         </div>
+
+        <p className="mt-6 text-center font-body text-sm opacity-70">
+          USA · United Kingdom · Germany · France · Italy · Spain · Netherlands · Belgium · Switzerland · Japan · South Korea · Australia · New Zealand · UAE · Saudi Arabia · Canada · Scandinavia
+        </p>
 
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 text-center">

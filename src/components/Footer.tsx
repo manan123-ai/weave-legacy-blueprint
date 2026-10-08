@@ -196,7 +196,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
           <div className="text-center md:text-left">
             <p className="font-body text-sm text-primary-foreground/60">
-              © 2024 Janki Nath & Co. All rights reserved.
+              © 2026 Janki Nath & Co. All rights reserved.
             </p>
             <p className="font-body text-sm text-primary-foreground/60 mt-1">
               Made in India 🇮🇳
@@ -209,6 +209,7 @@ const Footer = () => {
               { label: 'GOTS Certified', dot: 'bg-green-400' },
               { label: 'OCS Certified', dot: 'bg-green-400' },
               { label: 'OEKO-TEX Standard 100', dot: 'bg-blue-400' },
+              { label: 'GRS Certified', dot: 'bg-green-400' },
               { label: 'MSME Registered', dot: 'bg-green-400' },
             ].map((badge, i) => (
               <span

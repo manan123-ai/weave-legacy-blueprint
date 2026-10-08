@@ -129,8 +129,8 @@ const Testimonials = () => {
         >
           <div className="inline-flex items-center space-x-8 bg-primary/10 px-8 py-4 rounded-full">
             <div className="text-center">
-              <div className="font-serif text-2xl font-bold text-primary">5.0/5</div>
-              <div className="font-body text-sm text-muted-foreground">Average Rating</div>
+              <div className="font-serif text-2xl font-bold text-primary">20+</div>
+              <div className="font-body text-sm text-muted-foreground">Export Countries</div>
             </div>
             <div className="text-center">
               <div className="font-serif text-2xl font-bold text-primary">50+</div>
