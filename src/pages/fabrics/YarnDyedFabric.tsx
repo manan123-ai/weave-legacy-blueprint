@@ -4,23 +4,28 @@ const YarnDyedFabric = () => (
   <FabricCategoryPage
     slug="yarn-dyed"
     productName="Yarn Dyed Fabric"
-    title="Yarn Dyed Fabric Manufacturer & Exporter from India"
+    title="Yarn-Dyed Woven Fabrics — Checks, Stripes & Plaids"
     metaTitle="Yarn Dyed Fabric Manufacturer India — Stripes, Checks & Plaids | JNC"
     metaDescription="Yarn dyed fabric manufacturer in India: stripes, checks and plaids for shirting, apparel and home furnishing. Consistent colour on every reorder. Mill-direct export."
     keywords="yarn dyed fabric manufacturer India, checks stripes fabric India, yarn dyed export"
-    intro="Janki Nath & Co. manufactures yarn dyed fabrics — checks, stripes, plaids and multi-colour woven designs — from our yarn-dyed specialist units across India."
+    intro="Yarn dyeing means the thread is dyed before weaving, so the colour is woven into the structure rather than printed on top. The result is richer depth of colour, better wash fastness and a pattern that is the same on both sides."
     sections={[
       {
-        heading: 'What is Yarn Dyed Fabric',
+        heading: 'Yarn-Dyed Fabric from Janki Nath & Co.',
         paragraphs: [
-          'In yarn dyed fabric, individual yarns are dyed before weaving. This creates colours and patterns that are woven directly into the fabric structure — not printed or applied after weaving. Result: deeper colour penetration, better colourfastness and consistent colour reproduction across reorders.',
-          'This is the key difference from piece-dyed fabric, which is woven first from undyed yarn and dyed as finished cloth afterwards. Only yarn dyeing enables multi-colour woven patterns — checks, stripes and plaids — where different coloured yarns interlace in the weave structure; piece dyeing can only produce solid colours.',
+          'Janki Nath & Co. has been weaving fabric in India since 1968, and yarn-dyed constructions are a core part of our range. We weave checks, stripes, plaids, windowpanes and houndstooth in cotton, linen, cotton-linen blends, viscose and blends with Lycra, from our own weaving units. Each construction is developed from yarn selection through to finished fabric.',
         ],
       },
       {
-        heading: 'Yarn Dyed Fabric Manufacturer in India',
+        heading: 'Garment Weight',
         paragraphs: [
-          'Janki Nath & Co. is a yarn dyed fabric manufacturer in India, producing checks, stripes, plaids and multi-colour woven designs from our own yarn-dyeing and weaving units — mill-direct, not through a trading intermediary. Standard lead times are 15–30 days for constructions in our running range and 30–45 days for custom colour development, with both development quantities and bulk production available from the same facilities.',
+          'Lightweight to medium-weight constructions for shirts, blouses, dresses, trousers and co-ord sets. Popular weaves include poplin, chambray, Oxford, twill and voile, available in solid yarns, melange yarns and space-dyed effects. Suitable for spring/summer and resort collections.',
+        ],
+      },
+      {
+        heading: 'Home Furnishing Weight',
+        paragraphs: [
+          'Heavier constructions for cushion covers, table linen, napkins, runners, curtain panels and upholstered accessories, with tighter weave counts, a heavier GSM range and wider loom widths available. Checks and windowpane patterns are especially popular.',
         ],
       },
       {
@@ -33,26 +38,24 @@ const YarnDyedFabric = () => (
       {
         heading: 'Our Yarn Dyed Range',
         bullets: [
-          { label: 'Constructions', value: 'Checks · Stripes · Plaids · Madras · Chambray · Oxford · Dobby YD · Jacquard YD' },
-          { label: 'Compositions', value: 'Cotton · Linen · Cotton/Linen · Viscose · Cotton/Viscose yarn dyed' },
-          { label: 'Colour', value: 'Custom colour combinations developed to your specification. Pantone matching available.' },
+          { label: 'Constructions', value: 'Checks · Stripes · Plaids · Windowpanes · Houndstooth · Madras · Chambray · Oxford' },
+          { label: 'Compositions', value: 'Cotton · Linen · Cotton/Linen · Viscose · Blends with Lycra' },
+          { label: 'Colour', value: 'Custom colour combinations developed to your specification, with lab dip matching available.' },
         ],
       },
       {
-        heading: 'Why Yarn Dyed for Your Brand',
+        heading: 'What We Offer',
         paragraphs: [
-          'If your collection includes a signature stripe, recurring check or colour-blocked design — yarn dyed fabric ensures colour consistency across every reorder, every season.',
-        ],
-      },
-      {
-        heading: 'Applications',
-        paragraphs: [
-          'Shirting, casual trousers, summer dresses, resort wear, beach wear, home furnishing, cushion covers, table linen.',
+          'Orders range from small quantities to full bulk runs, with no minimum order lock-in. We develop custom check and stripe repeats from yarn selection through to finished fabric, and sampling and lab dip matching are available. BCI cotton is used across most constructions, and GOTS-certified organic yarn is available on request.',
         ],
       },
       {
         heading: 'Certifications',
         paragraphs: ['BCI certified cotton options available. OEKO-TEX Standard 100 and GRS certified. Available in certified and conventional constructions. Certifications on request.'],
+      },
+      {
+        heading: 'Enquire',
+        links: [{ label: 'Enquire about yarn-dyed constructions: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },
     ]}
   />
