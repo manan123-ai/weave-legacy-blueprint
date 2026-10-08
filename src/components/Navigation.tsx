@@ -8,6 +8,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [certificatesOpen, setCertificatesOpen] = useState(false);
   const [fabricsOpen, setFabricsOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -107,7 +108,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-5 xl:gap-6 flex-wrap justify-end">
+          <div className="hidden xl:flex items-center gap-5 2xl:gap-7 justify-end whitespace-nowrap">
             {navItems.slice(0, 2).map((item) => (
               <NavLink key={item.path} item={item} scrolled={scrolled} active={location.pathname === item.path} />
             ))}
@@ -163,9 +164,53 @@ const Navigation = () => {
               </AnimatePresence>
             </div>
 
-            {navItems.slice(2).map((item) => (
-              <NavLink key={item.path} item={item} scrolled={scrolled} active={location.pathname === item.path} />
-            ))}
+            {navItems
+              .filter((item) => ['/production', '/export', '/certifications', '/showroom'].includes(item.path))
+              .map((item) => (
+                <NavLink key={item.path} item={item} scrolled={scrolled} active={location.pathname === item.path} />
+              ))}
+
+            {/* More Dropdown (secondary pages) */}
+            <div className="relative">
+              <button
+                onClick={() => setMoreOpen((v) => !v)}
+                onBlur={() => setTimeout(() => setMoreOpen(false), 150)}
+                className="font-body text-sm font-medium transition-colors flex items-center gap-1 text-white/80 hover:text-white"
+              >
+                More
+                <ChevronDown className={`w-4 h-4 transition-transform ${moreOpen ? 'rotate-180' : ''}`} />
+              </button>
+              <AnimatePresence>
+                {moreOpen && (
+                  <motion.div
+                    className="absolute top-full right-0 mt-2 w-56 bg-background border border-border rounded-md shadow-lg py-2 z-50"
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {navItems
+                      .filter((item) => ['/sampling', '/request-samples', '/fabric-sourcing-guide', '/blog', '/clientele'].includes(item.path))
+                      .map((item) => (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          onMouseDown={() => setMoreOpen(false)}
+                          className="block px-4 py-2 text-sm font-body text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {navItems
+              .filter((item) => item.path === '/contact')
+              .map((item) => (
+                <NavLink key={item.path} item={item} scrolled={scrolled} active={location.pathname === item.path} />
+              ))}
 
             {/* Certifications Dropdown */}
             <div className="relative">
@@ -218,7 +263,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <motion.div whileTap={{ scale: 0.95 }} className="lg:hidden">
+          <motion.div whileTap={{ scale: 0.95 }} className="xl:hidden">
             <Button
               variant="ghost"
               size="icon"
@@ -235,7 +280,7 @@ const Navigation = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="lg:hidden border-t border-border"
+              className="xl:hidden border-t border-border"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
