@@ -39,6 +39,7 @@ const Navigation = () => {
     { name: 'Lurex & Sequins', path: '/fabrics/lurex' },
     { name: 'IKAT & Tie Dye', path: '/fabrics/ikat' },
     { name: 'Greige Fabric', path: '/fabrics/greige' },
+    { name: 'Home Furnishing Fabric', path: '/fabrics/home-furnishing' },
     { name: 'Lycra Blends', path: '/fabrics/lycra-blends' },
     { name: 'Certified Fabrics', path: '/fabrics/certified' },
     { name: 'View All Fabrics', path: '/fabrics', viewAll: true },
