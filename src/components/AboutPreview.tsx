@@ -18,9 +18,12 @@ const AboutPreview = () => {
   const bgY = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
 
   const paragraphs = [
-    'Janki Nath & Co. was founded in 1968 by Mr. Janki Nath and is now run by the fourth generation of the family — a premium woven fabric manufacturer and exporter supplying fashion brands, garment manufacturers and fabric importers across USA, UK, Germany, France, Japan, Australia, UAE and South Korea, mill-direct with no agents.',
-    "From our Head Office and Showroom in Mayapuri, New Delhi to dedicated weaving units in Meerut, Bhiwandi/Ichalkaranji, Erode, Salem and Surat — every thread is supervised end-to-end across India's most renowned textile hubs.",
-    'BCI, GOTS, OCS, OEKO-TEX Standard 100 and GRS certified — documentation available for every export order.',
+    "Janki Nath & Co. is a woven fabric manufacturer and exporter based in Mayapuri, New Delhi. Our range covers cotton, linen, jacquard, viscose, dobby, twill, yarn-dyed, upholstery and crepe fabrics, along with indigo, lurex, IKAT and Lycra blend constructions. Every fabric is woven — structure, texture and pattern built into the cloth itself — and each category draws on dedicated development experience across our weaving units in Meerut, Bhiwandi/Ichalkaranji, Erode, Salem and Surat.",
+    "Cotton and linen serve shirting, dresses and everyday apparel; jacquard and dobby bring woven pattern to occasion wear and furnishing; viscose and crepe give dresses and blouses their drape; yarn-dyed checks and stripes, indigo and IKAT add colour and heritage character to a collection; upholstery fabrics carry sofas, cushions and curtains; and lurex and Lycra blends add shine and stretch comfort where a design calls for it.",
+    "Our fabrics are chosen by garment brands building seasonal collections, interior designers and home furnishing companies specifying cloth for curtains, cushions and upholstery, fabric retailers stocking dependable lines, and sourcing houses managing production for their own clients. Whether the need is a shirting for a capsule collection or a furnishing weave for a hospitality project, we work from your brief: end use, handle, weight, colour and certification.",
+    "Janki Nath & Co. was founded in 1968 and is still run by the family, now in its fourth generation. Being family-run means you speak with the people who run the business and are accountable for your order. Our fabrics are available under BCI, GOTS, OCS, OEKO-TEX Standard 100 and GRS certification, with documentation provided for certified orders.",
+    "We work with small development quantities as readily as with bulk production, so a new buyer can validate a fabric before committing to volume, and a regular buyer can scale the same construction without changing supplier. Custom development is part of everyday work: we develop weaves, yarn combinations, colours and finishes to your brief, from the first strike-off sample through to production quantity. Standard lead times are 15–30 days for running qualities and 30–45 days for custom development. Certified fabric development is available, and we also work with conventional constructions depending on your requirements. From the first conversation to dispatch, you receive clear communication on construction, timelines and documentation.",
+    "Five weaving units, one standard of quality, and a team that is easy to reach. Message us on WhatsApp with your end use, quantity and timeline, and we will come back with the right construction and a clear plan.",
   ];
 
   return (
@@ -55,7 +58,7 @@ const AboutPreview = () => {
         <div className="max-w-3xl mx-auto mb-14 space-y-7">
           {paragraphs.map((text, index) => (
             <Reveal key={index} delay={index * 0.12} y={20}>
-              <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed font-light">
+              <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed font-light">
                 {text}
               </p>
             </Reveal>
@@ -73,6 +76,16 @@ const AboutPreview = () => {
               <Link to="/about">Know More About Us</Link>
             </Button>
           </MagneticButton>
+          <p className="mt-6 font-body text-base text-muted-foreground">
+            <a
+              href="https://wa.me/919891542727"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-4 hover:no-underline"
+            >
+              Start your enquiry on WhatsApp →
+            </a>
+          </p>
         </Reveal>
       </FigmaSurface>
     </section>
