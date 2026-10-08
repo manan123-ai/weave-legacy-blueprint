@@ -7,14 +7,12 @@ import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 const About = () => {
-  const whyChoose = [
-    { title: 'Experience and Expertise', description: 'Over five decades in the textile industry with a proven track record' },
-    { title: 'Top Quality', description: 'Exceptional export-quality fabrics that meet the highest standards' },
-    { title: 'Innovative Designs', description: 'Unique and trendsetting fabric designs' },
-    { title: 'Competitive Prices', description: 'High-quality products at competitive rates' },
-    { title: 'Global Reach', description: 'Reliable partner for international clients' },
-    { title: 'Customer Focus', description: 'Tailored solutions with a commitment to customer satisfaction' },
-    { title: 'Sustainability', description: 'Environmentally friendly manufacturing practices' },
+  const certifications = [
+    { name: 'BCI', description: 'Responsible cotton farming, at the source.' },
+    { name: 'GOTS', description: 'Organic fibre through to finished fabric.' },
+    { name: 'OCS', description: 'Verified organic material content.' },
+    { name: 'OEKO-TEX Standard 100', description: 'Every component tested for harmful substances.' },
+    { name: 'GRS', description: 'Verified recycled content.' },
   ];
 
   const leadership = [
@@ -25,17 +23,17 @@ const About = () => {
   ];
 
   const generations = [
-    { gen: 'First Generation — Founder', name: 'Mr. Janki Nath', description: 'Founded the business in 1968 in Mayapuri Industrial Area, New Delhi, building the original weaving capacity and the company\'s first relationships with yarn suppliers and fabric buyers in the Delhi textile trade.' },
-    { gen: 'Second Generation', name: 'Mr. Hamesh Kumar Bhasin (Managing Director, 45+ years)', description: 'Built the export business, developing relationships with international buyers and establishing JNC Fabrics as a reliable export-quality fabric supplier. Expanded weaving capacity across multiple units and added certifications including BCI, GOTS, OCS and OEKO-TEX.' },
-    { gen: 'Third Generation', name: 'Mr. Sandeepan Bhasin & Mr. Deepak Bhasin (Directors, 30+ years each)', description: 'Scaled international operations, expanded to five weaving units across India, and grew the company\'s reach across major export markets including USA, UK, Germany, France, Japan, Australia and UAE.' },
-    { gen: 'Fourth Generation', name: 'Mr. Manan Bhasin (Marketing Head)', description: 'Building on the company\'s manufacturing heritage with digital infrastructure, direct international buyer outreach and modern brand positioning for the next phase of growth.' },
+    { gen: 'First Generation — Founder', name: 'The late Shri Janki Nath Bhasin ji', description: 'Founded the business in 1968 in Mayapuri Industrial Area, New Delhi, and laid the foundation of quality and trust that the family continues to build on.' },
+    { gen: 'Second Generation', name: 'Mr. Hamesh Kumar Bhasin (Managing Director, 45+ years)', description: 'Built the export side of the business and established JNC Fabrics as a dependable supplier to international buyers.' },
+    { gen: 'Third Generation', name: 'Mr. Sandeepan Bhasin & Mr. Deepak Bhasin (Directors, 30+ years each)', description: 'Expanded weaving capacity to five units across India and grew the company\'s reach across major export markets.' },
+    { gen: 'Fourth Generation', name: 'Mr. Manan Bhasin (Marketing Head)', description: 'Brings the business to a new generation of international buyers through direct communication and a modern online presence.' },
   ];
 
   return (
     <div className="min-h-screen">
       <SEO
         title="About JNC Fabrics — Woven Fabric Manufacturer & Exporter, New Delhi"
-        description="Janki Nath & Co. — woven fabric manufacturer and exporter in New Delhi since 1968. 55+ years, BCI, GOTS, OCS, OEKO-TEX certified. Exports to 20+ countries."
+        description="Family-run woven fabric manufacturer and exporter in New Delhi since 1968. BCI, GOTS, OCS, OEKO-TEX and GRS certified. Exporting to 20+ countries."
         path="/about"
         jsonLd={[
           {
@@ -45,7 +43,7 @@ const About = () => {
             foundingDate: '1968',
             founder: {
               '@type': 'Person',
-              name: 'Mr. Janki Nath',
+              name: 'Shri Janki Nath Bhasin',
             },
             url: 'https://jcofabrics.com',
           },
@@ -71,18 +69,18 @@ const About = () => {
             />
             <Reveal delay={0.3}>
               <p className="font-body text-xl text-muted-foreground font-light">
-                Founded 1968 by Mr. Janki Nath — 55+ Years of Textile Excellence
+                Founded in 1968 by the late Shri Janki Nath Bhasin ji — 55+ Years of Textile Excellence
               </p>
             </Reveal>
           </div>
         </section>
 
-        {/* Company Profile */}
+        {/* Our Story */}
         <section className="py-32">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Reveal>
               <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
-                Company Profile
+                Our Story
               </p>
             </Reveal>
             <Reveal delay={0.1}>
@@ -92,42 +90,96 @@ const About = () => {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="font-body text-lg text-muted-foreground leading-relaxed font-light mb-6">
-                Janki Nath & Co. (JNC Fabrics) is a fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi, founded in 1968 by Mr. Janki Nath.
+                Janki Nath & Co. (JNC Fabrics) was founded in 1968 by the late Shri Janki Nath Bhasin ji in Mayapuri Industrial Area, New Delhi. What began as a single unit has grown, over four generations of family ownership, into a woven fabric manufacturer and exporter with weaving units across India and buyers in more than 20 countries.
               </p>
               <p className="font-body text-lg text-muted-foreground leading-relaxed font-light mb-6">
-                We export premium woven fabrics to fashion brands, garment manufacturers, buying houses and fabric importers across USA, UK, Germany, France, Italy, Japan, Australia, UAE and South Korea.
-              </p>
-              <p className="font-body text-lg text-muted-foreground leading-relaxed font-light mb-6">
-                Our weaving units in Meerut, Bhiwandi, Erode, Salem and Surat produce export-grade fabric across cotton, linen, jacquard, viscose, dobby, yarn-dyed, crepe, twill and upholstery constructions.
+                Our weaving units in Meerut, Bhiwandi, Erode, Salem and Surat each bring their own strengths in yarn, loom and finishing, while our head office and showroom in Mayapuri remains the place where buyers meet the family, see the fabrics and develop new qualities together.
               </p>
               <p className="font-body text-lg text-muted-foreground leading-relaxed font-light">
-                All export orders include full certification documentation — BCI, GOTS, OCS and OEKO-TEX Standard 100. MSME registered, monthly capacity 2 million+ meters, lead times 15-30 days.
+                We have stayed family-run because it keeps decisions close to the work. The people who take your enquiry are the people accountable for your order, from the first conversation to dispatch.
               </p>
             </Reveal>
           </div>
         </section>
 
-        {/* Company Overview */}
+        {/* What We Make / Who Buys */}
+        <section className="py-32 bg-secondary">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16">
+            <Reveal>
+              <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">What We Make</p>
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6">Woven fabrics for garments and homes</h3>
+              <p className="font-body text-muted-foreground leading-relaxed font-light">
+                We weave fabrics across garment and home furnishing weights: cotton, linen, jacquard, viscose, dobby, twill, yarn-dyed, crepe and upholstery constructions, along with indigo, lurex, IKAT and Lycra blends. A shirting for a collection and a furnishing cloth for a sofa are developed with the same attention to construction, handle and colour. Orders range from small development quantities to bulk production, and custom development is part of everyday work.
+              </p>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">Who We Work With</p>
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6">Buyers in 20+ countries</h3>
+              <p className="font-body text-muted-foreground leading-relaxed font-light">
+                Our fabrics are chosen by garment brands, interior designers and home furnishing companies, fabric retailers and sourcing houses, across more than 20 countries including the USA, UK, Germany, France, Italy, Japan, Australia, UAE and South Korea.
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* How We Work */}
+        <section className="py-32">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">How We Work</p>
+              <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-10 leading-tight">
+                From first enquiry to finished roll
+              </h2>
+              <p className="font-body text-lg text-muted-foreground leading-relaxed font-light">
+                You tell us the end use, handle, weight, colour and certification you need. We propose constructions from our range or develop a new one, and strike-off samples are prepared for your approval. Production then follows in the quantity you need, whether a small first order or a bulk programme. Standard lead times are 15–30 days for running qualities and 30–45 days for custom development.
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
+        <KineticStrip text="Since 1968 — Crafted in India" />
+
+        {/* Certifications */}
+        <section className="py-32 bg-accent">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Reveal className="text-center mb-14">
+              <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">Standards</p>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary leading-tight mb-6">Certifications</h2>
+              <p className="font-body text-lg text-muted-foreground font-light max-w-2xl mx-auto">
+                Our fabrics are available under five internationally recognised standards, with documentation provided for certified orders. We are also MSME registered.
+              </p>
+            </Reveal>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+              {certifications.map((c, index) => (
+                <motion.div
+                  key={c.name}
+                  className="bg-background p-6 rounded-sm text-center border border-border/40"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="font-serif text-lg font-bold text-primary mb-2 leading-tight">{c.name}</h3>
+                  <p className="font-body text-muted-foreground text-sm leading-relaxed font-light">{c.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Where We Work */}
         <section className="py-32">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <Reveal>
-              <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-10 leading-tight">
-                About Janki Nath <span className="italic text-muted-foreground">& Co.</span>
+              <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6 leading-tight">
+                Where we work
               </h2>
+              <p className="font-body text-lg text-muted-foreground leading-relaxed mb-10 font-light">
+                Our <span className="text-primary font-medium">Head Office and Showroom</span> in Mayapuri, New Delhi anchors weaving units in five of India's textile regions.
+              </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8 font-light">
-                Janki Nath & Co. is one of the leading names in the Indian export industry, catering to top garment and home furnishings exporters across Delhi NCR, Jaipur, and Bangalore for over 55 years. Renowned for our exceptional fabric designs and unwavering commitment to quality, we supply international garment brands with a wide range of fabrics that adhere to the highest global standards, including advanced dyeing and processing techniques.
-              </p>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <p className="font-body text-lg text-muted-foreground leading-relaxed mb-10 font-light">
-                Our <span className="text-primary font-medium">Head Office and Showroom</span> in Mayapuri, New Delhi anchors a network of dedicated weaving units across India's most renowned textile hubs — <span className="text-primary font-medium">Meerut, Bhiwandi / Ichalkaranji, Erode, Salem, and Surat</span>. This integrated setup lets us maintain stringent quality control and ensure timely delivery on every order. Our comprehensive product portfolio includes export-grade fabrics such as Greige, RFD, Bleached, Dyed, Printed, Yarn-Dyed, Mill-made, Auto/Powerloom, Handloom, and Jacquard &amp; Dobbys.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.25}>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border/40 rounded-sm overflow-hidden mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border/40 rounded-sm overflow-hidden">
                 {[
                   { label: 'Head Office / Showroom', value: 'Mayapuri, New Delhi' },
                   { label: 'Weaving Unit', value: 'Meerut' },
@@ -147,61 +199,6 @@ const About = () => {
                 ))}
               </div>
             </Reveal>
-
-            <div className="grid md:grid-cols-2 gap-12 mt-20">
-              <Reveal>
-                <div className="border-l-2 border-primary pl-8">
-                  <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">01 — Vision</p>
-                  <h3 className="font-serif text-2xl font-bold text-primary mb-6">Our Vision</h3>
-                  <p className="font-body text-muted-foreground leading-relaxed font-light">
-                    To be a global leader in the textile industry, renowned for our exceptional quality, innovative designs, and commitment to sustainability, while fostering long-term partnerships with our clients and contributing positively to the community.
-                  </p>
-                </div>
-              </Reveal>
-              <Reveal delay={0.15}>
-                <div className="border-l-2 border-primary pl-8">
-                  <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">02 — Mission</p>
-                  <h3 className="font-serif text-2xl font-bold text-primary mb-6">Our Mission</h3>
-                  <p className="font-body text-muted-foreground leading-relaxed font-light">
-                    At Janki Nath, our mission is to deliver superior export-quality fabrics that exceed our clients' expectations through unparalleled craftsmanship, innovative designs, and competitive pricing. We are dedicated to continuous improvement, sustainability, and customer satisfaction.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </section>
-
-        <KineticStrip text="Since 1968 — Crafted in India" />
-
-        {/* Why Choose Us */}
-        <section className="py-32 bg-accent">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Reveal className="text-center mb-20">
-              <p className="font-body text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6">
-                The Difference
-              </p>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary leading-tight">
-                Why Choose <span className="italic text-muted-foreground">Janki Nath</span>
-              </h2>
-            </Reveal>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {whyChoose.map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-background p-8 rounded-sm text-center border border-border/40 hover:border-primary/30 hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.15)] transition-all duration-700"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: (index % 3) * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -6 }}
-                >
-                  <p className="font-body text-xs text-muted-foreground/60 tabular-nums mb-3">0{index + 1}</p>
-                  <h3 className="font-serif text-xl font-semibold text-primary mb-3">{item.title}</h3>
-                  <p className="font-body text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -267,7 +264,14 @@ const About = () => {
             </div>
             <Reveal delay={0.4}>
               <p className="font-body text-lg text-muted-foreground mt-12 font-light italic">
-                Founded by Mr. Janki Nath in 1968, the business has since grown into a known name in the Indian woven fabric export industry.
+                Founded in 1968 by the late Shri Janki Nath Bhasin ji — still family-run, still built on the same commitment to quality.
+              </p>
+            </Reveal>
+            <Reveal delay={0.5}>
+              <p className="font-body text-base text-muted-foreground mt-8">
+                <a href="https://wa.me/919891542727" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:no-underline">
+                  Speak with us on WhatsApp →
+                </a>
               </p>
             </Reveal>
           </div>
