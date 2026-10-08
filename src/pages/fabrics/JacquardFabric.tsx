@@ -4,39 +4,46 @@ const JacquardFabric = () => (
   <FabricCategoryPage
     slug="jacquard"
     productName="Jacquard Fabric"
-    title="Jacquard Fabric Manufacturer & Exporter from India"
+    title="Jacquard Woven Fabrics — Complex Weave Constructions for Garment & Home"
     metaTitle="Jacquard Fabric Supplier for Apparel Manufacturers India | JNC Fabrics"
     metaDescription="Jacquard fabric supplier for apparel and garment manufacturers in India — custom patterns, damask, brocade. BCI, GOTS, OEKO-TEX certified. Export-ready."
     keywords="jacquard fabric manufacturer India, jacquard fabric exporter, damask fabric India, custom jacquard India"
-    intro="Janki Nath & Co. weaves jacquard fabrics across our specialist units in Erode and Salem — supplying fashion brands, occasion wear manufacturers and home furnishing companies worldwide."
+    intro="A jacquard loom controls each warp thread independently, allowing intricate patterns — florals, paisleys, damasks and geometric repeats — to be woven directly into the fabric."
     sections={[
       {
-        heading: 'Our Jacquard Fabric Range',
+        heading: 'Jacquard Fabric from Janki Nath & Co.',
         paragraphs: [
-          'Jacquard fabric is woven on Jacquard looms where individual warp yarns are controlled independently, creating complex patterns directly in the weave structure — not printed or embroidered. The pattern is structural, so it cannot fade, crack or wash out.',
-          'Damask jacquard is typically single-colour with a reversible satin-and-sateen pattern, used in formal wear and table linen. Brocade jacquard has a raised, textured surface from supplementary weft threads, used in occasion wear and festive garments. Matelassé jacquard has a quilted or embossed surface used in structured jackets and bags. Cutwork jacquard has physical voids in the weave for a lace-like, lightweight appearance. We also develop custom floral and geometric patterns to your design brief with no minimum repeat size for sampling.',
+          'JNC weaves jacquard fabrics on power looms and rapier looms across our units in Bhiwandi and Surat. The pattern is structural: it does not fade, crack or peel like a print. We work in cotton, viscose, cotton-viscose blends and lurex blends for metallic effects.',
+          'Damask jacquard is typically single-colour with a reversible satin-and-sateen pattern, used in formal wear and table linen. Brocade jacquard has a raised, textured surface from supplementary weft threads, used in occasion wear and festive garments. Matelassé jacquard has a quilted or embossed surface used in structured jackets and bags. Cutwork jacquard has physical voids in the weave for a lace-like, lightweight appearance.',
         ],
         bullets: [
-          { label: 'Constructions', value: 'Damask · Brocade · Matelassé · Cutwork · Floral · Geometric · Dobby jacquard' },
-          { label: 'Compositions', value: 'Cotton · Viscose · Cotton/Viscose · Linen · Lurex (metallic) · Cotton/Silk jacquard' },
+          { label: 'Constructions', value: 'Damask · Brocade · Matelassé · Cutwork · Floral · Paisley · Geometric · Dobby jacquard' },
+          { label: 'Compositions', value: 'Cotton · Viscose · Cotton/Viscose · Lurex blends (metallic effects)' },
+        ],
+      },
+      {
+        heading: 'Garment Weight Jacquard',
+        paragraphs: [
+          'Brocade fabrics for occasion wear, ethnic wear, co-ord sets and blouses. Lightweight jacquard for dresses and shirts. Lurex jacquard for eveningwear and festive collections. Available in self-colour and multi-colour woven designs.',
+        ],
+      },
+      {
+        heading: 'Home Furnishing Jacquard',
+        paragraphs: [
+          'Damask and brocade constructions for cushion covers, upholstery panels, curtain fabrics and table linen, in heavier GSM and wider widths. Used in hotel and hospitality procurement.',
         ],
       },
       {
         heading: 'Custom Jacquard for Apparel Manufacturers',
         paragraphs: [
-          'We supply custom jacquard fabric directly to apparel manufacturers and garment brands — not through trading houses. Our Erode and Salem units develop jacquard constructions to your design brief for occasion wear, bridal, evening wear and formal garment production, with both development quantities and bulk production available from the same facilities.',
+          'We supply custom jacquard fabric to apparel manufacturers and garment brands. Constructions are developed to your design brief for occasion wear, bridal, evening wear and formal garments, with development quantities and bulk production available.',
         ],
       },
       {
-        heading: 'Custom Pattern Development',
+        heading: 'What We Offer',
         paragraphs: [
-          'We develop custom jacquard patterns from your design brief. New pattern development available — repeat size, colour count and construction complexity discussed at inquiry stage.',
-        ],
-      },
-      {
-        heading: 'Applications',
-        paragraphs: [
-          'Occasion wear, evening wear, bridal, formal garments, upholstery, cushion covers, home furnishing, table linen and decorative textiles.',
+          'Custom jacquard design development from repeat artwork through to sample, with repeat size, colour count and construction complexity discussed at enquiry stage. Orders range from small quantities to bulk, with no minimum order lock-in. Lurex and metallic yarn weaving is available, and our existing design library can be browsed on WhatsApp.',
+          'Because the design is woven rather than applied, a jacquard construction holds its pattern through repeated washing and wear, which matters as much on a hotel curtain as on an evening dress.',
         ],
       },
       {
@@ -44,6 +51,10 @@ const JacquardFabric = () => (
         paragraphs: [
           'OEKO-TEX Standard 100 and GRS certified. GOTS certified options available in cotton jacquard. Available in certified and conventional constructions. Certifications on request.',
         ],
+      },
+      {
+        heading: 'Enquire',
+        links: [{ label: 'Enquire about jacquard constructions: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },
     ]}
   />
