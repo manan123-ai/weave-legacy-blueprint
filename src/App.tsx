@@ -43,6 +43,7 @@ const IndigoFabric = lazy(() => import("./pages/fabrics/IndigoFabric"));
 const LurexFabric = lazy(() => import("./pages/fabrics/LurexFabric"));
 const IkatFabric = lazy(() => import("./pages/fabrics/IkatFabric"));
 const GreigeFabric = lazy(() => import("./pages/fabrics/GreigeFabric"));
+const HomeFurnishingFabric = lazy(() => import("./pages/fabrics/HomeFurnishingFabric"));
 const LycraBlendsFabric = lazy(() => import("./pages/fabrics/LycraBlendsFabric"));
 const WovenFabricExporterIndia = lazy(() => import("./pages/fabrics/WovenFabricExporterIndia"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -101,6 +102,7 @@ const App = () => {
             <Route path="/fabrics/lurex" element={<LurexFabric />} />
             <Route path="/fabrics/ikat" element={<IkatFabric />} />
             <Route path="/fabrics/greige" element={<GreigeFabric />} />
+            <Route path="/fabrics/home-furnishing" element={<HomeFurnishingFabric />} />
             <Route path="/fabrics/lycra-blends" element={<LycraBlendsFabric />} />
             <Route path="/fabrics/woven-fabric-exporter-india" element={<WovenFabricExporterIndia />} />
             <Route path="/request-samples" element={<RequestSamples />} />
