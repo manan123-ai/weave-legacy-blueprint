@@ -44,6 +44,8 @@ const LurexFabric = lazy(() => import("./pages/fabrics/LurexFabric"));
 const IkatFabric = lazy(() => import("./pages/fabrics/IkatFabric"));
 const GreigeFabric = lazy(() => import("./pages/fabrics/GreigeFabric"));
 const HomeFurnishingFabric = lazy(() => import("./pages/fabrics/HomeFurnishingFabric"));
+const OrganicCottonFabric = lazy(() => import("./pages/fabrics/OrganicCottonFabric"));
+const RecycledFabric = lazy(() => import("./pages/fabrics/RecycledFabric"));
 const LycraBlendsFabric = lazy(() => import("./pages/fabrics/LycraBlendsFabric"));
 const WovenFabricExporterIndia = lazy(() => import("./pages/fabrics/WovenFabricExporterIndia"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -103,6 +105,8 @@ const App = () => {
             <Route path="/fabrics/ikat" element={<IkatFabric />} />
             <Route path="/fabrics/greige" element={<GreigeFabric />} />
             <Route path="/fabrics/home-furnishing" element={<HomeFurnishingFabric />} />
+            <Route path="/fabrics/organic-cotton" element={<OrganicCottonFabric />} />
+            <Route path="/fabrics/recycled" element={<RecycledFabric />} />
             <Route path="/fabrics/lycra-blends" element={<LycraBlendsFabric />} />
             <Route path="/fabrics/woven-fabric-exporter-india" element={<WovenFabricExporterIndia />} />
             <Route path="/request-samples" element={<RequestSamples />} />
