@@ -8,6 +8,9 @@ import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
 import KineticStrip from '@/components/motion/KineticStrip';
 import SEO from '@/components/SEO';
+import HomeStatsStrip from '@/components/HomeStatsStrip';
+import FourGenerations from '@/components/FourGenerations';
+import HomeCertifications from '@/components/HomeCertifications';
 
 const Index = () => {
   return (
@@ -134,10 +137,13 @@ const Index = () => {
         ]}
       />
       <HeroBanner />
+      <HomeStatsStrip />
       <AboutPreview />
+      <FourGenerations />
       <KineticStrip text="Heritage Craft — Modern Looms" />
       <FabricMarquee />
       <FabricShowreel />
+      <HomeCertifications />
       <KineticStrip text="Woven in India — Worn Worldwide" reverse />
       <GlobalExportMap />
       <WhyJankiNath />
