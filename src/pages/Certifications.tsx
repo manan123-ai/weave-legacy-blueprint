@@ -5,11 +5,26 @@ import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 const certifications = [
-  { name: 'GOTS', description: 'Global Organic Textile Standard — the full organic fibre-to-fabric supply chain.' },
-  { name: 'OEKO-TEX Standard 100', description: 'Every fabric tested and confirmed free from harmful substances.' },
-  { name: 'BCI', description: 'Better Cotton Initiative — responsibly farmed cotton at the source.' },
-  { name: 'OCS', description: 'Organic Content Standard — chain-of-custody verified organic content.' },
-  { name: 'GRS', description: 'Global Recycled Standard — chain-of-custody verified recycled content across the supply chain.' },
+  {
+    name: 'BCI — Better Cotton Initiative',
+    text: 'We are an active Better Cotton member and source Better Cotton, which supports responsible farming practices, efficient water use and better livelihoods for cotton farmers. BCI is a farm-level programme, so it supports a responsible-sourcing claim for your sustainability reporting rather than an organic claim. Better Cotton farmers are trained on reduced pesticide use, soil health and decent work, and a mass-balance system links purchases like ours to that farming. Membership details are available on request.',
+  },
+  {
+    name: 'GOTS — Global Organic Textile Standard',
+    text: 'GOTS covers the full chain of custody for organic fibre, including processing, manufacturing, packaging, labelling, trading and distribution, with environmental and social criteria audited throughout. The label requires a minimum organic fibre content and restricts harmful chemicals in dyeing and finishing, which makes it the most comprehensive standard for organic textiles. Buyers sourcing certified organic fabric can request GOTS transaction certificates from us for their orders.',
+  },
+  {
+    name: 'OCS — Organic Content Standard',
+    text: 'OCS verifies the presence and amount of organic material in a product, with chain-of-custody records behind the claim. It complements GOTS for products where the full GOTS processing and social criteria are not required, such as blended constructions. Ask for OCS when you need to state how much organic material a product contains, without the full processing audit that GOTS adds.',
+  },
+  {
+    name: 'OEKO-TEX Standard 100',
+    text: 'Fabrics under our OEKO-TEX Standard 100 certification are tested for harmful substances, so they are harmless in terms of human ecology and safe for skin contact. It is the certification most often asked for on garments, bedding and home textiles that touch the skin. Testing covers more than a hundred substances, including heavy metals, formaldehyde and restricted dyes, and the certification is renewed regularly.',
+  },
+  {
+    name: 'GRS — Global Recycled Standard',
+    text: 'GRS certifies recycled content in a product and verifies responsible social, environmental and chemical practices along the way. It is relevant to our recycled cotton and recycled polyester blend constructions, and gives your brand documentation for recycled-content claims. It also requires chain-of-custody tracking from the recycled raw material through to the finished fabric, so your recycled content figure can be verified.',
+  },
 ];
 
 const Certifications = () => (
@@ -35,7 +50,7 @@ const Certifications = () => (
           />
           <Reveal delay={0.3}>
             <p className="font-body text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto">
-              Janki Nath & Co. holds internationally recognised certifications across sustainability, organic content, chemical safety and responsible cotton sourcing. All certification documentation is available on request.
+              Janki Nath & Co. holds five internationally recognised certifications across responsible cotton sourcing, organic content, chemical safety and recycled content. Here is what each one means for your order.
             </p>
           </Reveal>
         </div>
@@ -43,42 +58,29 @@ const Certifications = () => (
 
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="h-px w-16 mx-auto mb-14" style={{ backgroundColor: '#c9a84c' }} />
-          </Reveal>
+          {certifications.map((cert) => (
+            <Reveal key={cert.name}>
+              <div className="h-px w-16 mb-8" style={{ backgroundColor: '#c9a84c' }} />
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-4">{cert.name}</h2>
+              <p className="font-body text-lg text-muted-foreground font-light leading-relaxed mb-14">{cert.text}</p>
+            </Reveal>
+          ))}
 
           <Reveal>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-6 gap-y-10 mb-14">
-              {certifications.map((cert) => (
-                <div key={cert.name} className="text-center">
-                  <p className="font-serif text-xl md:text-2xl font-bold text-primary leading-tight">
-                    {cert.name}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal>
-            <div className="h-px w-16 mx-auto mb-14" style={{ backgroundColor: '#c9a84c' }} />
-          </Reveal>
-
-          <Reveal>
-            <div className="space-y-5 mb-16">
-              {certifications.map((cert) => (
-                <p
-                  key={cert.name}
-                  className="font-body text-base md:text-lg text-muted-foreground font-light text-center leading-relaxed"
-                >
-                  <span className="text-primary font-medium">{cert.name}</span> — {cert.description}
-                </p>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal>
-            <p className="font-body text-base text-muted-foreground font-light text-center max-w-xl mx-auto">
-              Certified fabric developments are available on request. We also work with conventional constructions depending on buyer requirements.
+            <div className="h-px w-16 mx-auto mb-10" style={{ backgroundColor: '#c9a84c' }} />
+            <p className="font-body text-lg text-muted-foreground font-light text-center leading-relaxed">
+              Certified fabric developments are available on request, and we also work with conventional constructions depending on buyer requirements.
+            </p>
+            <p className="font-body text-lg text-primary text-center mt-6">
+              Request certification documents or transaction certificates via WhatsApp:{' '}
+              <a
+                href="https://wa.me/919891542727"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:no-underline"
+              >
+                wa.me/919891542727
+              </a>
             </p>
           </Reveal>
         </div>

@@ -43,9 +43,9 @@ const Index = () => {
             foundingDate: '1968',
             founder: {
               '@type': 'Person',
-              name: 'Mr. Janki Nath',
+              name: 'Shri Janki Nath Bhasin',
             },
-            description: 'Fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi, India. Founded 1968 by Mr. Janki Nath. Cotton, linen, jacquard, viscose, dobby, yarn-dyed, twill, upholstery and crepe fabrics. BCI, GOTS, OCS, OEKO-TEX Standard 100 and GRS certified. Five weaving units across India. Mill-direct export to 20+ countries.',
+            description: 'Fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi, India. Founded 1968 by the late Shri Janki Nath Bhasin ji. Cotton, linen, jacquard, viscose, dobby, yarn-dyed, twill, upholstery and crepe fabrics. BCI, GOTS, OCS, OEKO-TEX Standard 100 and GRS certified. Five weaving units across India. Mill-direct export to 20+ countries.',
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'A-14, Mayapuri Industrial Area, Phase-1',
@@ -86,7 +86,7 @@ const Index = () => {
                 name: 'Who founded Janki Nath & Co.?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Janki Nath & Co. was founded in 1968 by Mr. Janki Nath in Mayapuri Industrial Area, New Delhi. The business is now run by the fourth generation of the family, led by Mr. Hamesh Kumar Bhasin (second generation, Managing Director).',
+                  text: 'Janki Nath & Co. was founded in 1968 by the late Shri Janki Nath Bhasin ji in Mayapuri Industrial Area, New Delhi. The business is now run by the fourth generation of the family, led by Mr. Hamesh Kumar Bhasin (second generation, Managing Director).',
                 },
               },
               {
