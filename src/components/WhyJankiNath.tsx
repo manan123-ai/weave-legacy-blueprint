@@ -48,6 +48,13 @@ const WhyJankiNath = () => {
     { value: 5, suffix: '', label: 'Certifications — BCI, GOTS, OCS, OEKO-TEX, GRS' },
   ];
 
+  const highlights = [
+    { big: '200+', title: 'Fabric Constructions', detail: '' },
+    { big: '', title: 'Small Qty to Bulk', detail: 'No Minimum Order Lock-in' },
+    { big: '', title: 'Custom Development', detail: 'from Yarn to Finished Fabric' },
+    { big: '', title: 'FOB New Delhi', detail: 'Direct Export' },
+  ];
+
   return (
     <section ref={ref} className="py-32 bg-accent relative overflow-hidden">
       {/* Animated vertical line */}
@@ -118,6 +125,28 @@ const WhyJankiNath = () => {
             ))}
           </div>
         </Reveal>
+
+        {/* Capability highlights */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+          {highlights.map((h, i) => (
+            <motion.div
+              key={h.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="stats-glass text-center p-8"
+            >
+              {h.big && (
+                <div className="font-serif text-4xl font-bold mb-2 text-gradient-luxe">{h.big}</div>
+              )}
+              <h3 className="font-serif text-xl font-semibold text-primary leading-tight">{h.title}</h3>
+              {h.detail && (
+                <p className="font-body text-sm text-muted-foreground leading-relaxed mt-3">{h.detail}</p>
+              )}
+            </motion.div>
+          ))}
+        </div>
       </FigmaSurface>
     </section>
   );
