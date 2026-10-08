@@ -25,24 +25,45 @@ const Navigation = () => {
     { name: 'BCI Member', href: '#bci-certificate' },
   ];
 
-  const fabricLinks = [
-    { name: 'Cotton Fabric', path: '/fabrics/cotton' },
-    { name: 'Linen Fabric', path: '/fabrics/linen' },
-    { name: 'Jacquard Fabric', path: '/fabrics/jacquard' },
-    { name: 'Viscose Fabric', path: '/fabrics/viscose' },
-    { name: 'Yarn-Dyed Fabric', path: '/fabrics/yarn-dyed' },
-    { name: 'Dobby Fabric', path: '/fabrics/dobby' },
-    { name: 'Upholstery Fabric', path: '/fabrics/upholstery' },
-    { name: 'Crepe & High Twist', path: '/fabrics/crepe' },
-    { name: 'Twill & Drills', path: '/fabrics/twill' },
-    { name: 'Indigo Fabric', path: '/fabrics/indigo' },
-    { name: 'Lurex & Sequins', path: '/fabrics/lurex' },
-    { name: 'IKAT & Tie Dye', path: '/fabrics/ikat' },
-    { name: 'Greige Fabric', path: '/fabrics/greige' },
-    { name: 'Home Furnishing Fabric', path: '/fabrics/home-furnishing' },
-    { name: 'Lycra Blends', path: '/fabrics/lycra-blends' },
-    { name: 'Certified Fabrics', path: '/fabrics/certified' },
-    { name: 'View All Fabrics', path: '/fabrics', viewAll: true },
+  const fabricGroups = [
+    {
+      label: 'Garment Fabrics',
+      links: [
+        { name: 'Yarn-Dyed Fabrics', path: '/fabrics/yarn-dyed' },
+        { name: 'Dobby Fabrics', path: '/fabrics/dobby' },
+        { name: 'Jacquard Fabrics', path: '/fabrics/jacquard' },
+        { name: 'IKAT Fabrics', path: '/fabrics/ikat' },
+        { name: 'Greige Fabric', path: '/fabrics/greige' },
+      ],
+    },
+    {
+      label: 'Home Furnishing',
+      links: [
+        { name: 'Upholstery Fabric', path: '/fabrics/upholstery' },
+        { name: 'Home Furnishing Fabrics', path: '/fabrics/home-furnishing' },
+      ],
+    },
+    {
+      label: 'Certified Fabrics',
+      links: [
+        { name: 'Organic Cotton (GOTS)', path: '/fabrics/organic-cotton' },
+        { name: 'Recycled Fabric (GRS)', path: '/fabrics/recycled' },
+        { name: 'All Certified Fabrics', path: '/fabrics/certified' },
+      ],
+    },
+    {
+      label: 'More Fabrics',
+      links: [
+        { name: 'Cotton Fabric', path: '/fabrics/cotton' },
+        { name: 'Linen Fabric', path: '/fabrics/linen' },
+        { name: 'Viscose Fabric', path: '/fabrics/viscose' },
+        { name: 'Crepe & High Twist', path: '/fabrics/crepe' },
+        { name: 'Twill & Drills', path: '/fabrics/twill' },
+        { name: 'Indigo Fabric', path: '/fabrics/indigo' },
+        { name: 'Lurex & Sequins', path: '/fabrics/lurex' },
+        { name: 'Lycra Blends', path: '/fabrics/lycra-blends' },
+      ],
+    },
   ];
 
   const navItems = [
@@ -112,21 +133,31 @@ const Navigation = () => {
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.2 }}
                   >
-                    {fabricLinks.map((f) => (
-                      <Link
-                        key={f.path}
-                        to={f.path}
-                        onMouseDown={() => setFabricsOpen(false)}
-                        className={
-                          f.viewAll
-                            ? 'flex items-center justify-between px-4 py-2.5 mt-1 text-sm font-body font-medium text-primary border-t border-border hover:bg-muted/50 transition-colors'
-                            : 'block px-4 py-2 text-sm font-body text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors'
-                        }
-                      >
-                        {f.name}
-                        {f.viewAll && <span aria-hidden="true">→</span>}
-                      </Link>
+                    {fabricGroups.map((group) => (
+                      <div key={group.label}>
+                        <div className="px-4 pt-3 pb-1 text-[10px] font-body font-medium uppercase tracking-[0.25em] text-muted-foreground/70">
+                          {group.label}
+                        </div>
+                        {group.links.map((f) => (
+                          <Link
+                            key={f.path}
+                            to={f.path}
+                            onMouseDown={() => setFabricsOpen(false)}
+                            className="block px-4 py-1.5 text-sm font-body text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors"
+                          >
+                            {f.name}
+                          </Link>
+                        ))}
+                      </div>
                     ))}
+                    <Link
+                      to="/fabrics"
+                      onMouseDown={() => setFabricsOpen(false)}
+                      className="flex items-center justify-between px-4 py-2.5 mt-2 text-sm font-body font-medium text-primary border-t border-border hover:bg-muted/50 transition-colors"
+                    >
+                      View All Fabrics
+                      <span aria-hidden="true">→</span>
+                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -253,19 +284,36 @@ const Navigation = () => {
                         transition={{ duration: 0.25 }}
                         className="overflow-hidden"
                       >
-                        {fabricLinks.map((f) => (
-                          <Link
-                            key={f.path}
-                            to={f.path}
-                            onClick={() => {
-                              setIsOpen(false);
-                              setFabricsOpen(false);
-                            }}
-                            className="block px-6 py-2 text-sm font-body text-muted-foreground hover:text-primary transition-colors rounded-md"
-                          >
-                            {f.name}
-                          </Link>
+                        {fabricGroups.map((group) => (
+                          <div key={group.label}>
+                            <div className="px-6 pt-3 pb-1 text-[10px] font-body font-medium uppercase tracking-[0.25em] text-muted-foreground/70">
+                              {group.label}
+                            </div>
+                            {group.links.map((f) => (
+                              <Link
+                                key={f.path}
+                                to={f.path}
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setFabricsOpen(false);
+                                }}
+                                className="block px-6 py-2 text-sm font-body text-muted-foreground hover:text-primary transition-colors rounded-md"
+                              >
+                                {f.name}
+                              </Link>
+                            ))}
+                          </div>
                         ))}
+                        <Link
+                          to="/fabrics"
+                          onClick={() => {
+                            setIsOpen(false);
+                            setFabricsOpen(false);
+                          }}
+                          className="block px-6 py-2 text-sm font-body font-medium text-primary rounded-md"
+                        >
+                          View All Fabrics →
+                        </Link>
                       </motion.div>
                     )}
                   </AnimatePresence>
