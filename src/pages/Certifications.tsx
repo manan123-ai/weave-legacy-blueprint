@@ -1,3 +1,4 @@
+import CertificationLogoStrip from '@/components/CertificationLogoStrip';
 import Footer from '@/components/Footer';
 import KineticHeading from '@/components/motion/KineticHeading';
 import Reveal from '@/components/motion/Reveal';
@@ -55,6 +56,8 @@ const Certifications = () => (
           </Reveal>
         </div>
       </section>
+
+      <CertificationLogoStrip />
 
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

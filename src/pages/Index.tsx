@@ -6,6 +6,7 @@ import GlobalExportGlobe from '@/components/GlobalExportGlobe';
 import WhyJankiNath from '@/components/WhyJankiNath';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
+import CertificationLogoStrip from '@/components/CertificationLogoStrip';
 import KineticStrip from '@/components/motion/KineticStrip';
 import SEO from '@/components/SEO';
 
@@ -142,6 +143,7 @@ const Index = () => {
       <GlobalExportGlobe />
       <WhyJankiNath />
       <Testimonials />
+      <CertificationLogoStrip />
       <Footer />
     </div>
   );
