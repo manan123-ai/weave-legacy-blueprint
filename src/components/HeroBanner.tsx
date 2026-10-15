@@ -13,6 +13,7 @@ import MagneticButton from '@/components/motion/MagneticButton';
 
 const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [playVideo, setPlayVideo] = useState(false);
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -60,6 +61,12 @@ const HeroBanner = () => {
   ];
 
   useEffect(() => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const saveData = (navigator as any).connection?.saveData === true;
+    setPlayVideo(!reduce && !saveData);
+  }, []);
+
+  useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6500);
@@ -93,48 +100,32 @@ const HeroBanner = () => {
       {/* Preload the LCP image (first hero slide, WebP) so the browser
           fetches it immediately instead of waiting on CSSOM/JS discovery. */}
       <Helmet>
-        <link rel="preload" as="image" href={heroSlide1Webp} fetchpriority="high" type="image/webp" />
+        <link rel="preload" as="image" href="/video/hero-poster.jpg" fetchpriority="high" type="image/jpeg" />
       </Helmet>
       {/* Background Images with subtle parallax + slow zoom */}
       <motion.div className="absolute inset-0" style={{ y: imageY }}>
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className="absolute inset-0 transition-opacity duration-[1500ms] ease-in-out"
-            style={{ opacity: currentSlide === index ? 1 : 0 }}
-          >
-            {index === 0 ? (
-              // LCP-critical slide: serve the WebP directly as a plain <img>
-              // rather than via <picture>/<source>, so its src exactly
-              // matches the preloaded URL above with no indirection for the
-              // browser (or Lighthouse's LCP-priority detection) to resolve.
-              <img
-                src={slide.imageWebp}
-                alt={slide.alt}
-                loading="eager"
-                decoding="async"
-                fetchPriority="high"
-                className={`w-full h-full object-cover ${
-                  currentSlide === index ? 'animate-slow-zoom' : ''
-                }`}
-              />
-            ) : (
-              <picture>
-                <source srcSet={slide.imageWebp} type="image/webp" />
-                <img
-                  src={slide.image}
-                  alt={slide.alt}
-                  loading="lazy"
-                  decoding="async"
-                  fetchPriority="low"
-                  className={`w-full h-full object-cover ${
-                    currentSlide === index ? 'animate-slow-zoom' : ''
-                  }`}
-                />
-              </picture>
-            )}
-          </div>
-        ))}
+        {/* Looping factory film. Falls back to the still poster for reduced motion / data saver. */}
+        <img
+          src="/video/hero-poster.jpg"
+          alt="Woven fabric being produced at a Janki Nath & Co. weaving unit in India"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {playVideo && (
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            src="/video/hero-banner.mp4"
+            poster="/video/hero-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
         {/* Subtle grain overlay */}
         <div
