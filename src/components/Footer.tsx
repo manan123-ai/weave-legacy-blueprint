@@ -27,6 +27,31 @@ const fabricFooterLinks = [
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
+      {/* Contact CTA: shown on every page */}
+      <div className="border-b border-primary-foreground/15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary-foreground">Tell us what you are developing.</h2>
+            <p className="mt-3 font-body text-primary-foreground/70">We reply on WhatsApp and email, usually within a working day.</p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://wa.me/919891542727?text=Hi%2C%20I%20am%20interested%20in%20sourcing%20woven%20fabric%20from%20Janki%20Nath%20%26%20Co.%20Please%20share%20your%20catalogue%20and%20pricing."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-sm font-medium rounded-full bg-white text-black px-7 py-3.5 hover:bg-white/85 transition-colors"
+            >
+              Message on WhatsApp
+            </a>
+            <a
+              href="mailto:jcofabrics@yahoo.co.in?subject=Fabric%20enquiry"
+              className="font-body text-sm font-medium rounded-full border border-white/70 text-primary-foreground px-7 py-3.5 hover:bg-white hover:text-black transition-colors"
+            >
+              Email us
+            </a>
+          </div>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
