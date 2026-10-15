@@ -2,7 +2,7 @@ import HeroBanner from '@/components/HeroBanner';
 import AboutPreview from '@/components/AboutPreview';
 import FabricMarquee from '@/components/FabricMarquee';
 import FabricShowreel from '@/components/FabricShowreel';
-import GlobalExportMap from '@/components/GlobalExportMap';
+import GlobalExportGlobe from '@/components/GlobalExportGlobe';
 import WhyJankiNath from '@/components/WhyJankiNath';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
@@ -139,7 +139,7 @@ const Index = () => {
       <FabricMarquee />
       <FabricShowreel />
       <KineticStrip text="Woven in India — Worn Worldwide" reverse />
-      <GlobalExportMap />
+      <GlobalExportGlobe />
       <WhyJankiNath />
       <Testimonials />
       <Footer />

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { CheckCircle, Clock, Users, Package, Truck, Award, Leaf, HeartHandshake, ShieldCheck, Recycle } from 'lucide-react';
 import Footer from '@/components/Footer';
+import ProcessVideo from '@/components/ProcessVideo';
 import IndiaWorldMap from '@/components/IndiaWorldMap';
 import KineticHeading from '@/components/motion/KineticHeading';
 import KineticStrip from '@/components/motion/KineticStrip';
@@ -148,6 +149,8 @@ const ProductionProcess = () => {
       <KineticStrip text="From Yarn to Fabric — Crafted with Care" />
 
       {/* Export Terms Section */}
+      <ProcessVideo />
+
       <section className="py-24 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal className="text-center mb-12">
