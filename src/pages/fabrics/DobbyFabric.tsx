@@ -5,7 +5,7 @@ const DobbyFabric = () => (
     slug="dobby"
     productName="Dobby Fabric"
     title="Dobby Weave Fabrics — Textured Constructions for Garment & Home"
-    metaTitle="Dobby Fabric Manufacturer India — Self Dobby Colour Dobby | JNC Fabrics"
+    metaTitle="Dobby Fabric Manufacturer India | Self & Colour Dobby | JNC Fabrics"
     metaDescription="Dobby fabric manufacturer from India. Self-dobby and colour dobby in cotton and cotton blends. Subtle geometric weave for premium shirting and casualwear."
     keywords="dobby fabric manufacturer India, self dobby fabric, dobby weave fabric India"
     intro="A dobby loom weaves small geometric patterns directly into the fabric structure — dots, diamonds, birds-eye, waffle and micro-textures that add visual interest without printing. JNC produces dobby fabrics in cotton, linen, cotton-linen blends and viscose."

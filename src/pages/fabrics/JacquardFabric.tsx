@@ -11,7 +11,7 @@ const JacquardFabric = () => (
     intro="A jacquard loom controls each warp thread independently, allowing intricate patterns — florals, paisleys, damasks and geometric repeats — to be woven directly into the fabric."
     sections={[
       {
-        heading: 'Jacquard Fabric from Janki Nath & Co.',
+        heading: 'Jacquard Fabric Manufacturers in India: Janki Nath & Co.',
         paragraphs: [
           'JNC weaves jacquard fabrics on power looms and rapier looms across our units in Bhiwandi and Surat. The pattern is structural: it does not fade, crack or peel like a print. We work in cotton, viscose, cotton-viscose blends and lurex blends for metallic effects.',
           'Damask jacquard is typically single-colour with a reversible satin-and-sateen pattern, used in formal wear and table linen. Brocade jacquard has a raised, textured surface from supplementary weft threads, used in occasion wear and festive garments. Matelassé jacquard has a quilted or embossed surface used in structured jackets and bags. Cutwork jacquard has physical voids in the weave for a lace-like, lightweight appearance.',

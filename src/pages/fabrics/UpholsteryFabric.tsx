@@ -11,7 +11,7 @@ const UpholsteryFabric = () => (
     intro="JNC produces woven upholstery fabrics engineered for the mechanical stress of upholstered furniture — sofas, chairs, ottomans, headboards and banquettes."
     sections={[
       {
-        heading: 'Upholstery Fabric from Janki Nath & Co.',
+        heading: 'Upholstery Fabric Export from India: Janki Nath & Co.',
         paragraphs: [
           'We weave jacquard brocade, dobby, yarn-dyed check and plain weave constructions in cotton, cotton-polyester and viscose-cotton blends. All constructions are woven on wider looms to reduce seaming.',
         ],
