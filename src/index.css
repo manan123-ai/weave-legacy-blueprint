@@ -108,6 +108,10 @@ Feel: Editorial, spacious, modern-traditional hybrid
     @apply border-border;
   }
 
+  html, body {
+    overflow-x: clip; /* no sideways scroll on phones */
+  }
+
   body {
     @apply bg-background text-foreground font-body;
     cursor: auto;
