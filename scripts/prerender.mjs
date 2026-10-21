@@ -26,6 +26,7 @@ const ROUTES = [
   '/blog/fabric-export-documentation-india',
   '/blog/cotton-fabric-gsm-guide',
   '/blog/india-vs-china-fabric-sourcing',
+  '/blog/dobby-vs-jacquard-fabric-difference',
 ];
 
 const DIST = path.resolve('dist');
