@@ -26,11 +26,6 @@ const Index = () => {
             name: 'JNC Fabrics',
             url: 'https://jcofabrics.com',
             publisher: { '@id': 'https://jcofabrics.com/#organization' },
-            potentialAction: {
-              '@type': 'SearchAction',
-              target: 'https://jcofabrics.com/?q={search_term_string}',
-              'query-input': 'required name=search_term_string',
-            },
           },
           {
             '@context': 'https://schema.org',
@@ -73,7 +68,7 @@ const Index = () => {
             aggregateRating: {
               '@type': 'AggregateRating',
               ratingValue: '5',
-              reviewCount: '20',
+              reviewCount: '26',
               bestRating: '5',
               worstRating: '1',
             },
