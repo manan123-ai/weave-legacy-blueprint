@@ -5,7 +5,7 @@ const HomeFurnishingFabric = () => (
     slug="home-furnishing"
     productName="Home Furnishing Fabric"
     title="Home Furnishing Fabrics — Woven Textiles for Table, Bed & Living"
-    metaTitle="Home Furnishing Fabric Manufacturer & Exporter India | JNC"
+    metaTitle="Home Furnishing Fabric Manufacturer India | Table, Bed, Cushion"
     metaDescription="Woven home furnishing fabrics from India for table linen, cushion covers and bed linen accessories. Cotton, linen and blends. Small quantities to bulk."
     keywords="home furnishing fabric manufacturer India, table linen fabric India, cushion cover fabric exporter, home textile fabric supplier"
     intro="JNC produces woven home furnishing fabrics across all our manufacturing units. These are lighter constructions than upholstery fabric, designed for table linen, bed linen accessories, cushion covers, napkins, placemats, runners and decorative panels."

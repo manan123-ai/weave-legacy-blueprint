@@ -34,6 +34,25 @@ const LinenFabric = () => (
         ],
       },
       {
+        heading: 'Linen Fabric Weights (GSM)',
+        paragraphs: [
+          'Linen fabric is usually described by weight in grams per square metre. As a general guide, lightweight linen (roughly 100 to 150 GSM) suits shirts, blouses and dresses, mid-weight linen (roughly 150 to 250 GSM) suits trousers, jackets and home textiles, and heavier linen above that suits furnishing and upholstery use. Tell us your end use and target weight and we will develop to it.',
+        ],
+        links: [{ label: 'How to read GSM: fabric weight guide', to: '/blog/cotton-fabric-gsm-guide' }],
+      },
+      {
+        heading: 'Pure Linen or Cotton/Linen Blend?',
+        paragraphs: [
+          'Pure linen gives the crisp hand, natural texture and breathability linen is known for, and it creases more. A cotton/linen blend softens the hand, improves drape and reduces creasing while keeping much of the linen look, which is why it is popular for fashion. Blend ratios such as 55/45, 60/40, 70/30 and 80/20 are developed to the buyer brief.',
+        ],
+      },
+      {
+        heading: 'FAQ: Is Linen Fabric for Summer or Winter?',
+        paragraphs: [
+          'Linen is mainly a warm-weather fabric: it is breathable and feels cool against the skin, so lightweight linen suits spring and summer collections. Heavier linen and linen blends are also used for autumn collections, layered or in structured pieces.',
+        ],
+      },
+      {
         heading: 'Applications',
         paragraphs: [
           'Fashion apparel, summer collections, resort wear, trousers, shirts, dresses, home furnishing, curtains and drapery.',

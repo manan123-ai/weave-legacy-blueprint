@@ -5,8 +5,8 @@ const ViscoseFabric = () => (
     slug="viscose"
     productName="Viscose Fabric"
     title="Viscose Fabric Manufacturer & Exporter from India"
-    metaTitle="Viscose Fabric Manufacturer India — Export Quality | JNC Fabrics"
-    metaDescription="Viscose fabric manufacturer from India. Viscose twill, crepe, plain, georgette weight. Cotton/viscose blends. Fluid drape. Mill-direct export supply."
+    metaTitle="Viscose Fabric Manufacturer in India — Woven Viscose & Blends"
+    metaDescription="Woven viscose fabric manufacturer in India: viscose twill, crepe and plain weaves, plus cotton/viscose blends with fluid drape. Mill-direct export supply."
     keywords="viscose fabric manufacturer India, viscose fabric exporter, viscose twill India"
     intro="Janki Nath & Co. manufactures viscose and viscose blend fabrics — supplying fashion brands, dress manufacturers and resort wear labels worldwide."
     sections={[
