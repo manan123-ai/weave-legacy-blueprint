@@ -31,7 +31,7 @@ const certifications = [
 const Certifications = () => (
   <div className="min-h-screen">
     <SEO
-      title="GOTS & BCI Certified Fabric Manufacturer India | JNC Fabrics"
+      title="GOTS, GRS & BCI Certified Fabric Manufacturer India | JNC"
       description="Janki Nath & Co. is a GOTS certified fabric manufacturer in India and active BCI cotton fabric member, alongside OCS, OEKO-TEX Standard 100 and GRS. Full documentation on every export order."
       path="/certifications"
     />
