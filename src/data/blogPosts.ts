@@ -118,9 +118,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'what-is-bci-cotton-guide-textile-buyers',
-    title: 'BCI Cotton Fabric — Buy Certified Supply',
+    title: 'What Is BCI Cotton? Meaning, Full Form & Buyer Guide',
     metaDescription:
-      'BCI cotton fabric, mill-direct from a certified India manufacturer. See composition, GSM options and MOQ for buyers sourcing genuine BCI-verified cotton.',
+      'BCI stands for Better Cotton Initiative. What BCI cotton means, how it differs from organic and GOTS, and how to source BCI-certified cotton fabric from India.',
     excerpt:
       'BCI is the largest cotton sustainability programme — but it works differently from GOTS. Here’s what that means for your claims.',
     date: '2026-02-05',
@@ -227,9 +227,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'dobby-fabric-uses-construction-sourcing-guide',
-    title: "What Is Dobby Fabric? Uses, Construction & Manufacturer",
+    title: "What Is Dobby Fabric? Meaning, Uses & Summer or Winter",
     metaDescription:
-      'Dobby fabric explained: small geometric patterns woven in by a dobby loom. Uses in apparel and home furnishing, constructions, GSM, plus sourcing from an India mill.',
+      'What is dobby fabric? Small geometric patterns woven in by a dobby loom. Uses, summer or winter, dobby vs jacquard, GSM and sourcing from an India mill.',
     excerpt:
       'The subtle geometric weave that elevates plain shirting — and how to spec dobby for your next collection.',
     date: '2026-03-01',
@@ -270,6 +270,12 @@ export const blogPosts: BlogPost[] = [
       "Yes — shirting is its largest use. Fine self-dobby (about 100–180 GSM) gives formal shirts a premium texture, while colour dobby and heavier constructions suit casual shirts, trousers and light jackets. It breathes well in cotton and holds its pattern through repeated washing.",
       "### What GSM is dobby fabric available in?",
       "We manufacture dobby from about 100 GSM (fine shirting) up to about 350 GSM (heavy furnishing). See the table above for the range by construction and end use.",
+      "### Is dobby fabric for summer or winter?",
+      "It depends on the fibre and the weight, not on the dobby weave itself. Cotton and linen dobby in lighter weights (about 100–180 GSM) is breathable and suits summer. Heavier dobby (roughly 220 GSM and above), especially yarn-dyed cotton or blends, works for autumn-winter shirts, trousers and furnishing. Lighter constructions suit spring-summer collections and heavier ones suit autumn-winter.",
+      "### What is cotton dobby fabric?",
+      "Cotton dobby is dobby weave made in cotton yarn. It is the most common version: soft, breathable and absorbent, with the small woven geometric texture of dobby. It is used for shirting, dresses, curtains, cushion covers and table linen. See our [cotton fabric range](/fabrics/cotton).",
+      "### What does a dobby shirt mean?",
+      "A dobby shirt is made from dobby fabric. From a distance it looks plain, but up close it shows a fine woven texture such as dots or small diamonds. Self-dobby in fine cotton is a common choice for formal shirts.",
       "### Can dobby fabric be custom developed?",
       "Yes. We develop dobby in custom patterns, yarn counts, colours and GSM to a buyer's brief, from small sample quantities through to bulk production. Message us on [WhatsApp](https://wa.me/919891542727) with your brief to start a development.",
       "Related reading: [Dobby fabric range](/fabrics/dobby) | [Upholstery fabric range](/fabrics/upholstery) | [Cotton fabric range](/fabrics/cotton) | [Yarn-dyed vs. piece-dyed fabric guide](/blog/yarn-dyed-vs-piece-dyed-fabric-guide)",
