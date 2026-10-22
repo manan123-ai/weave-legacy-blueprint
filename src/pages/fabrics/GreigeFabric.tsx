@@ -55,6 +55,13 @@ const GreigeFabric = () => (
         ],
       },
       {
+        heading: 'FAQ: What Is Greige Fabric?',
+        paragraphs: [
+          'What is greige fabric? Greige (also called grey or loom-state fabric) is woven cloth straight off the loom, before bleaching, dyeing, printing or finishing.',
+          'Why buy greige fabric? Buyers who dye, print or finish in their own unit or with their own processor buy greige to control the final colour and finish. Tell us the construction, yarn and width you need and we will quote.',
+        ],
+      },
+      {
         heading: 'Enquire',
         links: [{ label: 'Enquire about greige fabric availability: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },

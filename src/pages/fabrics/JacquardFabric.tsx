@@ -6,7 +6,7 @@ const JacquardFabric = () => (
     productName="Jacquard Fabric"
     title="Jacquard Woven Fabrics — Complex Weave Constructions for Garment & Home"
     metaTitle="Jacquard Fabric Supplier for Apparel Manufacturers India | JNC Fabrics"
-    metaDescription="Jacquard fabric supplier for apparel and garment manufacturers in India — custom patterns, damask, brocade. BCI, GOTS, OEKO-TEX certified. Export-ready."
+    metaDescription="Custom jacquard fabric manufacturer in India for apparel and garment brands: damask, brocade, florals and your own artwork. BCI, GOTS, OEKO-TEX certified. Export-ready."
     keywords="jacquard fabric manufacturer India, jacquard fabric exporter, damask fabric India, custom jacquard India"
     intro="A jacquard loom controls each warp thread independently, allowing intricate patterns — florals, paisleys, damasks and geometric repeats — to be woven directly into the fabric."
     sections={[
@@ -51,6 +51,15 @@ const JacquardFabric = () => (
         paragraphs: [
           'OEKO-TEX Standard 100 and GRS certified. GOTS certified options available in cotton jacquard. Available in certified and conventional constructions. Certifications on request.',
         ],
+      },
+      {
+        heading: 'FAQ: What Is Jacquard Fabric?',
+        paragraphs: [
+          'What is jacquard fabric? Jacquard is a woven fabric in which the pattern is built into the cloth by a loom that controls the warp yarns individually, so detailed designs such as florals, paisleys and damask can be woven rather than printed.',
+          'What are the types of jacquard? Common types are damask, brocade, matelasse and cutwork, plus floral, paisley and geometric designs. Which one suits you depends on whether the fabric is for garments, home furnishing or upholstery.',
+          'Is jacquard fabric good? The woven pattern does not wash out or crack, so jacquard keeps its design well. It is usually heavier and takes more development than plain or dobby fabric. See how it compares in our dobby vs jacquard guide.',
+        ],
+        links: [{ label: 'Dobby vs jacquard fabric: differences, uses and cost', to: '/blog/dobby-vs-jacquard-fabric-difference' }],
       },
       {
         heading: 'Enquire',

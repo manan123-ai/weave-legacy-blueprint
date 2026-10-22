@@ -8,7 +8,7 @@ const OrganicCottonFabric = () => (
     metaTitle="GOTS Certified Organic Cotton Fabric Manufacturer India | JNC"
     metaDescription="GOTS and OCS certified organic cotton woven fabric from India — plain, dobby, yarn-dyed and jacquard for garments and home. Small quantities to bulk."
     keywords="organic cotton fabric manufacturer India GOTS, GOTS certified fabric India, organic cotton woven fabric exporter"
-    intro="JNC holds GOTS (Global Organic Textile Standard) certification, covering the full processing chain from organic fibre through to finished fabric. GOTS is widely regarded as the leading standard for organic textiles, covering not just the organic fibre content but also the processing, dyeing and finishing stages."
+    intro="Janki Nath & Co. is a GOTS and OCS certified organic cotton fabric manufacturer in India. We hold GOTS (Global Organic Textile Standard) certification, covering the full processing chain from organic fibre through to finished fabric. GOTS is widely regarded as the leading standard for organic textiles, covering not just the organic fibre content but also the processing, dyeing and finishing stages."
     sections={[
       {
         heading: 'Organic Cotton from Janki Nath & Co.',
@@ -55,6 +55,24 @@ const OrganicCottonFabric = () => (
         heading: 'What We Offer',
         paragraphs: [
           'Small quantities to bulk, with no minimum order lock-in. Custom construction development in organic cotton, and full certification documentation provided with each shipment. Standard lead times are 15–30 days for running qualities and 30–45 days for custom development.',
+        ],
+      },
+      {
+        heading: 'FAQ: Organic Cotton Fabric Suppliers in India',
+        paragraphs: [
+          'Who supplies GOTS certified organic cotton fabric in India? Janki Nath & Co. weaves GOTS and OCS certified organic cotton fabric in plain, poplin, chambray, dobby, yarn-dyed and jacquard constructions, from small quantities to bulk, with transaction certificates per shipment on request.',
+          'How do I verify a GOTS certificate? Ask the supplier for its current GOTS scope certificate and, for each order, the transaction certificate, and check the certified company in the public GOTS database. Both documents should name the products and the certified processing units.',
+          'What is the difference between GOTS organic and the "made with organic" label? Under GOTS, a product can be labelled "organic" when at least 95 percent of its fibres are certified organic, and "made with organic" when at least 70 percent are. Tell us which label your product needs and we will advise on the construction.',
+        ],
+      },
+      {
+        heading: 'Organic Cotton vs BCI Cotton',
+        paragraphs: [
+          'Organic cotton is grown without synthetic pesticides and fertilisers and certified to an organic standard. BCI (Better Cotton Initiative) cotton is not organic: it comes from a farmer training and sustainability programme that reduces water and pesticide use. We supply both. See our guide on what BCI cotton means, and our comparison of GOTS, OCS, GRS and OEKO-TEX, to decide which claim your product needs.',
+        ],
+        links: [
+          { label: 'What is BCI cotton? Meaning and buyer guide', to: '/blog/what-is-bci-cotton-guide-textile-buyers' },
+          { label: 'GOTS vs OCS vs GRS vs OEKO-TEX: which certification do you need?', to: '/blog/gots-ocs-grs-oeko-tex-certification-comparison' },
         ],
       },
       {

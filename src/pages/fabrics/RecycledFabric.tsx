@@ -58,6 +58,14 @@ const RecycledFabric = () => (
         ],
       },
       {
+        heading: 'FAQ: Recycled Fabric and GRS',
+        paragraphs: [
+          'What is GRS certified fabric? The Global Recycled Standard (GRS) verifies the recycled content of a product and the chain of custody, and adds environmental and social requirements for the certified units. It lets a brand support a recycled-content claim with documents.',
+          'How is recycled content confirmed? Recycled content is confirmed per construction, and documents are available for certified orders. Ask us for the construction you need and we will confirm what can be certified.',
+        ],
+        links: [{ label: 'GOTS vs OCS vs GRS vs OEKO-TEX: which certification do you need?', to: '/blog/gots-ocs-grs-oeko-tex-certification-comparison' }],
+      },
+      {
         heading: 'Enquire',
         links: [{ label: 'Enquire about GRS certified recycled fabric: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },

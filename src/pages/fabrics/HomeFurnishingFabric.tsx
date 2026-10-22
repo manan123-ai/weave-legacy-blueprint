@@ -57,6 +57,14 @@ const HomeFurnishingFabric = () => (
         ],
       },
       {
+        heading: 'FAQ: Choosing Fabric for Home Furnishing',
+        paragraphs: [
+          'Which fabric is used for table linen and napkins? Woven cotton and linen in plain, dobby or yarn-dyed constructions are common, because they are absorbent, hold their shape and wash well.',
+          'Which fabric suits cushion covers? Medium to heavier woven fabric holds its shape and wears well: dobby, yarn-dyed checks and jacquard are popular. For sofas and chairs, see our upholstery fabric range.',
+        ],
+        links: [{ label: 'Upholstery fabric range', to: '/fabrics/upholstery' }],
+      },
+      {
         heading: 'Enquire',
         links: [{ label: 'Enquire about home furnishing fabrics: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },
