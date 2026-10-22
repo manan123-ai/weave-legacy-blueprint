@@ -42,6 +42,43 @@
       Organization/WebSite/FAQPage blocks on the same page.
     -->
 
+    <!-- Google Analytics 4 (G-QBWVZKKH4H) with consent mode: analytics storage is denied by default for visitors in European time zones until they accept -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBWVZKKH4H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      var jncTz = ''; try { jncTz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+      var jncEu = /^Europe\//.test(jncTz) || jncTz === 'Atlantic/Reykjavik';
+      var jncSaved = null; try { jncSaved = localStorage.getItem('jnc_consent'); } catch (e) {}
+      gtag('consent', 'default', {
+        ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+        analytics_storage: (jncEu && jncSaved !== 'granted') ? 'denied' : 'granted'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-QBWVZKKH4H');
+      // Count enquiry actions: WhatsApp, email and phone clicks
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest ? e.target.closest('a') : null;
+        if (!a || !a.href) return;
+        var href = a.href, method = '';
+        if (href.indexOf('wa.me') > -1 || href.indexOf('whatsapp.com') > -1) method = 'whatsapp';
+        else if (href.indexOf('mailto:') === 0) method = 'email';
+        else if (href.indexOf('tel:') === 0) method = 'phone';
+        if (method) gtag('event', 'generate_lead', { method: method, page_path: location.pathname });
+      }, true);
+      // Small consent notice, shown only to visitors in European time zones who have not chosen yet
+      window.addEventListener('DOMContentLoaded', function () {
+        if (!jncEu || jncSaved) return;
+        var bar = document.createElement('div');
+        bar.setAttribute('role', 'dialog'); bar.setAttribute('aria-label', 'Analytics cookies');
+        bar.style.cssText = 'position:fixed;left:12px;bottom:12px;max-width:360px;z-index:60;background:#f6f1e7;color:#2b2b2b;border:1px solid #cfc6b2;border-radius:8px;padding:12px 14px;font:13px/1.45 system-ui,sans-serif;box-shadow:0 2px 10px rgba(0,0,0,.15)';
+        bar.innerHTML = 'We use analytics cookies to see which pages help buyers. <span style="display:block;margin-top:8px"><button id="jncYes" style="background:#2b2b2b;color:#fff;border:0;border-radius:4px;padding:6px 12px;margin-right:6px;cursor:pointer">Accept</button><button id="jncNo" style="background:transparent;color:#2b2b2b;border:1px solid #2b2b2b;border-radius:4px;padding:6px 12px;cursor:pointer">Decline</button></span>';
+        document.body.appendChild(bar);
+        function done(v) { try { localStorage.setItem('jnc_consent', v); } catch (e) {} if (v === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' }); bar.remove(); }
+        document.getElementById('jncYes').onclick = function () { done('granted'); };
+        document.getElementById('jncNo').onclick = function () { done('denied'); };
+      });
+    </script>
   </head>
 
   <body>
