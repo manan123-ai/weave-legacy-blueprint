@@ -493,6 +493,41 @@ export const blogPosts: BlogPost[] = [
       "[Contact us](/contact): jcofabrics@yahoo.co.in",
     ],
   },
+  {
+    slug: 'gots-ocs-grs-oeko-tex-certification-comparison',
+    title: 'GOTS vs OCS vs GRS vs OEKO-TEX: Which Do You Need?',
+    metaDescription:
+      'GOTS, OCS, GRS, OEKO-TEX Standard 100 and BCI compared in one table: what each verifies, what claim it supports, and which certification your fabric order needs.',
+    excerpt:
+      'Five certifications that answer five different buyer questions. A plain comparison, and how to choose.',
+    date: '2026-10-22',
+    dateDisplay: 'October 22, 2026',
+    author: 'Manan Bhasin',
+    content: [
+      "Buyers often ask for a certified fabric without saying which certification. GOTS, OCS, GRS, OEKO-TEX Standard 100 and BCI each verify something different, so the right one depends on the claim you want to make. Janki Nath & Co. holds all five and supplies certified woven fabric from India with documents for certified orders.",
+      "## The Five Certifications Compared",
+      "TABLE:Standard|What it verifies|Covers processing and social criteria|Typical claim\nGOTS|Organic fibre content plus environmental and social criteria through processing|Yes|Organic (95%+ organic fibre) or made with organic (70%+)\nOCS|How much certified organic material is in the final product|No|Organic content claim, including blends\nGRS|Recycled content, chain of custody and social and environmental practices|Yes|Recycled content claim\nOEKO-TEX Standard 100|The finished textile is tested for harmful substances|No (product test)|Tested for harmful substances\nBCI|Cotton grown by farmers in the Better Cotton programme|No (farm level)|Better Cotton sourcing, not organic",
+      "## Which One Do You Need?",
+      "### You want to label a product as organic",
+      "Choose GOTS if you need organic fibre plus environmental and social criteria through processing, or OCS if you only need to prove the organic content. See our [organic cotton fabric](/fabrics/organic-cotton).",
+      "### You want to claim recycled content",
+      "Choose GRS. It verifies the recycled content and the chain of custody. See our [recycled fabric](/fabrics/recycled).",
+      "### You want to show the fabric is safe against skin",
+      "Choose OEKO-TEX Standard 100, which tests the finished textile for harmful substances. It does not make the fabric organic.",
+      "### You want responsible cotton sourcing without the organic claim",
+      "BCI supports Better Cotton sourcing at farm level. It is not organic. Read our guide: [What is BCI cotton?](/blog/what-is-bci-cotton-guide-textile-buyers).",
+      "## Documents to Ask For",
+      "For any certified order, ask the supplier for the current scope or licence certificate and, for each shipment, a transaction certificate that names the products. Check the certified company in the public database of the standard where one exists. We provide certification documents for certified orders. See our [certifications page](/certifications).",
+      "## Frequently Asked Questions",
+      "### Is OCS the same as GOTS?",
+      "No. OCS verifies the amount of organic material in the final product. GOTS covers organic fibre content as well as environmental and social criteria through processing.",
+      "### Can one fabric carry more than one certification?",
+      "Yes, where the yarn, processing and supply chain all meet each standard. Tell us which certifications your order needs and we will confirm what can be certified for the construction.",
+      "### Which certification do European buyers ask for most?",
+      "It depends on the brand and the claim. Organic claims usually point to GOTS or OCS, recycled claims to GRS, and safety to OEKO-TEX Standard 100. Ask your buyer which claim they need on the label.",
+      "[Contact us](/contact) or message us on [WhatsApp](https://wa.me/919891542727) with the certification and construction you need.",
+    ],
+  },
 ];
 
 export const getPostBySlug = (slug: string) =>
