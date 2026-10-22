@@ -27,6 +27,7 @@ const ROUTES = [
   '/blog/cotton-fabric-gsm-guide',
   '/blog/india-vs-china-fabric-sourcing',
   '/blog/dobby-vs-jacquard-fabric-difference',
+  '/blog/gots-ocs-grs-oeko-tex-certification-comparison',
 ];
 
 const DIST = path.resolve('dist');
