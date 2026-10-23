@@ -10,7 +10,7 @@ const SITE = 'https://jcofabrics.com';
 
 const fabrics = [
   { name: 'Cotton fabrics', path: '/fabrics/cotton', desc: 'Plain, twill, poplin, canvas — greige, RFD, dyed and printed. BCI & GOTS certified.' },
-  { name: 'Linen fabrics', path: '/fabrics/linen', desc: '100% linen and blends. GOTS and OCS certified. Fluid, breathable, export-grade.' },
+  { name: 'Linen fabrics', path: '/fabrics/linen', desc: '100% linen and blends. OEKO-TEX Standard 100 available. Fluid, breathable, export-grade.' },
   { name: 'Jacquard fabrics', path: '/fabrics/jacquard', desc: 'Damask, brocade, matelassé. Custom pattern development in cotton, viscose and linen.' },
   { name: 'Yarn dyed fabrics', path: '/fabrics/yarn-dyed', desc: 'Checks, stripes, plaids. Consistent colour across reorders. Cotton and blends.' },
   { name: 'Upholstery fabrics', path: '/fabrics/upholstery', desc: 'Home furnishing and contract-grade upholstery. OEKO-TEX certified.' },

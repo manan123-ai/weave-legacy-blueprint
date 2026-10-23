@@ -68,7 +68,7 @@ const Fabrics = () => {
       name: 'Linen',
       slug: 'linen',
       image: linenFabric,
-      description: '100% linen and linen blend fabric for export — GOTS certified. Cotton/linen, viscose/linen blends available. Mill-direct from India.',
+      description: '100% linen and linen blend fabric for export — OEKO-TEX Standard 100 available. Cotton/linen, viscose/linen blends available. Mill-direct from India.',
       specs: 'GSM: 120-300 | Width: 44"-60" | Types: Pure Linen, Linen Blends',
       useCases: 'Summer Clothing, Home Textiles, Luxury Garments',
     },
