@@ -5,9 +5,9 @@ const LinenFabric = () => (
     slug="linen"
     productName="Linen Fabric"
     title="Linen Fabric Manufacturer & Exporter from India"
-    metaTitle="Linen Fabric Manufacturer India — GOTS Certified | JNC Fabrics"
-    metaDescription="100% linen and linen blend fabric from India. Cotton/linen, viscose/linen blends. GOTS and OCS certified. Mill-direct export to fashion brands worldwide."
-    keywords="linen fabric manufacturer India, linen fabric exporter, GOTS linen fabric, cotton linen blend India"
+    metaTitle="Linen Fabric Manufacturer India | Pure Linen & Blends | JNC Fabrics"
+    metaDescription="100% linen and linen blend fabric from India. Cotton/linen, viscose/linen blends. OEKO-TEX Standard 100 available. Mill-direct export to fashion brands worldwide."
+    keywords="linen fabric manufacturer India, linen fabric exporter, cotton linen blend India"
     intro="Janki Nath & Co. manufactures 100% linen and linen blend fabrics — exported to fashion brands and garment manufacturers across Europe, USA, Japan and Australia."
     sections={[
       {
@@ -17,14 +17,14 @@ const LinenFabric = () => (
           'Cotton/linen is our most popular blend for fashion applications — the cotton component reduces linen\'s tendency to crease and improves drape while retaining its breathability and texture (ratios: 55/45, 60/40, 70/30, 80/20). Viscose/linen adds fluid drape and a slight lustre, popular for summer dresses and resort wear. Linen contains natural pectin that stiffens the fibre when new — every wash cycle breaks it down gradually, which is why linen softens and improves with age rather than degrading like synthetic alternatives.',
         ],
         bullets: [
-          { label: 'Compositions', value: '100% Linen · Cotton/Linen · Viscose/Linen · Linen/Silk · Organic Linen (GOTS)' },
+          { label: 'Compositions', value: '100% Linen · Cotton/Linen · Viscose/Linen · Linen/Silk' },
           { label: 'Finishes', value: 'Natural/Undyed · Bleached · Piece-dyed · Yarn-dyed · Washed/Enzyme · Printed · Garment-dyed' },
         ],
       },
       {
         heading: 'Certifications',
         paragraphs: [
-          'Our linen fabrics are available GOTS certified and OCS certified. OEKO-TEX Standard 100 and GRS certified. Full export documentation provided. Available in certified and conventional constructions. Certifications on request.',
+          'OEKO-TEX Standard 100 testing is available for our linen fabrics. We do not offer GOTS certified linen. If you need a certified claim for a linen or linen-blend product, ask us which certification suits the construction. Full export documentation provided.',
         ],
       },
       {
