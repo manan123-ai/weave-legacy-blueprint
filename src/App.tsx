@@ -24,6 +24,7 @@ const ProductionProcess = lazy(() => import("./pages/ProductionProcess"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Export = lazy(() => import("./pages/Export"));
+const ExportUK = lazy(() => import("./pages/ExportUK"));
 const Certifications = lazy(() => import("./pages/Certifications"));
 const Showroom = lazy(() => import("./pages/Showroom"));
 const Sampling = lazy(() => import("./pages/Sampling"));
@@ -113,6 +114,7 @@ const App = () => {
             <Route path="/clientele" element={<Clientele />} />
             <Route path="/production" element={<ProductionProcess />} />
             <Route path="/export" element={<Export />} />
+            <Route path="/export/uk" element={<ExportUK />} />
             <Route path="/certifications" element={<Certifications />} />
             <Route path="/showroom" element={<Showroom />} />
             <Route path="/sampling" element={<Sampling />} />
