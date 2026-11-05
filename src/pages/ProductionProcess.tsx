@@ -109,7 +109,7 @@ const ProductionProcess = () => {
     <div className="min-h-screen">
       <SEO
         title="Fabric Manufacturing & Production | JNC Fabrics India"
-        description="Mill-direct woven fabric export from India. Custom development to bulk production. BCI, GOTS, OCS, OEKO-TEX certified. FOB pricing. 15-30 day lead times."
+        description="Mill-direct woven fabric export from India. Custom development to bulk production. BCI, GOTS, OCS, OEKO-TEX certified. FOB pricing. 45-60 day lead times."
         path="/production"
       />
       <Breadcrumbs items={[{ name: 'Production' }]} />
@@ -174,7 +174,7 @@ const ProductionProcess = () => {
               <div className="border-l-2 border-primary pl-6">
                 <h3 className="font-serif text-lg font-semibold text-primary mb-3">Minimum Order</h3>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                  We work on both development quantities and bulk export orders. Custom construction development available from small sampling quantities.
+                  Bulk orders start at 1,500 m per quality. Custom construction development can start from 150 m through our sampling unit, depending on the quality. Some qualities need a higher quantity.
                 </p>
               </div>
             </Reveal>
@@ -182,7 +182,7 @@ const ProductionProcess = () => {
               <div className="border-l-2 border-primary pl-6">
                 <h3 className="font-serif text-lg font-semibold text-primary mb-3">Lead Times</h3>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                  15-30 days for standard constructions, 30-45 days for custom development. FOB New Delhi pricing available.
+                  About 45 days for greige and most qualities, and about 60 days for yarn-dyed and jacquard, ex Delhi. FOB New Delhi pricing available.
                 </p>
               </div>
             </Reveal>

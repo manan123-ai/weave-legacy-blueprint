@@ -98,7 +98,7 @@ const Index = () => {
                 name: 'What is the lead time for fabric orders from Janki Nath & Co.?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Standard lead times are 15–30 days for fabrics in our running range and 30–45 days for custom fabric development. Jacquard pattern development may require 45–60 days. FOB New Delhi from our head office in Mayapuri Industrial Area.',
+                  text: 'Lead time is about 45 days for greige and most qualities, and about 60 days for yarn-dyed and jacquard, ex Delhi, from our head office in Mayapuri Industrial Area.',
                 },
               },
               {
@@ -114,7 +114,7 @@ const Index = () => {
                 name: 'Do you accept small or development quantity orders?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes. We work on both development quantities (small lots for sampling and collection development) and bulk production from the same weaving facilities. There is no minimum commitment to bulk before sample approval.',
+                  text: 'Bulk orders start at 1,500 m per quality. For custom development we can start from 150 m through our sampling unit. The minimum depends on the quality, and some qualities need a higher quantity. Sample development comes first, and there is no commitment to bulk before sample approval.',
                 },
               },
               {

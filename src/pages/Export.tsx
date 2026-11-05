@@ -68,7 +68,9 @@ const Export = () => (
                 ['Pricing', 'FOB New Delhi · CIF available on request'],
                 ['Payment', 'TT (Telegraphic Transfer) · LC (Letter of Credit)'],
                 ['Shipping', 'Air freight and sea freight both available'],
-                ['Lead Time', '15–30 days standard · 30–45 days custom development'],
+                ['Lead Time', 'About 45 days (greige and most qualities) · about 60 days (yarn-dyed, jacquard) · ex Delhi'],
+                ['Minimum Order', '1,500 m bulk per quality · custom development from 150 m, depending on the quality'],
+                ['Widths', '48 in to 120 in, and wider to order'],
               ].map(([l, v]) => (
                 <div key={l} className="border-l-2 border-primary/40 pl-4">
                   <p className="font-body text-[10px] uppercase tracking-[0.3em] text-primary mb-1">{l}</p>

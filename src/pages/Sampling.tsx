@@ -93,7 +93,7 @@ const Sampling = () => (
           <Reveal>
             <h2 className="font-serif text-2xl font-bold text-primary mt-10 mb-4">Development Quantities</h2>
             <p className="font-body text-lg text-muted-foreground font-light leading-relaxed">
-              We welcome custom fabric development from small sampling quantities — no requirement to commit to bulk before sample approval.
+              Custom fabric development can start from 150 m through our sampling unit, depending on the quality, while bulk orders start at 1,500 m per quality. There is no requirement to commit to bulk before sample approval.
             </p>
           </Reveal>
 

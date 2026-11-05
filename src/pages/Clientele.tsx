@@ -20,8 +20,8 @@ const Clientele = () => {
     {
       icon: Clock,
       title: 'Lead Times',
-      value: '15-30 Days',
-      description: 'Quick turnaround times for both standard and custom orders',
+      value: '45-60 Days',
+      description: 'Ex Delhi: about 45 days for most qualities, about 60 days for yarn-dyed and jacquard',
     },
     {
       icon: Settings,
