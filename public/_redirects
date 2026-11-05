@@ -1,6 +1,8 @@
 # Legacy/renamed URL still indexed by Google (26 impressions in GSC) —
 # 301 to the current blog post instead of losing that ranking to a 404.
-/compare/india-vs-china-fabric    /blog/india-vs-china-fabric-sourcing   301
+/compare/india-vs-china-fabric    /blog/how-to-source-fabric-directly-indian-mill   301
+/blog/india-vs-china-fabric-sourcing    /blog/how-to-source-fabric-directly-indian-mill   301
+/blog/linen-fabric-sourcing-india-vs-europe-vs-china    /fabrics/linen   301
 
 /sourcing-guide    /fabric-sourcing-guide   301
 
