@@ -35,10 +35,6 @@ const FAQS: [string, string][] = [
     'Lead time is about 45 days for greige and most qualities, and about 60 days for yarn-dyed and jacquard, ex Delhi. Sampling comes first, and bulk starts after approval.',
   ],
   [
-    'Do UK buyers pay import duty on fabric from India?',
-    'The India-UK Comprehensive Economic and Trade Agreement was reported to come into force on 15 July 2026, with zero duty for Indian textiles and apparel entering the UK. Whether a shipment qualifies depends on its commodity code and the origin rules, so please check current UK Government guidance and confirm with your customs agent. We supply a certificate of origin and the other export documents with each shipment.',
-  ],
-  [
     'Which documents come with a shipment?',
     'Commercial invoice, packing list, certificate of origin, bill of lading, GST invoice and certification documentation as applicable (GOTS, OCS, GRS, BCI, OEKO-TEX). Pre-shipment inspection reports are available on request.',
   ],
@@ -56,7 +52,7 @@ const ExportUK = () => (
   <div className="min-h-screen">
     <SEO
       title="Woven Fabric Supplier India for UK Buyers | JNC Fabrics"
-      description="Woven fabric from India for UK buyers: jacquard, dobby, yarn-dyed and linen. Bulk from 1,500 m, development from 150 m. India-UK trade deal notes."
+      description="Woven fabric from India for UK buyers: jacquard, dobby, yarn-dyed and linen. Bulk from 1,500 m, development from 150 m, widths 48 to 120 in, with export documents."
       path="/export/uk"
       jsonLd={[
         {
@@ -89,7 +85,7 @@ const ExportUK = () => (
           />
           <Reveal delay={0.3}>
             <p className="font-body text-lg md:text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-              Janki Nath & Co. supplies woven fabric from New Delhi to fashion brands, home furnishing companies and fabric importers in the United Kingdom. Cotton, linen, viscose, jacquard, dobby and yarn-dyed constructions for garments and homes, with sampling first and bulk after approval.
+              Janki Nath & Co. supplies woven fabric from New Delhi to fashion brands, home furnishing companies and fabric importers in the United Kingdom, woven in our own weaving unit. Cotton, linen, viscose, jacquard, dobby and yarn-dyed constructions for garments and homes, with sampling first and bulk after approval.
             </p>
           </Reveal>
         </div>
@@ -107,17 +103,6 @@ const ExportUK = () => (
                 </div>
               ))}
             </div>
-          </Reveal>
-
-          <Reveal>
-            <h2 className="font-serif text-3xl font-bold text-primary mb-6">India-UK Trade Agreement</h2>
-            <p className="font-body text-lg text-muted-foreground font-light leading-relaxed mb-4">
-              The India-UK Comprehensive Economic and Trade Agreement (CETA) was reported to come into force on 15 July 2026. Trade press reports zero duty on Indian textiles and apparel entering the UK, where import duties applied before.
-            </p>
-            <p className="font-body text-lg text-muted-foreground font-light leading-relaxed mb-4">
-              Whether a particular shipment qualifies depends on its commodity code and the origin rules. Please check the current UK Government tariff and origin guidance, and confirm with your customs agent. We provide a certificate of origin and the export documents listed below with each shipment.
-            </p>
-            <p className="font-body text-sm text-muted-foreground">Last checked: 6 November 2026.</p>
           </Reveal>
 
           <Reveal>
