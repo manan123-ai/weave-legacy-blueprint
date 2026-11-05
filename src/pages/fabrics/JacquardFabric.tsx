@@ -59,7 +59,7 @@ const JacquardFabric = () => (
           'What are the types of jacquard? Common types are damask, brocade, matelasse and cutwork, plus floral, paisley and geometric designs. Which one suits you depends on whether the fabric is for garments, home furnishing or upholstery.',
           'Is jacquard fabric good? The woven pattern does not wash out or crack, so jacquard keeps its design well. It is usually heavier and takes more development than plain or dobby fabric. See how it compares in our dobby vs jacquard guide.',
         ],
-        links: [{ label: 'Dobby vs jacquard fabric: differences, uses and cost', to: '/blog/dobby-vs-jacquard-fabric-difference' }],
+        links: [{ label: 'Dobby vs jacquard fabric: differences, uses and cost', to: '/blog/dobby-vs-jacquard-fabric-difference' }, { label: 'What is dobby fabric? Meaning, uses and summer or winter', to: '/blog/dobby-fabric-uses-construction-sourcing-guide' }],
       },
       {
         heading: 'Enquire',

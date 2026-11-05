@@ -62,7 +62,7 @@ const HomeFurnishingFabric = () => (
           'Which fabric is used for table linen and napkins? Woven cotton and linen in plain, dobby or yarn-dyed constructions are common, because they are absorbent, hold their shape and wash well.',
           'Which fabric suits cushion covers? Medium to heavier woven fabric holds its shape and wears well: dobby, yarn-dyed checks and jacquard are popular. For sofas and chairs, see our upholstery fabric range.',
         ],
-        links: [{ label: 'Upholstery fabric range', to: '/fabrics/upholstery' }],
+        links: [{ label: 'Upholstery fabric range', to: '/fabrics/upholstery' }, { label: 'What is dobby fabric? Uses for table linen and cushions', to: '/blog/dobby-fabric-uses-construction-sourcing-guide' }],
       },
       {
         heading: 'Enquire',

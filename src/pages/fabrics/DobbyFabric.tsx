@@ -12,7 +12,7 @@ const DobbyFabric = () => (
     sections={[
       {
         heading: 'What is Dobby Fabric',
-        links: [{ label: 'Read our complete guide: What Is Dobby Fabric?', to: '/blog/dobby-fabric-uses-construction-sourcing-guide' }],
+        links: [{ label: 'Read our complete guide: What Is Dobby Fabric?', to: '/blog/dobby-fabric-uses-construction-sourcing-guide' }, { label: 'Dobby vs jacquard fabric: differences, uses and cost', to: '/blog/dobby-vs-jacquard-fabric-difference' }],
         paragraphs: [
           'The texture is structural, so it does not wash out. Dobby fabrics are widely used in premium shirting, dress fabrics and home textiles where surface interest is required without a bold print.',
           'Self-dobby uses the same yarn colour as the background, so the pattern is visible only through the weave structure — it reads as a solid colour from a distance and reveals its texture up close, which is why it is used in premium formal shirting. Colour dobby uses a contrasting yarn colour, making the pattern immediately visible as a two-colour or multi-colour design.',
