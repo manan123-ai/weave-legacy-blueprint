@@ -54,7 +54,7 @@ const UpholsteryFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'Small quantities for sampling and development through to bulk production for furniture programmes, with custom construction and colour development to your brief. Fabric is export-ready with full documentation, FOB New Delhi.',
+          'Bulk orders start at 1,500 m per quality, with custom construction and colour development from 150 m depending on the quality, for furniture programmes. Fabric is export-ready with full documentation, FOB New Delhi.',
         ],
       },
       {

@@ -30,7 +30,7 @@ const LinenFabric = () => (
       {
         heading: 'Why Source Linen from India',
         paragraphs: [
-          'Indian linen manufacturers offer competitive mill-direct pricing without European price premiums, strong certification infrastructure for sustainability-focused brands, and flexible development capability from small quantities to bulk.',
+          'Indian linen manufacturers offer competitive mill-direct pricing without European price premiums, strong certification infrastructure for sustainability-focused brands, and a development route from 150 m (depending on the quality) ahead of bulk orders from 1,500 m.',
         ],
       },
       {

@@ -6,7 +6,7 @@ const HomeFurnishingFabric = () => (
     productName="Home Furnishing Fabric"
     title="Home Furnishing Fabrics — Woven Textiles for Table, Bed & Living"
     metaTitle="Home Furnishing Fabric Manufacturer India | Table, Bed, Cushion"
-    metaDescription="Woven home furnishing fabrics from India for table linen, cushion covers and bed linen accessories. Cotton, linen and blends. Small quantities to bulk."
+    metaDescription="Woven home furnishing fabrics from India for table linen, cushion covers and bed linen accessories. Cotton, linen and blends. Development from 150 m, bulk from 1,500 m."
     keywords="home furnishing fabric manufacturer India, table linen fabric India, cushion cover fabric exporter, home textile fabric supplier"
     intro="JNC produces woven home furnishing fabrics across all our manufacturing units. These are lighter constructions than upholstery fabric, designed for table linen, bed linen accessories, cushion covers, napkins, placemats, runners and decorative panels."
     sections={[
@@ -53,7 +53,7 @@ const HomeFurnishingFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'Small quantities to bulk with no minimum order lock-in, and custom construction development to your brief. Fabric is export-ready with full documentation, FOB New Delhi.',
+          'Bulk orders start at 1,500 m per quality, with custom construction development to your brief from 150 m depending on the quality. Fabric is export-ready with full documentation, FOB New Delhi.',
         ],
       },
       {

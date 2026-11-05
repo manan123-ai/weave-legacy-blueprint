@@ -6,7 +6,7 @@ const OrganicCottonFabric = () => (
     productName="Organic Cotton Fabric"
     title="Organic Cotton Fabric — GOTS Certified Woven Fabric from India"
     metaTitle="GOTS Certified Organic Cotton Fabric Manufacturer India | JNC"
-    metaDescription="GOTS and OCS certified organic cotton woven fabric from India — plain, dobby, yarn-dyed and jacquard for garments and home. Small quantities to bulk."
+    metaDescription="GOTS and OCS certified organic cotton woven fabric from India — plain, dobby, yarn-dyed and jacquard for garments and home. Development from 150 m, bulk from 1,500 m."
     keywords="organic cotton fabric manufacturer India GOTS, GOTS certified fabric India, organic cotton woven fabric exporter"
     intro="Janki Nath & Co. is a GOTS and OCS certified organic cotton fabric manufacturer in India. We hold GOTS (Global Organic Textile Standard) certification, covering the full processing chain from organic fibre through to finished fabric. GOTS is widely regarded as the leading standard for organic textiles, covering not just the organic fibre content but also the processing, dyeing and finishing stages."
     sections={[
@@ -54,13 +54,13 @@ const OrganicCottonFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'Small quantities to bulk, with no minimum order lock-in. Custom construction development in organic cotton, and full certification documentation provided with each shipment. Standard lead times are 15–30 days for running qualities and 30–45 days for custom development.',
+          'Bulk orders start at 1,500 m per quality, with custom construction development in organic cotton from 150 m depending on the quality. Full certification documentation is provided with each shipment. Lead time is about 45 days, or about 60 days for yarn-dyed and jacquard, ex Delhi.',
         ],
       },
       {
         heading: 'FAQ: Organic Cotton Fabric Suppliers in India',
         paragraphs: [
-          'Who supplies GOTS certified organic cotton fabric in India? Janki Nath & Co. weaves GOTS and OCS certified organic cotton fabric in plain, poplin, chambray, dobby, yarn-dyed and jacquard constructions, from small quantities to bulk, with transaction certificates per shipment on request.',
+          'Who supplies GOTS certified organic cotton fabric in India? Janki Nath & Co. weaves GOTS and OCS certified organic cotton fabric in plain, poplin, chambray, dobby, yarn-dyed and jacquard constructions, in development and bulk quantities, with transaction certificates per shipment on request.',
           'How do I verify a GOTS certificate? Ask the supplier for its current GOTS scope certificate and, for each order, the transaction certificate, and check the certified company in the public GOTS database. Both documents should name the products and the certified processing units.',
           'What is the difference between GOTS organic and the "made with organic" label? Under GOTS, a product can be labelled "organic" when at least 95 percent of its fibres are certified organic, and "made with organic" when at least 70 percent are. Tell us which label your product needs and we will advise on the construction.',
         ],

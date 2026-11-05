@@ -73,7 +73,7 @@ const WovenFabricExporterIndia = () => (
           <Reveal>
             <h2 className="font-serif text-3xl font-bold text-primary mb-6">MOQ for Export Orders</h2>
             <p className="font-body text-lg text-muted-foreground font-light leading-relaxed mb-4">
-              Minimum order quantity depends on the construction, not a fixed figure across the board. Fabrics already in our running range carry a lower MOQ since no new setup is required; custom development — a new construction, blend or finish — carries MOQ from the development stage itself. We work on both development quantities and bulk production, and do not require a bulk commitment before sampling — sample development comes first, bulk approval after.
+              Our bulk minimum is 1,500 m per quality. For custom development we can start from 150 m through our sampling unit, so a quality can be approved before bulk. The minimum depends on the quality, and some qualities need a higher quantity. Sample development comes first and bulk approval after. Fabric widths run from 48 inches to 120 inches, and wider to order. Lead time is about 45 days for greige and most qualities and about 60 days for yarn-dyed and jacquard, ex Delhi.
             </p>
             <p className="font-body text-base text-muted-foreground font-light leading-relaxed">
               See our full{' '}
