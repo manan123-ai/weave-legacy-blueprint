@@ -9,7 +9,7 @@ const ROUTES = [
   '/fabrics/viscose', '/fabrics/dobby', '/fabrics/certified',
   '/fabrics/crepe', '/fabrics/twill', '/fabrics/indigo', '/fabrics/lurex',
   '/fabrics/ikat', '/fabrics/greige', '/fabrics/home-furnishing', '/fabrics/organic-cotton', '/fabrics/recycled', '/fabrics/lycra-blends', '/fabrics/woven-fabric-exporter-india', '/request-samples',
-  '/clientele', '/production', '/export', '/certifications', '/showroom',
+  '/clientele', '/production', '/export', '/export/uk', '/certifications', '/showroom',
   '/sampling', '/fabric-sourcing-guide', '/contact', '/blog',
   '/blog/woven-fabric-manufacturers-india-buyers-guide-2026',
   '/blog/gots-certified-fabric-india-brand-guide',
