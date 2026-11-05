@@ -14,7 +14,6 @@ const ROUTES = [
   '/blog/woven-fabric-manufacturers-india-buyers-guide-2026',
   '/blog/gots-certified-fabric-india-brand-guide',
   '/blog/jacquard-fabric-guide-fashion-buyers',
-  '/blog/linen-fabric-sourcing-india-vs-europe-vs-china',
   '/blog/what-is-bci-cotton-guide-textile-buyers',
   '/blog/upholstery-home-furnishing-fabric-sourcing-india',
   '/blog/yarn-dyed-vs-piece-dyed-fabric-guide',
@@ -25,7 +24,6 @@ const ROUTES = [
   '/blog/how-to-request-fabric-samples-india',
   '/blog/fabric-export-documentation-india',
   '/blog/cotton-fabric-gsm-guide',
-  '/blog/india-vs-china-fabric-sourcing',
   '/blog/dobby-vs-jacquard-fabric-difference',
   '/blog/gots-ocs-grs-oeko-tex-certification-comparison',
 ];
