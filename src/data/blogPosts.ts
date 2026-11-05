@@ -92,31 +92,6 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: 'linen-fabric-sourcing-india-vs-europe-vs-china',
-    title: 'Linen Manufacturers in India vs Europe vs China',
-    metaDescription:
-      'Comparing linen manufacturers in India, Europe and China on quality, price and certification — and why Indian linen now competes on all three.',
-    excerpt:
-      'Where to source linen, what each region does best, and why India is increasingly competitive on quality and certification.',
-    date: '2026-01-30',
-    dateDisplay: 'January 30, 2026',
-    author: 'Manan Bhasin',
-    content: [
-      "Linen is manufactured primarily in three regions, and each answers a different sourcing priority: Europe (Belgium, France, Lithuania) for premium long-staple linen backed by centuries of flax-growing and processing heritage; China for volume production at competitive pricing; and India for a middle ground — quality linen and linen blends with strong certification infrastructure and mill-direct pricing that avoids the European price premium.",
-      "## European Linen",
-      "European linen remains the benchmark for quality, particularly Belgian and French linen sourced from the Normandy/Flanders flax-growing belt, where the climate and soil are specifically suited to long-staple flax. It commands higher cost, longer lead times, and more limited volume capacity than the alternatives — a deliberate trade-off for brands building a luxury or heritage-linen positioning where the European provenance itself is part of the story being told to the end customer.",
-      "## Chinese Linen",
-      "China offers high-volume linen and linen-blend production at competitive pricing, which makes it a reasonable choice for brands prioritising cost and scale above all else. The trade-off: quality is more variable across suppliers than in the European or Indian markets, and certification infrastructure for organic and sustainability claims is generally weaker — worth factoring in if your brand needs to substantiate a GOTS, OCS or similar claim on the finished garment.",
-      "## Indian Linen",
-      "Indian linen and linen-blend production has become increasingly competitive on quality, particularly for blended constructions — cotton/linen and viscose/linen — where India's spinning and weaving infrastructure is well developed. The certification infrastructure (GOTS, OCS, BCI) is strong and well established across Indian mills, which matters for brands with sustainability documentation requirements. Pricing is mill-direct without the European heritage premium, positioning India as the practical middle ground between European quality-at-a-price and Chinese volume-at-a-price.",
-      "## Sourcing Linen from India",
-      "At Janki Nath & Co., we manufacture 100% [linen and linen blends](/fabrics) — cotton/linen and viscose/linen — from our weaving units in India, with OEKO-TEX Standard 100 available and custom development from 150 m (depending on the quality) ahead of bulk orders from 1,500 m.",
-      "Related reading: [Linen fabric range](/fabrics/linen) | [Our certifications](/certifications) | [India vs. China fabric sourcing](/blog/india-vs-china-fabric-sourcing)",
-      "Comparing linen suppliers for your next season? Reach out directly — jcofabrics@yahoo.co.in | [WhatsApp: +91 9891542727](https://wa.me/919891542727)",
-      "[Contact us](/contact): jcofabrics@yahoo.co.in",
-    ],
-  },
-  {
     slug: 'what-is-bci-cotton-guide-textile-buyers',
     title: 'What Is BCI Cotton? Meaning, Full Form & Buyer Guide',
     metaDescription:
@@ -425,36 +400,6 @@ export const blogPosts: BlogPost[] = [
       "Related reading: [Cotton fabric range](/fabrics/cotton) | [Sampling process](/sampling) | [How to request fabric samples](/blog/how-to-request-fabric-samples-india) | [What is dobby fabric? Meaning, uses and GSM](/blog/dobby-fabric-uses-construction-sourcing-guide)",
       "Need help specifying the right GSM for your fabric? Reach out directly — jcofabrics@yahoo.co.in | [WhatsApp: +91 9891542727](https://wa.me/919891542727)",
       "[Contact us](/contact) with your weight requirement and end use for recommendations: jcofabrics@yahoo.co.in",
-    ],
-  },
-  {
-    slug: 'india-vs-china-fabric-sourcing',
-    title: 'India vs China Fabric Sourcing: Which Is Better?',
-    metaDescription:
-      'Honest comparison of India vs China for woven fabric sourcing — quality, pricing, certifications, lead times, MOQ and sustainability credentials compared.',
-    excerpt:
-      'Both are legitimate sourcing options. Here is where each country actually leads — and where the other wins.',
-    date: '2026-04-11',
-    dateDisplay: 'April 11, 2026',
-    author: 'Manan Bhasin',
-    content: [
-      "India and China are the two largest woven fabric producing countries in the world. Both are legitimate sourcing options, and neither is categorically \"better\" — the right choice depends on your specific requirements, not on a general reputation either country has.",
-      "## Pricing",
-      "China generally offers lower prices on commodity fabrics, driven by scale and infrastructure investment built up over decades. India is more competitive on specialty constructions, certified fabrics, and fabrics where hand skills matter — handloom and other traditional weaving techniques in particular. For GOTS and organic-certified fabrics specifically, Indian pricing is often more competitive than Chinese equivalents, partly because the certification infrastructure is already well embedded in the Indian mill ecosystem rather than being a newer add-on.",
-      "## Certifications",
-      "India has a stronger, more established infrastructure for international textile certifications — GOTS, OCS, BCI and OEKO-TEX are all well established across Indian mills, with local auditors and a mature documentation process. For brands with certification requirements, India is generally easier to work with on documentation and ongoing compliance, simply because more mills have already been through the certification process and know what buyers will ask for.",
-      "## Quality",
-      "Both countries produce across a wide quality range, from commodity-grade to genuinely premium. Quality is determined by the specific mill, not the country as a whole — evaluate individual suppliers on their own merits rather than assuming country of origin settles the question either way.",
-      "## Lead Times and MOQ",
-      "Lead times are broadly similar for standard constructions in both countries — typically 45-60 days for bulk production (our own lead time is about 45 days for most qualities and about 60 days for yarn-dyed and jacquard, ex Delhi), with comparable custom-development timelines. Minimum order quantities are similarly comparable across both countries for comparable quality levels; MOQ tends to be driven more by construction complexity (see our [MOQ guide](/blog/minimum-order-quantity-fabric-india)) than by which country the mill is in.",
-      "## Sustainability Positioning",
-      "India currently has stronger brand perception for sustainable and ethical sourcing, particularly in European markets. \"Made in India\" positioning carries more positive connotations for sustainability-focused brands than \"Made in China\" currently does, which is worth factoring in if sourcing story matters to your end customer, independent of the underlying manufacturing quality.",
-      "## When Each Country Makes Sense",
-      "India tends to make more sense for certified fabric (GOTS, OCS, BCI), specialty constructions (handloom, [jacquard](/fabrics/jacquard), other traditional techniques), sustainability-led brand positioning, and European market positioning. China may be more appropriate for very high-volume commodity fabrics where price is the primary driver and certifications aren't a requirement.",
-      "At Janki Nath & Co., we have been manufacturing and exporting woven fabrics from India since 1968, mill-direct across our own weaving units.",
-      "Related reading: [Our certifications](/certifications) | [Export from India](/export) | [Linen sourcing: India vs. Europe vs. China](/blog/linen-fabric-sourcing-india-vs-europe-vs-china)",
-      "Weighing up India as a sourcing base? Reach out directly — jcofabrics@yahoo.co.in | [WhatsApp: +91 9891542727](https://wa.me/919891542727)",
-      "[Contact us](/contact) to discuss your specific sourcing requirement: jcofabrics@yahoo.co.in | WhatsApp: +91 9891542727",
     ],
   },
   {
