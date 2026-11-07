@@ -50,7 +50,7 @@ const WhyJankiNath = () => {
 
   const highlights = [
     { big: '200+', title: 'Fabric Constructions', detail: '' },
-    { big: '', title: 'Sampling to Bulk', detail: 'Development from 150 m, bulk from 1,500 m' },
+    { big: '', title: 'Sampling to Bulk', detail: 'Small quantities to bulk · sampling from 150 m' },
     { big: '', title: 'Custom Development', detail: 'from Yarn to Finished Fabric' },
     { big: '', title: 'FOB New Delhi', detail: 'Direct Export' },
   ];
