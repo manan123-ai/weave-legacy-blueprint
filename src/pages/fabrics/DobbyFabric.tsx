@@ -41,7 +41,7 @@ const DobbyFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'Sampling from existing constructions or custom dobby development. Bulk orders start at 1,500 m per quality, with development from 150 m through our sampling unit, depending on the quality. BCI cotton is standard across the range, and GOTS organic is available. Lead time is about 45 days, or about 60 days for yarn-dyed dobby, ex Delhi.',
+          'Sampling from existing constructions or custom dobby development. From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and development from 150 m through our sampling unit, depending on the quality. BCI cotton is standard across the range, and GOTS organic is available. Lead time is about 45 days, or about 60 days for yarn-dyed dobby, ex Delhi.',
           'Because dobby is built on the loom rather than printed afterwards, a construction can be repeated across seasons with consistent results, and new colourways can be added to an established pattern without re-developing the weave. Tell us the end use, handle and weight you need, and we will propose the right construction from our range or develop one to your brief.',
         ],
       },

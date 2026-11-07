@@ -42,7 +42,7 @@ const JacquardFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'Custom jacquard design development from repeat artwork through to sample, with repeat size, colour count and construction complexity discussed at enquiry stage. Bulk orders start at 1,500 m per quality, with custom development from 150 m depending on the quality, and lead time is about 60 days, ex Delhi. Lurex and metallic yarn weaving is available, and our existing design library can be browsed on WhatsApp.',
+          'Custom jacquard design development from repeat artwork through to sample, with repeat size, colour count and construction complexity discussed at enquiry stage. From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom development from 150 m depending on the quality, and lead time is about 60 days, ex Delhi. Lurex and metallic yarn weaving is available, and our existing design library can be browsed on WhatsApp.',
           'Because the design is woven rather than applied, a jacquard construction holds its pattern through repeated washing and wear, which matters as much on a hotel curtain as on an evening dress.',
         ],
       },

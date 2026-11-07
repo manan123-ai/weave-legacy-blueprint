@@ -38,7 +38,7 @@ const IkatFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'Custom colourway development is available on existing IKAT designs. Bulk orders start at 1,500 m per quality, with development from 150 m depending on the quality. BCI cotton is used across IKAT constructions. Strike-off samples are available, and development quantities and bulk production are handled from the same facilities.',
+          'Custom colourway development is available on existing IKAT designs. From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and development from 150 m depending on the quality. BCI cotton is used across IKAT constructions. Strike-off samples are available, and development quantities and bulk production are handled from the same facilities.',
         ],
       },
       {

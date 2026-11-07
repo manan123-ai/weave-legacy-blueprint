@@ -6,7 +6,7 @@ const RecycledFabric = () => (
     productName="Recycled Fabric"
     title="Recycled Fabric — GRS Certified Recycled Cotton & Recycled Polyester Blends"
     metaTitle="GRS Certified Recycled Fabric Manufacturer & Exporter India | JNC"
-    metaDescription="GRS certified recycled cotton and recycled polyester blend woven fabric from India for garments and home furnishing. Development from 150 m, bulk from 1,500 m."
+    metaDescription="GRS certified recycled cotton and recycled polyester blend woven fabric from India for garments and home furnishing. Small quantities to bulk."
     keywords="recycled fabric manufacturer India GRS certified, recycled cotton fabric India, recycled polyester blend fabric exporter"
     intro="JNC holds GRS (Global Recycled Standard) certification, which verifies the recycled content in our fabric and confirms responsible social, environmental and chemical practices in our supply chain. GRS is a widely recognised standard for recycled content claims in textiles, and is requested by many sustainability-focused brands and retailers."
     sections={[
@@ -54,7 +54,7 @@ const RecycledFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'Bulk orders start at 1,500 m per quality, with custom development from 150 m depending on the quality. Full GRS documentation and transaction certificates are provided. Lead time is about 45 days, ex Delhi.',
+          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom development from 150 m depending on the quality. Full GRS documentation and transaction certificates are provided. Lead time is about 45 days, ex Delhi.',
         ],
       },
       {

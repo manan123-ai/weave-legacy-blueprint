@@ -54,7 +54,7 @@ const YarnDyedFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'Bulk orders start at 1,500 m per quality, with custom development from 150 m depending on the quality, and lead time is about 60 days, ex Delhi. We develop custom check and stripe repeats from yarn selection through to finished fabric, and sampling and lab dip matching are available. BCI cotton is used across most constructions, and GOTS-certified organic yarn is available on request.',
+          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom development from 150 m depending on the quality, and lead time is about 60 days, ex Delhi. We develop custom check and stripe repeats from yarn selection through to finished fabric, and sampling and lab dip matching are available. BCI cotton is used across most constructions, and GOTS-certified organic yarn is available on request.',
         ],
       },
       {

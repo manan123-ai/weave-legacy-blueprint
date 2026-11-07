@@ -5,8 +5,8 @@ const LinenFabric = () => (
     slug="linen"
     productName="Linen Fabric"
     title="Linen Fabric Manufacturer & Exporter from India"
-    metaTitle="Linen Fabric Manufacturer India | Pure Linen & Blends | JNC Fabrics"
-    metaDescription="100% linen and linen blend fabric from India. Cotton/linen, viscose/linen blends. OEKO-TEX Standard 100 available. Mill-direct export to fashion brands worldwide."
+    metaTitle="Linen Fabric Manufacturer & Exporter India | JNC Fabrics"
+    metaDescription="Pure linen and linen blend fabrics from India: cotton/linen and viscose/linen, OEKO-TEX testing available. Custom development, small quantities to bulk."
     keywords="linen fabric manufacturer India, linen fabric exporter, cotton linen blend India"
     intro="Janki Nath & Co. manufactures 100% linen and linen blend fabrics — exported to fashion brands and garment manufacturers across Europe, USA, Japan and Australia."
     sections={[
@@ -30,7 +30,7 @@ const LinenFabric = () => (
       {
         heading: 'Why Source Linen from India',
         paragraphs: [
-          'Indian linen manufacturers offer competitive mill-direct pricing without European price premiums, strong certification infrastructure for sustainability-focused brands, and a development route from 150 m (depending on the quality) ahead of bulk orders from 1,500 m.',
+          'Indian linen manufacturers offer competitive mill-direct pricing without European price premiums, strong certification infrastructure for sustainability-focused brands, and a route from small quantities to bulk, with development from 150 m (depending on the quality) and bulk orders from 1,500 m.',
         ],
       },
       {

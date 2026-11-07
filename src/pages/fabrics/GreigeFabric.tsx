@@ -6,7 +6,7 @@ const GreigeFabric = () => (
     productName="Greige Fabric"
     title="Greige Fabric — Unfinished Woven Fabric for Dyeing, Printing & Processing"
     metaTitle="Greige Fabric Supplier & Exporter from India | JNC Fabrics"
-    metaDescription="Greige woven fabric from India for dyeing, printing and processing — cotton, cotton-linen and cotton-viscose blends. Development from 150 m, bulk from 1,500 m."
+    metaDescription="Greige woven fabric from India for dyeing, printing and processing — cotton, cotton-linen and cotton-viscose blends. Small quantities to bulk."
     keywords="greige fabric supplier India, greige fabric exporter, grey fabric manufacturer India, unfinished woven fabric"
     intro={'Greige (pronounced "gray") is fabric as it comes off the loom — undyed, unfinished and ready for processing. Buyers who have their own dyeing, printing or finishing facilities prefer to source greige fabric and control the finishing themselves.'}
     sections={[
@@ -51,7 +51,7 @@ const GreigeFabric = () => (
       {
         heading: 'Minimum Order & Lead Time',
         paragraphs: [
-          'Greige bulk orders start at 1,500 m per quality, with custom development from 150 m depending on the quality. Lead time is about 45 days, ex Delhi. A development quantity lets you test a construction through your own process before committing to a seasonal run.',
+          'Greige is available from small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom development from 150 m depending on the quality. Lead time is about 45 days, ex Delhi. A development quantity lets you test a construction through your own process before committing to a seasonal run.',
         ],
       },
       {

@@ -6,7 +6,7 @@ const OrganicCottonFabric = () => (
     productName="Organic Cotton Fabric"
     title="Organic Cotton Fabric — GOTS Certified Woven Fabric from India"
     metaTitle="GOTS Certified Organic Cotton Fabric Manufacturer India | JNC"
-    metaDescription="GOTS and OCS certified organic cotton woven fabric from India — plain, dobby, yarn-dyed and jacquard for garments and home. Development from 150 m, bulk from 1,500 m."
+    metaDescription="GOTS and OCS certified organic cotton woven fabric from India — plain, dobby, yarn-dyed and jacquard for garments and home. Small quantities to bulk."
     keywords="organic cotton fabric manufacturer India GOTS, GOTS certified fabric India, organic cotton woven fabric exporter"
     intro="Janki Nath & Co. is a GOTS and OCS certified organic cotton fabric manufacturer in India. We hold GOTS (Global Organic Textile Standard) certification, covering the full processing chain from organic fibre through to finished fabric. GOTS is widely regarded as the leading standard for organic textiles, covering not just the organic fibre content but also the processing, dyeing and finishing stages."
     sections={[
@@ -54,7 +54,7 @@ const OrganicCottonFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'Bulk orders start at 1,500 m per quality, with custom construction development in organic cotton from 150 m depending on the quality. Full certification documentation is provided with each shipment. Lead time is about 45 days, or about 60 days for yarn-dyed and jacquard, ex Delhi.',
+          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom construction development in organic cotton from 150 m depending on the quality. Full certification documentation is provided with each shipment. Lead time is about 45 days, or about 60 days for yarn-dyed and jacquard, ex Delhi.',
         ],
       },
       {
