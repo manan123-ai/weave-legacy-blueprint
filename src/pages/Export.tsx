@@ -69,7 +69,7 @@ const Export = () => (
                 ['Payment', 'TT (Telegraphic Transfer) · LC (Letter of Credit)'],
                 ['Shipping', 'Air freight and sea freight both available'],
                 ['Lead Time', 'About 45 days (greige and most qualities) · about 60 days (yarn-dyed, jacquard) · ex Delhi'],
-                ['Minimum Order', '1,500 m bulk per quality · custom development from 150 m, depending on the quality'],
+                ['Minimum Order', 'Small quantities to bulk · sampling and custom development from 150 m, bulk from 1,500 m per quality (depends on the quality)'],
                 ['Widths', '48 in to 120 in, and wider to order'],
               ].map(([l, v]) => (
                 <div key={l} className="border-l-2 border-primary/40 pl-4">

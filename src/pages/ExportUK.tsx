@@ -28,7 +28,7 @@ const RANGE: [string, string, string][] = [
 const FAQS: [string, string][] = [
   [
     'What is the minimum order for UK buyers?',
-    'Bulk orders start at 1,500 m per quality. For custom development we can start from 150 m through our sampling unit. The minimum depends on the quality, and some qualities need a higher quantity.',
+    'We work from small quantities to bulk. Bulk orders start at 1,500 m per quality. For sampling and custom development we can start from 150 m through our sampling unit. The minimum depends on the quality, and some qualities need a higher quantity.',
   ],
   [
     'How long does an order take?',
@@ -52,7 +52,7 @@ const ExportUK = () => (
   <div className="min-h-screen">
     <SEO
       title="Woven Fabric Supplier India for UK Buyers | JNC Fabrics"
-      description="Woven fabric from India for UK buyers: jacquard, dobby, yarn-dyed and linen. Bulk from 1,500 m, development from 150 m, widths 48 to 120 in, with export documents."
+      description="Woven fabric from India for UK buyers: jacquard, dobby, yarn-dyed and linen. Small quantities to bulk, widths 48 to 120 in, with export documents."
       path="/export/uk"
       jsonLd={[
         {

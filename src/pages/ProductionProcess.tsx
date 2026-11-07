@@ -174,7 +174,7 @@ const ProductionProcess = () => {
               <div className="border-l-2 border-primary pl-6">
                 <h3 className="font-serif text-lg font-semibold text-primary mb-3">Minimum Order</h3>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                  Bulk orders start at 1,500 m per quality. Custom construction development can start from 150 m through our sampling unit, depending on the quality. Some qualities need a higher quantity.
+                  We work from small quantities to bulk. Bulk orders start at 1,500 m per quality. Sampling and custom construction development can start from 150 m through our sampling unit, depending on the quality. Some qualities need a higher quantity.
                 </p>
               </div>
             </Reveal>

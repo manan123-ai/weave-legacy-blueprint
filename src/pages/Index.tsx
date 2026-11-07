@@ -14,8 +14,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Janki Nath & Co. | Woven Fabric Manufacturer India Since 1968"
-        description="Janki Nath & Co. (JNC Fabrics / JNC Textiles) — fourth-generation woven fabric manufacturer and exporter from Mayapuri, New Delhi since 1968. Cotton, linen, jacquard, viscose, dobby, twill, yarn-dyed, upholstery and crepe fabrics. BCI, GOTS, OCS, OEKO-TEX Standard 100 and GRS certified. Mill-direct export to 20+ countries."
+        title="Woven Fabric Manufacturer & Exporter India | JNC Fabrics"
+        description="Woven fabric manufacturer and exporter in New Delhi since 1968. Jacquard, dobby, yarn-dyed, linen and more. Custom development, small quantities to bulk."
         path="/"
         keywords="woven fabric manufacturer India, fabric exporter India, cotton fabric manufacturer India export, linen fabric manufacturer India, jacquard fabric manufacturer India, GOTS certified fabric India, BCI cotton fabric India, woven fabric supplier India, fabric manufacturer New Delhi, fabric manufacturer Mayapuri, mill direct fabric India, Janki Nath Co, JNC Fabrics, JCO Fabrics, textile manufacturer India 1968, dobby fabric India, yarn dyed fabric India, upholstery fabric India, viscose fabric India, twill fabric India, crepe fabric India, fabric export New Delhi, woven fabric exporter India"
         jsonLd={[
@@ -114,7 +114,7 @@ const Index = () => {
                 name: 'Do you accept small or development quantity orders?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Bulk orders start at 1,500 m per quality. For custom development we can start from 150 m through our sampling unit. The minimum depends on the quality, and some qualities need a higher quantity. Sample development comes first, and there is no commitment to bulk before sample approval.',
+                  text: 'We work from small quantities to bulk. Bulk orders start at 1,500 m per quality. For sampling and custom development we can start from 150 m through our sampling unit. The minimum depends on the quality, and some qualities need a higher quantity. Sample development comes first, and there is no commitment to bulk before sample approval.',
                 },
               },
               {

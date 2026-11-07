@@ -131,7 +131,7 @@ const About = () => {
                 From first enquiry to finished roll
               </h2>
               <p className="font-body text-lg text-muted-foreground leading-relaxed font-light">
-                You tell us the end use, handle, weight, colour and certification you need. We propose constructions from our range or develop a new one, and strike-off samples are prepared for your approval. Production then follows once the sample is approved, with bulk orders from 1,500 m per quality. Lead time is about 45 days for most qualities and about 60 days for yarn-dyed and jacquard, ex Delhi.
+                You tell us the end use, handle, weight, colour and certification you need. We propose constructions from our range or develop a new one, and strike-off samples are prepared for your approval. Production then follows once the sample is approved, from small quantities to bulk, with bulk orders from 1,500 m per quality. Lead time is about 45 days for most qualities and about 60 days for yarn-dyed and jacquard, ex Delhi.
               </p>
             </Reveal>
           </div>
