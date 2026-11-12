@@ -21,6 +21,7 @@ const CottonFabric = () => (
           { label: 'Finishes', value: 'Greige · RFD · Bleached · Piece-dyed · Yarn-dyed · Printed · Discharge · Mercerised · Sanforised · Enzyme washed' },
           { label: 'Constructions', value: 'Plain weave · Twill · Poplin · Canvas/Duck · Sateen · Oxford · Dobby · Voile/Lawn · Muslin' },
         ],
+        links: [{ label: 'Greige cotton for your own dyeing, printing and processing', to: '/fabrics/greige' }],
       },
       {
         heading: 'Certifications',

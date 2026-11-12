@@ -50,6 +50,7 @@ const OrganicCottonFabric = () => (
         paragraphs: [
           'GOTS certified (processing chain). OCS certified (organic content). Transaction certificates are available per shipment on request. Both certifications are independently audited annually.',
         ],
+        links: [{ label: 'See all our certified fabrics', to: '/fabrics/certified' }],
       },
       {
         heading: 'What We Offer',
