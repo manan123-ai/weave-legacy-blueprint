@@ -106,18 +106,17 @@ const FabricCategoryPage = ({
   const jsonLd = [
     {
       '@context': 'https://schema.org',
-      '@type': 'Product',
+      '@type': 'Service',
       name: `${productName} — Janki Nath & Co.`,
       description: metaDescription,
-      manufacturer: { '@id': 'https://jcofabrics.com/#organization' },
-      countryOfOrigin: 'India',
-      brand: { '@type': 'Brand', name: 'JNC Fabrics' },
+      serviceType: `${productName} manufacturing and export`,
+      provider: { '@id': 'https://jcofabrics.com/#organization' },
+      areaServed: 'Worldwide',
       image: 'https://jcofabrics.com/og-image.jpg',
-      // No `offers` block: these are B2B quote-only SKUs with no fixed
-      // online price, and Google flags an Offer without a resolvable
-      // price/aggregateRating/review as a critical structured-data issue.
-      // Omitting offers keeps the Product schema valid without fabricating
-      // a price or fake reviews.
+      // Service, not Product: these are B2B quote-only fabrics with no fixed
+      // price, and Google requires offers, review or aggregateRating on
+      // Product markup (Search Console flagged 14 items as critical, Nov 2026).
+      // Reviews belong to the company, so they are not attached here.
     },
     // BreadcrumbList is emitted once by the shared <Breadcrumbs> component
     // below — do not duplicate it here (script tags aren't deduped by
