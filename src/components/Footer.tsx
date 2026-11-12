@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Mail, Phone, MapPin, Instagram, Linkedin } from 'lucide-react';
 
 const ThreadsIcon = ({ className }: { className?: string }) => (
@@ -25,6 +25,10 @@ const fabricFooterLinks = [
 ];
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  // On the linen page only, leave out GOTS and OCS so the strip cannot be read as
+  // applying to linen (linen is OEKO-TEX Standard 100 only). Other pages unchanged.
+  const isLinenPage = pathname === '/fabrics/linen' || pathname === '/fabrics/linen/';
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* Contact CTA: shown on every page */}
@@ -236,7 +240,9 @@ const Footer = () => {
               { label: 'OEKO-TEX Standard 100', dot: 'bg-blue-400' },
               { label: 'GRS Certified', dot: 'bg-green-400' },
               { label: 'MSME Registered', dot: 'bg-green-400' },
-            ].map((badge, i) => (
+            ]
+              .filter((badge) => !(isLinenPage && (badge.label === 'GOTS Certified' || badge.label === 'OCS Certified')))
+              .map((badge, i) => (
               <span
                 key={badge.label}
                 className="badge-scale-in font-body text-xs text-primary-foreground/60 bg-primary-foreground/10 px-3 py-1 rounded flex items-center gap-1"
