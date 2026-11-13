@@ -1,4 +1,7 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import upholsterySamplesImg from '@/assets/upholstery-fabric-samples.jpg';
+import upholsteryJacquardImg from '@/assets/upholstery-home-furnishing-new.jpg';
+import upholsteryStackImg from '@/assets/upholstery-updated.jpg';
 
 const UpholsteryFabric = () => (
   <FabricCategoryPage
@@ -9,6 +12,17 @@ const UpholsteryFabric = () => (
     metaDescription="Upholstery fabric export from India: sofa, curtain and drapery fabrics direct from the mill. OEKO-TEX and GRS certified, exported to the USA, UK and Europe."
     keywords="upholstery fabric manufacturer India, home furnishing fabric India, sofa fabric manufacturer"
     intro="JNC produces woven upholstery fabrics engineered for the mechanical stress of upholstered furniture — sofas, chairs, ottomans, headboards and banquettes."
+    quickFacts={[
+      'Bulk orders start at 1,500 m per quality',
+      'Sampling and custom development from 150 m, depending on the quality',
+      'Widths 48 to 120 inches, wider on order, ex Delhi',
+      'Lead time confirmed per quality and quantity at the time of enquiry',
+    ]}
+    images={[
+      { src: upholsterySamplesImg, alt: 'Woven upholstery fabric swatches in grey, brown and cream, from Janki Nath & Co., India' },
+      { src: upholsteryJacquardImg, alt: 'Woven jacquard upholstery fabric in gold and grey, from Janki Nath & Co., India' },
+      { src: upholsteryStackImg, alt: 'Folded woven upholstery fabrics in cream and tan, from Janki Nath & Co., India' },
+    ]}
     sections={[
       {
         heading: 'Upholstery Fabric Export from India: Janki Nath & Co.',
@@ -42,7 +56,7 @@ const UpholsteryFabric = () => (
       {
         heading: 'Performance Standards',
         paragraphs: [
-          'Our upholstery fabrics are produced to export quality standards, suitable for residential and contract applications. Fabric testing is available on request, including Martindale abrasion (residential minimum 10,000–15,000 rubs, contract and hospitality 25,000–30,000+ rubs), colourfastness to light and rubbing, pilling resistance and dimensional stability, tested to relevant BS EN ISO standards.',
+          'Our upholstery fabrics are produced to export quality standards, suitable for residential and contract applications. Fabric testing is available on request, including Martindale abrasion, colourfastness to light and rubbing, pilling resistance and dimensional stability, tested to relevant BS EN ISO standards. Contract and hospitality use calls for a higher abrasion rating than residential use.',
         ],
       },
       {
@@ -52,15 +66,30 @@ const UpholsteryFabric = () => (
         ],
       },
       {
+        heading: 'Upholstery or Home Furnishing Fabric?',
+        paragraphs: [
+          'Upholstery fabric is for seating and headboards and is heavier and more tightly woven. For table linen, cushion covers and bed linen accessories, see home furnishing fabric.',
+        ],
+        links: [{ label: 'Home furnishing fabric', to: '/fabrics/home-furnishing' }, { label: 'Jacquard fabric', to: '/fabrics/jacquard' }, { label: 'Dobby fabric', to: '/fabrics/dobby' }, { label: 'Yarn-dyed fabric', to: '/fabrics/yarn-dyed' }, { label: 'Upholstery and home furnishing fabric: sourcing from India', to: '/blog/upholstery-home-furnishing-fabric-sourcing-india' }],
+      },
+      {
         heading: 'What We Offer',
         paragraphs: [
-          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom construction and colour development from 150 m depending on the quality, for furniture programmes. Fabric is export-ready with full documentation, FOB New Delhi.',
+          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom construction and colour development from 150 m depending on the quality, for furniture programmes. Fabric is export-ready with full documentation.',
         ],
       },
       {
         heading: 'Enquire',
         links: [{ label: 'Enquire about upholstery fabric: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },
+    ]}
+    faq={[
+      { q: 'What is the minimum order for upholstery fabric?', a: 'Bulk orders start at 1,500 m per quality. Sampling and custom development start from 150 m. Both depend on the quality.' },
+      { q: 'How long does it take?', a: 'It depends on the quality, construction and quantity. Send us your requirement and we confirm on enquiry.' },
+      { q: 'Which construction suits which piece?', a: 'Plain weave suits tailored and contemporary pieces, dobby helps disguise everyday wear, jacquard brocade suits statement chairs and headboards, and yarn-dyed checks suit casual interiors.' },
+      { q: 'Do you supply contract and hospitality fabric?', a: 'Yes. Tell us the piece and the traffic it will see, and we recommend a construction and weight.' },
+      { q: 'Can you develop our own colours or constructions?', a: 'Yes. Custom construction and colour development from 150 m, depending on the quality.' },
+      { q: 'Which certifications are available?', a: 'OEKO-TEX Standard 100 is available on request, depending on the quality. BCI cotton available. GRS recycled content is available on request.' },
     ]}
   />
 );

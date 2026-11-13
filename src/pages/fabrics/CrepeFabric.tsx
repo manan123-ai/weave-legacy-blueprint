@@ -23,6 +23,7 @@ const CrepeFabric = () => (
           { label: 'Supply', value: 'Development quantities and bulk' },
           { label: 'Export', value: 'Mill-direct, with export documentation' },
         ],
+        links: [{ label: 'For woven viscose in plain and twill, see viscose fabric', to: '/fabrics/viscose' }],
       },
       {
         heading: 'Certifications',
