@@ -54,7 +54,7 @@ const RecycledFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom development from 150 m depending on the quality. Full GRS documentation and transaction certificates are provided. Lead time is about 45 days, ex Delhi.',
+          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom development from 150 m depending on the quality. Full GRS documentation and transaction certificates are provided. Lead time is confirmed per quality and quantity at the time of enquiry.',
         ],
       },
       {

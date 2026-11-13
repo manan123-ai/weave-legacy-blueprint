@@ -51,7 +51,7 @@ const GreigeFabric = () => (
       {
         heading: 'Minimum Order & Lead Time',
         paragraphs: [
-          'Greige is available from small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom development from 150 m depending on the quality. Lead time is about 45 days, ex Delhi. A development quantity lets you test a construction through your own process before committing to a seasonal run.',
+          'Greige is available from small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom development from 150 m depending on the quality. Lead time is confirmed per quality and quantity at the time of enquiry. A development quantity lets you test a construction through your own process before committing to a seasonal run.',
         ],
       },
       {
