@@ -15,6 +15,16 @@ export interface FabricSection {
   links?: { label: string; to: string }[];
 }
 
+export interface FabricFaq {
+  q: string;
+  a: string;
+}
+
+export interface FabricImage {
+  src: string;
+  alt: string;
+}
+
 export interface FabricCategoryPageProps {
   slug: string; // e.g. "cotton"
   title: string;
@@ -24,6 +34,12 @@ export interface FabricCategoryPageProps {
   intro: string;
   sections: FabricSection[];
   productName: string;
+  /** Optional strip of enquiry facts under the intro, with a WhatsApp button. */
+  quickFacts?: string[];
+  /** Optional photos shown after the first section. Each needs descriptive alt text. */
+  images?: FabricImage[];
+  /** Optional visible FAQ shown after the last section; also written as FAQPage markup. */
+  faq?: FabricFaq[];
 }
 
 // Icon shown on each spec/quality card — matched by keyword in the bullet
@@ -100,6 +116,9 @@ const FabricCategoryPage = ({
   intro,
   sections,
   productName,
+  quickFacts,
+  images,
+  faq,
 }: FabricCategoryPageProps) => {
   const path = `/fabrics/${slug}`;
 
@@ -118,6 +137,19 @@ const FabricCategoryPage = ({
       // Product markup (Search Console flagged 14 items as critical, Nov 2026).
       // Reviews belong to the company, so they are not attached here.
     },
+    ...(faq && faq.length > 0
+      ? [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faq.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          },
+        ]
+      : []),
     // BreadcrumbList is emitted once by the shared <Breadcrumbs> component
     // below — do not duplicate it here (script tags aren't deduped by
     // scripts/prerender.mjs, so a second copy would ship to production).
@@ -153,6 +185,29 @@ const FabricCategoryPage = ({
             </Reveal>
           </div>
         </section>
+
+        {quickFacts && quickFacts.length > 0 && (
+          <section className="py-10 bg-secondary/60 border-y border-border/60">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <ul className="grid gap-2 sm:grid-cols-2 font-body text-sm text-muted-foreground">
+                {quickFacts.map((f, i) => (
+                  <li key={i} className="flex gap-2">
+                    <span aria-hidden="true" className="text-primary">✓</span>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={`https://wa.me/919891542727?text=${encodeURIComponent(`Hi, I would like to enquire about ${productName.toLowerCase()}.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 font-body text-sm font-medium bg-[#25D366] text-white px-6 py-3 rounded-full hover:bg-[#1fb855] transition-colors"
+              >
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </section>
+        )}
 
         <KineticStrip text="Mill Direct · Export Grade · India" />
 
@@ -228,9 +283,40 @@ const FabricCategoryPage = ({
                       </div>
                     )}
                   </Reveal>
+                  {idx === 0 && images && images.length > 0 && (
+                    <div className="mt-10 grid gap-4 sm:grid-cols-2">
+                      {images.map((img) => (
+                        <img
+                          key={img.src}
+                          src={img.src}
+                          alt={img.alt}
+                          loading="lazy"
+                          className="w-full h-64 object-cover rounded-lg border border-border"
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
               ));
             })()}
+
+            {faq && faq.length > 0 && (
+              <div>
+                <Reveal>
+                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6 leading-tight">
+                    Frequently asked questions
+                  </h2>
+                </Reveal>
+                <div className="space-y-6">
+                  {faq.map((f, i) => (
+                    <div key={i}>
+                      <h3 className="font-serif text-lg font-bold text-primary mb-2">{f.q}</h3>
+                      <p className="font-body text-lg text-muted-foreground leading-relaxed font-light">{f.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <Reveal>
               <div className="mt-16 rounded-sm border border-border/60 bg-card p-10">
