@@ -31,7 +31,7 @@ const UpholsteryFabric = () => (
         ],
         bullets: [
           { label: 'Constructions', value: 'Plain · Dobby · Jacquard brocade · Yarn-dyed checks' },
-          { label: 'Compositions', value: 'Cotton · Cotton/Polyester · Viscose/Cotton' },
+          { label: 'Compositions', value: 'Cotton · Cotton/Polyester · Viscose/Cotton · Linen' },
           { label: 'Widths', value: 'Wider loom widths available to reduce seaming' },
         ],
       },
