@@ -59,7 +59,7 @@ const WovenFabricExporterIndia = () => (
             <p className="font-body text-lg text-muted-foreground font-light leading-relaxed">
               As a fabric exporter in India, we produce across five in-house weaving units — Meerut, Bhiwandi, Ichalkaranji, Erode, Salem and Surat — covering cotton, linen, jacquard, viscose, dobby, yarn-dyed, crepe, twill and upholstery constructions. Being mill-direct rather than a trading house means we control production, quality and documentation for every export order ourselves, not through an intermediary. See our full{' '}
               <Link to="/fabrics" className="text-primary underline underline-offset-4 hover:no-underline">fabric range</Link>{' '}
-              for the complete catalogue.
+              for the complete catalogue. To browse everything we weave, see <Link to="/fabrics" className="text-primary underline underline-offset-4 hover:no-underline">all woven fabrics</Link>.
             </p>
           </Reveal>
 

@@ -1,4 +1,7 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import jacquardNewImg from '@/assets/jacquard-new.jpg';
+import cutworkImg from '@/assets/cutwork-jacquard-fabric.jpg';
+import jacquardEdenImg from '@/assets/jacquard-eden.jpg';
 
 const JacquardFabric = () => (
   <FabricCategoryPage
@@ -9,6 +12,17 @@ const JacquardFabric = () => (
     metaDescription="Custom jacquard fabric manufacturer in India for apparel and garment brands: damask, brocade, florals and your own artwork. BCI, GOTS, OEKO-TEX certified. Export-ready."
     keywords="jacquard fabric manufacturer India, jacquard fabric exporter, damask fabric India, custom jacquard India"
     intro="A jacquard loom controls each warp thread independently, allowing intricate patterns — florals, paisleys, damasks and geometric repeats — to be woven directly into the fabric."
+    quickFacts={[
+      'Bulk orders start at 1,500 m per quality',
+      'Sampling and custom development from 150 m, depending on the quality',
+      'Widths 48 to 120 inches, wider on order, ex Delhi',
+      'Lead time confirmed per quality and quantity at the time of enquiry',
+    ]}
+    images={[
+      { src: jacquardNewImg, alt: 'Jacquard fabric with a gold paisley pattern on navy, woven by Janki Nath & Co., India' },
+      { src: cutworkImg, alt: 'Black and ivory cutwork jacquard fabric with a leaf pattern, from Janki Nath & Co., India' },
+      { src: jacquardEdenImg, alt: 'Multicolour woven jacquard fabric with a landscape pattern, from Janki Nath & Co., India' },
+    ]}
     sections={[
       {
         heading: 'Jacquard Fabric Manufacturers in India: Janki Nath & Co.',
@@ -40,9 +54,22 @@ const JacquardFabric = () => (
         ],
       },
       {
+        heading: 'Where Jacquard Fabric Is Used',
+        paragraphs: [
+          'Occasion wear, ethnic wear, co-ord sets and blouses. Dresses and shirts. Eveningwear, bridal and formal garments. Cushion covers, upholstery panels, curtains and table linen. Hotel and hospitality.',
+        ],
+        links: [{ label: 'Lurex and sequin fabric for metallic jacquard effects', to: '/fabrics/lurex' }, { label: 'Upholstery fabric', to: '/fabrics/upholstery' }],
+      },
+      {
+        heading: 'Starting a Jacquard Development',
+        paragraphs: [
+          'Send us the artwork or reference, the repeat size, the number of colours, the composition and the end use. We confirm what is possible and quote on enquiry.',
+        ],
+      },
+      {
         heading: 'What We Offer',
         paragraphs: [
-          'Custom jacquard design development from repeat artwork through to sample, with repeat size, colour count and construction complexity discussed at enquiry stage. From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom development from 150 m depending on the quality, and lead time is about 60 days, ex Delhi. Lurex and metallic yarn weaving is available, and our existing design library can be browsed on WhatsApp.',
+          'Custom jacquard design development from repeat artwork through to sample, with repeat size, colour count and construction complexity discussed at enquiry stage. From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom development from 150 m depending on the quality, and lead time is confirmed per quality and quantity at the time of enquiry. Lurex and metallic yarn weaving is available, and our existing design library can be browsed on WhatsApp.',
           'Because the design is woven rather than applied, a jacquard construction holds its pattern through repeated washing and wear, which matters as much on a hotel curtain as on an evening dress.',
         ],
       },
@@ -65,6 +92,14 @@ const JacquardFabric = () => (
         heading: 'Enquire',
         links: [{ label: 'Enquire about jacquard constructions: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },
+    ]}
+    faq={[
+      { q: 'What is the minimum order for jacquard fabric?', a: 'Bulk orders start at 1,500 m per quality. Sampling and custom development start from 150 m. Both depend on the quality.' },
+      { q: 'How long does it take?', a: 'It depends on the quality, construction and quantity. Send us your requirement and we confirm on enquiry.' },
+      { q: 'Can you weave my own design?', a: 'Yes. We develop jacquard from your repeat artwork through to sample.' },
+      { q: 'Is jacquard expensive to make?', a: 'Jacquard takes more development than plain or dobby fabric, because the design is set up for the loom. Cost depends on the repeat size, the colour count and the quantity. Send us your reference and we quote on enquiry.' },
+      { q: 'Which fibres do you weave jacquard in?', a: 'Cotton, viscose, cotton-viscose blends and lurex blends.' },
+      { q: 'What is the difference between jacquard and dobby?', a: 'A dobby loom weaves small repeating geometric patterns. A jacquard loom controls each warp thread to weave larger, detailed designs. The dobby vs jacquard guide linked on this page explains the difference.' },
     ]}
   />
 );

@@ -50,7 +50,7 @@ const OrganicCottonFabric = () => (
         paragraphs: [
           'GOTS certified (processing chain). OCS certified (organic content). Transaction certificates are available per shipment on request. Both certifications are independently audited annually.',
         ],
-        links: [{ label: 'See all our certified fabrics', to: '/fabrics/certified' }],
+        links: [{ label: 'See all our certified fabrics', to: '/fabrics/certified' }, { label: 'For how GOTS, OCS, GRS, OEKO-TEX and BCI differ, see our certification comparison', to: '/blog/gots-ocs-grs-oeko-tex-certification-comparison' }],
       },
       {
         heading: 'What We Offer',

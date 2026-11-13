@@ -1,4 +1,5 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import dobbyImg from '@/assets/dobby-fabric.jpg';
 
 const DobbyFabric = () => (
   <FabricCategoryPage
@@ -9,6 +10,15 @@ const DobbyFabric = () => (
     metaDescription="Dobby fabric manufacturer from India. Self-dobby and colour dobby in cotton and cotton blends. Subtle geometric weave for premium shirting and casualwear."
     keywords="dobby fabric manufacturer India, self dobby fabric, dobby weave fabric India"
     intro="A dobby loom weaves small geometric patterns directly into the fabric structure — dots, diamonds, birds-eye, waffle and micro-textures that add visual interest without printing. JNC produces dobby fabrics in cotton, linen, cotton-linen blends and viscose."
+    quickFacts={[
+      'Bulk orders start at 1,500 m per quality',
+      'Sampling and custom development from 150 m, depending on the quality',
+      'Widths 48 to 120 inches, wider on order, ex Delhi',
+      'Lead time confirmed per quality and quantity at the time of enquiry',
+    ]}
+    images={[
+      { src: dobbyImg, alt: 'Dobby fabric with a small woven textured pattern, from Janki Nath & Co., India' },
+    ]}
     sections={[
       {
         heading: 'What is Dobby Fabric',
@@ -39,9 +49,22 @@ const DobbyFabric = () => (
         ],
       },
       {
+        heading: 'Where Dobby Fabric Is Used',
+        paragraphs: [
+          'Premium formal shirting. Blouses and dresses. Resort and occasion wear. Table linen and napkins. Cushion covers. Bed linen accessories.',
+        ],
+        links: [{ label: 'Yarn-dyed fabric: checks, stripes and plaids', to: '/fabrics/yarn-dyed' }],
+      },
+      {
+        heading: 'Dobby Blends',
+        paragraphs: [
+          'Dobby is a weave, so it can be made in different fibres and blends. We weave dobby in cotton, linen, cotton-linen blends, viscose and cotton-Lycra.',
+        ],
+      },
+      {
         heading: 'What We Offer',
         paragraphs: [
-          'Sampling from existing constructions or custom dobby development. From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and development from 150 m through our sampling unit, depending on the quality. BCI cotton is standard across the range, and GOTS organic is available. Lead time is about 45 days, or about 60 days for yarn-dyed dobby, ex Delhi.',
+          'Sampling from existing constructions or custom dobby development. From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and development from 150 m through our sampling unit, depending on the quality. BCI cotton is standard across the range, and GOTS organic is available. Lead time is confirmed per quality and quantity at the time of enquiry.',
           'Because dobby is built on the loom rather than printed afterwards, a construction can be repeated across seasons with consistent results, and new colourways can be added to an established pattern without re-developing the weave. Tell us the end use, handle and weight you need, and we will propose the right construction from our range or develop one to your brief.',
         ],
       },
@@ -53,6 +76,14 @@ const DobbyFabric = () => (
         heading: 'Enquire',
         links: [{ label: 'Enquire about dobby constructions: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },
+    ]}
+    faq={[
+      { q: 'What is the minimum order for dobby fabric?', a: 'Bulk orders start at 1,500 m per quality. Sampling and custom development start from 150 m. Both depend on the quality.' },
+      { q: 'How long does it take?', a: 'It depends on the quality, construction and quantity. Send us your requirement and we confirm on enquiry.' },
+      { q: 'Self dobby or colour dobby?', a: 'Self dobby uses the same yarn colour as the background, so the pattern shows only through the weave. Colour dobby uses a contrasting yarn, so the pattern is immediately visible.' },
+      { q: 'What is dobby blend fabric?', a: 'Dobby is a weave, so a dobby blend is a dobby construction woven in a blended yarn, such as cotton-linen or cotton-Lycra.' },
+      { q: 'Is dobby the same as jacquard?', a: 'No. A dobby loom weaves small repeating geometric patterns. A jacquard loom controls each warp thread to weave larger, detailed designs. The dobby vs jacquard guide linked at the top of this page explains the difference.' },
+      { q: 'Is dobby for summer or winter?', a: 'It depends on the yarn and the weight. Our complete dobby guide, linked at the top of this page, explains it.' },
     ]}
   />
 );

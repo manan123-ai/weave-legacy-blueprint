@@ -44,7 +44,7 @@ const CottonFabric = () => (
       {
         heading: 'Export & Ordering',
         paragraphs: [
-          'Mill-direct supply. No agents between buyer and production. FOB pricing from New Delhi. Documentation: commercial invoice, packing list, certificate of origin, GST invoice, certification documentation.',
+          'Mill-direct supply. No agents between buyer and production. Documentation: commercial invoice, packing list, certificate of origin, GST invoice, certification documentation.',
         ],
       },
     ]}

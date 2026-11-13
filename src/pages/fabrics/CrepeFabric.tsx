@@ -21,7 +21,7 @@ const CrepeFabric = () => (
           { label: 'Finishes', value: 'Greige · RFD · Piece-dyed · Yarn-dyed' },
           { label: 'Certifications', value: 'BCI · GOTS · OCS · OEKO-TEX · GRS' },
           { label: 'Supply', value: 'Development quantities and bulk' },
-          { label: 'Export', value: 'Mill-direct, FOB New Delhi' },
+          { label: 'Export', value: 'Mill-direct, with export documentation' },
         ],
       },
       {
@@ -45,7 +45,7 @@ const CrepeFabric = () => (
       {
         heading: 'Export & Ordering',
         paragraphs: [
-          'Mill-direct supply. No agents between buyer and production. FOB pricing from New Delhi. Documentation: commercial invoice, packing list, certificate of origin, GST invoice, certification documentation.',
+          'Mill-direct supply. No agents between buyer and production. Documentation: commercial invoice, packing list, certificate of origin, GST invoice, certification documentation.',
         ],
       },
     ]}
