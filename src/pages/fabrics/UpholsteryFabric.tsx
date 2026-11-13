@@ -27,7 +27,7 @@ const UpholsteryFabric = () => (
       {
         heading: 'Upholstery Fabric Export from India: Janki Nath & Co.',
         paragraphs: [
-          'We weave jacquard brocade, dobby, yarn-dyed check and plain weave constructions in cotton, cotton-polyester and viscose-cotton blends. All constructions are woven on wider looms to reduce seaming.',
+          'We weave jacquard brocade, dobby, yarn-dyed check and plain weave constructions in cotton, cotton-polyester and viscose-cotton blends. All constructions are woven on wider looms to reduce seaming. We also make linen upholstery fabric. Tell us the piece and the use and we recommend a construction.',
         ],
         bullets: [
           { label: 'Constructions', value: 'Plain · Dobby · Jacquard brocade · Yarn-dyed checks' },
@@ -56,13 +56,13 @@ const UpholsteryFabric = () => (
       {
         heading: 'Performance Standards',
         paragraphs: [
-          'Our upholstery fabrics are produced to export quality standards, suitable for residential and contract applications. Fabric testing is available on request, including Martindale abrasion, colourfastness to light and rubbing, pilling resistance and dimensional stability, tested to relevant BS EN ISO standards. Contract and hospitality use calls for a higher abrasion rating than residential use.',
+          'Our upholstery fabrics are produced to export quality standards, suitable for residential and contract applications. Testing is available on request: Martindale and Wyzenbeek abrasion, pilling, colourfastness to light and rubbing, seam slippage, tensile and tear strength, and dimensional stability. Fire testing to the standard you need can be arranged, confirmed per quality. Contract and hospitality use calls for a higher abrasion rating than residential use.',
         ],
       },
       {
         heading: 'Certifications',
         paragraphs: [
-          'OEKO-TEX Standard 100 certified. BCI cotton is used across cotton-based upholstery constructions. GRS-certified recycled content constructions are available on request. Available in certified and conventional constructions. Certifications on request.',
+          'OEKO-TEX Standard 100 available on request, depending on the quality. BCI cotton available. GRS recycled content constructions are available on request. Available in certified and conventional constructions. Certifications on request.',
         ],
       },
       {
@@ -75,7 +75,7 @@ const UpholsteryFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom construction and colour development from 150 m depending on the quality, for furniture programmes. Fabric is export-ready with full documentation.',
+          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom construction and colour development from 150 m depending on the quality, for furniture programmes. Fabric is export-ready with full documentation. Flame-retardant and water-repellent finishes can be applied on order. The minimum order is higher for these finishes and confirmed per quality.',
         ],
       },
       {
@@ -89,6 +89,7 @@ const UpholsteryFabric = () => (
       { q: 'Which construction suits which piece?', a: 'Plain weave suits tailored and contemporary pieces, dobby helps disguise everyday wear, jacquard brocade suits statement chairs and headboards, and yarn-dyed checks suit casual interiors.' },
       { q: 'Do you supply contract and hospitality fabric?', a: 'Yes. Tell us the piece and the traffic it will see, and we recommend a construction and weight.' },
       { q: 'Can you develop our own colours or constructions?', a: 'Yes. Custom construction and colour development from 150 m, depending on the quality.' },
+      { q: 'Do you offer testing?', a: 'Testing is available on request: Martindale and Wyzenbeek abrasion, pilling, colourfastness to light and rubbing, seam slippage, tensile and tear strength, and dimensional stability. Fire testing to the standard you need can be arranged, confirmed per quality.' },
       { q: 'Which certifications are available?', a: 'OEKO-TEX Standard 100 is available on request, depending on the quality. BCI cotton available. GRS recycled content is available on request.' },
     ]}
   />
