@@ -55,7 +55,7 @@ const OrganicCottonFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom construction development in organic cotton from 150 m depending on the quality. Full certification documentation is provided with each shipment. Lead time is about 45 days, or about 60 days for yarn-dyed and jacquard, ex Delhi.',
+          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom construction development in organic cotton from 150 m depending on the quality. Full certification documentation is provided with each shipment. Lead time is confirmed per quality and quantity at the time of enquiry.',
         ],
       },
       {

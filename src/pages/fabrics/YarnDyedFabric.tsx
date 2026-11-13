@@ -41,7 +41,7 @@ const YarnDyedFabric = () => (
       {
         heading: 'What Is Yarn-Dyed Fabric? Yarn-Dyed vs Piece-Dyed',
         paragraphs: [
-          'Yarn-dyed fabric is woven from yarn that was dyed before weaving. Because the colour is in the thread, checks, stripes and plaids are woven in rather than printed, and the pattern looks the same on both sides of the cloth.',
+          'Yarn-dyed fabric is woven from yarn that was dyed before weaving. Because the colour is in the thread, checks, stripes and plaids are woven in rather than printed.',
           'Piece-dyed fabric is woven in plain undyed yarn and dyed afterwards as a whole piece, which gives a single solid colour. Yarn-dyed is chosen when the design needs more than one colour in the weave, such as checks, stripes and woven plaids.',
         ],
         links: [{ label: 'Read our guide: Yarn-dyed vs piece-dyed fabric', to: '/blog/yarn-dyed-vs-piece-dyed-fabric-guide' }],

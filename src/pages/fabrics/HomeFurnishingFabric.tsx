@@ -53,7 +53,7 @@ const HomeFurnishingFabric = () => (
       {
         heading: 'What We Offer',
         paragraphs: [
-          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom construction development to your brief from 150 m depending on the quality. Fabric is export-ready with full documentation, FOB New Delhi.',
+          'From small quantities to bulk: bulk orders start at 1,500 m per quality, with sampling and custom construction development to your brief from 150 m depending on the quality. Fabric is export-ready with full documentation.',
         ],
       },
       {
