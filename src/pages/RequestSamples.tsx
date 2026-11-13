@@ -60,6 +60,9 @@ const RequestSamples = () => (
               <li>Lab dips for colour approval; strike-off for construction approval.</li>
               <li>Development yardage (3–5m) before bulk approval.</li>
             </ol>
+            <p className="font-body text-muted-foreground mt-4">
+              Not sure what to ask for? See <Link to="/sampling" className="text-primary underline underline-offset-4 hover:no-underline">how our sampling works</Link>.
+            </p>
           </Reveal>
 
           <Reveal>
