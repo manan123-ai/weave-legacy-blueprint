@@ -19,6 +19,12 @@ const IkatFabric = () => (
       { src: ikatRolls, alt: 'Rolls of striped woven fabric in assorted colours' },
       { src: ikatFolded, alt: 'Folded woven fabrics in pink and blue' },
     ]}
+    quickFacts={[
+      'Bulk orders start at 1,500 m per quality',
+      'Sampling and custom development from 150 m, depending on the quality',
+      'Widths 48 to 120 inches, wider on order, ex Delhi',
+      'Lead time confirmed per quality and quantity at the time of enquiry',
+    ]}
     sections={[
       {
         heading: 'IKAT from Janki Nath & Co.',
@@ -54,13 +60,19 @@ const IkatFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'Our IKAT fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 and GRS (Global Recycled Standard) certified. Full documentation provided with every export order. Available in certified and conventional constructions. Certifications on request.',
+          'GOTS and OCS certified cotton is available, BCI cotton is available, and OEKO-TEX Standard 100 and GRS are available on request, depending on the quality. We confirm what applies to each quality. Full documentation is provided with every export order.',
         ],
       },
       {
         heading: 'Enquire',
         links: [{ label: 'Enquire about IKAT constructions: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },
+    ]}
+    faq={[
+      { q: 'What is the minimum order for IKAT fabric?', a: 'Bulk orders start at 1,500 m per quality. Sampling and custom development start from 150 m. Both depend on the quality.' },
+      { q: 'How long does it take?', a: 'It depends on the quality, construction and quantity. Send us your requirement and we confirm on enquiry.' },
+      { q: 'Is IKAT resist-dyed by hand?', a: 'The resist-dyeing is done by hand on the yarn before weaving, which gives IKAT its feathered edge.' },
+      { q: 'Which fibres do you weave IKAT in?', a: 'Cotton and viscose, with natural and reactive dyes available.' },
     ]}
   />
 );

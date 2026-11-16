@@ -19,6 +19,12 @@ const HomeFurnishingFabric = () => (
       { src: homeTablecloth, alt: 'Woven linen-look tablecloth' },
       { src: homeGreen, alt: 'Woven table linen in white and green' },
     ]}
+    quickFacts={[
+      'Bulk orders start at 1,500 m per quality',
+      'Sampling and custom development from 150 m, depending on the quality',
+      'Widths 48 to 120 inches, wider on order, ex Delhi',
+      'Lead time confirmed per quality and quantity at the time of enquiry',
+    ]}
     sections={[
       {
         heading: 'Home Furnishing Fabric from Janki Nath & Co.',
@@ -57,7 +63,7 @@ const HomeFurnishingFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'OEKO-TEX Standard 100. BCI cotton. GOTS-certified organic cotton constructions are available for certified product lines. Available in certified and conventional constructions. Certifications on request.',
+          'OEKO-TEX Standard 100 is available on request, depending on the quality. BCI cotton is available. GOTS and OCS certified organic cotton constructions are available for certified product lines, depending on the quality. We confirm what applies to each quality.',
         ],
       },
       {
@@ -78,6 +84,11 @@ const HomeFurnishingFabric = () => (
         heading: 'Enquire',
         links: [{ label: 'Enquire about home furnishing fabrics: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },
+    ]}
+    faq={[
+      { q: 'What is the minimum order for home furnishing fabric?', a: 'Bulk orders start at 1,500 m per quality. Sampling and custom development start from 150 m. Both depend on the quality.' },
+      { q: 'How long does it take?', a: 'It depends on the quality, construction and quantity. Send us your requirement and we confirm on enquiry.' },
+      { q: 'Which constructions do you weave for home furnishing?', a: 'Plain, yarn-dyed, dobby, jacquard and IKAT, in cotton, linen, cotton-linen blend and viscose.' },
     ]}
   />
 );

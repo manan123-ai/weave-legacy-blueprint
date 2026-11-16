@@ -12,12 +12,18 @@ const RecycledFabric = () => (
     metaTitle="GRS Certified Recycled Fabric Manufacturer & Exporter India | JNC"
     metaDescription="GRS certified recycled cotton and recycled polyester blend woven fabric from India for garments and home furnishing. Small quantities to bulk."
     keywords="recycled fabric manufacturer India GRS certified, recycled cotton fabric India, recycled polyester blend fabric exporter"
-    intro="JNC holds GRS (Global Recycled Standard) certification, which verifies the recycled content in our fabric and confirms responsible social, environmental and chemical practices in our supply chain. GRS is a widely recognised standard for recycled content claims in textiles, and is requested by many sustainability-focused brands and retailers."
+    intro="Janki Nath & Co. makes woven fabric with recycled cotton and recycled polyester blend yarns, to your requirement. GRS (Global Recycled Standard) certified fabric is available, depending on the quality. GRS verifies the recycled content in the fabric and confirms responsible social, environmental and chemical practices in the supply chain, and is requested by many sustainability-focused brands and retailers."
     images={[
       { src: recStack, alt: 'Stacked plain woven fabrics in neutral tones' },
       { src: recGold, alt: 'Woven fabric in gold with soft drape' },
       { src: recBlack, alt: 'Close-up of a black textured woven fabric' },
       { src: recBlue, alt: 'Blue ribbed woven fabric' },
+    ]}
+    quickFacts={[
+      'Bulk orders start at 1,500 m per quality',
+      'Sampling and custom development from 150 m, depending on the quality',
+      'Widths 48 to 120 inches, wider on order, ex Delhi',
+      'Lead time confirmed per quality and quantity at the time of enquiry',
     ]}
     sections={[
       {
@@ -27,7 +33,7 @@ const RecycledFabric = () => (
         ],
         bullets: [
           { label: 'Fibres', value: 'Recycled cotton · Recycled polyester blended with cotton or viscose' },
-          { label: 'Certification', value: 'GRS certified, with transaction certificates per shipment' },
+          { label: 'Certification', value: 'GRS certified fabric available, with transaction certificates per shipment' },
           { label: 'Applications', value: 'Casualwear · Workwear · Home textiles · Upholstery and furnishing' },
         ],
       },
@@ -58,7 +64,7 @@ const RecycledFabric = () => (
       {
         heading: 'Certification',
         paragraphs: [
-          'GRS certified. Transaction certificates are available per shipment. Recycled content percentage is confirmed per construction and is available on request.',
+          'GRS certified fabric is available, depending on the quality. Transaction certificates are available per shipment. Recycled content percentage is confirmed per construction and is available on request.',
         ],
       },
       {
@@ -79,6 +85,10 @@ const RecycledFabric = () => (
         heading: 'Enquire',
         links: [{ label: 'Enquire about GRS certified recycled fabric: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },
+    ]}
+    faq={[
+      { q: 'What is the minimum order for recycled fabric?', a: 'Bulk orders start at 1,500 m per quality. Sampling and custom development start from 150 m. Both depend on the quality.' },
+      { q: 'How long does it take?', a: 'It depends on the quality, construction and quantity. Send us your requirement and we confirm on enquiry.' },
     ]}
   />
 );

@@ -19,6 +19,12 @@ const CottonFabric = () => (
       { src: cotGrey, alt: 'Plain woven cotton fabric in grey' },
       { src: cotLight, alt: 'Plain woven cotton fabric in light grey' },
     ]}
+    quickFacts={[
+      'Bulk orders start at 1,500 m per quality',
+      'Sampling and custom development from 150 m, depending on the quality',
+      'Widths 48 to 120 inches, wider on order, ex Delhi',
+      'Lead time confirmed per quality and quantity at the time of enquiry',
+    ]}
     sections={[
       {
         heading: 'Our Cotton Fabric Range',
@@ -34,9 +40,16 @@ const CottonFabric = () => (
         links: [{ label: 'Greige cotton for your own dyeing, printing and processing', to: '/fabrics/greige' }, { label: 'Cotton/viscose blends: see viscose fabric', to: '/fabrics/viscose' }],
       },
       {
+        heading: 'Cotton Fabric Manufacturer and Exporter from India',
+        paragraphs: [
+          'We are a mill-direct manufacturer and exporter of woven cotton fabric, supplying brands, importers and garment manufacturers abroad. Fabric is exported with full documentation. We make as per your requirement: tell us the quality, construction, width and quantity and we confirm.',
+        ],
+        links: [{ label: 'Organic cotton fabric', to: '/fabrics/organic-cotton' }, { label: 'Home furnishing fabric', to: '/fabrics/home-furnishing' }, { label: 'How our sampling works', to: '/sampling' }],
+      },
+      {
         heading: 'Certifications',
         paragraphs: [
-          'Our cotton fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 and GRS (Global Recycled Standard) certified. Full documentation provided with every export order. Available in certified and conventional constructions. Certifications on request.',
+          'GOTS and OCS certified cotton is available, BCI cotton is available, and OEKO-TEX Standard 100 and GRS are available on request, depending on the quality. We confirm what applies to each quality. Full documentation is provided with every export order.',
         ],
       },
       {
@@ -57,6 +70,13 @@ const CottonFabric = () => (
           'Mill-direct supply. No agents between buyer and production. Documentation: commercial invoice, packing list, certificate of origin, GST invoice, certification documentation.',
         ],
       },
+    ]}
+    faq={[
+      { q: 'What is the minimum order for cotton fabric?', a: 'Bulk orders start at 1,500 m per quality. Sampling and custom development start from 150 m. Both depend on the quality.' },
+      { q: 'How long does it take?', a: 'It depends on the quality, construction and quantity. Send us your requirement and we confirm on enquiry.' },
+      { q: 'Which cotton fabrics do you make?', a: 'Plain weave, twill, drill, poplin, canvas, sateen, oxford, dobby, voile and muslin, in greige, RFD, bleached, dyed, printed and yarn-dyed finishes.' },
+      { q: 'Do you supply greige cotton for our own dyeing?', a: 'Yes. Greige cotton is available for your own dyeing, printing and processing.' },
+      { q: 'Is certified cotton available?', a: 'GOTS and OCS certified cotton and BCI cotton are available, and OEKO-TEX Standard 100 and GRS are available on request, depending on the quality.' },
     ]}
   />
 );

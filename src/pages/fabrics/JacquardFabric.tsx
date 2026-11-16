@@ -86,7 +86,7 @@ const JacquardFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'OEKO-TEX Standard 100 and GRS certified. GOTS certified options available in cotton jacquard. Available in certified and conventional constructions. Certifications on request.',
+          'OEKO-TEX Standard 100 and GRS are available on request, depending on the quality. GOTS and OCS certified cotton is available for cotton jacquard. We confirm what applies to each quality.',
         ],
       },
       {
@@ -110,6 +110,7 @@ const JacquardFabric = () => (
       { q: 'Is jacquard expensive to make?', a: 'Jacquard takes more development than plain or dobby fabric, because the design is set up for the loom. Cost depends on the repeat size, the colour count and the quantity. Send us your reference and we quote on enquiry.' },
       { q: 'Which fibres do you weave jacquard in?', a: 'Cotton, viscose, cotton-viscose blends and lurex blends.' },
       { q: 'What is the difference between jacquard and dobby?', a: 'A dobby loom weaves small repeating geometric patterns. A jacquard loom controls each warp thread to weave larger, detailed designs. The dobby vs jacquard guide linked on this page explains the difference.' },
+      { q: 'Do you make jacquard fabric to order for apparel brands?', a: 'Yes. We make jacquard to order for apparel brands and garment manufacturers, developed to your design, repeat size, colours and composition. Send us the brief and we confirm what is possible.' },
     ]}
   />
 );

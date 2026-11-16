@@ -49,6 +49,12 @@ const TwillFabric = () => (
         ],
       },
       {
+        heading: 'Twill and Drill Fabric Manufacturer and Exporter from India',
+        paragraphs: [
+          'We are a mill-direct manufacturer and exporter of woven twill and drill fabric, supplying brands, importers and garment manufacturers abroad. Fabric is exported with full documentation. We make as per your requirement: tell us the quality, construction, width and quantity and we confirm.',
+        ],
+      },
+      {
         heading: 'Certifications',
         paragraphs: [
           'Twill is a weave, so it can be made in certified cotton. Our twill and drill fabrics are available in GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard) certified cotton, BCI (Better Cotton Initiative) cotton is available, and OEKO-TEX Standard 100 and GRS are available on request. We confirm what applies to each quality. Full documentation is provided with every export order.',

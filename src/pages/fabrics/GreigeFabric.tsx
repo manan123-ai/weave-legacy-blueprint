@@ -19,6 +19,12 @@ const GreigeFabric = () => (
       { src: greigeBeige, alt: 'Natural woven fabric in beige' },
       { src: greigeGreyBeige, alt: 'Woven fabric in natural grey-beige' },
     ]}
+    quickFacts={[
+      'Bulk orders start at 1,500 m per quality',
+      'Sampling and custom development from 150 m, depending on the quality',
+      'Widths 48 to 120 inches, wider on order, ex Delhi',
+      'Lead time confirmed per quality and quantity at the time of enquiry',
+    ]}
     sections={[
       {
         heading: 'Greige from Janki Nath & Co.',
@@ -75,6 +81,11 @@ const GreigeFabric = () => (
         heading: 'Enquire',
         links: [{ label: 'Enquire about greige fabric availability: wa.me/919891542727', to: 'https://wa.me/919891542727' }],
       },
+    ]}
+    faq={[
+      { q: 'What is the minimum order for greige fabric?', a: 'Bulk orders start at 1,500 m per quality. Sampling and custom development start from 150 m. Both depend on the quality.' },
+      { q: 'How long does it take?', a: 'It depends on the quality, construction and quantity. Send us your requirement and we confirm on enquiry.' },
+      { q: 'Which greige constructions do you weave?', a: 'Plain weave, twill, poplin, sheeting, dobby base and oxford, in cotton, cotton-linen blend and cotton-viscose blend.' },
     ]}
   />
 );

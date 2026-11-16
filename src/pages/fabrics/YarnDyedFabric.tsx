@@ -86,7 +86,7 @@ const YarnDyedFabric = () => (
       },
       {
         heading: 'Certifications',
-        paragraphs: ['BCI certified cotton options available. OEKO-TEX Standard 100 and GRS certified. Available in certified and conventional constructions. Certifications on request.'],
+        paragraphs: ['BCI cotton is available. GOTS and OCS certified cotton is available, and OEKO-TEX Standard 100 and GRS are available on request, depending on the quality. We confirm what applies to each quality.'],
       },
       {
         heading: 'Enquire',

@@ -78,7 +78,7 @@ const DobbyFabric = () => (
       },
       {
         heading: 'Certifications',
-        paragraphs: ['BCI certified cotton options. OEKO-TEX Standard 100 and GRS certified. Available in certified and conventional constructions. Certifications on request.'],
+        paragraphs: ['BCI cotton is available. GOTS and OCS certified cotton is available, and OEKO-TEX Standard 100 and GRS are available on request, depending on the quality. We confirm what applies to each quality.'],
       },
       {
         heading: 'Enquire',
@@ -92,6 +92,8 @@ const DobbyFabric = () => (
       { q: 'What is dobby blend fabric?', a: 'Dobby is a weave, so a dobby blend is a dobby construction woven in a blended yarn, such as cotton-linen or cotton-Lycra.' },
       { q: 'Is dobby the same as jacquard?', a: 'No. A dobby loom weaves small repeating geometric patterns. A jacquard loom controls each warp thread to weave larger, detailed designs. The dobby vs jacquard guide linked at the top of this page explains the difference.' },
       { q: 'Is dobby for summer or winter?', a: 'It depends on the yarn and the weight. Our complete dobby guide, linked at the top of this page, explains it.' },
+      { q: 'What is dobby fabric made of?', a: 'Dobby is a weave, not a fibre. We weave dobby in cotton, linen, cotton-linen blends, viscose and cotton-Lycra.' },
+      { q: 'What is dobby fabric used for?', a: 'Premium formal shirting, blouses and dresses, resort and occasion wear, and home textiles such as table linen, napkins, cushion covers and bed linen accessories.' },
     ]}
   />
 );

@@ -19,6 +19,12 @@ const LycraBlendsFabric = () => (
       { src: stretchGreenGrey, alt: 'Woven fabric in grey-green' },
       { src: stretchStripe, alt: 'Woven fabric with fine stripes in green' },
     ]}
+    quickFacts={[
+      'Bulk orders start at 1,500 m per quality',
+      'Sampling and custom development from 150 m, depending on the quality',
+      'Widths 48 to 120 inches, wider on order, ex Delhi',
+      'Lead time confirmed per quality and quantity at the time of enquiry',
+    ]}
     sections={[
       {
         heading: 'Our Lycra Blends Range',
@@ -29,7 +35,7 @@ const LycraBlendsFabric = () => (
         bullets: [
           { label: 'Constructions', value: 'Cotton-Lycra · Viscose-Lycra · Poly-Lycra Wovens' },
           { label: 'Stretch', value: '2-way · 4-way · High Recovery' },
-          { label: 'Certifications', value: 'BCI · GOTS · OCS · OEKO-TEX · GRS' },
+          { label: 'Certifications', value: 'Available on request, depending on the quality' },
           { label: 'Supply', value: 'Development quantities and bulk' },
           { label: 'Export', value: 'Mill-direct, with export documentation' },
         ],
@@ -37,7 +43,7 @@ const LycraBlendsFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'Our Lycra blend fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 and GRS (Global Recycled Standard) certified. Full documentation provided with every export order. Available in certified and conventional constructions. Certifications on request.',
+          'OEKO-TEX Standard 100, BCI cotton, and GOTS and OCS certified cotton are available on request, depending on the quality. GOTS and OCS apply to the cotton content. We confirm what applies to each quality. Full documentation is provided with every export order.',
         ],
       },
       {
@@ -58,6 +64,12 @@ const LycraBlendsFabric = () => (
           'Mill-direct supply. No agents between buyer and production. Documentation: commercial invoice, packing list, certificate of origin, GST invoice, certification documentation.',
         ],
       },
+    ]}
+    faq={[
+      { q: 'What is the minimum order for Lycra blend fabric?', a: 'Bulk orders start at 1,500 m per quality. Sampling and custom development start from 150 m. Both depend on the quality.' },
+      { q: 'How long does it take?', a: 'It depends on the quality, construction and quantity. Send us your requirement and we confirm on enquiry.' },
+      { q: 'Which stretch constructions do you make?', a: '2-way, 4-way and high recovery stretch, in cotton-Lycra, viscose-Lycra and poly-Lycra wovens.' },
+      { q: 'Do you test stretch and recovery?', a: 'Development includes stretch percentage and recovery testing.' },
     ]}
   />
 );

@@ -19,6 +19,12 @@ const IndigoFabric = () => (
       { src: indigoCrinkle, alt: 'Indigo-dyed woven fabric' },
       { src: indigoLight, alt: 'Draped indigo-dyed fabric in light blue' },
     ]}
+    quickFacts={[
+      'Bulk orders start at 1,500 m per quality',
+      'Sampling and custom development from 150 m, depending on the quality',
+      'Widths 48 to 120 inches, wider on order, ex Delhi',
+      'Lead time confirmed per quality and quantity at the time of enquiry',
+    ]}
     sections={[
       {
         heading: 'Our Indigo Dyed Range',
@@ -29,7 +35,7 @@ const IndigoFabric = () => (
         bullets: [
           { label: 'Constructions', value: 'Plain Weave · Twill · Denim-weight · Yarn-dyed' },
           { label: 'Finishes', value: 'Light to Deep Indigo · Washed · Enzyme-washed · RFD' },
-          { label: 'Certifications', value: 'BCI · GOTS · OCS · OEKO-TEX · GRS' },
+          { label: 'Certifications', value: 'Available on request, depending on the quality' },
           { label: 'Supply', value: 'Development quantities and bulk' },
           { label: 'Export', value: 'Mill-direct, with export documentation' },
         ],
@@ -37,7 +43,7 @@ const IndigoFabric = () => (
       {
         heading: 'Certifications',
         paragraphs: [
-          'Our indigo dyed fabrics are available certified under BCI (Better Cotton Initiative), GOTS (Global Organic Textile Standard) and OCS (Organic Content Standard). OEKO-TEX Standard 100 and GRS (Global Recycled Standard) certified. Full documentation provided with every export order. Available in certified and conventional constructions. Certifications on request.',
+          'GOTS and OCS certified cotton is available, BCI cotton is available, and OEKO-TEX Standard 100 and GRS are available on request, depending on the quality. We confirm what applies to each quality. Full documentation is provided with every export order.',
         ],
       },
       {
@@ -58,6 +64,12 @@ const IndigoFabric = () => (
           'Mill-direct supply. No agents between buyer and production. Documentation: commercial invoice, packing list, certificate of origin, GST invoice, certification documentation.',
         ],
       },
+    ]}
+    faq={[
+      { q: 'What is the minimum order for indigo fabric?', a: 'Bulk orders start at 1,500 m per quality. Sampling and custom development start from 150 m. Both depend on the quality.' },
+      { q: 'How long does it take?', a: 'It depends on the quality, construction and quantity. Send us your requirement and we confirm on enquiry.' },
+      { q: 'Which indigo shades can you make?', a: 'From light washed indigo to deep, saturated tones, with custom shade matching during development.' },
+      { q: 'Which constructions do you weave in indigo?', a: 'Plain weave, twill, denim-weight and yarn-dyed constructions.' },
     ]}
   />
 );

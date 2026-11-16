@@ -44,7 +44,7 @@ const OrganicCottonFabric = () => (
       {
         heading: 'Organic Cotton Fabric Manufacturer and Exporter from India',
         paragraphs: [
-          'We are a mill-direct manufacturer and exporter, supplying brands, importers and garment manufacturers abroad. Fabric is exported with full documentation.',
+          'We are a mill-direct manufacturer and exporter, supplying brands, importers and garment manufacturers abroad. Fabric is exported with full documentation. We make as per your requirement: tell us the quality, construction, width and quantity and we confirm.',
         ],
       },
       {
