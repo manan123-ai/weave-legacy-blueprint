@@ -1,4 +1,8 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import crepeBlush from '@/assets/crepe-blush.jpg';
+import crepeBlue from '@/assets/crepe-blue.jpg';
+import crepeGreen from '@/assets/crepe-green.jpg';
+import crepeCoral from '@/assets/crepe-coral.jpg';
 
 const CrepeFabric = () => (
   <FabricCategoryPage
@@ -9,6 +13,12 @@ const CrepeFabric = () => (
     metaDescription="Export-grade crepe and high twist fabric from India — moss crepe, georgette, high twist voile. Fine texture, excellent drape. Mill-direct supply for fashion brands worldwide."
     keywords="crepe fabric manufacturer India, high twist fabric exporter, georgette fabric India, moss crepe fabric"
     intro="Janki Nath & Co. manufactures export-grade crepe and high twist fabrics from our weaving units across India — supplying fashion brands, garment manufacturers and buying houses across USA, UK, Germany, France, Japan and Australia."
+    images={[
+      { src: crepeBlush, alt: 'Soft woven crepe-type fabric in blush pink' },
+      { src: crepeBlue, alt: 'Soft woven crepe-type fabric in blue' },
+      { src: crepeGreen, alt: 'Soft woven crepe-type fabric in green' },
+      { src: crepeCoral, alt: 'Soft woven crepe-type fabric in coral' },
+    ]}
     sections={[
       {
         heading: 'Our Crepe & High Twist Range',

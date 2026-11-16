@@ -1,4 +1,8 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import indigoStripe from '@/assets/indigo-stripe.jpg';
+import indigoShibori from '@/assets/indigo-shibori.jpg';
+import indigoCrinkle from '@/assets/indigo-crinkle.jpg';
+import indigoLight from '@/assets/indigo-light.jpg';
 
 const IndigoFabric = () => (
   <FabricCategoryPage
@@ -9,6 +13,12 @@ const IndigoFabric = () => (
     metaDescription="Export-grade indigo dyed fabric from India — light to deep indigo shades for denim and traditional wear. Traditional and modern indigo dyeing. Mill-direct supply."
     keywords="indigo fabric manufacturer India, indigo dyed fabric exporter, denim fabric India, indigo woven fabric"
     intro="Janki Nath & Co. manufactures export-grade indigo dyed fabrics from our weaving units across India — supplying fashion brands, garment manufacturers and buying houses across USA, UK, Germany, France, Japan and Australia."
+    images={[
+      { src: indigoStripe, alt: 'Indigo-dyed woven fabric with a natural stripe' },
+      { src: indigoShibori, alt: 'Indigo-dyed fabric with a shibori pattern' },
+      { src: indigoCrinkle, alt: 'Indigo-dyed woven fabric' },
+      { src: indigoLight, alt: 'Draped indigo-dyed fabric in light blue' },
+    ]}
     sections={[
       {
         heading: 'Our Indigo Dyed Range',

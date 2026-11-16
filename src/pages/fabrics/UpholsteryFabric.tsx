@@ -1,4 +1,5 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import uphTextures from '@/assets/upholstery-textures.jpg';
 import upholsterySamplesImg from '@/assets/upholstery-fabric-samples.jpg';
 import upholsteryJacquardImg from '@/assets/upholstery-home-furnishing-new.jpg';
 import upholsteryStackImg from '@/assets/upholstery-updated.jpg';
@@ -22,6 +23,7 @@ const UpholsteryFabric = () => (
       { src: upholsterySamplesImg, alt: 'Woven upholstery fabric swatches in grey, brown and cream, from Janki Nath & Co., India' },
       { src: upholsteryJacquardImg, alt: 'Woven jacquard upholstery fabric in gold and grey, from Janki Nath & Co., India' },
       { src: upholsteryStackImg, alt: 'Folded woven upholstery fabrics in cream and tan, from Janki Nath & Co., India' },
+      { src: uphTextures, alt: 'Stacked woven upholstery-weight fabrics in neutral tones' },
     ]}
     sections={[
       {

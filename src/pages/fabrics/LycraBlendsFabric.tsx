@@ -1,4 +1,8 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import stretchBlue from '@/assets/stretch-blue.jpg';
+import stretchGrey from '@/assets/stretch-grey.jpg';
+import stretchGreenGrey from '@/assets/stretch-green-grey.jpg';
+import stretchStripe from '@/assets/stretch-stripe-green.jpg';
 
 const LycraBlendsFabric = () => (
   <FabricCategoryPage
@@ -9,6 +13,12 @@ const LycraBlendsFabric = () => (
     metaDescription="Export-grade Lycra blend woven fabric from India — 2-way and 4-way stretch constructions for activewear and swimwear. Mill-direct supply."
     keywords="lycra fabric manufacturer India, stretch fabric exporter, activewear fabric India, swimwear fabric supplier"
     intro="Janki Nath & Co. manufactures export-grade Lycra blend woven fabrics from our weaving units across India — supplying fashion brands, garment manufacturers and buying houses across USA, UK, Germany, France, Japan and Australia."
+    images={[
+      { src: stretchBlue, alt: 'Blue woven fabric with a soft finish' },
+      { src: stretchGrey, alt: 'Grey woven fabric' },
+      { src: stretchGreenGrey, alt: 'Woven fabric in grey-green' },
+      { src: stretchStripe, alt: 'Woven fabric with fine stripes in green' },
+    ]}
     sections={[
       {
         heading: 'Our Lycra Blends Range',

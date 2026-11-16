@@ -1,4 +1,8 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import lurexSheen from '@/assets/lurex-gold-sheen.jpg';
+import lurexFolds from '@/assets/lurex-gold-folds.jpg';
+import lurexCrinkle from '@/assets/lurex-gold-crinkle.jpg';
+import lurexSilver from '@/assets/lurex-silver.jpg';
 
 const LurexFabric = () => (
   <FabricCategoryPage
@@ -9,6 +13,12 @@ const LurexFabric = () => (
     metaDescription="Export-grade lurex and sequin fabric from India — woven metallic and reflective textiles for evening and occasion wear. Mill-direct supply."
     keywords="lurex fabric manufacturer India, sequin fabric exporter, metallic fabric India, occasion wear fabric"
     intro="Janki Nath & Co. manufactures export-grade lurex and sequin fabrics from our weaving units across India — supplying fashion brands, garment manufacturers and buying houses across USA, UK, Germany, France, Japan and Australia."
+    images={[
+      { src: lurexSheen, alt: 'Woven fabric with a gold metallic shine' },
+      { src: lurexFolds, alt: 'Gold metallic fabric with soft folds' },
+      { src: lurexCrinkle, alt: 'Crinkled gold metallic fabric' },
+      { src: lurexSilver, alt: 'Silver metallic fabric with folds' },
+    ]}
     sections={[
       {
         heading: 'Our Lurex & Sequins Range',

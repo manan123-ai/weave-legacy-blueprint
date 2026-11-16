@@ -1,4 +1,9 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import jqFloralMulti from '@/assets/jacquard-floral-multicolour.jpg';
+import jqRoseBlack from '@/assets/jacquard-rose-black.jpg';
+import jqFloralBlue from '@/assets/jacquard-floral-blue.jpg';
+import jqFloralMono from '@/assets/jacquard-floral-mono.jpg';
+import jqGeoMono from '@/assets/jacquard-geometric-mono.jpg';
 import jacquardNewImg from '@/assets/jacquard-new.jpg';
 import cutworkImg from '@/assets/cutwork-jacquard-fabric.jpg';
 import jacquardEdenImg from '@/assets/jacquard-eden.jpg';
@@ -22,6 +27,11 @@ const JacquardFabric = () => (
       { src: jacquardNewImg, alt: 'Jacquard fabric with a gold paisley pattern on navy, woven by Janki Nath & Co., India' },
       { src: cutworkImg, alt: 'Black and ivory cutwork jacquard fabric with a leaf pattern, from Janki Nath & Co., India' },
       { src: jacquardEdenImg, alt: 'Multicolour woven jacquard fabric with a landscape pattern, from Janki Nath & Co., India' },
+      { src: jqFloralMulti, alt: 'Woven jacquard fabric with a multicolour floral design' },
+      { src: jqRoseBlack, alt: 'Woven jacquard fabric with a rose design on black' },
+      { src: jqFloralBlue, alt: 'Woven jacquard fabric with a blue floral design' },
+      { src: jqFloralMono, alt: 'Woven jacquard fabric with a black and white floral design' },
+      { src: jqGeoMono, alt: 'Woven jacquard fabric with a diamond design in black and white' },
     ]}
     sections={[
       {

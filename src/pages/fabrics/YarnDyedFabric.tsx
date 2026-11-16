@@ -1,4 +1,6 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import ydCheckGreenBlue from '@/assets/yarn-dyed-check-green-blue.jpg';
+import ydPlaidRed from '@/assets/yarn-dyed-plaid-red.jpg';
 import yarnDyedImg from '@/assets/yarn-dyed-fabric.jpg';
 
 const YarnDyedFabric = () => (
@@ -18,6 +20,8 @@ const YarnDyedFabric = () => (
     ]}
     images={[
       { src: yarnDyedImg, alt: 'Yarn-dyed cotton plaid fabric in red, blue and yellow, woven by Janki Nath & Co., India' },
+      { src: ydCheckGreenBlue, alt: 'Yarn-dyed woven check in green, blue and yellow' },
+      { src: ydPlaidRed, alt: 'Yarn-dyed woven plaid in red, black and white' },
     ]}
     sections={[
       {

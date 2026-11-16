@@ -1,4 +1,8 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import twillTeal from '@/assets/twill-teal.jpg';
+import twillCheckBlue from '@/assets/twill-check-blue.jpg';
+import twillDiagGreen from '@/assets/twill-diagonal-green.jpg';
+import twillSoftGreen from '@/assets/twill-soft-green.jpg';
 import twillDrillsImg from '@/assets/twill-drills-new.jpg';
 
 const TwillFabric = () => (
@@ -18,6 +22,10 @@ const TwillFabric = () => (
     ]}
     images={[
       { src: twillDrillsImg, alt: 'Cotton twill fabric folded, showing the diagonal rib, from Janki Nath & Co., India' },
+      { src: twillTeal, alt: 'Woven twill fabric in teal with a diagonal weave' },
+      { src: twillCheckBlue, alt: 'Woven twill check fabric in blue' },
+      { src: twillDiagGreen, alt: 'Close-up of a diagonal twill weave in green' },
+      { src: twillSoftGreen, alt: 'Soft woven twill fabric in green' },
     ]}
     sections={[
       {

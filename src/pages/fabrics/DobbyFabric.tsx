@@ -1,4 +1,8 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import dobbyPeach from '@/assets/dobby-texture-peach.jpg';
+import dobbyNatural from '@/assets/dobby-fine-natural.jpg';
+import dobbyRolls from '@/assets/dobby-rolls-motif.jpg';
+import dobbyLight from '@/assets/dobby-light-stripe.jpg';
 import dobbyImg from '@/assets/dobby-fabric.jpg';
 
 const DobbyFabric = () => (
@@ -18,6 +22,10 @@ const DobbyFabric = () => (
     ]}
     images={[
       { src: dobbyImg, alt: 'Dobby fabric with a small woven textured pattern, from Janki Nath & Co., India' },
+      { src: dobbyPeach, alt: 'Woven textured fabric with a small geometric weave in peach, white and yellow' },
+      { src: dobbyNatural, alt: 'Close-up of fine woven textured fabric in natural colour' },
+      { src: dobbyRolls, alt: 'Rolls of woven fabric with small woven motifs in assorted colours' },
+      { src: dobbyLight, alt: 'Light woven fabric with a fine stripe texture' },
     ]}
     sections={[
       {

@@ -1,4 +1,8 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import greigeNatural from '@/assets/greige-natural.jpg';
+import greigeCream from '@/assets/greige-cream.jpg';
+import greigeBeige from '@/assets/greige-beige.jpg';
+import greigeGreyBeige from '@/assets/greige-grey-beige.jpg';
 
 const GreigeFabric = () => (
   <FabricCategoryPage
@@ -9,6 +13,12 @@ const GreigeFabric = () => (
     metaDescription="Greige woven fabric from India for dyeing, printing and processing — cotton, cotton-linen and cotton-viscose blends. Small quantities to bulk."
     keywords="greige fabric supplier India, greige fabric exporter, grey fabric manufacturer India, unfinished woven fabric"
     intro={'Greige (pronounced "gray") is fabric as it comes off the loom — undyed, unfinished and ready for processing. Buyers who have their own dyeing, printing or finishing facilities prefer to source greige fabric and control the finishing themselves.'}
+    images={[
+      { src: greigeNatural, alt: 'Natural undyed woven cotton fabric' },
+      { src: greigeCream, alt: 'Natural undyed cotton fabric in cream' },
+      { src: greigeBeige, alt: 'Natural woven fabric in beige' },
+      { src: greigeGreyBeige, alt: 'Woven fabric in natural grey-beige' },
+    ]}
     sections={[
       {
         heading: 'Greige from Janki Nath & Co.',

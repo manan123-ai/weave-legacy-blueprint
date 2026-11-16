@@ -1,4 +1,8 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import homeChecked from '@/assets/home-checked-linen.jpg';
+import homeNapkins from '@/assets/home-napkins.jpg';
+import homeTablecloth from '@/assets/home-tablecloth.jpg';
+import homeGreen from '@/assets/home-table-green.jpg';
 
 const HomeFurnishingFabric = () => (
   <FabricCategoryPage
@@ -9,6 +13,12 @@ const HomeFurnishingFabric = () => (
     metaDescription="Woven home furnishing fabrics from India for table linen, cushion covers and bed linen accessories. Cotton, linen and blends. Small quantities to bulk."
     keywords="home furnishing fabric manufacturer India, table linen fabric India, cushion cover fabric exporter, home textile fabric supplier"
     intro="JNC produces woven home furnishing fabrics across all our manufacturing units. These are lighter constructions than upholstery fabric, designed for table linen, bed linen accessories, cushion covers, napkins, placemats, runners and decorative panels."
+    images={[
+      { src: homeChecked, alt: 'Checked woven table linen with a napkin' },
+      { src: homeNapkins, alt: 'Folded woven cotton napkins in natural tones' },
+      { src: homeTablecloth, alt: 'Woven linen-look tablecloth' },
+      { src: homeGreen, alt: 'Woven table linen in white and green' },
+    ]}
     sections={[
       {
         heading: 'Home Furnishing Fabric from Janki Nath & Co.',

@@ -1,4 +1,8 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import cotRolls from '@/assets/cotton-rolls-plain.jpg';
+import cotRolls2 from '@/assets/cotton-rolls-colour.jpg';
+import cotGrey from '@/assets/cotton-plain-grey.jpg';
+import cotLight from '@/assets/cotton-plain-light.jpg';
 
 const CottonFabric = () => (
   <FabricCategoryPage
@@ -9,6 +13,12 @@ const CottonFabric = () => (
     metaDescription="Export-grade cotton fabric from India. Plain weave, twill, dobby, poplin, canvas. Greige, RFD, dyed and printed. BCI and GOTS certified. Mill-direct supply."
     keywords="cotton fabric manufacturer India, cotton fabric exporter, BCI cotton fabric, GOTS cotton fabric India"
     intro="Janki Nath & Co. manufactures export-grade cotton fabrics from our weaving units across India — supplying fashion brands, garment manufacturers and buying houses across USA, UK, Germany, France, Japan and Australia."
+    images={[
+      { src: cotRolls, alt: 'Rolls of woven cotton fabric in plain colours' },
+      { src: cotRolls2, alt: 'Rolls of woven cotton fabric in blue, brown and red' },
+      { src: cotGrey, alt: 'Plain woven cotton fabric in grey' },
+      { src: cotLight, alt: 'Plain woven cotton fabric in light grey' },
+    ]}
     sections={[
       {
         heading: 'Our Cotton Fabric Range',

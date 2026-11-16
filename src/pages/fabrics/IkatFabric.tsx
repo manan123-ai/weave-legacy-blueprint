@@ -1,4 +1,8 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import ikatOrange from '@/assets/ikat-orange-blue.jpg';
+import ikatCheck from '@/assets/ikat-check-stripe.jpg';
+import ikatRolls from '@/assets/ikat-stripe-rolls.jpg';
+import ikatFolded from '@/assets/ikat-folded.jpg';
 
 const IkatFabric = () => (
   <FabricCategoryPage
@@ -9,6 +13,12 @@ const IkatFabric = () => (
     metaDescription="Export-grade IKAT and tie dye fabric from India — traditional resist-dyed woven fabric with artisan constructions for premium collections. Mill-direct supply."
     keywords="IKAT fabric manufacturer India, tie dye fabric exporter, resist-dyed fabric India, artisan woven fabric"
     intro="IKAT is a resist-dyeing technique where yarn is tied and dyed in a specific pattern before weaving. When the yarn is woven, the pattern emerges — with characteristic soft, feathered edges that cannot be replicated by printing."
+    images={[
+      { src: ikatOrange, alt: 'Ikat-patterned woven fabric in orange and blue' },
+      { src: ikatCheck, alt: 'Woven check and stripe fabrics in red, yellow and green' },
+      { src: ikatRolls, alt: 'Rolls of striped woven fabric in assorted colours' },
+      { src: ikatFolded, alt: 'Folded woven fabrics in pink and blue' },
+    ]}
     sections={[
       {
         heading: 'IKAT from Janki Nath & Co.',

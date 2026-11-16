@@ -1,4 +1,8 @@
 import FabricCategoryPage from '@/components/FabricCategoryPage';
+import recStack from '@/assets/recycled-stack.jpg';
+import recGold from '@/assets/recycled-gold-drape.jpg';
+import recBlack from '@/assets/recycled-black-weave.jpg';
+import recBlue from '@/assets/recycled-blue-rib.jpg';
 
 const RecycledFabric = () => (
   <FabricCategoryPage
@@ -9,6 +13,12 @@ const RecycledFabric = () => (
     metaDescription="GRS certified recycled cotton and recycled polyester blend woven fabric from India for garments and home furnishing. Small quantities to bulk."
     keywords="recycled fabric manufacturer India GRS certified, recycled cotton fabric India, recycled polyester blend fabric exporter"
     intro="JNC holds GRS (Global Recycled Standard) certification, which verifies the recycled content in our fabric and confirms responsible social, environmental and chemical practices in our supply chain. GRS is a widely recognised standard for recycled content claims in textiles, and is requested by many sustainability-focused brands and retailers."
+    images={[
+      { src: recStack, alt: 'Stacked plain woven fabrics in neutral tones' },
+      { src: recGold, alt: 'Woven fabric in gold with soft drape' },
+      { src: recBlack, alt: 'Close-up of a black textured woven fabric' },
+      { src: recBlue, alt: 'Blue ribbed woven fabric' },
+    ]}
     sections={[
       {
         heading: 'Recycled Fabric from Janki Nath & Co.',
