@@ -26,6 +26,7 @@ const ROUTES = [
   '/blog/cotton-fabric-gsm-guide',
   '/blog/dobby-vs-jacquard-fabric-difference',
   '/blog/gots-ocs-grs-oeko-tex-certification-comparison',
+  '/blog/how-to-brief-a-fabric-manufacturer',
 ];
 
 const DIST = path.resolve('dist');
