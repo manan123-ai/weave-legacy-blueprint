@@ -476,6 +476,35 @@ export const blogPosts: BlogPost[] = [
       "[Contact us](/contact) or message us on [WhatsApp](https://wa.me/919891542727) with the certification and construction you need.",
     ],
   },
+  {
+    slug: 'how-to-brief-a-fabric-manufacturer',
+    title: 'How to Brief a Fabric Manufacturer: The Details We Need Before We Can Quote',
+    metaDescription:
+      'What to send a woven fabric manufacturer to get an accurate quote: construction, composition, width, colour, quantity and end use. A buyer\'s checklist.',
+    excerpt:
+      'Most sourcing delays come from an incomplete brief. Here are the ten details to send a fabric manufacturer, and what happens after you send them.',
+    date: '2026-11-17',
+    dateDisplay: 'November 17, 2026',
+    author: 'Manan Bhasin',
+    content: [
+      "Most delays in sourcing fabric come from an incomplete brief, not from the mill. A manufacturer who makes to order cannot give a useful price until the quality is clear. This guide lists what to send, why each item matters, and what happens next.",
+      "## We make to order, so the brief is the starting point",
+      "A woven fabric manufacturer does not usually pick a roll off a shelf. Each quality is made for the buyer, so the first step is to describe what you need. Once we have the details, we confirm what we can make, the quantity and the lead time for that quality.",
+      "## The details to send",
+      "Ten details cover almost every enquiry. You do not need all of them on day one, but the more you send, the more accurate the first reply.",
+      "TABLE:Detail|What to send|Why it matters\\nFabric and construction|Plain weave, twill, dobby, jacquard, yarn-dyed check or stripe, crepe. If you use a construction code, send it as written (for example a duck of 16 x 8, or a yarn count such as 3/10 x 2/10).|This decides which loom and yarn we use.\\nComposition|100 percent cotton, cotton and linen, cotton and viscose, or a blend with Lycra for stretch.|Fibre content sets the handle, the dyeing route and the price.\\nWidth|The finished width you need. We weave 48 to 120 inches, and wider on order.|Width affects cutting efficiency for your garment or product.\\nWeight or handle|A target weight if you have one, or a reference swatch.|A swatch is often clearer than a number.\\nFinish|Greige for your own processing, RFD, bleached, dyed, printed or yarn-dyed.|It tells us how far to take the fabric.\\nColour|A Pantone reference or a photo. For yarn-dyed fabric, the pattern and colours of the check or stripe.|Colour approval is the usual first sample step.\\nQuantity|Quantity for development and for bulk. Bulk starts at 1,500 metres per quality and sampling from 150 metres, both depending on the quality.|It tells us whether the quality suits your plan.\\nEnd use|Shirts, dresses, trousers, workwear, table linen, cushions, upholstery.|End use tells us what weight and construction to suggest.\\nCertification needs|Organic cotton, BCI cotton, OEKO-TEX Standard 100, or none. These are available depending on the quality.|We confirm what applies to each quality before quoting.\\nDestination|The country and the delivery point.|Documentation is right from the start.",
+      "## A reference helps more than a description",
+      "A swatch, a photo or an existing fabric you want matched saves several rounds of messages. If you do not have a reference, describe the garment or product and the look you want, and we will propose constructions.",
+      "## What happens after you send the brief",
+      "We confirm what is possible and quote on enquiry. Lead time depends on the quality, construction and quantity, and we confirm it when we reply. The usual route after that has three steps.",
+      "First, a strike-off or lab dip for colour approval and hand feel. Second, a sample length, typically 3 to 5 metres, for final approval. Third, bulk production once the sample is approved. [How our sampling works](/sampling) explains each step.",
+      "## A checklist you can copy",
+      "Fabric and construction. Composition. Width. Weight or handle target. Finish. Colour reference. Quantity for development and bulk. End use. Certification needs. Destination. Send these with a swatch or photo if you have one, and we will reply with what we can make.",
+      "Related reading: [How our sampling works](/sampling) | [Minimum order quantity for fabric from India](/blog/minimum-order-quantity-fabric-india) | [How to request fabric samples from India](/blog/how-to-request-fabric-samples-india) | [Cotton fabric range](/fabrics/cotton) | [Yarn-dyed fabric range](/fabrics/yarn-dyed) | [Jacquard fabric range](/fabrics/jacquard)",
+      "Sending a brief? Reach out directly: jcofabrics@yahoo.co.in | [WhatsApp: +91 9891542727](https://wa.me/919891542727)",
+      "[Contact us](/contact): jcofabrics@yahoo.co.in",
+    ],
+  },
 ];
 
 export const getPostBySlug = (slug: string) =>
