@@ -505,6 +505,43 @@ export const blogPosts: BlogPost[] = [
       "[Contact us](/contact): jcofabrics@yahoo.co.in",
     ],
   },
+  {
+    slug: 'how-to-read-a-fabric-construction',
+    title: 'How to Read a Fabric Construction: Counts, Ends and Picks, Width and Weight',
+    metaDescription:
+      'How to read a woven fabric specification: yarn counts, ply, ends and picks per inch, width and weight. A plain guide for buyers sending an enquiry.',
+    excerpt:
+      'Yarn counts, ply, ends and picks, width and weight: what each part of a woven fabric specification tells you, in plain terms.',
+    date: '2026-11-19',
+    dateDisplay: 'November 19, 2026',
+    author: 'Manan Bhasin',
+    content: [
+      "A fabric specification looks like code until you know how to read it. Once you can, an enquiry gets a faster and more accurate answer. This guide explains the parts of a woven fabric construction in plain terms.",
+      "## What a construction line tells you",
+      "A woven fabric is made of warp yarns, which run along the length, and weft yarns, which run across the width. A construction line describes both: how thick each yarn is, how many there are, and how wide and heavy the finished cloth is.",
+      "TABLE:Part|What it tells you|Example\\nYarn count|How thick the yarn is. A higher number is a finer yarn. Warp count first, then weft.|40 x 40\\nPly|How many yarns are twisted together to make one yarn.|2/10 means two plies of 10s\\nEnds and picks|Warp yarns and weft yarns per inch. More means a tighter, firmer cloth.|133 x 72\\nWidth|The finished width of the cloth.|58 inches\\nWeight|Grams per square metre (GSM), which follows from the counts, density and finish.|A target GSM or a swatch\\nWeave|How the yarns interlace: plain, twill, dobby, jacquard.|Plain weave\\nFinish|How far the fabric is taken: greige, bleached, dyed, yarn-dyed, printed.|Bleached",
+      "## Yarn count: how thick the yarn is",
+      "Yarn count is written as a number, and in cotton it is usually the English count (Ne). The higher the number, the finer the yarn. A 10s yarn is coarser than a 40s yarn. In a specification you will often see two counts joined by a multiplication sign, for example 40 x 40. The first number is the warp yarn count and the second is the weft yarn count.",
+      "Some specifications use short forms such as 16 x 8. Read them the same way: warp count first, weft count second. If a code is unclear, ask the supplier to confirm which yarn each number refers to.",
+      "## Ply: single yarn or twisted yarns",
+      "A fraction such as 2/10 means two plies of 10s yarn twisted together. A construction written as 3/10 x 2/10 would then have a three-ply 10s warp and a two-ply 10s weft. Plied yarns make a heavier, stronger fabric than a single yarn of the same count.",
+      "## Ends and picks: how dense the cloth is",
+      "Ends are the warp yarns per inch, and picks are the weft yarns per inch. They are often written together after the counts, for example 40 x 40 / 133 x 72. More ends and picks make a tighter, firmer cloth. Two fabrics with the same yarn counts can feel very different if their ends and picks differ.",
+      "## Width",
+      "Width is the finished width of the cloth. For garments, a wider width can cut more efficiently. We weave widths from 48 to 120 inches, and wider on order. State the finished width you need in your enquiry.",
+      "## Weight",
+      "Weight is usually given in grams per square metre (GSM). It follows from the yarn counts, the ends and picks, and the finish. If you have a target weight, send it. If you have a fabric you like, a swatch is often clearer than a number. Our [fabric GSM guide](/blog/cotton-fabric-gsm-guide) explains the common ranges.",
+      "## Weave and finish",
+      "The weave (plain, twill, dobby, jacquard) and the finish (greige, bleached, dyed, yarn-dyed, printed) complete the picture. Twill and drill have a diagonal rib and are usually firmer. A yarn-dyed fabric is woven from dyed yarn, so the colour pattern is part of the construction.",
+      "## Putting it together",
+      "A complete line might read: cotton, 40 x 40 / 133 x 72, plain weave, 58 inches, bleached. That tells a mill the fibre, the yarn counts, the density, the weave, the width and the finish.",
+      "## If you only have part of the information",
+      "Send what you have. A reference swatch, a photo, an end use and a target quantity are enough for us to propose a construction. Our guide on [how to brief a fabric manufacturer](/blog/how-to-brief-a-fabric-manufacturer) lists the details that help most, and [how our sampling works](/sampling) explains what happens next.",
+      "Related reading: [How to brief a fabric manufacturer](/blog/how-to-brief-a-fabric-manufacturer) | [Cotton fabric GSM weight guide](/blog/cotton-fabric-gsm-guide) | [Cotton fabric range](/fabrics/cotton) | [Twill and drill fabric range](/fabrics/twill) | [How our sampling works](/sampling)",
+      "Sending a specification? Reach out directly: jcofabrics@yahoo.co.in | [WhatsApp: +91 9891542727](https://wa.me/919891542727)",
+      "[Contact us](/contact): jcofabrics@yahoo.co.in",
+    ],
+  },
 ];
 
 export const getPostBySlug = (slug: string) =>
